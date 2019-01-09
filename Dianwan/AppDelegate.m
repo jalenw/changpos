@@ -89,31 +89,6 @@ didFinishLaunchingWithOptions:launchOptions
     } else {
         NSLog(@"服务器内部错误");
     }
-//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:
-//     ^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
-//         if (connectionError) {
-//             NSLog(@"连接错误 %@", connectionError);
-//                 dispatch_semaphore_signal(semaphore);
-//             return;
-//         }
-//         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-//         if (httpResponse.statusCode == 200 || httpResponse.statusCode == 304) {
-//             // 解析数据
-//             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-//             NSLog(@"%@", dict);
-//                 dispatch_semaphore_signal(semaphore);
-//         } else {
-//             NSLog(@"服务器内部错误");
-//                 dispatch_semaphore_signal(semaphore);
-//         }
-//     }];
-//
-//
-//    });
-//
-//
-//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-  
     
     if ([HTTPClientInstance isLogin]) {
         AppDelegateInstance.defaultUser = [User getObjectById:[HTTPClientInstance.uid longLongValue] context:AppDelegateInstance.managedObjectContext];

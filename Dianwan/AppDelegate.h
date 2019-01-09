@@ -15,11 +15,13 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 #define AppDelegateInstance ((AppDelegate*)[[UIApplication sharedApplication] delegate])
-#define base_url [[[NSBundle mainBundle] infoDictionary] objectForKey:@"base_url"]//请求地址
-#define web_url [[[NSBundle mainBundle] infoDictionary] objectForKey:@"web_url"]//跳转H5页面开头部分
+#define base_url AppDelegateInstance.baseUrl.length>0?AppDelegateInstance.baseUrl:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"base_url"]//请求地址
+#define web_url AppDelegateInstance.webUrl.length>0?AppDelegateInstance.webUrl:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"web_url"]//跳转H5页面开头部分
 
 @class User;
 @interface AppDelegate : UIResponder <UIApplicationDelegate,JPUSHRegisterDelegate>
+@property (strong, nonatomic) NSString *baseUrl;
+@property (strong, nonatomic) NSString *webUrl;
 @property (strong, nonatomic) User *defaultUser;//保存登录用户信息
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) NSOperationQueue *operationQueue;

@@ -70,9 +70,50 @@ didFinishLaunchingWithOptions:launchOptions
     [[UINavigationBar appearance] setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
 
-    [[LocationService sharedInstance]startUpdateLocation];//启动定位
+//    [[LocationService sharedInstance]startUpdateLocation];//启动定位
     
     [self initSharePlatform];
+    
+    //同步获取服务器地址
+    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLResponse *response = NULL;
+    NSError *connectionError = NULL;
+    NSData *data =[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&connectionError];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    if (httpResponse.statusCode == 200 || httpResponse.statusCode == 304) {
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        NSLog(@"%@", dict);
+        self.baseUrl = [NSString stringWithFormat:@"%@index.php/",[dict safeStringForKey:@"result"]];
+        self.webUrl = [NSString stringWithFormat:@"%@dist/index.html#/",[dict safeStringForKey:@"result"]];
+    } else {
+        NSLog(@"服务器内部错误");
+    }
+//    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:
+//     ^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+//         if (connectionError) {
+//             NSLog(@"连接错误 %@", connectionError);
+//                 dispatch_semaphore_signal(semaphore);
+//             return;
+//         }
+//         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+//         if (httpResponse.statusCode == 200 || httpResponse.statusCode == 304) {
+//             // 解析数据
+//             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+//             NSLog(@"%@", dict);
+//                 dispatch_semaphore_signal(semaphore);
+//         } else {
+//             NSLog(@"服务器内部错误");
+//                 dispatch_semaphore_signal(semaphore);
+//         }
+//     }];
+//
+//
+//    });
+//
+//
+//    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+  
     
     if ([HTTPClientInstance isLogin]) {
         AppDelegateInstance.defaultUser = [User getObjectById:[HTTPClientInstance.uid longLongValue] context:AppDelegateInstance.managedObjectContext];

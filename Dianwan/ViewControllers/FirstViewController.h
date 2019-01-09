@@ -9,6 +9,10 @@
 #import "BaseViewController.h"
 #import "AdView.h"
 @interface FirstViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *headView;
 @property (weak, nonatomic) IBOutlet AdView *adView;
+@property (weak, nonatomic) IBOutlet UILabel *rankTurnover;
+@property (weak, nonatomic) IBOutlet UILabel *rankActivity;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end

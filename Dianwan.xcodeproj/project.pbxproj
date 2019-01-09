@@ -63,6 +63,7 @@
 		8E980B5F211035FC00C7B6DA /* SystemMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */; };
 		8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B612110373100C7B6DA /* SystemMsgTableViewCell.m */; };
 		8E980B642110373100C7B6DA /* SystemMsgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E980B622110373100C7B6DA /* SystemMsgTableViewCell.xib */; };
+		8E99BBE721E3AFE100EC2E12 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E99BBE621E3AFE100EC2E12 /* libEaseMobClientSDK.a */; };
 		8E9FE2CC212E72B900D26955 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2B5212E72B900D26955 /* UIScrollView+MJRefresh.m */; };
 		8E9FE2CD212E72B900D26955 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2B6212E72B900D26955 /* MJRefreshConst.m */; };
 		8E9FE2CE212E72B900D26955 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2B7212E72B900D26955 /* MJRefreshFooter.m */; };
@@ -74,6 +75,11 @@
 		8E9FE2D4212E72B900D26955 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2C7212E72B900D26955 /* UIView+MJExtension.m */; };
 		8E9FE2D5212E72B900D26955 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2C8212E72B900D26955 /* MJRefreshGifHeader.m */; };
 		8E9FE2D6212E72B900D26955 /* MJRefreshGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE2CB212E72B900D26955 /* MJRefreshGifFooter.m */; };
+		8EA1DC3521E48D3300A8A501 /* FirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1DC3321E48D3300A8A501 /* FirstCollectionViewCell.m */; };
+		8EA1DC3621E48D3300A8A501 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1DC3421E48D3300A8A501 /* FirstCollectionViewCell.xib */; };
+		8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1E1C821E5E04B00A8A501 /* File.swift */; };
+		8EA1E1D321E5E12D00A8A501 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; };
+		8EA1E1D421E5E12D00A8A501 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EB4E3BF2120065F00BC563B /* AppDelegate+EaseMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3BD2120065F00BC563B /* AppDelegate+EaseMob.m */; };
 		8EB4E3EB212009AD00BC563B /* EMSDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3CA212009AC00BC563B /* EMSDWebImageDownloader.m */; };
 		8EB4E3EC212009AD00BC563B /* NSData+EMImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3CB212009AC00BC563B /* NSData+EMImageContentType.m */; };
@@ -425,6 +431,30 @@
 		CDC890791D8698C000CE03CE /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88FF11D8698BF00CE03CE /* UIViewController+DismissKeyboard.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8EA1E1CF21E5E08400A8A501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		8EA1E1D121E5E08400A8A501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		8EA1E1D521E5E12D00A8A501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		CD0666551E8CEA4E00CCD49A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -432,6 +462,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8EA1E1D421E5E12D00A8A501 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +566,7 @@
 		8E980B602110373100C7B6DA /* SystemMsgTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMsgTableViewCell.h; sourceTree = "<group>"; };
 		8E980B612110373100C7B6DA /* SystemMsgTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemMsgTableViewCell.m; sourceTree = "<group>"; };
 		8E980B622110373100C7B6DA /* SystemMsgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemMsgTableViewCell.xib; sourceTree = "<group>"; };
+		8E99BBE621E3AFE100EC2E12 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		8E9FE2B5212E72B900D26955 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		8E9FE2B6212E72B900D26955 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		8E9FE2B7212E72B900D26955 /* MJRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooter.m; sourceTree = "<group>"; };
@@ -558,6 +590,12 @@
 		8E9FE2C9212E72B900D26955 /* MJRefreshLegendFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLegendFooter.h; sourceTree = "<group>"; };
 		8E9FE2CA212E72B900D26955 /* MJRefreshLegendHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshLegendHeader.h; sourceTree = "<group>"; };
 		8E9FE2CB212E72B900D26955 /* MJRefreshGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshGifFooter.m; sourceTree = "<group>"; };
+		8EA1DC3221E48D3300A8A501 /* FirstCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCollectionViewCell.h; sourceTree = "<group>"; };
+		8EA1DC3321E48D3300A8A501 /* FirstCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCollectionViewCell.m; sourceTree = "<group>"; };
+		8EA1DC3421E48D3300A8A501 /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		8EA1E1C721E5E04B00A8A501 /* Dianwan-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dianwan-Bridging-Header.h"; sourceTree = "<group>"; };
+		8EA1E1C821E5E04B00A8A501 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8EB4E3BD2120065F00BC563B /* AppDelegate+EaseMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+EaseMob.m"; sourceTree = "<group>"; };
 		8EB4E3BE2120065F00BC563B /* AppDelegate+EaseMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+EaseMob.h"; sourceTree = "<group>"; };
 		8EB4E3CA212009AC00BC563B /* EMSDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSDWebImageDownloader.m; sourceTree = "<group>"; };
@@ -1220,6 +1258,7 @@
 				CD6323C21EE54C1100D033F4 /* libWeiboSDK.a in Frameworks */,
 				CD6323BB1EE54C1100D033F4 /* MailConnector.framework in Frameworks */,
 				CD6323C41EE54C1100D033F4 /* libWeChatSDK.a in Frameworks */,
+				8EA1E1D321E5E12D00A8A501 /* Charts.framework in Frameworks */,
 				CD3C730D1ED56E6E0039B80B /* jcore-ios-1.1.3.a in Frameworks */,
 				8EEF4BC1211D8CB500DE1E36 /* libopencore-amrwb.a in Frameworks */,
 				8EB4E43521201DF300BC563B /* Bolts.framework in Frameworks */,
@@ -1231,6 +1270,7 @@
 				CD6323BA1EE54C1100D033F4 /* CopyConnector.framework in Frameworks */,
 				CD6323BE1EE54C1100D033F4 /* SMSConnector.framework in Frameworks */,
 				CD6323BC1EE54C1100D033F4 /* QQConnector.framework in Frameworks */,
+				8E99BBE721E3AFE100EC2E12 /* libEaseMobClientSDK.a in Frameworks */,
 				8EEF4BC2211D8CB500DE1E36 /* libopencore-amrnb.a in Frameworks */,
 				CD6323BD1EE54C1100D033F4 /* SinaWeiboConnector.framework in Frameworks */,
 				CD6323C81EE54C1100D033F4 /* ShareSDKConnector.framework in Frameworks */,
@@ -1363,6 +1403,35 @@
 				8E9FE2CB212E72B900D26955 /* MJRefreshGifFooter.m */,
 			);
 			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		8EA1DC3121E48D0000A8A501 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1DC3221E48D3300A8A501 /* FirstCollectionViewCell.h */,
+				8EA1DC3321E48D3300A8A501 /* FirstCollectionViewCell.m */,
+				8EA1DC3421E48D3300A8A501 /* FirstCollectionViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		8EA1E1C621E5E04B00A8A501 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */,
+				8EA1E1C721E5E04B00A8A501 /* Dianwan-Bridging-Header.h */,
+				8EA1E1C821E5E04B00A8A501 /* File.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		8EA1E1CB21E5E08400A8A501 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EA1E1D021E5E08400A8A501 /* Charts.framework */,
+				8EA1E1D221E5E08400A8A501 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		8EB4E3C9212009AC00BC563B /* EMSDWebImage */ = {
@@ -1726,6 +1795,7 @@
 		8EDA41421F22F813000CBA40 /* FirstPage */ = {
 			isa = PBXGroup;
 			children = (
+				8EA1DC3121E48D0000A8A501 /* Cell */,
 				8EF8B39F211989AA00687B7F /* QRFrameView.h */,
 				8EF8B39E211989A900687B7F /* QRFrameView.m */,
 				8EF8B39C211989A600687B7F /* QRViewController.h */,
@@ -1802,6 +1872,7 @@
 		8EEF4A23211D8C9500DE1E36 /* EaseMobSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8E99BBE621E3AFE100EC2E12 /* libEaseMobClientSDK.a */,
 				8EEF4A25211D8C9500DE1E36 /* include */,
 				8EEF4A8F211D8C9500DE1E36 /* EaseMob.bundle */,
 			);
@@ -2800,6 +2871,7 @@
 		CDC88E6E1D8698BF00CE03CE /* Externs */ = {
 			isa = PBXGroup;
 			children = (
+				8EA1E1C621E5E04B00A8A501 /* Charts */,
 				8EEF4A23211D8C9500DE1E36 /* EaseMobSDK */,
 				985A8B021F94AD1900B5DDB9 /* FixSpace */,
 				0432ECF11F271CD1008D7AA3 /* WechatControl */,
@@ -2932,6 +3004,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8EA1E1D621E5E12D00A8A501 /* PBXTargetDependency */,
 			);
 			name = Dianwan;
 			productName = happy;
@@ -2950,6 +3023,7 @@
 					CDC88E371D8691DF00CE03CE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = B3MLVVDM4T;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -2973,12 +3047,35 @@
 			mainGroup = CDC88E2F1D8691DF00CE03CE;
 			productRefGroup = CDC88E391D8691DF00CE03CE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8EA1E1CB21E5E08400A8A501 /* Products */;
+					ProjectRef = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CDC88E371D8691DF00CE03CE /* Dianwan */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8EA1E1D021E5E08400A8A501 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 8EA1E1CF21E5E08400A8A501 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8EA1E1D221E5E08400A8A501 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 8EA1E1D121E5E08400A8A501 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CDC88E361D8691DF00CE03CE /* Resources */ = {
@@ -3037,6 +3134,7 @@
 				8EB4E4D621201FAE00BC563B /* chat_receiver_audio_playing_full@2x.png in Resources */,
 				8EB4E4CD21201FAE00BC563B /* chat_location_detail_disclosure@2x.png in Resources */,
 				8EB4E4FC21201FAE00BC563B /* VoiceSearchFeedback020.png in Resources */,
+				8EA1DC3621E48D3300A8A501 /* FirstCollectionViewCell.xib in Resources */,
 				8EB4E4D421201FAE00BC563B /* chat_receiver_bg.png in Resources */,
 				8EEF4BF3211D8CB500DE1E36 /* MWPhotoBrowser.bundle in Resources */,
 				8EB4E4D121201FAE00BC563B /* chat_location_detail_disclosureHL@2x.png in Resources */,
@@ -3245,6 +3343,7 @@
 				8E9FE2D3212E72B900D26955 /* MJRefreshComponent.m in Sources */,
 				8E9FE2D4212E72B900D26955 /* UIView+MJExtension.m in Sources */,
 				8EEF4BDD211D8CB500DE1E36 /* PSTGridLayoutSection.m in Sources */,
+				8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */,
 				8EEF4BDE211D8CB500DE1E36 /* PSTCollectionViewItemKey.m in Sources */,
 				8EEF4C0A211D8CB500DE1E36 /* EaseBubbleView+Location.m in Sources */,
 				8EB4E3FA212009AD00BC563B /* UIImageView+EMHighlightedWebCache.m in Sources */,
@@ -3378,10 +3477,19 @@
 				8EEF4BFF211D8CB500DE1E36 /* EaseMessageCell.m in Sources */,
 				8EB4E42E21201D0300BC563B /* UIImageView+HeadImage.m in Sources */,
 				8EEF4C05211D8CB500DE1E36 /* EaseTextView.m in Sources */,
+				8EA1DC3521E48D3300A8A501 /* FirstCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EA1E1D621E5E12D00A8A501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 8EA1E1D521E5E12D00A8A501 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDC88E4C1D8691E000CE03CE /* LaunchScreen.storyboard */ = {
@@ -3488,10 +3596,13 @@
 		CDC88E531D8691E000CE03CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dianwan/Dianwan.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sen yang (K469PL5D8E)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B3MLVVDM4T;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -3509,6 +3620,7 @@
 					"$(PROJECT_DIR)/Dianwan/Externs/AlipaySDK",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/Parse",
+					"$(PROJECT_DIR)/Dianwan/Externs/Charts",
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";
@@ -3533,6 +3645,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dianwan/Externs/Charts/Dianwan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3540,10 +3655,13 @@
 		CDC88E541D8691E000CE03CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dianwan/Dianwan.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sen yang (K469PL5D8E)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B3MLVVDM4T;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -3561,6 +3679,7 @@
 					"$(PROJECT_DIR)/Dianwan/Externs/AlipaySDK",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/Parse",
+					"$(PROJECT_DIR)/Dianwan/Externs/Charts",
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";
@@ -3585,6 +3704,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dianwan/Externs/Charts/Dianwan-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

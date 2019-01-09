@@ -9,8 +9,8 @@
 #import "FirstViewController.h"
 #import "QRViewController.h"
 #import "NavigationMapViewViewController.h"
-//#import <MediaPlayer/MediaPlayer.h> 视频播放
-@interface FirstViewController ()<QRViewControllerDelegate>
+#import "FirstCollectionViewCell.h"
+@interface FirstViewController ()
 {
     NSArray *adArray;
 }
@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"简单创业 轻松畅POS";
+    [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 587)];
 //    [self setLeftBarButtonWithImage:[UIImage imageNamed:@"first_qr"]];
 //    [self setRightBarButtonWithTitle:@"导航"];
     [self setupAdView];
@@ -31,36 +32,23 @@
 //        controller.showNav = YES;
 //        [self.navigationController pushViewController:controller animated:YES];
     }];
+    
+    UICollectionViewFlowLayout *_layout = [[UICollectionViewFlowLayout alloc]init];
+    _layout.itemSize = CGSizeMake(ScreenWidth,200);
+    _layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    _layout.minimumLineSpacing = 0;
+    _layout.minimumInteritemSpacing = 0;
+    _layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    [self.collectionView setCollectionViewLayout:_layout];
+    UINib *nib = [UINib nibWithNibName:@"FirstCollectionViewCell"
+                                bundle: [NSBundle mainBundle]];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"FirstCollectionViewCell"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 }
-
-//-(void)leftbarButtonDidTap:(UIButton *)button
-//{
-//    QRViewController *vc = [[QRViewController alloc]init];
-//    vc.delegate = self;
-//    [self.navigationController pushViewController:vc animated:YES];
-//}
-//
-//-(void)rightbarButtonDidTap:(UIButton *)button
-//{
-//    NavigationMapViewViewController *controller = [[NavigationMapViewViewController alloc] init];
-//    CLLocationCoordinate2D navCoordinate;
-//    navCoordinate.latitude = 39.92;
-//    navCoordinate.longitude = 116.46;
-//    controller.naviCoords = navCoordinate;
-//    [self.navigationController pushViewController:controller animated:YES];
-//}
-//
-//-(void)qrReturnString:(NSString*)str
-//{
-//    CommonUIWebViewController *controller = [[CommonUIWebViewController alloc] init];
-//    controller.address = str;
-//    [self.navigationController pushViewController:controller animated:YES];
-//}
 
 //获取首页广告
 -(void)setupAdView
@@ -77,11 +65,16 @@
     }];
 }
 
-//视频播放
-//MPMoviePlayerViewController *mPMoviePlayerViewController;
-//mPMoviePlayerViewController = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"播放地址"]];
-//mPMoviePlayerViewController.view.frame = ScreenBounds;
-//[self presentViewController:mPMoviePlayerViewController animated:YES completion:nil];
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    FirstCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"FirstCollectionViewCell" forIndexPath:indexPath];
+    return cell;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

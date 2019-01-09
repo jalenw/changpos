@@ -194,13 +194,6 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    if (self.showNav) {
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
-    }
-    else
-    {
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
-    }
 }
 
 - (void)share:(NSString*)shareImage :(NSString*)shareTitle :(NSString*)shareContent :(NSString*)shareUrl {

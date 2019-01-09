@@ -13,6 +13,7 @@
 @interface FirstViewController ()
 {
     NSArray *adArray;
+    NSDictionary *dict;
 }
 @end
 
@@ -22,6 +23,9 @@
     [super viewDidLoad];
     self.navigationItem.title = @"简单创业 轻松畅POS";
     [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 587)];
+    [self.scrollView addLegendHeaderWithRefreshingBlock:^{
+        [self getData];
+    }];
 //    [self setLeftBarButtonWithImage:[UIImage imageNamed:@"first_qr"]];
 //    [self setRightBarButtonWithTitle:@"导航"];
     [self setupAdView];
@@ -48,6 +52,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self getData];
 }
 
 //获取首页广告
@@ -65,6 +70,19 @@
     }];
 }
 
+-(void)getData
+{
+    [[ServiceForUser manager]postMethodName:@"mobile/recharge/today_earnings" params:@{} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [self.scrollView headerEndRefreshing];
+        if (status) {
+            dict = [data safeDictionaryForKey:@"result"];
+            self.rankTurnover.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"trading"]];
+            self.rankActivity.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"activation"]];
+            [self.collectionView reloadData];
+        }
+    }];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 3;
@@ -73,11 +91,21 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FirstCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: @"FirstCollectionViewCell" forIndexPath:indexPath];
+    if (indexPath.row==0) {
+        [cell setDict:dict];
+    }
     return cell;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)menuAct:(UIButton *)sender {
+    if (sender.tag==0) {
+        CommonUIWebViewController *controller = [[CommonUIWebViewController alloc] init];
+        controller.address = [NSString stringWithFormat:@"%@%@?isBack=true",web_url,@"signIn"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 @end

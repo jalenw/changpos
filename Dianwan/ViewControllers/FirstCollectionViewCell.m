@@ -17,9 +17,10 @@
 
 - (void)setupPieChartView:(PieChartView *)chartView
 {
-    chartView.usePercentValuesEnabled = YES;
+    chartView.userInteractionEnabled = NO;
+    chartView.usePercentValuesEnabled = NO;
     chartView.drawSlicesUnderHoleEnabled = NO;
-    chartView.holeRadiusPercent = 0.58;
+    chartView.holeRadiusPercent = 0.4;
     chartView.transparentCircleRadiusPercent = 0.61;
     chartView.chartDescription.enabled = NO;
     [chartView setExtraOffsetsWithLeft:5.f top:10.f right:5.f bottom:5.f];
@@ -49,6 +50,7 @@
     chartView.rotationAngle = 0.0;
     chartView.rotationEnabled = YES;
     chartView.highlightPerTapEnabled = YES;
+    chartView.drawEntryLabelsEnabled = NO;
     
     ChartLegend *l = chartView.legend;
     l.horizontalAlignment = ChartLegendHorizontalAlignmentRight;
@@ -58,5 +60,47 @@
     l.xEntrySpace = 7.0;
     l.yEntrySpace = 0.0;
     l.yOffset = 0.0;
+}
+
+-(void)setDict:(NSDictionary *)dict
+{
+    _dict = dict;
+    self.price.text = [NSString stringWithFormat:@"￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"].length>0?[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"]:@""];
+    NSDictionary *nowDict = [[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"];
+    NSArray *array = [[[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"] allKeys];
+    NSMutableArray *entries = [[NSMutableArray alloc] init];
+    for (int i = 0; i < array.count; i++)
+    {
+        NSString *key = [array objectAtIndex:i];
+        double value = [nowDict safeDoubleForKey:key];
+        NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":@"";
+        if (value>0) {
+            [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+        }
+    }
+    PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
+    dataSet.sliceSpace = 2.0;
+    NSMutableArray *colors = [[NSMutableArray alloc] init];
+    [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
+    [colors addObjectsFromArray:ChartColorTemplates.joyful];
+    [colors addObjectsFromArray:ChartColorTemplates.colorful];
+    [colors addObjectsFromArray:ChartColorTemplates.liberty];
+    [colors addObjectsFromArray:ChartColorTemplates.pastel];
+    [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
+    dataSet.colors = colors;
+    dataSet.valueLinePart1OffsetPercentage = 0.8;
+    dataSet.valueLinePart1Length = 0.2;
+    dataSet.valueLinePart2Length = 0.4;
+    dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+    PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+//    NSNumberFormatter *pFormatter = [[NSNumberFormatter alloc] init];
+//    pFormatter.numberStyle = NSNumberFormatterPercentStyle;
+//    pFormatter.maximumFractionDigits = 1;
+//    pFormatter.multiplier = @1.f;
+//    pFormatter.percentSymbol = @"";
+//    [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
+    [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
+    [data setValueTextColor:UIColor.blackColor];
+    _pieChartView.data = data;
 }
 @end

@@ -11,5 +11,6 @@
 #import "Dianwan-Swift.h"
 @interface FirstCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
-
+@property (weak, nonatomic) IBOutlet UILabel *price;
+@property (strong, nonatomic) NSDictionary *dict;
 @end

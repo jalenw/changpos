@@ -10,6 +10,8 @@
 #import "QRViewController.h"
 #import "NavigationMapViewViewController.h"
 #import "FirstCollectionViewCell.h"
+#import "BusinessHandlingViewController.h"
+#import "MyPartnerViewController.h"
 @interface FirstViewController ()
 {
     NSArray *adArray;
@@ -105,6 +107,18 @@
     if (sender.tag==0) {
         CommonUIWebViewController *controller = [[CommonUIWebViewController alloc] init];
         controller.address = [NSString stringWithFormat:@"%@%@?isBack=true",web_url,@"signIn"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    if (sender.tag==1) {
+        MyPartnerViewController *controller = [[MyPartnerViewController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    if (sender.tag==2) {
+//        BusinessHandlingViewController *controller = [[BusinessHandlingViewController alloc] init];
+//        [self.navigationController pushViewController:controller animated:YES];
+    }
+    if (sender.tag==3) {
+        BusinessHandlingViewController *controller = [[BusinessHandlingViewController alloc] init];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

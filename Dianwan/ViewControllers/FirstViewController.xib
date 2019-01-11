@@ -167,6 +167,10 @@
                                         <outlet property="delegate" destination="-1" id="naB-68-JXv"/>
                                     </connections>
                                 </collectionView>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first_income" id="eHI-HF-WOa">
+                                    <rect key="frame" x="8" y="0.0" width="83" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -238,6 +242,7 @@
     </objects>
     <resources>
         <image name="first_bussiness" width="46" height="46"/>
+        <image name="first_income" width="82" height="25"/>
         <image name="first_partner" width="46" height="46"/>
         <image name="first_rank" width="82" height="25"/>
         <image name="first_sign" width="46" height="46"/>

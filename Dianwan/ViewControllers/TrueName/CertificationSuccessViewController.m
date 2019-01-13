@@ -29,17 +29,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"实名认证";
     [self setUI];
     self.view.backgroundColor = RGB(48, 46, 58);
 }
- -(void)setupNav
-{
-        UILabel *titleview = [[UILabel alloc]init];
-        titleview.text = @"实名认证";
-        titleview.textColor = RGB(253, 210, 88);
-        self.navigationItem.titleView = titleview;
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

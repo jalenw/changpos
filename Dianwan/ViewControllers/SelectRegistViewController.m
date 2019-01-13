@@ -26,18 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
      self.view.backgroundColor = RGB(48, 46, 58);
 //    self.RegistMethon = @"1";
 //    self.saomaREG.selected = YES;
 }
 
--(void)setupNav{
-   
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

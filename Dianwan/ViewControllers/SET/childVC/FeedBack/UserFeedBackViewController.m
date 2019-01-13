@@ -21,9 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.title = @"反馈意见";
+    self.title = @"反馈意见";
 
-    [self setupNav];
     self.view.backgroundColor =RGB(48, 46, 58);
     self.submit.layer.cornerRadius = 21;
     self.submit.layer.masksToBounds = YES;
@@ -38,17 +37,6 @@
     
     self.countLab.text = [NSString stringWithFormat:@"0/%ld",(long)MaxCount];
    
-}
-
--(void)setupNav
-{
-    
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text =@"反馈意见";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
-    
 }
 
 -(void)rightbarButtonDidTap:(UIButton *)button

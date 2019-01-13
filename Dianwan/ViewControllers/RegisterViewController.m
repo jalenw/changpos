@@ -68,7 +68,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"注册";
     self.phoneTF.delegate =self;
     self.phoneTF.tag =1;
     self.codeTF.delegate =self;
@@ -83,20 +83,7 @@
     self.view.backgroundColor = RGB(48, 46, 58);
 }
 
--(void)setupNav
-{
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    
-    UILabel *titlevieew=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
-    titlevieew.text =@"注册";
-    titlevieew.font = [UIFont systemFontOfSize:18];
-    titlevieew.textColor = RGB(253, 210, 88);
-    titlevieew.textAlignment= NSTextAlignmentCenter;
-    self.navigationItem.titleView =titlevieew;
-}
+
 
 
     

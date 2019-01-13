@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"绑定银行卡";
     [self addsubviews];
     self.view.backgroundColor = RGB(48, 46, 58);
     self.userNameLabel.text = AppDelegateInstance.defaultUser.member_name;
@@ -114,15 +114,7 @@
     }
 }
 
--(void)setupNav
-{
-    UILabel *titleview=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
-    titleview.text =@"绑定银行卡";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.textAlignment= NSTextAlignmentCenter;
-    self.navigationItem.titleView =titleview;
 
-}
 #pragma mark - 懒加载
 - (CountdownManager *)countDownManager {
     if (!_countDownManager) {

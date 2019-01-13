@@ -55,7 +55,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"修改登录密码";
 //    if ([self.type isEqualToString:@"2"]) {
         self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;
         self.phoneTF.delegate =self;
@@ -74,15 +74,6 @@
     self.codeTF.delegate =self;
 }
 
--(void)setupNav
-{
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text = @"修改登录密码";
-    titleview.textColor = [UIColor blackColor];
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
-    
-}
 
 
 - (IBAction)securityTextAction:(UIButton *)sender {

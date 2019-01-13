@@ -24,18 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title= @"支付设置";
     self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;
     self.view.backgroundColor =RGB(48, 46, 58);
 }
--(void)setupNav
-{
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text = @"支付设置";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
- }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

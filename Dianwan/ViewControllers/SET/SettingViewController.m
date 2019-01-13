@@ -36,7 +36,7 @@
    
     _titleArr = @[_changePWCell,_paySetCell,_clearCell,_feedBackCell,_aboutUsCell];
 
-    [self setupNav];
+   self.title =@"设置";
     
     _maintableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 70 * 6) style:UITableViewStyleGrouped];
     self.maintableview.scrollEnabled = NO;
@@ -61,14 +61,6 @@
     }];
     
 }
--(void)setupNav
-{
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text = @"设置";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
- }
 
 //退出事件
 -(void)loginOutAction{

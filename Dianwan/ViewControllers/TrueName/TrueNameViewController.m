@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+   self.title = @"实名认证";
     UIScrollView *scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     [scrollview addSubview:_truenameview];
     
@@ -25,14 +25,6 @@
     scrollview.showsHorizontalScrollIndicator =NO;
     scrollview.showsVerticalScrollIndicator =NO;
     [self.view addSubview:scrollview];
-}
-
--(void)setupNav
-{
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text = @"实名认证";
-    titleview.textColor = RGB(253, 210, 88);
-    self.navigationItem.titleView = titleview;
 }
 
 - (void)didReceiveMemoryWarning {

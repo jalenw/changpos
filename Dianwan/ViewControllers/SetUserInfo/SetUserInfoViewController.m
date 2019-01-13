@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"个人信息";
     [self setuserInfoData];
      self.view.backgroundColor = RGB(48, 46, 58);
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectedMethon)];
@@ -81,14 +81,6 @@
 //        NSLog(@"保存个人信息出错---%@",err);
 //    }];
     
-}
--(void)setupNav
-{
-  
-    UILabel *titlevieew=[[UILabel alloc]init];
-    titlevieew.text =@"个人信息";
-    titlevieew.textColor = RGB(253, 210, 88);
-    self.navigationItem.titleView =titlevieew;
 }
 
 

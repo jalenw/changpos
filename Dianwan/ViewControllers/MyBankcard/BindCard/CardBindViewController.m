@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title=@"我的银行卡";
     
     _hascard=NO;
     _modelArr = [NSMutableArray array];
@@ -58,16 +58,6 @@
     _addCard.backgroundColor = [UIColor blueColor];
     [self.view addSubview:_addCard];
     
-}
-
--(void)setupNav
-{
-    UILabel *titleview=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
-    titleview.text =@"我的银行卡";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.font = [UIFont systemFontOfSize:18];
-    titleview.textAlignment= NSTextAlignmentCenter;
-    self.navigationItem.titleView =titleview;
 }
 
 

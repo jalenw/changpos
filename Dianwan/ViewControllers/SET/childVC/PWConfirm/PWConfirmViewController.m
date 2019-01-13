@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNav];
+    self.title = @"完善资料";
     self.view.backgroundColor =RGB(48, 46, 58);
     
     self.pasView = [[SYPasswordView alloc] initWithFrame:CGRectMake(30, 20, self.view.frame.size.width - 60, 45)];
@@ -41,15 +41,6 @@
     self.pasView.textField.autocapitalizationType = UIKeyboardTypeNumberPad;
     
 }
--(void)setupNav
-{
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text =@"完善资料";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
-}
-
 
 
 -(void)selectedmethon:(UIButton *)selectedmethon{

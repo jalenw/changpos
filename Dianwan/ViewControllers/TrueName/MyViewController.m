@@ -78,7 +78,6 @@
 }
 
 -(void)rightbarButtonDidTap:(UIButton *)button{
-    NSLog(@"1234");
     SettingViewController *setVC = [[SettingViewController alloc]init];
     [self.navigationController pushViewController:setVC animated:YES];
 }

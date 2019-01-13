@@ -123,9 +123,9 @@
 	<key>base_url</key>
 	<string>http://www.gdzuanqian.net/index.php/</string>
 	<key>key_ShareSDK</key>
-	<string>260742debe833</string>
+	<string>2762f9bb03517</string>
 	<key>key_easemob</key>
-	<string>1176180614177245#bowei</string>
+	<string>1114181103065336#df47da552ffb20e81916423dddeadbee</string>
 	<key>key_jpush</key>
 	<string>bc21098e976c3e9dca04ab26</string>
 	<key>key_qq_appid</key>
@@ -133,7 +133,7 @@
 	<key>key_qq_appkey</key>
 	<string>8sVESEfPdSe1YZ79</string>
 	<key>key_wechat_appid</key>
-	<string>wx0070a9a5bbfef3a0</string>
+	<string>wx87bfd7a130edc55d</string>
 	<key>key_wechat_secret</key>
 	<string>369b6270d50e1f88aa644db3c22ab9b0</string>
 	<key>key_weibo</key>

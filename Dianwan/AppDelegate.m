@@ -186,6 +186,7 @@ didFinishLaunchingWithOptions:launchOptions
         [cookieStorage setCookie:cookie];
     }
     
+    NSLog(@"%@",AppDelegateInstance.defaultUser.chat_id);
     //环信登录
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:AppDelegateInstance.defaultUser.chat_id password:AppDelegateInstance.defaultUser.chat_pwd completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error && loginInfo) {

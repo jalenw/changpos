@@ -1689,8 +1689,8 @@
 		8E6D1E6321EB273E002C6717 /* PWConfirm */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D1E6421EB273E002C6717 /* PWConfirmViewController.m */,
 				8E6D1E6521EB273E002C6717 /* PWConfirmViewController.h */,
+				8E6D1E6421EB273E002C6717 /* PWConfirmViewController.m */,
 				8E6D1E6621EB273E002C6717 /* PWConfirmViewController.xib */,
 			);
 			path = PWConfirm;

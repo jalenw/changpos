@@ -21,4 +21,9 @@
     // Configure the view for the selected state
 }
 
+-(void)setDict:(NSDictionary *)dict
+{
+    _dict = dict;
+    //开始绑定数据到UI
+}
 @end

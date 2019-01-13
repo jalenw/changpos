@@ -22,6 +22,9 @@
 #define DarkColor1 RGB(11,11,11)
 #define DarkColor2 RGB(50,50,50)
 
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+#define HIDE_KEY_BOARD  [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+
 #define key_easemob [[[NSBundle mainBundle] infoDictionary] objectForKey:@"key_easemob"]//环信key
 #define key_jpush  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"key_jpush"] //极光推送key
 #define key_ShareSDK [[[NSBundle mainBundle] infoDictionary] objectForKey:@"key_ShareSDK"]//ShareSDK key

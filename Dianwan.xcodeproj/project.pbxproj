@@ -33,8 +33,6 @@
 		04395EEB1F2350970074865E /* SecurityTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04395EEA1F2350970074865E /* SecurityTextField.m */; };
 		04EBFC351F25D60F00C4DE83 /* LZHActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBFC341F25D60F00C4DE83 /* LZHActionSheetView.m */; };
 		04EBFC381F25D79C00C4DE83 /* LZHAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBFC371F25D79C00C4DE83 /* LZHAreaPickerView.m */; };
-		8E059A28212174B30047A07D /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E059A25212174B10047A07D /* PayViewController.xib */; };
-		8E059A29212174B30047A07D /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E059A26212174B20047A07D /* PayViewController.m */; };
 		8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */; };
 		8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */; };
 		8E412B861F23572100A40CE6 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7F1F23572100A40CE6 /* ForgetViewController.m */; };
@@ -47,8 +45,72 @@
 		8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664E72169BF040022DF94 /* NavigationMapViewViewController.m */; };
 		8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4664E82169BF040022DF94 /* NavigationMapViewViewController.xib */; };
 		8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664EC2169BFD70022DF94 /* MKAnnotation.m */; };
-		8E4664F3216A2EC90022DF94 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4664F0216A2EC90022DF94 /* UserViewController.xib */; };
-		8E4664F4216A2EC90022DF94 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664F2216A2EC90022DF94 /* UserViewController.m */; };
+		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
+		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
+		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
+		8E6D1E0721EB2488002C6717 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0121EB2488002C6717 /* RegisterViewController.m */; };
+		8E6D1E0821EB2488002C6717 /* SelectRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0321EB2488002C6717 /* SelectRegistViewController.m */; };
+		8E6D1E1521EB261C002C6717 /* HMScannerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0B21EB261C002C6717 /* HMScannerBorder.m */; };
+		8E6D1E1621EB261C002C6717 /* HMScannerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0D21EB261C002C6717 /* HMScannerMaskView.m */; };
+		8E6D1E1721EB261C002C6717 /* HMScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0E21EB261C002C6717 /* HMScannerViewController.m */; };
+		8E6D1E1821EB261C002C6717 /* HMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0F21EB261C002C6717 /* HMScanner.m */; };
+		8E6D1E1921EB261C002C6717 /* HMScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1021EB261C002C6717 /* HMScanner.bundle */; };
+		8E6D1E1A21EB261C002C6717 /* HMScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1221EB261C002C6717 /* HMScannerController.m */; };
+		8E6D1E8021EB273F002C6717 /* MyBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */; };
+		8E6D1E8121EB273F002C6717 /* MyBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */; };
+		8E6D1E8B21EB273F002C6717 /* City2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3121EB273E002C6717 /* City2ViewController.xib */; };
+		8E6D1E8C21EB273F002C6717 /* cityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3421EB273E002C6717 /* cityModel.m */; };
+		8E6D1E8D21EB273F002C6717 /* SetUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3621EB273E002C6717 /* SetUserInfoViewController.xib */; };
+		8E6D1E8E21EB273F002C6717 /* CityTableviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3721EB273E002C6717 /* CityTableviewViewController.xib */; };
+		8E6D1E8F21EB273F002C6717 /* CityTableviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3821EB273E002C6717 /* CityTableviewViewController.m */; };
+		8E6D1E9021EB273F002C6717 /* SetUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3921EB273E002C6717 /* SetUserInfoViewController.m */; };
+		8E6D1E9121EB273F002C6717 /* City2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3A21EB273E002C6717 /* City2ViewController.m */; };
+		8E6D1E9221EB273F002C6717 /* CertificationSuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3E21EB273E002C6717 /* CertificationSuccessViewController.xib */; };
+		8E6D1E9321EB273F002C6717 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4121EB273E002C6717 /* MyViewController.xib */; };
+		8E6D1E9421EB273F002C6717 /* TrueNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4321EB273E002C6717 /* TrueNameViewController.xib */; };
+		8E6D1E9521EB273F002C6717 /* CertificationSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4521EB273E002C6717 /* CertificationSuccessViewController.m */; };
+		8E6D1E9621EB273F002C6717 /* TruenameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4621EB273E002C6717 /* TruenameView.m */; };
+		8E6D1E9721EB273F002C6717 /* PerfectInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4721EB273E002C6717 /* PerfectInformationViewController.m */; };
+		8E6D1E9821EB273F002C6717 /* PerfectInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4821EB273E002C6717 /* PerfectInformationViewController.xib */; };
+		8E6D1E9921EB273F002C6717 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4921EB273E002C6717 /* MyViewController.m */; };
+		8E6D1E9A21EB273F002C6717 /* TrueNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4A21EB273E002C6717 /* TrueNameViewController.m */; };
+		8E6D1E9B21EB273F002C6717 /* MineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4B21EB273E002C6717 /* MineHeadView.m */; };
+		8E6D1E9C21EB273F002C6717 /* HooDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E4F21EB273E002C6717 /* HooDatePicker.m */; };
+		8E6D1E9D21EB273F002C6717 /* NSDate+HooDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5021EB273E002C6717 /* NSDate+HooDatePicker.m */; };
+		8E6D1E9E21EB273F002C6717 /* PaySetPWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5521EB273E002C6717 /* PaySetPWViewController.xib */; };
+		8E6D1E9F21EB273F002C6717 /* PaySetPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5621EB273E002C6717 /* PaySetPWViewController.m */; };
+		8E6D1EA021EB273F002C6717 /* PWInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5A21EB273E002C6717 /* PWInputViewController.xib */; };
+		8E6D1EA121EB273F002C6717 /* SYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5C21EB273E002C6717 /* SYPasswordView.m */; };
+		8E6D1EA221EB273F002C6717 /* PWInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5D21EB273E002C6717 /* PWInputViewController.m */; };
+		8E6D1EA321EB273F002C6717 /* UserFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E5F21EB273E002C6717 /* UserFeedBackViewController.m */; };
+		8E6D1EA421EB273F002C6717 /* UserFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6021EB273E002C6717 /* UserFeedBackViewController.xib */; };
+		8E6D1EA521EB273F002C6717 /* PWConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6421EB273E002C6717 /* PWConfirmViewController.m */; };
+		8E6D1EA621EB273F002C6717 /* PWConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6621EB273E002C6717 /* PWConfirmViewController.xib */; };
+		8E6D1EA721EB273F002C6717 /* ChangeLoginPWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6821EB273E002C6717 /* ChangeLoginPWViewController.xib */; };
+		8E6D1EA821EB273F002C6717 /* ChangeLoginPWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6A21EB273E002C6717 /* ChangeLoginPWViewController.m */; };
+		8E6D1EA921EB273F002C6717 /* LLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6E21EB273E002C6717 /* LLFileTool.m */; };
+		8E6D1EAA21EB273F002C6717 /* UIView+EasyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E6F21EB273E002C6717 /* UIView+EasyLayout.m */; };
+		8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7021EB273E002C6717 /* ToolManager.m */; };
+		8E6D1EAC21EB273F002C6717 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7221EB273E002C6717 /* SettingViewController.m */; };
+		8E6D1EAD21EB273F002C6717 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7321EB273E002C6717 /* SettingViewController.xib */; };
+		8E6D1EAE21EB273F002C6717 /* BusinessApplicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */; };
+		8E6D1EAF21EB273F002C6717 /* BusinessApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */; };
+		8E6D1EB021EB273F002C6717 /* MyFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7A21EB273F002C6717 /* MyFViewController.m */; };
+		8E6D1EB121EB273F002C6717 /* MyFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */; };
+		8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7F21EB273F002C6717 /* CountdownManager.m */; };
+		8E6D1EBB21EB2A48002C6717 /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EB821EB2A46002C6717 /* PayViewController.xib */; };
+		8E6D1EBC21EB2A48002C6717 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EBA21EB2A47002C6717 /* PayViewController.m */; };
+		8E6D1EC021EB2A5C002C6717 /* SetPayPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EBE21EB2A5B002C6717 /* SetPayPwViewController.m */; };
+		8E6D1EC121EB2A5C002C6717 /* SetPayPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EBF21EB2A5C002C6717 /* SetPayPwViewController.xib */; };
+		8E6D1EED21EB2ACB002C6717 /* CardBindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EDD21EB2ACB002C6717 /* CardBindViewController.xib */; };
+		8E6D1EEE21EB2ACB002C6717 /* RemoveBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EDE21EB2ACB002C6717 /* RemoveBindCardViewController.m */; };
+		8E6D1EEF21EB2ACB002C6717 /* CardBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE021EB2ACB002C6717 /* CardBindViewController.m */; };
+		8E6D1EF021EB2ACB002C6717 /* BindCardOkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE121EB2ACB002C6717 /* BindCardOkViewController.xib */; };
+		8E6D1EF121EB2ACB002C6717 /* CardInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE421EB2ACB002C6717 /* CardInfoModel.m */; };
+		8E6D1EF221EB2ACB002C6717 /* BindCardOkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE521EB2ACB002C6717 /* BindCardOkViewController.m */; };
+		8E6D1EF321EB2ACB002C6717 /* CardCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE721EB2ACB002C6717 /* CardCellTableViewCell.xib */; };
+		8E6D1EF421EB2ACB002C6717 /* CardCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EE921EB2ACB002C6717 /* CardCellTableViewCell.m */; };
+		8E6D1EF521EB2ACB002C6717 /* RemoveBindCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EEC21EB2ACB002C6717 /* RemoveBindCardViewController.xib */; };
 		8E71089021E72C5D00CB11B9 /* BusinessHandlingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71088E21E72C5D00CB11B9 /* BusinessHandlingViewController.m */; };
 		8E71089121E72C5D00CB11B9 /* BusinessHandlingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E71088F21E72C5D00CB11B9 /* BusinessHandlingViewController.xib */; };
 		8E71089621E72FB900CB11B9 /* MyPartnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E71089421E72FB900CB11B9 /* MyPartnerViewController.m */; };
@@ -63,16 +125,10 @@
 		8E7108AB21E737B100CB11B9 /* MerchantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108A921E737B100CB11B9 /* MerchantTableViewCell.xib */; };
 		8E7108AF21E73F1F00CB11B9 /* PartnersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108AD21E73F1F00CB11B9 /* PartnersTableViewCell.m */; };
 		8E7108B021E73F1F00CB11B9 /* PartnersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108AE21E73F1F00CB11B9 /* PartnersTableViewCell.xib */; };
-		8E7ABFB2211ACBD800EADF76 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7ABFB0211ACBD800EADF76 /* FeedbackViewController.m */; };
-		8E7ABFB3211ACBD800EADF76 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7ABFB1211ACBD800EADF76 /* FeedbackViewController.xib */; };
-		8E7ABFC7211AD9CC00EADF76 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7ABFC5211AD9CC00EADF76 /* SettingViewController.m */; };
-		8E7ABFC8211AD9CC00EADF76 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7ABFC6211AD9CC00EADF76 /* SettingViewController.xib */; };
-		8E7ABFCC211AE29300EADF76 /* BindingPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7ABFC9211AE29300EADF76 /* BindingPhoneViewController.m */; };
-		8E7ABFCD211AE29300EADF76 /* BindingPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7ABFCA211AE29300EADF76 /* BindingPhoneViewController.xib */; };
-		8E7ABFD1211AE3FB00EADF76 /* ModifyPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7ABFCF211AE3FB00EADF76 /* ModifyPwViewController.m */; };
-		8E7ABFD2211AE3FB00EADF76 /* ModifyPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7ABFD0211AE3FB00EADF76 /* ModifyPwViewController.xib */; };
-		8E7ABFD6211AECE800EADF76 /* SetPayPwViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7ABFD4211AECE800EADF76 /* SetPayPwViewController.m */; };
-		8E7ABFD7211AECE800EADF76 /* SetPayPwViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7ABFD5211AECE800EADF76 /* SetPayPwViewController.xib */; };
+		8E7108B421E86F0100CB11B9 /* ApplyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108B221E86F0100CB11B9 /* ApplyDetailViewController.m */; };
+		8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */; };
+		8E7108B921E8717200CB11B9 /* ApplyDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */; };
+		8E7108BA21E8717200CB11B9 /* ApplyDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */; };
 		8E980B5E211035FC00C7B6DA /* SystemMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */; };
 		8E980B5F211035FC00C7B6DA /* SystemMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */; };
 		8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B612110373100C7B6DA /* SystemMsgTableViewCell.m */; };
@@ -268,8 +324,6 @@
 		8ED176F41F0B45AE00105584 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD06664F1E8CD72A00CCD49A /* libicucore.tbd */; };
 		8ED176F51F0B45BF00105584 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA31EE7DC4E00AD1E77 /* libc++.tbd */; };
 		8ED176F61F0B45CD00105584 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA51EE7DC5600AD1E77 /* libz.tbd */; };
-		8ED4A873211197A10038E719 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4A871211197A10038E719 /* MyViewController.m */; };
-		8ED4A874211197A10038E719 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4A872211197A10038E719 /* MyViewController.xib */; };
 		8ED4A878211197F70038E719 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4A876211197F70038E719 /* FirstViewController.m */; };
 		8ED4A879211197F70038E719 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4A877211197F70038E719 /* FirstViewController.xib */; };
 		8EDA41401F22F731000CBA40 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA413E1F22F731000CBA40 /* LoginViewController.m */; };
@@ -365,9 +419,6 @@
 		8EEF4C15211D8CB500DE1E36 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF4BA5211D8CB500DE1E36 /* EaseUIResource.bundle */; };
 		8EEF4C3A211D8DC700DE1E36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF4C39211D8DBE00DE1E36 /* MobileCoreServices.framework */; };
 		8EEF4C3C211D8DDE00DE1E36 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF4C3B211D8DD800DE1E36 /* CFNetwork.framework */; };
-		8EF8B3A1211989AB00687B7F /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8B39D211989A800687B7F /* QRViewController.m */; };
-		8EF8B3A2211989AB00687B7F /* QRFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8B39E211989A900687B7F /* QRFrameView.m */; };
-		8EF8B3A3211989AB00687B7F /* QRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF8B3A0211989AB00687B7F /* QRViewController.xib */; };
 		8EFC60D61F25864A0088E00A /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC60D51F25864A0088E00A /* AdView.m */; };
 		90A2F2101D8E7CB600AB04CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A2F20F1D8E7CB600AB04CF /* Assets.xcassets */; };
 		9816D9691F258E39000FCD7E /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9816D9641F258E39000FCD7E /* FriendListCell.m */; };
@@ -533,9 +584,6 @@
 		04EBFC341F25D60F00C4DE83 /* LZHActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHActionSheetView.m; sourceTree = "<group>"; };
 		04EBFC361F25D79C00C4DE83 /* LZHAreaPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHAreaPickerView.h; sourceTree = "<group>"; };
 		04EBFC371F25D79C00C4DE83 /* LZHAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHAreaPickerView.m; sourceTree = "<group>"; };
-		8E059A25212174B10047A07D /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
-		8E059A26212174B20047A07D /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
-		8E059A27212174B20047A07D /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		8E412B7B1F23572100A40CE6 /* CodeLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeLoginViewController.h; sourceTree = "<group>"; };
 		8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeLoginViewController.m; sourceTree = "<group>"; };
 		8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeLoginViewController.xib; sourceTree = "<group>"; };
@@ -555,9 +603,113 @@
 		8E4664E92169BF040022DF94 /* NavigationMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMapViewViewController.h; sourceTree = "<group>"; };
 		8E4664EC2169BFD70022DF94 /* MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotation.m; sourceTree = "<group>"; };
 		8E4664ED2169BFD70022DF94 /* MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
-		8E4664F0216A2EC90022DF94 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
-		8E4664F1216A2EC90022DF94 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
-		8E4664F2216A2EC90022DF94 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
+		8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		8E6D1E0021EB2488002C6717 /* SelectRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectRegistViewController.h; sourceTree = "<group>"; };
+		8E6D1E0121EB2488002C6717 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8E6D1E0221EB2488002C6717 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		8E6D1E0321EB2488002C6717 /* SelectRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectRegistViewController.m; sourceTree = "<group>"; };
+		8E6D1E0A21EB261C002C6717 /* HMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScanner.h; sourceTree = "<group>"; };
+		8E6D1E0B21EB261C002C6717 /* HMScannerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerBorder.m; sourceTree = "<group>"; };
+		8E6D1E0C21EB261C002C6717 /* HMScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerController.h; sourceTree = "<group>"; };
+		8E6D1E0D21EB261C002C6717 /* HMScannerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerMaskView.m; sourceTree = "<group>"; };
+		8E6D1E0E21EB261C002C6717 /* HMScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerViewController.m; sourceTree = "<group>"; };
+		8E6D1E0F21EB261C002C6717 /* HMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScanner.m; sourceTree = "<group>"; };
+		8E6D1E1021EB261C002C6717 /* HMScanner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMScanner.bundle; sourceTree = "<group>"; };
+		8E6D1E1121EB261C002C6717 /* HMScannerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerMaskView.h; sourceTree = "<group>"; };
+		8E6D1E1221EB261C002C6717 /* HMScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerController.m; sourceTree = "<group>"; };
+		8E6D1E1321EB261C002C6717 /* HMScannerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerBorder.h; sourceTree = "<group>"; };
+		8E6D1E1421EB261C002C6717 /* HMScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerViewController.h; sourceTree = "<group>"; };
+		8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBankCardViewController.m; sourceTree = "<group>"; };
+		8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBankCardViewController.xib; sourceTree = "<group>"; };
+		8E6D1E1E21EB273D002C6717 /* MyBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBankCardViewController.h; sourceTree = "<group>"; };
+		8E6D1E3121EB273E002C6717 /* City2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = City2ViewController.xib; sourceTree = "<group>"; };
+		8E6D1E3221EB273E002C6717 /* CityTableviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableviewViewController.h; sourceTree = "<group>"; };
+		8E6D1E3321EB273E002C6717 /* SetUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUserInfoViewController.h; sourceTree = "<group>"; };
+		8E6D1E3421EB273E002C6717 /* cityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cityModel.m; sourceTree = "<group>"; };
+		8E6D1E3521EB273E002C6717 /* City2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City2ViewController.h; sourceTree = "<group>"; };
+		8E6D1E3621EB273E002C6717 /* SetUserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUserInfoViewController.xib; sourceTree = "<group>"; };
+		8E6D1E3721EB273E002C6717 /* CityTableviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityTableviewViewController.xib; sourceTree = "<group>"; };
+		8E6D1E3821EB273E002C6717 /* CityTableviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityTableviewViewController.m; sourceTree = "<group>"; };
+		8E6D1E3921EB273E002C6717 /* SetUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUserInfoViewController.m; sourceTree = "<group>"; };
+		8E6D1E3A21EB273E002C6717 /* City2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City2ViewController.m; sourceTree = "<group>"; };
+		8E6D1E3B21EB273E002C6717 /* cityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cityModel.h; sourceTree = "<group>"; };
+		8E6D1E3D21EB273E002C6717 /* PerfectInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerfectInformationViewController.h; sourceTree = "<group>"; };
+		8E6D1E3E21EB273E002C6717 /* CertificationSuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CertificationSuccessViewController.xib; sourceTree = "<group>"; };
+		8E6D1E3F21EB273E002C6717 /* TruenameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TruenameView.h; sourceTree = "<group>"; };
+		8E6D1E4021EB273E002C6717 /* CertificationSuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificationSuccessViewController.h; sourceTree = "<group>"; };
+		8E6D1E4121EB273E002C6717 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		8E6D1E4221EB273E002C6717 /* TrueNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueNameViewController.h; sourceTree = "<group>"; };
+		8E6D1E4321EB273E002C6717 /* TrueNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrueNameViewController.xib; sourceTree = "<group>"; };
+		8E6D1E4421EB273E002C6717 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		8E6D1E4521EB273E002C6717 /* CertificationSuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificationSuccessViewController.m; sourceTree = "<group>"; };
+		8E6D1E4621EB273E002C6717 /* TruenameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TruenameView.m; sourceTree = "<group>"; };
+		8E6D1E4721EB273E002C6717 /* PerfectInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfectInformationViewController.m; sourceTree = "<group>"; };
+		8E6D1E4821EB273E002C6717 /* PerfectInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PerfectInformationViewController.xib; sourceTree = "<group>"; };
+		8E6D1E4921EB273E002C6717 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		8E6D1E4A21EB273E002C6717 /* TrueNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueNameViewController.m; sourceTree = "<group>"; };
+		8E6D1E4B21EB273E002C6717 /* MineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeadView.m; sourceTree = "<group>"; };
+		8E6D1E4D21EB273E002C6717 /* HooDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HooDatePicker.h; sourceTree = "<group>"; };
+		8E6D1E4E21EB273E002C6717 /* NSDate+HooDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HooDatePicker.h"; sourceTree = "<group>"; };
+		8E6D1E4F21EB273E002C6717 /* HooDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HooDatePicker.m; sourceTree = "<group>"; };
+		8E6D1E5021EB273E002C6717 /* NSDate+HooDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HooDatePicker.m"; sourceTree = "<group>"; };
+		8E6D1E5221EB273E002C6717 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		8E6D1E5521EB273E002C6717 /* PaySetPWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaySetPWViewController.xib; sourceTree = "<group>"; };
+		8E6D1E5621EB273E002C6717 /* PaySetPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySetPWViewController.m; sourceTree = "<group>"; };
+		8E6D1E5721EB273E002C6717 /* PaySetPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySetPWViewController.h; sourceTree = "<group>"; };
+		8E6D1E5921EB273E002C6717 /* SYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPasswordView.h; sourceTree = "<group>"; };
+		8E6D1E5A21EB273E002C6717 /* PWInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWInputViewController.xib; sourceTree = "<group>"; };
+		8E6D1E5B21EB273E002C6717 /* PWInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWInputViewController.h; sourceTree = "<group>"; };
+		8E6D1E5C21EB273E002C6717 /* SYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPasswordView.m; sourceTree = "<group>"; };
+		8E6D1E5D21EB273E002C6717 /* PWInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWInputViewController.m; sourceTree = "<group>"; };
+		8E6D1E5F21EB273E002C6717 /* UserFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedBackViewController.m; sourceTree = "<group>"; };
+		8E6D1E6021EB273E002C6717 /* UserFeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserFeedBackViewController.xib; sourceTree = "<group>"; };
+		8E6D1E6121EB273E002C6717 /* UserFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedBackViewController.h; sourceTree = "<group>"; };
+		8E6D1E6421EB273E002C6717 /* PWConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWConfirmViewController.m; sourceTree = "<group>"; };
+		8E6D1E6521EB273E002C6717 /* PWConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWConfirmViewController.h; sourceTree = "<group>"; };
+		8E6D1E6621EB273E002C6717 /* PWConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWConfirmViewController.xib; sourceTree = "<group>"; };
+		8E6D1E6821EB273E002C6717 /* ChangeLoginPWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeLoginPWViewController.xib; sourceTree = "<group>"; };
+		8E6D1E6921EB273E002C6717 /* ChangeLoginPWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeLoginPWViewController.h; sourceTree = "<group>"; };
+		8E6D1E6A21EB273E002C6717 /* ChangeLoginPWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeLoginPWViewController.m; sourceTree = "<group>"; };
+		8E6D1E6C21EB273E002C6717 /* ToolManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolManager.h; sourceTree = "<group>"; };
+		8E6D1E6D21EB273E002C6717 /* UIView+EasyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EasyLayout.h"; sourceTree = "<group>"; };
+		8E6D1E6E21EB273E002C6717 /* LLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLFileTool.m; sourceTree = "<group>"; };
+		8E6D1E6F21EB273E002C6717 /* UIView+EasyLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EasyLayout.m"; sourceTree = "<group>"; };
+		8E6D1E7021EB273E002C6717 /* ToolManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolManager.m; sourceTree = "<group>"; };
+		8E6D1E7121EB273E002C6717 /* LLFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLFileTool.h; sourceTree = "<group>"; };
+		8E6D1E7221EB273E002C6717 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		8E6D1E7321EB273E002C6717 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		8E6D1E7421EB273E002C6717 /* MineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeadView.h; sourceTree = "<group>"; };
+		8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessApplicationViewController.xib; sourceTree = "<group>"; };
+		8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessApplicationViewController.m; sourceTree = "<group>"; };
+		8E6D1E7821EB273E002C6717 /* BusinessApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessApplicationViewController.h; sourceTree = "<group>"; };
+		8E6D1E7A21EB273F002C6717 /* MyFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFViewController.m; sourceTree = "<group>"; };
+		8E6D1E7B21EB273F002C6717 /* MyFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFViewController.h; sourceTree = "<group>"; };
+		8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFViewController.xib; sourceTree = "<group>"; };
+		8E6D1E7E21EB273F002C6717 /* CountdownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownManager.h; sourceTree = "<group>"; };
+		8E6D1E7F21EB273F002C6717 /* CountdownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownManager.m; sourceTree = "<group>"; };
+		8E6D1EB821EB2A46002C6717 /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
+		8E6D1EB921EB2A47002C6717 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		8E6D1EBA21EB2A47002C6717 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
+		8E6D1EBD21EB2A5B002C6717 /* SetPayPwViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPayPwViewController.h; sourceTree = "<group>"; };
+		8E6D1EBE21EB2A5B002C6717 /* SetPayPwViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPayPwViewController.m; sourceTree = "<group>"; };
+		8E6D1EBF21EB2A5C002C6717 /* SetPayPwViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPayPwViewController.xib; sourceTree = "<group>"; };
+		8E6D1EDD21EB2ACB002C6717 /* CardBindViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBindViewController.xib; sourceTree = "<group>"; };
+		8E6D1EDE21EB2ACB002C6717 /* RemoveBindCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoveBindCardViewController.m; sourceTree = "<group>"; };
+		8E6D1EDF21EB2ACB002C6717 /* BindCardOkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindCardOkViewController.h; sourceTree = "<group>"; };
+		8E6D1EE021EB2ACB002C6717 /* CardBindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBindViewController.m; sourceTree = "<group>"; };
+		8E6D1EE121EB2ACB002C6717 /* BindCardOkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BindCardOkViewController.xib; sourceTree = "<group>"; };
+		8E6D1EE321EB2ACB002C6717 /* CardInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardInfoModel.h; sourceTree = "<group>"; };
+		8E6D1EE421EB2ACB002C6717 /* CardInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardInfoModel.m; sourceTree = "<group>"; };
+		8E6D1EE521EB2ACB002C6717 /* BindCardOkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindCardOkViewController.m; sourceTree = "<group>"; };
+		8E6D1EE721EB2ACB002C6717 /* CardCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCellTableViewCell.xib; sourceTree = "<group>"; };
+		8E6D1EE821EB2ACB002C6717 /* CardCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCellTableViewCell.h; sourceTree = "<group>"; };
+		8E6D1EE921EB2ACB002C6717 /* CardCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCellTableViewCell.m; sourceTree = "<group>"; };
+		8E6D1EEA21EB2ACB002C6717 /* RemoveBindCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoveBindCardViewController.h; sourceTree = "<group>"; };
+		8E6D1EEB21EB2ACB002C6717 /* CardBindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBindViewController.h; sourceTree = "<group>"; };
+		8E6D1EEC21EB2ACB002C6717 /* RemoveBindCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemoveBindCardViewController.xib; sourceTree = "<group>"; };
 		8E71088D21E72C5D00CB11B9 /* BusinessHandlingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessHandlingViewController.h; sourceTree = "<group>"; };
 		8E71088E21E72C5D00CB11B9 /* BusinessHandlingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessHandlingViewController.m; sourceTree = "<group>"; };
 		8E71088F21E72C5D00CB11B9 /* BusinessHandlingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessHandlingViewController.xib; sourceTree = "<group>"; };
@@ -579,22 +731,13 @@
 		8E7108AC21E73F1F00CB11B9 /* PartnersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PartnersTableViewCell.h; sourceTree = "<group>"; };
 		8E7108AD21E73F1F00CB11B9 /* PartnersTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PartnersTableViewCell.m; sourceTree = "<group>"; };
 		8E7108AE21E73F1F00CB11B9 /* PartnersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnersTableViewCell.xib; sourceTree = "<group>"; };
-		8E7ABFAF211ACBD800EADF76 /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
-		8E7ABFB0211ACBD800EADF76 /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
-		8E7ABFB1211ACBD800EADF76 /* FeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		8E7108B121E86F0100CB11B9 /* ApplyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyDetailViewController.h; sourceTree = "<group>"; };
+		8E7108B221E86F0100CB11B9 /* ApplyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyDetailViewController.m; sourceTree = "<group>"; };
+		8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyDetailViewController.xib; sourceTree = "<group>"; };
+		8E7108B621E8717200CB11B9 /* ApplyDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyDetailTableViewCell.h; sourceTree = "<group>"; };
+		8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyDetailTableViewCell.m; sourceTree = "<group>"; };
+		8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyDetailTableViewCell.xib; sourceTree = "<group>"; };
 		8E7ABFB6211AD30F00EADF76 /* Dianwan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dianwan.entitlements; sourceTree = "<group>"; };
-		8E7ABFC4211AD9CB00EADF76 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
-		8E7ABFC5211AD9CC00EADF76 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		8E7ABFC6211AD9CC00EADF76 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		8E7ABFC9211AE29300EADF76 /* BindingPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingPhoneViewController.m; sourceTree = "<group>"; };
-		8E7ABFCA211AE29300EADF76 /* BindingPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BindingPhoneViewController.xib; sourceTree = "<group>"; };
-		8E7ABFCB211AE29300EADF76 /* BindingPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingPhoneViewController.h; sourceTree = "<group>"; };
-		8E7ABFCE211AE3FB00EADF76 /* ModifyPwViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPwViewController.h; sourceTree = "<group>"; };
-		8E7ABFCF211AE3FB00EADF76 /* ModifyPwViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPwViewController.m; sourceTree = "<group>"; };
-		8E7ABFD0211AE3FB00EADF76 /* ModifyPwViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyPwViewController.xib; sourceTree = "<group>"; };
-		8E7ABFD3211AECE800EADF76 /* SetPayPwViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPayPwViewController.h; sourceTree = "<group>"; };
-		8E7ABFD4211AECE800EADF76 /* SetPayPwViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPayPwViewController.m; sourceTree = "<group>"; };
-		8E7ABFD5211AECE800EADF76 /* SetPayPwViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPayPwViewController.xib; sourceTree = "<group>"; };
 		8E980B5B211035FC00C7B6DA /* SystemMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMsgViewController.h; sourceTree = "<group>"; };
 		8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemMsgViewController.m; sourceTree = "<group>"; };
 		8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemMsgViewController.xib; sourceTree = "<group>"; };
@@ -831,9 +974,6 @@
 		8EBF664221E1B157001C4A0D /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		8EC5C89620F884030041A34A /* UIView+XibLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XibLayout.h"; sourceTree = "<group>"; };
 		8EC5C89720F884030041A34A /* UIView+XibLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XibLayout.m"; sourceTree = "<group>"; };
-		8ED4A870211197A10038E719 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		8ED4A871211197A10038E719 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		8ED4A872211197A10038E719 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		8ED4A875211197F70038E719 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		8ED4A876211197F70038E719 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8ED4A877211197F70038E719 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -1119,11 +1259,6 @@
 		8EEF4BA5211D8CB500DE1E36 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
 		8EEF4C39211D8DBE00DE1E36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8EEF4C3B211D8DD800DE1E36 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		8EF8B39C211989A600687B7F /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
-		8EF8B39D211989A800687B7F /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
-		8EF8B39E211989A900687B7F /* QRFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRFrameView.m; sourceTree = "<group>"; };
-		8EF8B39F211989AA00687B7F /* QRFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRFrameView.h; sourceTree = "<group>"; };
-		8EF8B3A0211989AB00687B7F /* QRViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRViewController.xib; sourceTree = "<group>"; };
 		8EFC60D41F25864A0088E00A /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		8EFC60D51F25864A0088E00A /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		90A2F20F1D8E7CB600AB04CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1404,10 +1539,250 @@
 		8E4664EF2169F02B0022DF94 /* WebViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E6D1EB921EB2A47002C6717 /* PayViewController.h */,
+				8E6D1EBA21EB2A47002C6717 /* PayViewController.m */,
+				8E6D1EB821EB2A46002C6717 /* PayViewController.xib */,
+				8E6D1EBD21EB2A5B002C6717 /* SetPayPwViewController.h */,
+				8E6D1EBE21EB2A5B002C6717 /* SetPayPwViewController.m */,
+				8E6D1EBF21EB2A5C002C6717 /* SetPayPwViewController.xib */,
 				0432ECF51F271F0B008D7AA3 /* CommonUIWebViewController.h */,
 				0432ECF61F271F0B008D7AA3 /* CommonUIWebViewController.m */,
 			);
 			name = WebViewController;
+			sourceTree = "<group>";
+		};
+		8E6D1E0921EB261C002C6717 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E0A21EB261C002C6717 /* HMScanner.h */,
+				8E6D1E0B21EB261C002C6717 /* HMScannerBorder.m */,
+				8E6D1E0C21EB261C002C6717 /* HMScannerController.h */,
+				8E6D1E0D21EB261C002C6717 /* HMScannerMaskView.m */,
+				8E6D1E0E21EB261C002C6717 /* HMScannerViewController.m */,
+				8E6D1E0F21EB261C002C6717 /* HMScanner.m */,
+				8E6D1E1021EB261C002C6717 /* HMScanner.bundle */,
+				8E6D1E1121EB261C002C6717 /* HMScannerMaskView.h */,
+				8E6D1E1221EB261C002C6717 /* HMScannerController.m */,
+				8E6D1E1321EB261C002C6717 /* HMScannerBorder.h */,
+				8E6D1E1421EB261C002C6717 /* HMScannerViewController.h */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		8E6D1E1B21EB273D002C6717 /* MyBankcard */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1EDC21EB2ACB002C6717 /* BindCard */,
+				8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */,
+				8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */,
+				8E6D1E1E21EB273D002C6717 /* MyBankCardViewController.h */,
+			);
+			path = MyBankcard;
+			sourceTree = "<group>";
+		};
+		8E6D1E3021EB273E002C6717 /* SetUserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E3521EB273E002C6717 /* City2ViewController.h */,
+				8E6D1E3121EB273E002C6717 /* City2ViewController.xib */,
+				8E6D1E3221EB273E002C6717 /* CityTableviewViewController.h */,
+				8E6D1E3321EB273E002C6717 /* SetUserInfoViewController.h */,
+				8E6D1E3621EB273E002C6717 /* SetUserInfoViewController.xib */,
+				8E6D1E3721EB273E002C6717 /* CityTableviewViewController.xib */,
+				8E6D1E3821EB273E002C6717 /* CityTableviewViewController.m */,
+				8E6D1E3921EB273E002C6717 /* SetUserInfoViewController.m */,
+				8E6D1E3A21EB273E002C6717 /* City2ViewController.m */,
+				8E6D1E3B21EB273E002C6717 /* cityModel.h */,
+				8E6D1E3421EB273E002C6717 /* cityModel.m */,
+			);
+			path = SetUserInfo;
+			sourceTree = "<group>";
+		};
+		8E6D1E3C21EB273E002C6717 /* TrueName */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E3D21EB273E002C6717 /* PerfectInformationViewController.h */,
+				8E6D1E3E21EB273E002C6717 /* CertificationSuccessViewController.xib */,
+				8E6D1E3F21EB273E002C6717 /* TruenameView.h */,
+				8E6D1E4021EB273E002C6717 /* CertificationSuccessViewController.h */,
+				8E6D1E4121EB273E002C6717 /* MyViewController.xib */,
+				8E6D1E4221EB273E002C6717 /* TrueNameViewController.h */,
+				8E6D1E4321EB273E002C6717 /* TrueNameViewController.xib */,
+				8E6D1E4421EB273E002C6717 /* MyViewController.h */,
+				8E6D1E4521EB273E002C6717 /* CertificationSuccessViewController.m */,
+				8E6D1E4621EB273E002C6717 /* TruenameView.m */,
+				8E6D1E4721EB273E002C6717 /* PerfectInformationViewController.m */,
+				8E6D1E4821EB273E002C6717 /* PerfectInformationViewController.xib */,
+				8E6D1E4921EB273E002C6717 /* MyViewController.m */,
+				8E6D1E4A21EB273E002C6717 /* TrueNameViewController.m */,
+			);
+			path = TrueName;
+			sourceTree = "<group>";
+		};
+		8E6D1E4C21EB273E002C6717 /* HooDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E4D21EB273E002C6717 /* HooDatePicker.h */,
+				8E6D1E4E21EB273E002C6717 /* NSDate+HooDatePicker.h */,
+				8E6D1E4F21EB273E002C6717 /* HooDatePicker.m */,
+				8E6D1E5021EB273E002C6717 /* NSDate+HooDatePicker.m */,
+			);
+			path = HooDatePicker;
+			sourceTree = "<group>";
+		};
+		8E6D1E5121EB273E002C6717 /* SET */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E5321EB273E002C6717 /* childVC */,
+				8E6D1E6B21EB273E002C6717 /* Other */,
+				8E6D1E5221EB273E002C6717 /* SettingViewController.h */,
+				8E6D1E7221EB273E002C6717 /* SettingViewController.m */,
+				8E6D1E7321EB273E002C6717 /* SettingViewController.xib */,
+			);
+			path = SET;
+			sourceTree = "<group>";
+		};
+		8E6D1E5321EB273E002C6717 /* childVC */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E5421EB273E002C6717 /* PaySet */,
+				8E6D1E5821EB273E002C6717 /* PWInputVC */,
+				8E6D1E5E21EB273E002C6717 /* FeedBack */,
+				8E6D1E6321EB273E002C6717 /* PWConfirm */,
+				8E6D1E6721EB273E002C6717 /* ChangeLoginPW */,
+			);
+			path = childVC;
+			sourceTree = "<group>";
+		};
+		8E6D1E5421EB273E002C6717 /* PaySet */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E5721EB273E002C6717 /* PaySetPWViewController.h */,
+				8E6D1E5621EB273E002C6717 /* PaySetPWViewController.m */,
+				8E6D1E5521EB273E002C6717 /* PaySetPWViewController.xib */,
+			);
+			path = PaySet;
+			sourceTree = "<group>";
+		};
+		8E6D1E5821EB273E002C6717 /* PWInputVC */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E5B21EB273E002C6717 /* PWInputViewController.h */,
+				8E6D1E5D21EB273E002C6717 /* PWInputViewController.m */,
+				8E6D1E5A21EB273E002C6717 /* PWInputViewController.xib */,
+				8E6D1E5921EB273E002C6717 /* SYPasswordView.h */,
+				8E6D1E5C21EB273E002C6717 /* SYPasswordView.m */,
+			);
+			path = PWInputVC;
+			sourceTree = "<group>";
+		};
+		8E6D1E5E21EB273E002C6717 /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E6121EB273E002C6717 /* UserFeedBackViewController.h */,
+				8E6D1E5F21EB273E002C6717 /* UserFeedBackViewController.m */,
+				8E6D1E6021EB273E002C6717 /* UserFeedBackViewController.xib */,
+			);
+			path = FeedBack;
+			sourceTree = "<group>";
+		};
+		8E6D1E6321EB273E002C6717 /* PWConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E6421EB273E002C6717 /* PWConfirmViewController.m */,
+				8E6D1E6521EB273E002C6717 /* PWConfirmViewController.h */,
+				8E6D1E6621EB273E002C6717 /* PWConfirmViewController.xib */,
+			);
+			path = PWConfirm;
+			sourceTree = "<group>";
+		};
+		8E6D1E6721EB273E002C6717 /* ChangeLoginPW */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E6921EB273E002C6717 /* ChangeLoginPWViewController.h */,
+				8E6D1E6A21EB273E002C6717 /* ChangeLoginPWViewController.m */,
+				8E6D1E6821EB273E002C6717 /* ChangeLoginPWViewController.xib */,
+			);
+			path = ChangeLoginPW;
+			sourceTree = "<group>";
+		};
+		8E6D1E6B21EB273E002C6717 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E6C21EB273E002C6717 /* ToolManager.h */,
+				8E6D1E7021EB273E002C6717 /* ToolManager.m */,
+				8E6D1E6D21EB273E002C6717 /* UIView+EasyLayout.h */,
+				8E6D1E6F21EB273E002C6717 /* UIView+EasyLayout.m */,
+				8E6D1E7121EB273E002C6717 /* LLFileTool.h */,
+				8E6D1E6E21EB273E002C6717 /* LLFileTool.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8E6D1E7521EB273E002C6717 /* BusinessApplication */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E7821EB273E002C6717 /* BusinessApplicationViewController.h */,
+				8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */,
+				8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */,
+			);
+			path = BusinessApplication;
+			sourceTree = "<group>";
+		};
+		8E6D1E7921EB273F002C6717 /* Myfriend */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E7B21EB273F002C6717 /* MyFViewController.h */,
+				8E6D1E7A21EB273F002C6717 /* MyFViewController.m */,
+				8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */,
+			);
+			path = Myfriend;
+			sourceTree = "<group>";
+		};
+		8E6D1E7D21EB273F002C6717 /* Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1E7E21EB273F002C6717 /* CountdownManager.h */,
+				8E6D1E7F21EB273F002C6717 /* CountdownManager.m */,
+			);
+			path = Countdown;
+			sourceTree = "<group>";
+		};
+		8E6D1EDC21EB2ACB002C6717 /* BindCard */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1EDD21EB2ACB002C6717 /* CardBindViewController.xib */,
+				8E6D1EDE21EB2ACB002C6717 /* RemoveBindCardViewController.m */,
+				8E6D1EDF21EB2ACB002C6717 /* BindCardOkViewController.h */,
+				8E6D1EE021EB2ACB002C6717 /* CardBindViewController.m */,
+				8E6D1EE121EB2ACB002C6717 /* BindCardOkViewController.xib */,
+				8E6D1EE221EB2ACB002C6717 /* Model */,
+				8E6D1EE521EB2ACB002C6717 /* BindCardOkViewController.m */,
+				8E6D1EE621EB2ACB002C6717 /* View */,
+				8E6D1EEA21EB2ACB002C6717 /* RemoveBindCardViewController.h */,
+				8E6D1EEB21EB2ACB002C6717 /* CardBindViewController.h */,
+				8E6D1EEC21EB2ACB002C6717 /* RemoveBindCardViewController.xib */,
+			);
+			path = BindCard;
+			sourceTree = "<group>";
+		};
+		8E6D1EE221EB2ACB002C6717 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1EE321EB2ACB002C6717 /* CardInfoModel.h */,
+				8E6D1EE421EB2ACB002C6717 /* CardInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E6D1EE621EB2ACB002C6717 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D1EE721EB2ACB002C6717 /* CardCellTableViewCell.xib */,
+				8E6D1EE821EB2ACB002C6717 /* CardCellTableViewCell.h */,
+				8E6D1EE921EB2ACB002C6717 /* CardCellTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8E71088B21E72C0400CB11B9 /* Businesshandling */ = {
@@ -1416,6 +1791,9 @@
 				8E71088D21E72C5D00CB11B9 /* BusinessHandlingViewController.h */,
 				8E71088E21E72C5D00CB11B9 /* BusinessHandlingViewController.m */,
 				8E71088F21E72C5D00CB11B9 /* BusinessHandlingViewController.xib */,
+				8E7108B121E86F0100CB11B9 /* ApplyDetailViewController.h */,
+				8E7108B221E86F0100CB11B9 /* ApplyDetailViewController.m */,
+				8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */,
 			);
 			name = Businesshandling;
 			sourceTree = "<group>";
@@ -1478,6 +1856,9 @@
 				8E7108AC21E73F1F00CB11B9 /* PartnersTableViewCell.h */,
 				8E7108AD21E73F1F00CB11B9 /* PartnersTableViewCell.m */,
 				8E7108AE21E73F1F00CB11B9 /* PartnersTableViewCell.xib */,
+				8E7108B621E8717200CB11B9 /* ApplyDetailTableViewCell.h */,
+				8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */,
+				8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1865,11 +2246,6 @@
 				8E71089221E72F4200CB11B9 /* MyPartner */,
 				8E71088B21E72C0400CB11B9 /* Businesshandling */,
 				8EA1DC3121E48D0000A8A501 /* Cell */,
-				8EF8B39F211989AA00687B7F /* QRFrameView.h */,
-				8EF8B39E211989A900687B7F /* QRFrameView.m */,
-				8EF8B39C211989A600687B7F /* QRViewController.h */,
-				8EF8B39D211989A800687B7F /* QRViewController.m */,
-				8EF8B3A0211989AB00687B7F /* QRViewController.xib */,
 				8ED4A875211197F70038E719 /* FirstViewController.h */,
 				8ED4A876211197F70038E719 /* FirstViewController.m */,
 				8ED4A877211197F70038E719 /* FirstViewController.xib */,
@@ -1894,30 +2270,16 @@
 		8EDA41441F22F82C000CBA40 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				8ED4A870211197A10038E719 /* MyViewController.h */,
-				8ED4A871211197A10038E719 /* MyViewController.m */,
-				8ED4A872211197A10038E719 /* MyViewController.xib */,
-				8E7ABFAF211ACBD800EADF76 /* FeedbackViewController.h */,
-				8E7ABFB0211ACBD800EADF76 /* FeedbackViewController.m */,
-				8E7ABFB1211ACBD800EADF76 /* FeedbackViewController.xib */,
-				8E7ABFC4211AD9CB00EADF76 /* SettingViewController.h */,
-				8E7ABFC5211AD9CC00EADF76 /* SettingViewController.m */,
-				8E7ABFC6211AD9CC00EADF76 /* SettingViewController.xib */,
-				8E4664F1216A2EC90022DF94 /* UserViewController.h */,
-				8E4664F2216A2EC90022DF94 /* UserViewController.m */,
-				8E4664F0216A2EC90022DF94 /* UserViewController.xib */,
-				8E7ABFCB211AE29300EADF76 /* BindingPhoneViewController.h */,
-				8E7ABFC9211AE29300EADF76 /* BindingPhoneViewController.m */,
-				8E7ABFCA211AE29300EADF76 /* BindingPhoneViewController.xib */,
-				8E7ABFCE211AE3FB00EADF76 /* ModifyPwViewController.h */,
-				8E7ABFCF211AE3FB00EADF76 /* ModifyPwViewController.m */,
-				8E7ABFD0211AE3FB00EADF76 /* ModifyPwViewController.xib */,
-				8E7ABFD3211AECE800EADF76 /* SetPayPwViewController.h */,
-				8E7ABFD4211AECE800EADF76 /* SetPayPwViewController.m */,
-				8E7ABFD5211AECE800EADF76 /* SetPayPwViewController.xib */,
-				8E059A27212174B20047A07D /* PayViewController.h */,
-				8E059A26212174B20047A07D /* PayViewController.m */,
-				8E059A25212174B10047A07D /* PayViewController.xib */,
+				8E6D1E7521EB273E002C6717 /* BusinessApplication */,
+				8E6D1E7D21EB273F002C6717 /* Countdown */,
+				8E6D1E4C21EB273E002C6717 /* HooDatePicker */,
+				8E6D1E1B21EB273D002C6717 /* MyBankcard */,
+				8E6D1E7921EB273F002C6717 /* Myfriend */,
+				8E6D1E5121EB273E002C6717 /* SET */,
+				8E6D1E3021EB273E002C6717 /* SetUserInfo */,
+				8E6D1E3C21EB273E002C6717 /* TrueName */,
+				8E6D1E7421EB273E002C6717 /* MineHeadView.h */,
+				8E6D1E4B21EB273E002C6717 /* MineHeadView.m */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -2689,6 +3051,14 @@
 		CD0666311E8CB9A600CCD49A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */,
+				8E6D1E0121EB2488002C6717 /* RegisterViewController.m */,
+				8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */,
+				8E6D1E0221EB2488002C6717 /* RegisterViewModel.h */,
+				8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */,
+				8E6D1E0021EB2488002C6717 /* SelectRegistViewController.h */,
+				8E6D1E0321EB2488002C6717 /* SelectRegistViewController.m */,
+				8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */,
 				8E412B7B1F23572100A40CE6 /* CodeLoginViewController.h */,
 				8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */,
 				8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */,
@@ -2943,6 +3313,7 @@
 		CDC88E6E1D8698BF00CE03CE /* Externs */ = {
 			isa = PBXGroup;
 			children = (
+				8E6D1E0921EB261C002C6717 /* QRCode */,
 				8EA1E1C621E5E04B00A8A501 /* Charts */,
 				8EEF4A23211D8C9500DE1E36 /* EaseMobSDK */,
 				985A8B021F94AD1900B5DDB9 /* FixSpace */,
@@ -3094,9 +3465,9 @@
 				TargetAttributes = {
 					CDC88E371D8691DF00CE03CE = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = B3MLVVDM4T;
+						DevelopmentTeam = SYKDB6MBYW;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -3158,13 +3529,14 @@
 				8EB4E4E221201FAE00BC563B /* chatBar_textBg@2x.png in Resources */,
 				9816D96A1F258E39000FCD7E /* FriendListCell.xib in Resources */,
 				8EB4E51921201FAE00BC563B /* chatBar_more_cameraSelected@2x.png in Resources */,
-				8E7ABFD2211AE3FB00EADF76 /* ModifyPwViewController.xib in Resources */,
 				8EB4E50521201FAE00BC563B /* VoiceSearchFeedback002@2x.png in Resources */,
 				8EB4E50921201FAE00BC563B /* VoiceSearchFeedback015.png in Resources */,
 				8EB4E4F621201FAE00BC563B /* VoiceSearchFeedback005@2x.png in Resources */,
 				8EB4E4C921201FAE00BC563B /* call_silence@2x.png in Resources */,
 				8ED4A879211197F70038E719 /* FirstViewController.xib in Resources */,
 				8EB4E51121201FAE00BC563B /* VoiceSearchFeedback016@2x.png in Resources */,
+				8E6D1EF521EB2ACB002C6717 /* RemoveBindCardViewController.xib in Resources */,
+				8E6D1EC121EB2A5C002C6717 /* SetPayPwViewController.xib in Resources */,
 				8EB4E51E21201FAE00BC563B /* chatBar_more_location@2x.png in Resources */,
 				8EEF4A91211D8C9600DE1E36 /* EaseMob.bundle in Resources */,
 				8EB4E4E121201FAE00BC563B /* chatBar_more_face.png in Resources */,
@@ -3174,10 +3546,12 @@
 				8EB4E4F221201FAE00BC563B /* VoiceSearchFeedback013@2x.png in Resources */,
 				8E7108B021E73F1F00CB11B9 /* PartnersTableViewCell.xib in Resources */,
 				8E7108AB21E737B100CB11B9 /* MerchantTableViewCell.xib in Resources */,
+				8E6D1EAD21EB273F002C6717 /* SettingViewController.xib in Resources */,
 				8EB4E54B21201FAE00BC563B /* chatListCellHead@2x.png in Resources */,
 				CDC88E4E1D8691E000CE03CE /* LaunchScreen.storyboard in Resources */,
-				8E7ABFD7211AECE800EADF76 /* SetPayPwViewController.xib in Resources */,
 				8EB4E52E21201FAE00BC563B /* chatBar_colorMore_location@2x.png in Resources */,
+				8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */,
+				8E6D1EB121EB273F002C6717 /* MyFViewController.xib in Resources */,
 				8EB4E54821201FAE00BC563B /* messageSendFail@2x.png in Resources */,
 				8EB4E4FE21201FAE00BC563B /* VoiceSearchFeedback007.png in Resources */,
 				8EB4E4E021201FAE00BC563B /* chatBar_more_cardSelected.png in Resources */,
@@ -3193,22 +3567,25 @@
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
 				8EB4E4F721201FAE00BC563B /* VoiceSearchFeedback018.png in Resources */,
 				8EB4E51721201FAE00BC563B /* call_out.png in Resources */,
+				8E6D1E9E21EB273F002C6717 /* PaySetPWViewController.xib in Resources */,
 				8EDA41531F22F85C000CBA40 /* FriendsViewController.xib in Resources */,
 				8EB4E4CA21201FAE00BC563B /* chat_location_preview@2x.png in Resources */,
 				8EB4E54321201FAE00BC563B /* chatBar_faceSelected@2x.png in Resources */,
 				8EB4E4E921201FAE00BC563B /* chat_sender_audio_playing_003@2x.png in Resources */,
 				8EB4E53621201FAE00BC563B /* chatBar_colorMore_videoCall@2x.png in Resources */,
+				8E6D1E9821EB273F002C6717 /* PerfectInformationViewController.xib in Resources */,
 				8EBF664421E1B157001C4A0D /* InformationViewController.xib in Resources */,
 				8EB4E53B21201FAE00BC563B /* chatBar_faceSelected.png in Resources */,
 				8EEF4C15211D8CB500DE1E36 /* EaseUIResource.bundle in Resources */,
 				8E71089721E72FB900CB11B9 /* MyPartnerViewController.xib in Resources */,
 				8EB4E4D221201FAE00BC563B /* chat_receiver_bg@2x.png in Resources */,
+				8E6D1EBB21EB2A48002C6717 /* PayViewController.xib in Resources */,
 				CD6323B81EE54C1100D033F4 /* ShareSDKUI.bundle in Resources */,
 				8E980B5F211035FC00C7B6DA /* SystemMsgViewController.xib in Resources */,
-				8ED4A874211197A10038E719 /* MyViewController.xib in Resources */,
 				8EB4E54621201FAE00BC563B /* call_silence_h@2x.png in Resources */,
 				8EB4E4D621201FAE00BC563B /* chat_receiver_audio_playing_full@2x.png in Resources */,
 				8EB4E4CD21201FAE00BC563B /* chat_location_detail_disclosure@2x.png in Resources */,
+				8E6D1EA721EB273F002C6717 /* ChangeLoginPWViewController.xib in Resources */,
 				8EB4E4FC21201FAE00BC563B /* VoiceSearchFeedback020.png in Resources */,
 				8EA1DC3621E48D3300A8A501 /* FirstCollectionViewCell.xib in Resources */,
 				8EB4E4D421201FAE00BC563B /* chat_receiver_bg.png in Resources */,
@@ -3223,22 +3600,24 @@
 				8EB4E4C821201FAE00BC563B /* call_out_h@2x.png in Resources */,
 				8EB4E50E21201FAE00BC563B /* VoiceSearchFeedback017.png in Resources */,
 				8E7108A521E7316700CB11B9 /* LZHTabScrollViewController.xib in Resources */,
-				8E059A28212174B30047A07D /* PayViewController.xib in Resources */,
 				04395EDE1F233EC10074865E /* TZImagePickerController.bundle in Resources */,
+				8E6D1E9321EB273F002C6717 /* MyViewController.xib in Resources */,
 				8EB4E4F421201FAE00BC563B /* VoiceSearchFeedback017@2x.png in Resources */,
 				8EB4E4F921201FAE00BC563B /* VoiceSearchFeedback019@2x.png in Resources */,
 				8EB4E51421201FAE00BC563B /* VoiceSearchFeedback018@2x.png in Resources */,
+				8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */,
 				8EB4E51B21201FAE00BC563B /* chatBar_more_photoSelected@2x.png in Resources */,
 				8EB4E52421201FAE00BC563B /* chatBar_more_locationSelected@2x.png in Resources */,
 				8EB4E52021201FAE00BC563B /* chatBar_more_photo.png in Resources */,
 				8EB4E50821201FAE00BC563B /* VoiceSearchFeedback012@2x.png in Resources */,
-				8E7ABFB3211ACBD800EADF76 /* FeedbackViewController.xib in Resources */,
 				CD6323C31EE54C1100D033F4 /* WeiboSDK.bundle in Resources */,
 				8EB4E54521201FAE00BC563B /* call_out_h.png in Resources */,
+				8E6D1EF321EB2ACB002C6717 /* CardCellTableViewCell.xib in Resources */,
 				8EB4E51821201FAE00BC563B /* chatBar_recordSelectedBg@2x.png in Resources */,
 				8EB4E54721201FAE00BC563B /* imageDownloadFail@2x.png in Resources */,
 				8EB4E52821201FAE00BC563B /* chatBar_recordBg@2x.png in Resources */,
 				90A2F2101D8E7CB600AB04CF /* Assets.xcassets in Resources */,
+				8E6D1E9221EB273F002C6717 /* CertificationSuccessViewController.xib in Resources */,
 				8EB4E50321201FAE00BC563B /* VoiceSearchFeedback010.png in Resources */,
 				8EB4E4CE21201FAE00BC563B /* chat_location_detail_disclosure.png in Resources */,
 				8EB4E4FD21201FAE00BC563B /* VoiceSearchFeedback009.png in Resources */,
@@ -3247,11 +3626,13 @@
 				8EB4E4DE21201FAE00BC563B /* chatBar_more_faceSelected.png in Resources */,
 				8EB4E51621201FAE00BC563B /* VoiceSearchFeedback014@2x.png in Resources */,
 				8EB4E51521201FAE00BC563B /* VoiceSearchFeedback006@2x.png in Resources */,
+				8E6D1E8E21EB273F002C6717 /* CityTableviewViewController.xib in Resources */,
 				8EB4E52C21201FAE00BC563B /* chatBar_colorMore_cameraSelected@2x.png in Resources */,
 				8EB4E50021201FAE00BC563B /* VoiceSearchFeedback012.png in Resources */,
-				8E7ABFCD211AE29300EADF76 /* BindingPhoneViewController.xib in Resources */,
+				8E7108BA21E8717200CB11B9 /* ApplyDetailTableViewCell.xib in Resources */,
 				8EB4E53721201FAE00BC563B /* messageToolbarBg@2x.png in Resources */,
 				8EB4E4F821201FAE00BC563B /* VoiceSearchFeedback007@2x.png in Resources */,
+				8E6D1EF021EB2ACB002C6717 /* BindCardOkViewController.xib in Resources */,
 				8EB4E54021201FAE00BC563B /* chatBar_moreSelected@2x.png in Resources */,
 				8EB4E52521201FAE00BC563B /* chatBar_recordSelected@2x.png in Resources */,
 				8EB4E50D21201FAE00BC563B /* VoiceSearchFeedback016.png in Resources */,
@@ -3261,7 +3642,6 @@
 				CD6323C71EE54C1100D033F4 /* ShareSDK.bundle in Resources */,
 				8EB4E53E21201FAE00BC563B /* chatBar_keyboardSelected@2x.png in Resources */,
 				8EB4E4EC21201FAE00BC563B /* chat_sender_bg@2x.png in Resources */,
-				8E7ABFC8211AD9CC00EADF76 /* SettingViewController.xib in Resources */,
 				8EB4E53C21201FAE00BC563B /* chatBar_keyboard.png in Resources */,
 				8E7108A121E72FFD00CB11B9 /* PartnersViewController.xib in Resources */,
 				CD06663B1E8CBB6500CCD49A /* SVProgressHUD.bundle in Resources */,
@@ -3269,6 +3649,7 @@
 				8EB4E4ED21201FAE00BC563B /* chat_sender_audio_playing_002@2x.png in Resources */,
 				8EB4E52B21201FAE00BC563B /* chatBar_colorMore_videoSelected@2x.png in Resources */,
 				8EB4E4CC21201FAE00BC563B /* chat_location_annotation_someone@2x.png in Resources */,
+				8E6D1E1921EB261C002C6717 /* HMScanner.bundle in Resources */,
 				8EB4E4EA21201FAE00BC563B /* chat_sender_bg.png in Resources */,
 				8EB4E4FB21201FAE00BC563B /* VoiceSearchFeedback008.png in Resources */,
 				8EB4E50621201FAE00BC563B /* VoiceSearchFeedback005.png in Resources */,
@@ -3278,21 +3659,24 @@
 				8EB4E4DD21201FAE00BC563B /* chatBar_textBg.png in Resources */,
 				8EB4E51A21201FAE00BC563B /* chatBar_more_photoSelected.png in Resources */,
 				8EB4E53F21201FAE00BC563B /* chatBar_recordSelectedBg.png in Resources */,
+				8E6D1EA621EB273F002C6717 /* PWConfirmViewController.xib in Resources */,
 				8EB4E53321201FAE00BC563B /* chatBar_colorMore_audioCallSelected@2x.png in Resources */,
-				8EF8B3A3211989AB00687B7F /* QRViewController.xib in Resources */,
 				8EB4E53821201FAE00BC563B /* chatBar_face.png in Resources */,
 				8EB4E4DF21201FAE00BC563B /* chatBar_more_card.png in Resources */,
 				8EB4E4EB21201FAE00BC563B /* chat_sender_audio_playing_001@2x.png in Resources */,
+				8E6D1EA021EB273F002C6717 /* PWInputViewController.xib in Resources */,
 				8EB4E51C21201FAE00BC563B /* chatBar_more_camera.png in Resources */,
 				8EB4E53421201FAE00BC563B /* chatBar_colorMore_photoSelected@2x.png in Resources */,
 				8EB4E53121201FAE00BC563B /* chatBar_colorMore_camera@2x.png in Resources */,
 				8EB4E4D521201FAE00BC563B /* chat_receiver_audio_playing000@2x.png in Resources */,
 				8EB4E4D721201FAE00BC563B /* chat_receiver_audio_playing003@2x.png in Resources */,
+				8E6D1EED21EB2ACB002C6717 /* CardBindViewController.xib in Resources */,
 				8E71089C21E72FEF00CB11B9 /* MerchantViewController.xib in Resources */,
 				8EB4E52121201FAE00BC563B /* chatBar_more_camera@2x.png in Resources */,
 				8EB4E4F321201FAE00BC563B /* VoiceSearchFeedback009@2x.png in Resources */,
 				8EB4E52A21201FAE00BC563B /* chatBar_face@2x.png in Resources */,
 				8EB4E4E521201FAE00BC563B /* chatBar_more_face@2x.png in Resources */,
+				8E6D1E9421EB273F002C6717 /* TrueNameViewController.xib in Resources */,
 				8EB4E53921201FAE00BC563B /* chatBar_more@2x.png in Resources */,
 				8EB4E51321201FAE00BC563B /* VoiceSearchFeedback004@2x.png in Resources */,
 				8EB4E50221201FAE00BC563B /* VoiceSearchFeedback010@2x.png in Resources */,
@@ -3300,7 +3684,7 @@
 				8EB4E50A21201FAE00BC563B /* VoiceSearchFeedback001.png in Resources */,
 				8EB4E54421201FAE00BC563B /* chatBar_recordBg.png in Resources */,
 				8EB4E4DB21201FAE00BC563B /* faceDelete.png in Resources */,
-				8E4664F3216A2EC90022DF94 /* UserViewController.xib in Resources */,
+				8E6D1E8D21EB273F002C6717 /* SetUserInfoViewController.xib in Resources */,
 				8EB4E4E621201FAE00BC563B /* chatBar_more_faceSelected@2x.png in Resources */,
 				8EBF663A21E1B13D001C4A0D /* StatisticViewController.xib in Resources */,
 				8EB4E53521201FAE00BC563B /* chatBar_colorMore_locationSelected@2x.png in Resources */,
@@ -3317,12 +3701,16 @@
 				8E412B891F23572100A40CE6 /* RegViewController.xib in Resources */,
 				8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */,
 				8EB4E52221201FAE00BC563B /* chatBar_more_photo@2x.png in Resources */,
+				8E6D1E8121EB273F002C6717 /* MyBankCardViewController.xib in Resources */,
 				8EB4E4E821201FAE00BC563B /* chat_sender_audio_playing_full@2x.png in Resources */,
+				8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */,
 				8EB4E4CB21201FAE00BC563B /* chat_location_annotation_someone.png in Resources */,
+				8E6D1EAE21EB273F002C6717 /* BusinessApplicationViewController.xib in Resources */,
 				8EB4E4CF21201FAE00BC563B /* chat_location_detail_disclosureHL.png in Resources */,
 				8EB4E52621201FAE00BC563B /* chatBar_moreSelected.png in Resources */,
 				0432ECEF1F271CC4008D7AA3 /* AlipaySDK.bundle in Resources */,
 				8EB4E54A21201FAE00BC563B /* chatListCellHead.png in Resources */,
+				8E6D1E8B21EB273F002C6717 /* City2ViewController.xib in Resources */,
 				8EB4E4F121201FAE00BC563B /* VoiceSearchFeedback001@2x.png in Resources */,
 				8E412B871F23572100A40CE6 /* ForgetViewController.xib in Resources */,
 				8EB4E53D21201FAE00BC563B /* chatBar_keyboardSelected.png in Resources */,
@@ -3331,6 +3719,7 @@
 				8EB4E51221201FAE00BC563B /* VoiceSearchFeedback008@2x.png in Resources */,
 				8EB4E4D321201FAE00BC563B /* chat_receiver_audio_playing002@2x.png in Resources */,
 				CD6323B51EE54C1100D033F4 /* ShareSDKConfigFile.bundle in Resources */,
+				8E6D1EA421EB273F002C6717 /* UserFeedBackViewController.xib in Resources */,
 				8EB4E55021202A3200BC563B /* MsgTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3342,6 +3731,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6D1E8021EB273F002C6717 /* MyBankCardViewController.m in Sources */,
 				985A8B0B1F94AD7C00B5DDB9 /* NSObject+SXRuntime.m in Sources */,
 				8E980B5E211035FC00C7B6DA /* SystemMsgViewController.m in Sources */,
 				8EEF4BF8211D8CB500DE1E36 /* EaseUsersListViewController.m in Sources */,
@@ -3351,12 +3741,14 @@
 				985A8B0E1F94AD7C00B5DDB9 /* UINavigationItem+SXFixSpace.m in Sources */,
 				8EEF4BC9211D8CB500DE1E36 /* EMCDDeviceManager+Microphone.m in Sources */,
 				8EB4E411212019F600BC563B /* EMGifImage.m in Sources */,
+				8E6D1EF421EB2ACB002C6717 /* CardCellTableViewCell.m in Sources */,
 				8EEF4C08211D8CB500DE1E36 /* EaseChatToolbarItem.m in Sources */,
 				8E9FE2D6212E72B900D26955 /* MJRefreshGifFooter.m in Sources */,
 				0413AA4A1F2879C5006F2743 /* ShareCommonView.m in Sources */,
 				8EBF664321E1B157001C4A0D /* InformationViewController.m in Sources */,
-				8E7ABFD1211AE3FB00EADF76 /* ModifyPwViewController.m in Sources */,
+				8E6D1E9021EB273F002C6717 /* SetUserInfoViewController.m in Sources */,
 				CD6B83031E542F420082F5EB /* JsonHelper.m in Sources */,
+				8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */,
 				CD06662A1E8CB53700CCD49A /* MainViewController.m in Sources */,
 				04EBFC381F25D79C00C4DE83 /* LZHAreaPickerView.m in Sources */,
 				8EB4E3F8212009AD00BC563B /* EMSDWebImageCompat.m in Sources */,
@@ -3365,12 +3757,14 @@
 				CDC88FFA1D8698BF00CE03CE /* HTTPClient.m in Sources */,
 				CD3D81A71EA9FF3600F6AC20 /* SBJsonWriter.m in Sources */,
 				8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */,
-				8E4664F4216A2EC90022DF94 /* UserViewController.m in Sources */,
+				8E7108B421E86F0100CB11B9 /* ApplyDetailViewController.m in Sources */,
+				8E6D1EAF21EB273F002C6717 /* BusinessApplicationViewController.m in Sources */,
 				8EEF4BDF211D8CB500DE1E36 /* PSTCollectionView.m in Sources */,
 				8EB4E3F2212009AD00BC563B /* EMSDWebImageDecoder.m in Sources */,
 				8EEF4BDB211D8CB500DE1E36 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				CDC88E401D8691E000CE03CE /* AppDelegate.m in Sources */,
 				CD3D81A41EA9FF3600F6AC20 /* SBJSON.m in Sources */,
+				8E6D1EAA21EB273F002C6717 /* UIView+EasyLayout.m in Sources */,
 				8EEF4BB2211D8CB500DE1E36 /* EaseMessageMulticastBase.m in Sources */,
 				8EB4E3ED212009AD00BC563B /* UIButton+EMWebCache.m in Sources */,
 				8EB4E3EE212009AD00BC563B /* EMSDWebImagePrefetcher.m in Sources */,
@@ -3380,9 +3774,12 @@
 				8E9FE2CD212E72B900D26955 /* MJRefreshConst.m in Sources */,
 				98C059421F2305CB007AC0B6 /* User+CoreDataProperties.m in Sources */,
 				8E9FE2CE212E72B900D26955 /* MJRefreshFooter.m in Sources */,
+				8E6D1EBC21EB2A48002C6717 /* PayViewController.m in Sources */,
+				8E6D1EB021EB273F002C6717 /* MyFViewController.m in Sources */,
 				8EEF4BAD211D8CB500DE1E36 /* EaseChineseToPinyin.m in Sources */,
 				CDC88FF91D8698BF00CE03CE /* Reachability.m in Sources */,
 				04395EDB1F233EC10074865E /* TZGifPhotoPreviewController.m in Sources */,
+				8E6D1E9521EB273F002C6717 /* CertificationSuccessViewController.m in Sources */,
 				8EEF4BB3211D8CB500DE1E36 /* EaseMessageModel.m in Sources */,
 				8E7108AF21E73F1F00CB11B9 /* PartnersTableViewCell.m in Sources */,
 				8EEF4BAF211D8CB500DE1E36 /* EaseEmotionEscape.m in Sources */,
@@ -3394,11 +3791,11 @@
 				8EEF4BA6211D8CB500DE1E36 /* UIViewController+HUD.m in Sources */,
 				8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */,
 				8EEF4BD6211D8CB500DE1E36 /* PSTCollectionViewController.m in Sources */,
-				8E7ABFB2211ACBD800EADF76 /* FeedbackViewController.m in Sources */,
 				8EB4E3EF212009AD00BC563B /* MKAnnotationView+EMWebCache.m in Sources */,
 				04395EE51F233EC10074865E /* UIView+Layout.m in Sources */,
 				8EEF4C07211D8CB500DE1E36 /* EaseRecordView.m in Sources */,
 				8EEF4C13211D8CB500DE1E36 /* EaseMessageHelper+Revoke.m in Sources */,
+				8E6D1E9621EB273F002C6717 /* TruenameView.m in Sources */,
 				CDC88FFC1D8698BF00CE03CE /* AFHTTPSessionManager.m in Sources */,
 				8E9FE2D5212E72B900D26955 /* MJRefreshGifHeader.m in Sources */,
 				8EEF4BC5211D8CB500DE1E36 /* EMVoiceConverter.mm in Sources */,
@@ -3414,28 +3811,31 @@
 				CDC8906E1D8698C000CE03CE /* DBHelper.m in Sources */,
 				CDC8906B1D8698C000CE03CE /* AlertHelper.m in Sources */,
 				8E9FE2CF212E72B900D26955 /* MJRefreshHeader.m in Sources */,
+				8E6D1E1821EB261C002C6717 /* HMScanner.m in Sources */,
 				8E9FE2D1212E72B900D26955 /* MJRefreshLegendFooter.m in Sources */,
+				8E6D1EC021EB2A5C002C6717 /* SetPayPwViewController.m in Sources */,
 				CDC890711D8698C000CE03CE /* NSError+Helper.m in Sources */,
 				8EB4E3F7212009AD00BC563B /* EMSDWebImageDownloaderOperation.m in Sources */,
 				98C059411F2305CB007AC0B6 /* User.m in Sources */,
+				8E6D1EF121EB2ACB002C6717 /* CardInfoModel.m in Sources */,
 				04395EDC1F233EC10074865E /* TZImageCropManager.m in Sources */,
 				8EEF4BC3211D8CB500DE1E36 /* wav.mm in Sources */,
-				8E7ABFCC211AE29300EADF76 /* BindingPhoneViewController.m in Sources */,
 				8E9FE2D3212E72B900D26955 /* MJRefreshComponent.m in Sources */,
 				8E9FE2D4212E72B900D26955 /* UIView+MJExtension.m in Sources */,
 				8EEF4BDD211D8CB500DE1E36 /* PSTGridLayoutSection.m in Sources */,
 				8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */,
 				8EEF4BDE211D8CB500DE1E36 /* PSTCollectionViewItemKey.m in Sources */,
 				8EEF4C0A211D8CB500DE1E36 /* EaseBubbleView+Location.m in Sources */,
+				8E6D1E9D21EB273F002C6717 /* NSDate+HooDatePicker.m in Sources */,
 				8EB4E3FA212009AD00BC563B /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				8EEF4BC7211D8CB500DE1E36 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				CDC890761D8698C000CE03CE /* Tooles.m in Sources */,
 				8EB4E3EB212009AD00BC563B /* EMSDWebImageDownloader.m in Sources */,
 				8E412B881F23572100A40CE6 /* RegViewController.m in Sources */,
+				8E6D1EA521EB273F002C6717 /* PWConfirmViewController.m in Sources */,
 				8EEF4C02211D8CB500DE1E36 /* EaseImageView.m in Sources */,
 				8EEF4C12211D8CB500DE1E36 /* EaseMessageHelper+RemoveAfterRead.m in Sources */,
-				8E7ABFC7211AD9CC00EADF76 /* SettingViewController.m in Sources */,
-				8E059A29212174B30047A07D /* PayViewController.m in Sources */,
+				8E6D1EA121EB273F002C6717 /* SYPasswordView.m in Sources */,
 				CD06662B1E8CB53700CCD49A /* UIBarButtonItem+Extension.m in Sources */,
 				8E9FE2CC212E72B900D26955 /* UIScrollView+MJRefresh.m in Sources */,
 				04395EE31F233EC10074865E /* TZProgressView.m in Sources */,
@@ -3444,6 +3844,7 @@
 				8EEF4BD3211D8CB500DE1E36 /* MWGridViewController.m in Sources */,
 				8EEF4BAC211D8CB500DE1E36 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				8EEF4C00211D8CB500DE1E36 /* EaseBaseMessageCell.m in Sources */,
+				8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */,
 				8EEF4BAB211D8CB500DE1E36 /* EaseMessageReadManager.m in Sources */,
 				8EEF4BD8211D8CB500DE1E36 /* PSTCollectionViewCell.m in Sources */,
 				8EEF4BE0211D8CB500DE1E36 /* PSTGridLayoutRow.m in Sources */,
@@ -3452,10 +3853,13 @@
 				8EEF4C10211D8CB500DE1E36 /* EaseMessageHelper.m in Sources */,
 				CD06663C1E8CBB6500CCD49A /* SVProgressHUD.m in Sources */,
 				CD3D81A21EA9FF3600F6AC20 /* NSObject+SBJSON.m in Sources */,
+				8E6D1E9A21EB273F002C6717 /* TrueNameViewController.m in Sources */,
 				CD06662D1E8CB53700CCD49A /* ZTTabBar.m in Sources */,
+				8E6D1E1521EB261C002C6717 /* HMScannerBorder.m in Sources */,
 				8E9FE2D2212E72B900D26955 /* UIScrollView+MJExtension.m in Sources */,
 				8E7108AA21E737B100CB11B9 /* MerchantTableViewCell.m in Sources */,
 				CDC890011D8698BF00CE03CE /* AFURLSessionManager.m in Sources */,
+				8E6D1E9F21EB273F002C6717 /* PaySetPWViewController.m in Sources */,
 				8EEF4BFB211D8CB500DE1E36 /* EaseViewController.m in Sources */,
 				04395EE81F2342BE0074865E /* LZHAlertView.m in Sources */,
 				8EEF4C03211D8CB500DE1E36 /* EaseFacialView.m in Sources */,
@@ -3494,19 +3898,25 @@
 				8EEF4BD5211D8CB500DE1E36 /* DACircularProgressView.m in Sources */,
 				8EB4E3F4212009AD00BC563B /* EMSDWebImageManager.m in Sources */,
 				8EEF4BA9211D8CB500DE1E36 /* UIViewController+DismissKeyboard.m in Sources */,
+				8E6D1E9921EB273F002C6717 /* MyViewController.m in Sources */,
+				8E6D1E9C21EB273F002C6717 /* HooDatePicker.m in Sources */,
+				8E6D1E1621EB261C002C6717 /* HMScannerMaskView.m in Sources */,
 				8EEF4BD1211D8CB500DE1E36 /* MWPhoto.m in Sources */,
 				8EB4E42821201CC500BC563B /* EMBubbleView+Gif.m in Sources */,
 				CDC890781D8698C000CE03CE /* UIView+RSAdditions.m in Sources */,
 				04395EDD1F233EC10074865E /* TZImageManager.m in Sources */,
 				8EB4E3F6212009AD00BC563B /* UIImage+EMGIF.m in Sources */,
+				8E6D1E0721EB2488002C6717 /* RegisterViewController.m in Sources */,
+				8E6D1E1721EB261C002C6717 /* HMScannerViewController.m in Sources */,
 				8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */,
 				8EFC60D61F25864A0088E00A /* AdView.m in Sources */,
 				8EEF4BAA211D8CB500DE1E36 /* NSDateFormatter+Category.m in Sources */,
-				8ED4A873211197A10038E719 /* MyViewController.m in Sources */,
+				8E6D1EEE21EB2ACB002C6717 /* RemoveBindCardViewController.m in Sources */,
 				8EEF4BC8211D8CB500DE1E36 /* EMCDDeviceManager+Media.m in Sources */,
-				8EF8B3A1211989AB00687B7F /* QRViewController.m in Sources */,
 				8EDA41521F22F85C000CBA40 /* FriendsViewController.m in Sources */,
-				8E7ABFD6211AECE800EADF76 /* SetPayPwViewController.m in Sources */,
+				8E6D1EA821EB273F002C6717 /* ChangeLoginPWViewController.m in Sources */,
+				8E6D1E9B21EB273F002C6717 /* MineHeadView.m in Sources */,
+				8E6D1EA321EB273F002C6717 /* UserFeedBackViewController.m in Sources */,
 				04EBFC351F25D60F00C4DE83 /* LZHActionSheetView.m in Sources */,
 				8EEF4BD7211D8CB500DE1E36 /* PSTCollectionViewFlowLayout.m in Sources */,
 				8EC5C89820F884040041A34A /* UIView+XibLayout.m in Sources */,
@@ -3532,15 +3942,19 @@
 				0413AA4B1F2879C5006F2743 /* ShareHelper.m in Sources */,
 				8EB4E3F5212009AD00BC563B /* UIImage+EMWebP.m in Sources */,
 				8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */,
+				8E6D1E9121EB273F002C6717 /* City2ViewController.m in Sources */,
+				8E6D1EF221EB2ACB002C6717 /* BindCardOkViewController.m in Sources */,
 				CD06662C1E8CB53700CCD49A /* ZTNavigationController.m in Sources */,
 				0432ED011F2747ED008D7AA3 /* LZHDatePickerView.m in Sources */,
 				8EEF4BCD211D8CB500DE1E36 /* MWPhotoBrowser.m in Sources */,
 				8EEF4BC4211D8CB500DE1E36 /* amrFileCodec.mm in Sources */,
+				8E6D1E9721EB273F002C6717 /* PerfectInformationViewController.m in Sources */,
 				CD845D1C1D8E80C800445DB4 /* ServiceForUser.m in Sources */,
 				8EB4E54F21202A3200BC563B /* MsgTableViewCell.m in Sources */,
 				8E7108A621E7316700CB11B9 /* LZHTabScrollViewController.m in Sources */,
 				8EB4E3F3212009AD00BC563B /* UIImageView+EMWebCache.m in Sources */,
 				8EEF4C0F211D8CB500DE1E36 /* EaseBubbleView+Image.m in Sources */,
+				8E6D1E0821EB2488002C6717 /* SelectRegistViewController.m in Sources */,
 				8EEF4BD9211D8CB500DE1E36 /* PSTGridLayoutInfo.m in Sources */,
 				CD3D81A61EA9FF3600F6AC20 /* SBJsonParser.m in Sources */,
 				8EEF4BCC211D8CB500DE1E36 /* EMCDDeviceManagerBase.m in Sources */,
@@ -3550,20 +3964,28 @@
 				CDC88E3D1D8691E000CE03CE /* main.m in Sources */,
 				8EEF4BD4211D8CB500DE1E36 /* MWGridCell.m in Sources */,
 				8EEF4BF7211D8CB500DE1E36 /* EaseConversationListViewController.m in Sources */,
+				8E7108B921E8717200CB11B9 /* ApplyDetailTableViewCell.m in Sources */,
 				CDC890721D8698C000CE03CE /* NSManagedObject+Helper.m in Sources */,
 				CDC8906C1D8698C000CE03CE /* BlockUIAlertView.m in Sources */,
 				0432ECF41F271CD1008D7AA3 /* WXApiManager.m in Sources */,
-				8EF8B3A2211989AB00687B7F /* QRFrameView.m in Sources */,
 				8EEF4BB1211D8CB500DE1E36 /* EaseEmotionManager.m in Sources */,
 				8EEF4BFE211D8CB500DE1E36 /* EaseMessageTimeCell.m in Sources */,
+				8E6D1E8C21EB273F002C6717 /* cityModel.m in Sources */,
 				8EEF4BE1211D8CB500DE1E36 /* PSTCollectionViewLayout.m in Sources */,
+				8E6D1EA921EB273F002C6717 /* LLFileTool.m in Sources */,
 				8EB4E3BF2120065F00BC563B /* AppDelegate+EaseMob.m in Sources */,
 				04395EDF1F233EC10074865E /* TZImagePickerController.m in Sources */,
+				8E6D1EEF21EB2ACB002C6717 /* CardBindViewController.m in Sources */,
+				8E6D1EA221EB273F002C6717 /* PWInputViewController.m in Sources */,
 				8EB4E42721201CC500BC563B /* ChatViewController.m in Sources */,
+				8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */,
+				8E6D1E1A21EB261C002C6717 /* HMScannerController.m in Sources */,
 				8EEF4BFF211D8CB500DE1E36 /* EaseMessageCell.m in Sources */,
 				8EB4E42E21201D0300BC563B /* UIImageView+HeadImage.m in Sources */,
 				8EEF4C05211D8CB500DE1E36 /* EaseTextView.m in Sources */,
+				8E6D1EAC21EB273F002C6717 /* SettingViewController.m in Sources */,
 				8EA1DC3521E48D3300A8A501 /* FirstCollectionViewCell.m in Sources */,
+				8E6D1E8F21EB273F002C6717 /* CityTableviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3686,10 +4108,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dianwan/Dianwan.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sen yang (K469PL5D8E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B3MLVVDM4T;
+				DEVELOPMENT_TEAM = SYKDB6MBYW;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3727,10 +4150,10 @@
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.intexh.boweiuser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = youqiang_pay_dev_123;
 				SWIFT_OBJC_BRIDGING_HEADER = "Dianwan/Externs/Charts/Dianwan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -3745,10 +4168,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dianwan/Dianwan.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sen yang (K469PL5D8E)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B3MLVVDM4T;
+				DEVELOPMENT_TEAM = SYKDB6MBYW;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3786,10 +4210,10 @@
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.intexh.boweiuser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = youqiang_pay_dev_123;
 				SWIFT_OBJC_BRIDGING_HEADER = "Dianwan/Externs/Charts/Dianwan-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

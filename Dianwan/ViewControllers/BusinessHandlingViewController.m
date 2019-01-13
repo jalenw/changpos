@@ -7,7 +7,7 @@
 //
 
 #import "BusinessHandlingViewController.h"
-
+#import "ApplyDetailViewController.h"
 @interface BusinessHandlingViewController ()
 
 @end
@@ -19,6 +19,12 @@
     self.title = @"业务申请";
     [self setRightBarButtonWithTitle:@"申请明细"];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)rightbarButtonDidTap:(UIButton*)button
+{
+    ApplyDetailViewController *vc = [[ApplyDetailViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)menuAct:(UIButton *)sender {

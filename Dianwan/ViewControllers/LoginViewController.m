@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RegViewController.h"
 #import "CodeLoginViewController.h"
+#import "SelectRegistViewController.h"
 #import "ForgetViewController.h"
 #import <ShareSDK/ShareSDK.h>
 @interface LoginViewController ()
@@ -43,7 +44,8 @@
 }
 
 - (IBAction)regAct:(UIButton *)sender {
-    RegViewController *vc = [[RegViewController alloc]init];
+    SelectRegistViewController *vc = [[SelectRegistViewController alloc]init];
+//    RegViewController *vc = [[RegViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

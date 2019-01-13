@@ -296,4 +296,24 @@ double LantitudeLongitudeDist(double lon1,double lat1,
     double dist  = theta*er;
     return dist;
 }
+
++ (BOOL)isEmpty:(NSString *) str {
+    if (!str) {
+        return true;
+    } else {
+        NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+        NSString *trimedString = [str stringByTrimmingCharactersInSet:set];
+        if ([trimedString length] == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+//输入框只能输入x-X位字母、数字、特殊字符验证
++ (BOOL)checkTextMin:(NSInteger)min Max:(NSInteger)max Text:(NSString *)text {
+    NSString *MOBILE = [NSString stringWithFormat:@"^[a-zA-Z0-9\\W]{%ld,%ld}$",min,max];
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    return ![regextestmobile evaluateWithObject:text];
+}
 @end

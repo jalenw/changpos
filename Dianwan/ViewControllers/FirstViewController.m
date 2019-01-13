@@ -7,7 +7,6 @@
 //
 
 #import "FirstViewController.h"
-#import "QRViewController.h"
 #import "NavigationMapViewViewController.h"
 #import "FirstCollectionViewCell.h"
 #import "BusinessHandlingViewController.h"

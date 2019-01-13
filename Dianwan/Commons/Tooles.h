@@ -56,4 +56,7 @@
 //计算两个经纬度直接距离
 double LantitudeLongitudeDist(double lon1,double lat1,
                               double lon2,double lat2);
+
++ (BOOL)isEmpty:(NSString *) str;
++ (BOOL)checkTextMin:(NSInteger)min Max:(NSInteger)max Text:(NSString *)text;
 @end

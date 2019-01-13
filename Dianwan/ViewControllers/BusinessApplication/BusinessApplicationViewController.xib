@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BusinessApplicationViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaG-tF-olT">
+                    <rect key="frame" x="18" y="36" width="339" height="60"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.76862745098039209" blue="0.22714018485915494" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Fus-UR-0nn"/>
+                    </constraints>
+                    <state key="normal" title="商户修改费率">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSS-OY-rSE">
+                    <rect key="frame" x="18" y="127" width="339" height="60"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.22939590669014084" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="SKM-SS-0lG"/>
+                    </constraints>
+                    <state key="normal" title="修改申请结算低价">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8u-ka-qLU">
+                    <rect key="frame" x="18" y="218" width="339" height="60"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.22939590670000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="sdO-kJ-O0i"/>
+                    </constraints>
+                    <state key="normal" title="修改激活奖励金额">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYB-XV-wrv">
+                    <rect key="frame" x="18" y="309" width="339" height="60"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.22939590670000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="nZC-Lr-WOr"/>
+                    </constraints>
+                    <state key="normal" title="申请自备机入网">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Z8u-ka-qLU" firstAttribute="top" secondItem="kSS-OY-rSE" secondAttribute="bottom" constant="31" id="2Cx-82-m48"/>
+                <constraint firstItem="zYB-XV-wrv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="18" id="7bN-A6-Bdj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Z8u-ka-qLU" secondAttribute="trailing" constant="18" id="Abw-Ul-cAY"/>
+                <constraint firstItem="gaG-tF-olT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="18" id="Ag4-CV-JUM"/>
+                <constraint firstItem="kSS-OY-rSE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="18" id="LCO-w0-8k5"/>
+                <constraint firstItem="kSS-OY-rSE" firstAttribute="top" secondItem="gaG-tF-olT" secondAttribute="bottom" constant="31" id="MR3-xS-Nh4"/>
+                <constraint firstItem="gaG-tF-olT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="Msr-o6-SWn"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kSS-OY-rSE" secondAttribute="trailing" constant="18" id="XlW-wq-4Y9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="zYB-XV-wrv" secondAttribute="trailing" constant="18" id="eIr-zj-6cU"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gaG-tF-olT" secondAttribute="trailing" constant="18" id="eiF-0n-27T"/>
+                <constraint firstItem="Z8u-ka-qLU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="18" id="mhP-dt-lEx"/>
+                <constraint firstItem="zYB-XV-wrv" firstAttribute="top" secondItem="Z8u-ka-qLU" secondAttribute="bottom" constant="31" id="tMj-NI-1jY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="281" y="201"/>
+        </view>
+    </objects>
+</document>

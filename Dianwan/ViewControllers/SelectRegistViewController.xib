@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectRegistViewController">
+            <connections>
+                <outlet property="saomaREG" destination="bWo-DN-oL5" id="oco-T4-IHZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yaoqingREG" destination="HVl-sd-gpd" id="RLK-Pi-NiB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ut-KI-xVx">
+                    <rect key="frame" x="160.5" y="573" width="54" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="3xJ-PC-z01"/>
+                        <constraint firstAttribute="width" constant="54" id="Jl4-ms-d0P"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="选择注册方式_确认"/>
+                    <connections>
+                        <action selector="RegistrationWayAction:" destination="-1" eventType="touchUpInside" id="egT-TS-dAP"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录页logo+slogan-1" translatesAutoresizingMaskIntoConstraints="NO" id="mwy-hO-k5R">
+                    <rect key="frame" x="108" y="59" width="159" height="118"/>
+                    <color key="backgroundColor" red="0.8823859436" green="0.72379726170000003" blue="0.98105400799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="118" id="w7R-jj-GAA"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWo-DN-oL5">
+                    <rect key="frame" x="103" y="270" width="169" height="54"/>
+                    <color key="backgroundColor" red="0.98105400799999998" green="0.49155341159999999" blue="0.43432419389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="EWQ-dF-kXU"/>
+                    </constraints>
+                    <state key="normal" image="扫码注册1"/>
+                    <state key="selected" image="扫码注册1"/>
+                    <connections>
+                        <action selector="sweepCodeAction:" destination="-1" eventType="touchUpInside" id="PwE-oU-IT7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVl-sd-gpd">
+                    <rect key="frame" x="103" y="372" width="169" height="54"/>
+                    <color key="backgroundColor" red="0.39554278939999998" green="0.98105400799999998" blue="0.3340028786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="UIH-ir-eSE"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="tSb-8I-t4C"/>
+                    </constraints>
+                    <state key="normal" image="邀请码注册2"/>
+                    <state key="selected" image="邀请码注册2"/>
+                    <connections>
+                        <action selector="InvitationRegisterAction:" destination="-1" eventType="touchUpInside" id="Z4O-NS-tTf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bWo-DN-oL5" secondAttribute="trailing" constant="103" id="0Ot-0K-jlM"/>
+                <constraint firstItem="bWo-DN-oL5" firstAttribute="top" secondItem="mwy-hO-k5R" secondAttribute="bottom" constant="93" id="45P-VQ-QvG"/>
+                <constraint firstItem="mwy-hO-k5R" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="39" id="9TQ-Sr-eXE"/>
+                <constraint firstItem="HVl-sd-gpd" firstAttribute="top" secondItem="bWo-DN-oL5" secondAttribute="bottom" constant="48" id="Fe5-Df-Fyu"/>
+                <constraint firstItem="bWo-DN-oL5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="103" id="GbF-2T-A6N"/>
+                <constraint firstItem="mwy-hO-k5R" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="108" id="KQv-QK-IJs"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="HVl-sd-gpd" secondAttribute="trailing" constant="103" id="LgB-uj-342"/>
+                <constraint firstItem="0Ut-KI-xVx" firstAttribute="top" secondItem="HVl-sd-gpd" secondAttribute="bottom" constant="147" id="ZA5-aJ-BBI"/>
+                <constraint firstItem="HVl-sd-gpd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="103" id="aZL-sl-twD"/>
+                <constraint firstItem="0Ut-KI-xVx" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="iAs-Ml-o3G"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="mwy-hO-k5R" secondAttribute="trailing" constant="108" id="jmO-4B-4y8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="扫码注册1" width="168" height="54"/>
+        <image name="登录页logo+slogan-1" width="160" height="118"/>
+        <image name="选择注册方式_确认" width="54" height="54"/>
+        <image name="邀请码注册2" width="168" height="54"/>
+    </resources>
+</document>

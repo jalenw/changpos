@@ -8,12 +8,13 @@
 
 #import "MyViewController.h"
 #import "TrueNameViewController.h"
-#import "BusinessApplicationViewController.h"
+#import "BusinessHandlingViewController.h"
 #import "SettingViewController.h"
 #import "SetUserInfoViewController.h"
 #import "CardBindViewController.h"
 #import "MineHeadView.h"
 #import "CertificationSuccessViewController.h"
+#import "ChatViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -45,7 +46,7 @@
     }
     
     
-      [self setupNav];
+    [self setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_pay"]];
     self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStyleGrouped];
     [self.view addSubview:self.mainTableView];
     self.mainTableView.delegate =self;
@@ -76,22 +77,6 @@
     }
 }
 
-
--(void)setupNav
-{
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    
-    UILabel *titleview = [[UILabel alloc]init];
-    titleview.text = @"我的";
-    titleview.textColor = RGB(253, 210, 88);
-    titleview.backgroundColor = [UIColor clearColor];
-    self.navigationItem.titleView = titleview;
-    [self setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_pay"]];
-    
-}
 -(void)rightbarButtonDidTap:(UIButton *)button{
     NSLog(@"1234");
     SettingViewController *setVC = [[SettingViewController alloc]init];
@@ -202,7 +187,7 @@
         }
         if(indexPath.row==6){
             //业务申请
-            BusinessApplicationViewController *  Business = [[BusinessApplicationViewController alloc]init];
+            BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
             [self.navigationController pushViewController:Business animated:YES];
             
         }
@@ -219,6 +204,9 @@
             
         }
         if(indexPath.row==8){
+            NSString *chat_id = [AppDelegateInstance.customerService safeStringForKey:@"chat_id"];
+            ChatViewController *chatController = [[ChatViewController alloc] initWithConversationChatter:chat_id conversationType:eConversationTypeChat];
+            [self.navigationController pushViewController:chatController animated:YES];
             
         }
     }

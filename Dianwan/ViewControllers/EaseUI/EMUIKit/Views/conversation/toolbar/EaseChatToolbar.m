@@ -157,7 +157,7 @@
     [styleChangeButton addTarget:self action:@selector(styleButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     EaseChatToolbarItem *styleItem = [[EaseChatToolbarItem alloc] initWithButton:styleChangeButton withView:nil];
-    [self setInputViewLeftItems:@[styleItem]];
+//    [self setInputViewLeftItems:@[styleItem]];
     
     //录制
     self.recordButton = [[UIButton alloc] initWithFrame:self.inputTextView.frame];
@@ -197,7 +197,7 @@
     [self.moreButton addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     EaseChatToolbarItem *moreItem = [[EaseChatToolbarItem alloc] initWithButton:self.moreButton withView:self.moreView];
     
-    [self setInputViewRightItems:@[faceItem, moreItem]];
+    [self setInputViewRightItems:@[faceItem]];
 }
 
 - (void)dealloc

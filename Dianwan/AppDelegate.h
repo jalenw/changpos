@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSString *baseUrl;
 @property (strong, nonatomic) NSString *webUrl;
 @property (strong, nonatomic) User *defaultUser;//保存登录用户信息
+@property (strong, nonatomic) NSDictionary *customerService;//保存客服信息
 @property (strong, nonatomic) UIWindow *window;
 @property (strong,nonatomic) NSOperationQueue *operationQueue;
 @property (strong, nonatomic) UINavigationController *currentNavigationController;//当前导航栏

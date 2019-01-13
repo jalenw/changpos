@@ -73,6 +73,27 @@
     
     EaseEmotionManager *manager= [[EaseEmotionManager alloc] initWithType:EMEmotionDefault emotionRow:3 emotionCol:7 emotions:[EaseEmoji allEmoji]];
     [self.faceView setEmotionManagers:@[manager]];
+    
+    UIView *callView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
+    callView.backgroundColor = RGB(48, 46, 58);
+    [self.view addSubview:callView];
+    UIButton *callBt = [UIButton buttonWithType:UIButtonTypeCustom];
+    [callBt addTarget:self action:@selector(callService) forControlEvents:UIControlEventTouchUpInside];
+    callBt.frame = CGRectMake(0, 0, callView.width, callView.height);
+    [callBt setTitle:@"一键拨打客服电话" forState:UIControlStateNormal];
+    [callView addSubview:callBt];
+}
+
+-(void)callService
+{
+    NSString *callPhone = [NSString stringWithFormat:@"telprompt://%@",[AppDelegateInstance.customerService safeStringForKey:@"member_mobile"]];
+    CGFloat version = [[[UIDevice currentDevice]systemVersion]floatValue];
+    if (version >= 10.0) {
+        /// 大于等于10.0系统使用此openURL方法
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@{} completionHandler:nil];
+    } else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,21 +104,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.conversation.conversationType == eConversationTypeGroupChat) {
-        if ([[self.conversation.ext objectForKey:@"groupSubject"] length])
-        {
-            self.title = [self.conversation.ext objectForKey:@"groupSubject"];
-        }
-    }
-    
-    //获取群组成员，若没有可注释
-    [[ServiceForUser manager]postMethodName:@"" params:@{@"chat_group_id":self.conversation.chatter} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
-        if (status) {
-            memberList = [[data safeDictionaryForKey:@"datas"] safeArrayForKey:@"memberInfo"];
-            self.ower = [[data safeDictionaryForKey:@"datas"] safeDictionaryForKey:@"ownerInfo"];
-            self.title = [self.ower safeStringForKey:@"member_name"];
-        }
-    }];
+//    if (self.conversation.conversationType == eConversationTypeGroupChat) {
+//        if ([[self.conversation.ext objectForKey:@"groupSubject"] length])
+//        {
+//            self.title = [self.conversation.ext objectForKey:@"groupSubject"];
+//        }
+//    }
+//    //获取群组成员，若没有可注释
+//    [[ServiceForUser manager]postMethodName:@"" params:@{@"chat_group_id":self.conversation.chatter} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+//        if (status) {
+//            memberList = [[data safeDictionaryForKey:@"datas"] safeArrayForKey:@"memberInfo"];
+//            self.ower = [[data safeDictionaryForKey:@"datas"] safeDictionaryForKey:@"ownerInfo"];
+//            self.title = [self.ower safeStringForKey:@"member_name"];
+//        }
+//    }];
 }
 
 #pragma mark - setup subviews
@@ -106,18 +126,19 @@
 {
     //单聊
     if (self.conversation.conversationType == eConversationTypeChat) {
+        self.title = @"在线客服";
     }
     else{//群聊
         [self setRightBarButtonWithTitle:@"群成员"];
     }
 }
 
--(void)rightbarButtonDidTap:(UIButton *)button
-{
-    FriendsViewController *vc = [[FriendsViewController alloc]init];
-    vc.data = memberList;
-    [self.navigationController pushViewController:vc animated:YES];
-}
+//-(void)rightbarButtonDidTap:(UIButton *)button
+//{
+//    FriendsViewController *vc = [[FriendsViewController alloc]init];
+//    vc.data = memberList;
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 #pragma mark - UIAlertViewDelegate
 

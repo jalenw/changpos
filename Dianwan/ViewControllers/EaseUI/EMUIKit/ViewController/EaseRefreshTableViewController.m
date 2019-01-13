@@ -38,7 +38,7 @@
 //        self.edgesForExtendedLayout =  UIRectEdgeNone;
 //    }
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:self.style];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height) style:self.style];
     _tableView.accessibilityIdentifier = @"table_view";
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.delegate = self;

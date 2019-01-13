@@ -93,8 +93,6 @@
 		8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7021EB273E002C6717 /* ToolManager.m */; };
 		8E6D1EAC21EB273F002C6717 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7221EB273E002C6717 /* SettingViewController.m */; };
 		8E6D1EAD21EB273F002C6717 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7321EB273E002C6717 /* SettingViewController.xib */; };
-		8E6D1EAE21EB273F002C6717 /* BusinessApplicationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */; };
-		8E6D1EAF21EB273F002C6717 /* BusinessApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */; };
 		8E6D1EB021EB273F002C6717 /* MyFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7A21EB273F002C6717 /* MyFViewController.m */; };
 		8E6D1EB121EB273F002C6717 /* MyFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */; };
 		8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7F21EB273F002C6717 /* CountdownManager.m */; };
@@ -682,9 +680,6 @@
 		8E6D1E7221EB273E002C6717 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		8E6D1E7321EB273E002C6717 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		8E6D1E7421EB273E002C6717 /* MineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeadView.h; sourceTree = "<group>"; };
-		8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessApplicationViewController.xib; sourceTree = "<group>"; };
-		8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessApplicationViewController.m; sourceTree = "<group>"; };
-		8E6D1E7821EB273E002C6717 /* BusinessApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessApplicationViewController.h; sourceTree = "<group>"; };
 		8E6D1E7A21EB273F002C6717 /* MyFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFViewController.m; sourceTree = "<group>"; };
 		8E6D1E7B21EB273F002C6717 /* MyFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFViewController.h; sourceTree = "<group>"; };
 		8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFViewController.xib; sourceTree = "<group>"; };
@@ -1601,19 +1596,19 @@
 		8E6D1E3C21EB273E002C6717 /* TrueName */ = {
 			isa = PBXGroup;
 			children = (
+				8E6D1E4421EB273E002C6717 /* MyViewController.h */,
+				8E6D1E4921EB273E002C6717 /* MyViewController.m */,
+				8E6D1E4121EB273E002C6717 /* MyViewController.xib */,
 				8E6D1E3D21EB273E002C6717 /* PerfectInformationViewController.h */,
 				8E6D1E3E21EB273E002C6717 /* CertificationSuccessViewController.xib */,
 				8E6D1E3F21EB273E002C6717 /* TruenameView.h */,
 				8E6D1E4021EB273E002C6717 /* CertificationSuccessViewController.h */,
-				8E6D1E4121EB273E002C6717 /* MyViewController.xib */,
 				8E6D1E4221EB273E002C6717 /* TrueNameViewController.h */,
 				8E6D1E4321EB273E002C6717 /* TrueNameViewController.xib */,
-				8E6D1E4421EB273E002C6717 /* MyViewController.h */,
 				8E6D1E4521EB273E002C6717 /* CertificationSuccessViewController.m */,
 				8E6D1E4621EB273E002C6717 /* TruenameView.m */,
 				8E6D1E4721EB273E002C6717 /* PerfectInformationViewController.m */,
 				8E6D1E4821EB273E002C6717 /* PerfectInformationViewController.xib */,
-				8E6D1E4921EB273E002C6717 /* MyViewController.m */,
 				8E6D1E4A21EB273E002C6717 /* TrueNameViewController.m */,
 			);
 			path = TrueName;
@@ -1717,16 +1712,6 @@
 				8E6D1E6E21EB273E002C6717 /* LLFileTool.m */,
 			);
 			path = Other;
-			sourceTree = "<group>";
-		};
-		8E6D1E7521EB273E002C6717 /* BusinessApplication */ = {
-			isa = PBXGroup;
-			children = (
-				8E6D1E7821EB273E002C6717 /* BusinessApplicationViewController.h */,
-				8E6D1E7721EB273E002C6717 /* BusinessApplicationViewController.m */,
-				8E6D1E7621EB273E002C6717 /* BusinessApplicationViewController.xib */,
-			);
-			path = BusinessApplication;
 			sourceTree = "<group>";
 		};
 		8E6D1E7921EB273F002C6717 /* Myfriend */ = {
@@ -2270,7 +2255,6 @@
 		8EDA41441F22F82C000CBA40 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				8E6D1E7521EB273E002C6717 /* BusinessApplication */,
 				8E6D1E7D21EB273F002C6717 /* Countdown */,
 				8E6D1E4C21EB273E002C6717 /* HooDatePicker */,
 				8E6D1E1B21EB273D002C6717 /* MyBankcard */,
@@ -3705,7 +3689,6 @@
 				8EB4E4E821201FAE00BC563B /* chat_sender_audio_playing_full@2x.png in Resources */,
 				8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */,
 				8EB4E4CB21201FAE00BC563B /* chat_location_annotation_someone.png in Resources */,
-				8E6D1EAE21EB273F002C6717 /* BusinessApplicationViewController.xib in Resources */,
 				8EB4E4CF21201FAE00BC563B /* chat_location_detail_disclosureHL.png in Resources */,
 				8EB4E52621201FAE00BC563B /* chatBar_moreSelected.png in Resources */,
 				0432ECEF1F271CC4008D7AA3 /* AlipaySDK.bundle in Resources */,
@@ -3758,7 +3741,6 @@
 				CD3D81A71EA9FF3600F6AC20 /* SBJsonWriter.m in Sources */,
 				8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */,
 				8E7108B421E86F0100CB11B9 /* ApplyDetailViewController.m in Sources */,
-				8E6D1EAF21EB273F002C6717 /* BusinessApplicationViewController.m in Sources */,
 				8EEF4BDF211D8CB500DE1E36 /* PSTCollectionView.m in Sources */,
 				8EB4E3F2212009AD00BC563B /* EMSDWebImageDecoder.m in Sources */,
 				8EEF4BDB211D8CB500DE1E36 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,

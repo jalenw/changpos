@@ -67,8 +67,10 @@ didFinishLaunchingWithOptions:launchOptions
     
 
     //设置导航栏背景色
-    [[UINavigationBar appearance] setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:RGB(253, 210, 88)}];
 
 //    [[LocationService sharedInstance]startUpdateLocation];//启动定位
     
@@ -193,6 +195,13 @@ didFinishLaunchingWithOptions:launchOptions
             NSLog(@"登录成功");
         }
     } onQueue:nil];
+    
+    //获取客服信息
+    [[ServiceForUser manager]postMethodName:@"mobile/index/get_kfu_info" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        if (status) {
+            self.customerService = [data safeDictionaryForKey:@"result"];
+        }
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

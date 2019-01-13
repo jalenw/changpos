@@ -1058,7 +1058,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         CGRect rect = self.tableView.frame;
-        rect.origin.y = 0;
+        rect.origin.y = 44;
         rect.size.height = self.view.frame.size.height - toHeight;
         self.tableView.frame = rect;
     }];

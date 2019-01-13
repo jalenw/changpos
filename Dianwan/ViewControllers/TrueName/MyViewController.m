@@ -15,6 +15,7 @@
 #import "MineHeadView.h"
 #import "CertificationSuccessViewController.h"
 #import "ChatViewController.h"
+#import "MyPartnerViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -171,7 +172,9 @@
             
         }
         if(indexPath.row==2){
-            
+            //我的伙伴
+            MyPartnerViewController *mypartener =[[MyPartnerViewController alloc]init];
+            [self.navigationController pushViewController:mypartener animated:YES];
         }
         if(indexPath.row==3){
             

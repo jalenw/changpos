@@ -37,6 +37,8 @@
 - (UIView*)createTopHeaderView;
 //设置下滑线的偏移位置
 - (CGFloat)indicatorOffset;
+//设置下滑线的长度
+-(CGFloat)indicatorWidth;
 //切换controller时调用
 - (void)currentControllerDidChange;
 //准备切换Controller时调用

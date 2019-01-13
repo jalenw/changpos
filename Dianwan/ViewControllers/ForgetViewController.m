@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor =RGB(46, 48, 58);
     self.phone.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.phone.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.code.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.code.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.password.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.password.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
@@ -32,7 +33,7 @@
 }
 
 - (IBAction)getCodeAct:(UIButton *)sender {
-    [[ServiceForUser manager]postMethodName:@"" params:@{@"phone":self.phone.text,@"type":@"3"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:@{@"phone":self.phone.text,@"type":@"1"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
             sender.enabled = NO;
             i = 60;
@@ -63,7 +64,7 @@
         return;
     }
     [self.view endEditing:YES];
-    [[ServiceForUser manager]postMethodName:@"" params:@{@"phone":self.phone.text,@"password":self.password.text,@"captcha":self.code.text,@"client":@"ios"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/connect/find_password" params:@{@"phone":self.phone.text,@"password":self.password.text,@"re_password":self.rePassword.text,@"captcha":self.code.text,@"client":@"ios"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
             [AlertHelper showAlertWithTitle:@"修改成功"];
         }

@@ -41,10 +41,21 @@
     [param setValue:@(page) forKey:@"page"];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/examineAllocationInfo" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
+            NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            NSArray *data = [result safeArrayForKey:@"data"];
+            for (NSDictionary *dataItem in data) {
+                [dataList addObject:dataItem];
+            }
+            
             [self.tableView headerEndRefreshing];
         }
         else
         {
+            NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            NSArray *data = [result safeArrayForKey:@"data"];
+            for (NSDictionary *dataItem in data) {
+                [dataList addObject:dataItem];
+            }
             [self.tableView footerEndRefreshing];
         }
         if (status) {
@@ -72,7 +83,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 105;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

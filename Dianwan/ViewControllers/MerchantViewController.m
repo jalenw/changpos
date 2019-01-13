@@ -52,10 +52,21 @@
     [param setValue:@(page) forKey:@"page"];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/listOfMyBusiness" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
+            NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            NSArray *dataArray = [result safeArrayForKey:@"data"];
+            for ( NSDictionary *dataitem in dataArray) {
+                [dataList addObject:dataitem];
+            }
+           
             [self.tableView headerEndRefreshing];
         }
         else
         {
+            NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            NSArray *dataArray = [result safeArrayForKey:@"data"];
+            for ( NSDictionary *dataitem in dataArray) {
+                [dataList addObject:dataitem];
+            }
             [self.tableView footerEndRefreshing];
         }
         if (status) {
@@ -74,6 +85,7 @@
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        cell.backgroundColor = RGB(48, 46, 58);
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.row];
@@ -83,7 +95,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 200;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

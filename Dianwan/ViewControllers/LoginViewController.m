@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = RGB(48, 46, 58);
     [self setupForDismissKeyboard];
     self.phone.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.phone.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.passWord.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passWord.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];

@@ -7,6 +7,15 @@
 //
 
 #import "MerchantTableViewCell.h"
+@interface MerchantTableViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *imageview;
+@property (weak, nonatomic) IBOutlet UILabel *snNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+
+@end
 
 @implementation MerchantTableViewCell
 
@@ -25,5 +34,11 @@
 {
     _dict = dict;
     //开始绑定数据到UI
+    self.timeLabel.text = [[_dict safeStringForKey:@"actication_time"] substringToIndex:[_dict safeStringForKey:@"actication_time"].length -8 ];
+    self.nameLabel.text = [_dict safeStringForKey:@"goods_name"];
+    self.snNumLabel.text =[NSString stringWithFormat:@"SN号:%@",[_dict safeStringForKey:@"sn_code"]];
+    self.countNumLabel.text = [NSString stringWithFormat:@"累计:%@   ",[_dict safeStringForKey:@"lg_av_amount"]];
+    
+    
 }
 @end

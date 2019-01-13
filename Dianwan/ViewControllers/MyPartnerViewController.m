@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
+    [self setRightBarButtonWithTitle:@"取消"];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -28,6 +29,28 @@
 - (BOOL)isAllowScroll{
     return NO;
 }
+-(UIColor *)normalTabTextColor{
+    return [UIColor whiteColor];
+}
+
+-(UIColor *)selectTabTextColor{
+    return RGB(241, 228, 142);
+}
+
+
+-(UIColor *)indicatorColor{
+    return RGB(241, 228, 142);
+}
+
+-(CGFloat)indicatorWidth{
+    return 80;
+}
+
+- (CGFloat)indicatorOffset{
+     return (ScreenWidth/2-80)/2;
+}
+
+
 
 - (void)setupControllers{
     self.scrollView.top = 0;
@@ -86,12 +109,6 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     return view;
 }
-- (CGFloat)indicatorOffset{
-    return 0;
-}
 
-- (UIColor *)selectTabTextColor{
-    return ThemeColor;
-}
 
 @end

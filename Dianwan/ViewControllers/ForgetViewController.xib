@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetViewController">
             <connections>
                 <outlet property="code" destination="WCm-Gs-OKh" id="lQl-7Q-K3h"/>
+                <outlet property="codeBtn" destination="9xl-F2-aKn" id="3iP-Th-242"/>
                 <outlet property="password" destination="djO-dL-md0" id="Kph-CT-sVF"/>
                 <outlet property="phone" destination="uLs-V1-9hu" id="eNb-P5-Qe4"/>
                 <outlet property="rePassword" destination="J9q-fQ-vDZ" id="naK-OH-RNR"/>
@@ -68,12 +69,12 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9xl-F2-aKn">
-                            <rect key="frame" x="228" y="11" width="107" height="30"/>
+                            <rect key="frame" x="228" y="12" width="107" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="发送验证码">
-                                <color key="titleColor" red="0.26274509800000001" green="0.4431372549" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="1" green="0.6470588235294118" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

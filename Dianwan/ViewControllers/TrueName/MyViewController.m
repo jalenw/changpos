@@ -195,7 +195,7 @@
         }
         if(indexPath.row==7){
             //实名认证
-            if(AppDelegateInstance.defaultUser.is_approve==1){
+            if(AppDelegateInstance.defaultUser.is_approve==0){
                 TrueNameViewController *truenameVC = [[TrueNameViewController alloc]init];
                 [self.navigationController pushViewController:truenameVC animated:YES];
             }else{
@@ -217,7 +217,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self getuserInfo];
+    [self setUI];
 }
 
 - (void)getuserInfo{

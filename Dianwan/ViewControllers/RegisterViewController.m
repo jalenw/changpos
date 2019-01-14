@@ -10,7 +10,7 @@
 #import "RegisterViewModel.h"
 #import "ZTNavigationController.h"
 #import "CountdownManager.h"
-
+#import "IQKeyboardManager.h"
 #import "LoginViewController.h"
 
 @interface RegisterViewController ()<CountdownManagerDelegate,UITextFieldDelegate>
@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *codeTF;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTF;
 @property (weak, nonatomic) IBOutlet UITextField *emailTF;
-//@property (weak, nonatomic) IBOutlet UITextField *userNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *pwTextFiled;
 @property (weak, nonatomic) IBOutlet UITextField *pwTextFileds;
 
@@ -54,13 +53,15 @@
     [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
   
-    //    [IQKeyboardManager sharedManager].enable = YES;
+        [IQKeyboardManager sharedManager].enable = YES;
+        [IQKeyboardManager sharedManager].shouldResignOnTouchOutside=YES;
 }
 
 
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+      [IQKeyboardManager sharedManager].enable = YES;
 //    [UIApplication sharedApplication].statusBarStyle =UIStatusBarStyleDefault;
 //    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
 //    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];;
@@ -105,18 +106,6 @@
         }
            
     }
-//- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:animated];
-//    self.countDownManager.delegate = self;
-////    [IQKeyboardManager sharedManager].enable = YES;
-//}
-//
-//- (void)viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//    self.countDownManager.delegate = nil;
-////    [IQKeyboardManager sharedManager].enable = NO;
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

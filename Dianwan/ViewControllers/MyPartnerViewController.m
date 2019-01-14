@@ -50,7 +50,9 @@
      return (ScreenWidth/2-80)/2;
 }
 
-
+-(void)rightbarButtonDidTap:(UIButton *)button{
+    self.searchTf.text =@"";
+}
 
 - (void)setupControllers{
     self.scrollView.top = 0;
@@ -88,7 +90,7 @@
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     [topView addSubview:self.topHeaderView];
     [self.view addSubview:topView];
-    self.searchView.width = ScreenWidth-90;
+    self.searchView.width = ScreenWidth-120;
     self.searchTf.returnKeyType = UIReturnKeySearch;
     self.searchTf.delegate = self;
     self.navigationItem.titleView = self.searchView;

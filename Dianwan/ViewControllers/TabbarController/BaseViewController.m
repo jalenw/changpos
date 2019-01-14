@@ -58,7 +58,7 @@
     
     [button addTarget:self action:@selector(rightbarButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
     button.titleLabel.font = DefaultFontOfSize(15);
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:RGB(241, 228, 142) forState:UIControlStateNormal];
     UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [self.navigationItem sx_setRightBarButtonItems:@[rightBarItem]];
     return button;

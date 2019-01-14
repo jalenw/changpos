@@ -15,7 +15,6 @@
     static CountdownManager *instance;
     dispatch_once(&onceToken, ^{
         instance = [super init];
-//        [NSUserDefaults standardUserDefaults]÷
     });
     return instance;
 }

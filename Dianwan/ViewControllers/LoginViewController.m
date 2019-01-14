@@ -50,10 +50,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)codeLoginAct:(UIButton *)sender {
-    CodeLoginViewController *vc = [[CodeLoginViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+
+- (IBAction)codeAction:(UIButton *)sender {
+    self.passWord.secureTextEntry =!self.passWord.secureTextEntry;
 }
+
 
 - (IBAction)forgetAct:(UIButton *)sender {
     ForgetViewController *vc = [[ForgetViewController alloc]init];

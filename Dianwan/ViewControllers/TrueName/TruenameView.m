@@ -88,9 +88,10 @@
 
 - (IBAction)uploadicon:(UIButton *)sender {
     TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 columnNumber:4 delegate:self pushPhotoPickerVc:YES];
+    
     imagePickerVc.allowTakePicture = YES;
     imagePickerVc.allowPickingOriginalPhoto = YES;
-    imagePickerVc.showSelectBtn = NO;
+    imagePickerVc.showSelectBtn = YES;
     imagePickerVc.allowCrop = YES;
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
         if (sender.tag==1) {

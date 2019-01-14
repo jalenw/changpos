@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface ForgetViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *code;
 @property (weak, nonatomic) IBOutlet UITextField *password;

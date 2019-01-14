@@ -141,6 +141,7 @@
 		8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */; };
 		8E7108B921E8717200CB11B9 /* ApplyDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */; };
 		8E7108BA21E8717200CB11B9 /* ApplyDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */; };
+		8E747D7821EC735100622F10 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E747D7621EC735100622F10 /* libEaseMobClientSDK.a */; };
 		8E980B5E211035FC00C7B6DA /* SystemMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */; };
 		8E980B5F211035FC00C7B6DA /* SystemMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */; };
 		8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B612110373100C7B6DA /* SystemMsgTableViewCell.m */; };
@@ -774,6 +775,7 @@
 		8E7108B621E8717200CB11B9 /* ApplyDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyDetailTableViewCell.h; sourceTree = "<group>"; };
 		8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyDetailTableViewCell.m; sourceTree = "<group>"; };
 		8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyDetailTableViewCell.xib; sourceTree = "<group>"; };
+		8E747D7621EC735100622F10 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEaseMobClientSDK.a; path = "../../../../changpos集成前/Dianwan/Externs/EaseMobSDK/libEaseMobClientSDK.a"; sourceTree = "<group>"; };
 		8E7ABFB6211AD30F00EADF76 /* Dianwan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dianwan.entitlements; sourceTree = "<group>"; };
 		8E980B5B211035FC00C7B6DA /* SystemMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMsgViewController.h; sourceTree = "<group>"; };
 		8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemMsgViewController.m; sourceTree = "<group>"; };
@@ -1449,6 +1451,7 @@
 			files = (
 				8E4664E52169BBCB0022DF94 /* libstdc++.6.0.9.tbd in Frameworks */,
 				8EEF4C3C211D8DDE00DE1E36 /* CFNetwork.framework in Frameworks */,
+				8E747D7821EC735100622F10 /* libEaseMobClientSDK.a in Frameworks */,
 				8EEF4C3A211D8DC700DE1E36 /* MobileCoreServices.framework in Frameworks */,
 				8ED176F41F0B45AE00105584 /* libicucore.tbd in Frameworks */,
 				8ED176F61F0B45CD00105584 /* libz.tbd in Frameworks */,
@@ -2403,6 +2406,7 @@
 		8EEF4A23211D8C9500DE1E36 /* EaseMobSDK */ = {
 			isa = PBXGroup;
 			children = (
+				8E747D7621EC735100622F10 /* libEaseMobClientSDK.a */,
 				8EEF4A25211D8C9500DE1E36 /* include */,
 				8EEF4A8F211D8C9500DE1E36 /* EaseMob.bundle */,
 			);
@@ -4260,6 +4264,7 @@
 					"$(PROJECT_DIR)/Dianwan/Externs/EaseMobSDK",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)集成前/Dianwan/Externs/EaseMobSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;
@@ -4320,6 +4325,7 @@
 					"$(PROJECT_DIR)/Dianwan/Externs/EaseMobSDK",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)集成前/Dianwan/Externs/EaseMobSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegViewController.h"
+#import "CodeLoginViewController.h"
 #import "SelectRegistViewController.h"
 #import "ForgetViewController.h"
 #import <ShareSDK/ShareSDK.h>
@@ -62,19 +63,6 @@
 
 - (IBAction)loginAct:(UIButton *)sender {
     [self.view endEditing:YES];
-    if ([Tooles isEmpty:self.phone.text]) {
-        [AlertHelper showAlertWithTitle:@"手机号不能为空"];
-        return;
-    }
-    if ([Tooles valiMobile:self.phone.text]) {
-        [AlertHelper showAlertWithTitle:@"请输入正确的手机号"];
-        return;
-    }
-    if ([Tooles isEmpty:self.passWord.text]) {
-        [AlertHelper showAlertWithTitle:@"密码不能为空"];
-        return;
-    }
-    
     [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/login/index" params:@{@"username":self.phone.text,@"password":self.passWord.text} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];

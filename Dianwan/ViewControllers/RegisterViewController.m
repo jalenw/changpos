@@ -134,6 +134,7 @@
     }
     HIDE_KEY_BOARD
     [SVProgressHUD show];
+    WEAKSELF
     [self.registerViewModel registerWithAccount:_phoneTF.text
                                        Password:_passwordTF.text
                                 ConfirmPassword:_confirmPasswordTF.text
@@ -143,6 +144,12 @@
                                    pwTextFileds:self.pwTextFileds.text
                                         Success:^(NSString *phone, NSString *password) {
                                             [AlertHelper showAlertWithTitle:@"注册成功"];
+
+//                                            if (self.resgiterSuccess){
+//                                                self.resgiterSuccess(phone,password);
+//                                            }
+//                                            [weakSelf.navigationController popViewControllerAnimated:YES];
+                                            
                                             AppDelegateInstance.window.rootViewController = [[ZTNavigationController alloc]initWithRootViewController:[[LoginViewController alloc]init]];
                                         } Failure:^(NSString *msg) {
                                             [AlertHelper showAlertWithTitle:msg];

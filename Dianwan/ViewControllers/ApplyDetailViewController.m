@@ -8,6 +8,7 @@
 
 #import "ApplyDetailViewController.h"
 #import "ApplyDetailTableViewCell.h"
+#import "ApplyShowDetailViewController.h"
 @interface ApplyDetailViewController ()
 {
     NSMutableArray *dataList;
@@ -87,7 +88,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ApplyShowDetailViewController *applyshow = [[ApplyShowDetailViewController alloc]init];
+    applyshow.idNum =[dataList[indexPath.row] safeIntForKey:@"id"];
+    [self.navigationController pushViewController:applyshow animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

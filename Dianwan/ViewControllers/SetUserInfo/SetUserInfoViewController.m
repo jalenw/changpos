@@ -62,28 +62,22 @@
                                @"evolution_city":self.cityLabel.text,
                                @"evolution_address":self.addreLabel.text,
                                @"evolution_city_id":self.city_id?self.city_id:[NSString stringWithFormat:@"%lld", AppDelegateInstance.defaultUser.evolution_city_id],
-                               @"client":@"ios"
                                };
     [[ServiceForUser manager]postMethodName:@"mobile/member/edit_member_info" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             //设置完成后更新信息
-            [[ServiceForUser manager]postMethodName:@"mobile/member/get_member_info" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
-                if (status) {
-                    if([data safeIntForKey:@"code"]==200){
-                        AppDelegateInstance.defaultUser = [User insertOrReplaceWithDictionary:[data safeDictionaryForKey:@"result"] context:AppDelegateInstance.managedObjectContext];
-                        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"保存数据成功"];
-                        [self.navigationController popViewControllerAnimated:YES];
-                    }else{
-                        NSLog(@"%@",[NSString stringWithFormat:@"%@",requestFailed]);
-                    }
-                }else
-                {
-                    [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"保存数据失败"];
-                [self.navigationController popViewControllerAnimated:YES];
-                }
-            }];
-           
+            AppDelegateInstance.defaultUser.evolution_city = self.cityLabel.text;
+            if (self.city_id) {
+                AppDelegateInstance.defaultUser.evolution_city_id = [self.city_id integerValue];
+            }
+            AppDelegateInstance.defaultUser.evolution_address = self.addreLabel.text;
+            if (self.picurl.length>0) {
+                AppDelegateInstance.defaultUser.member_avatar = self.picurl;
+            }
+            [AppDelegateInstance saveContext];
+            [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"保存数据成功"];
+            [self.navigationController popViewControllerAnimated:YES];
         }else{
             [AlertHelper showAlertWithTitle:error];
         }

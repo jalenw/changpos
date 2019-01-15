@@ -82,7 +82,7 @@
         
     } progress:uploadProgress success:^(NSURLSessionDataTask *  task, id   responseObject) {
         NSDictionary *dict = responseObject;
-        resultBlock(dict,[dict safeStringForKey:@"err_msg"],[dict safeIntForKey:@"err_code"]==0?YES:NO,nil);
+        resultBlock(dict,[dict safeStringForKey:@"message"],[dict safeIntForKey:@"code"]==200?YES:NO,nil);
     } failure:^(NSURLSessionDataTask *  task, NSError *  error) {
         resultBlock(nil,nil,0,error);
     }];

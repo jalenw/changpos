@@ -107,14 +107,14 @@
         } block:^(NSDictionary *responseObject, NSString *error, BOOL status, NSError *requestFailed) {
             [SVProgressHUD dismiss];
             if (status) {
-                if([responseObject safeIntForKey:@"code"]==200){
-                    
+//                if([responseObject safeIntForKey:@"code"]==200){
+                
                     if (sender.tag==1) {
                         self.foreImageUrl =[responseObject safeStringForKey:@"result"];
                     }else{
                         self.backImageUrl =[responseObject safeStringForKey:@"result"];
                     }
-                }
+//                }
             }else{
                 [AlertHelper showAlertWithTitle:[responseObject safeStringForKey:@"message"]];
             }

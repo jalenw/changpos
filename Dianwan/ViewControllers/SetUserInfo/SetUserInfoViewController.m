@@ -123,10 +123,10 @@
         } block:^(NSDictionary *responseObject, NSString *error, BOOL status, NSError *requestFailed) {
             [SVProgressHUD dismiss];
             if (status) {
-                if([responseObject safeIntForKey:@"code"]==200){
+//                if([responseObject safeIntForKey:@"code"]==200){
                    _picurl =[responseObject safeStringForKey:@"result"];
                   
-                }
+//                }
             }else{
                 [AlertHelper showAlertWithTitle:[responseObject safeStringForKey:@"message"]];
             }
@@ -173,10 +173,10 @@
     } block:^(NSDictionary *responseObject, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if([responseObject safeIntForKey:@"code"]==200){
+//            if([responseObject safeIntForKey:@"code"]==200){
                 _picurl =[responseObject safeStringForKey:@"result"];
                 
-            }
+//            }
         }else{
             [AlertHelper showAlertWithTitle:[responseObject safeStringForKey:@"message"]];
         }

@@ -52,24 +52,18 @@
     [param setValue:@(page) forKey:@"page"];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/listOfMyBusiness" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
-            NSDictionary *result = [data safeDictionaryForKey:@"result"];
-            NSArray *dataArray = [result safeArrayForKey:@"data"];
-            for ( NSDictionary *dataitem in dataArray) {
-                [dataList addObject:dataitem];
-            }
-           
             [self.tableView headerEndRefreshing];
         }
         else
         {
+            [self.tableView footerEndRefreshing];
+        }
+        if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             NSArray *dataArray = [result safeArrayForKey:@"data"];
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
-            [self.tableView footerEndRefreshing];
-        }
-        if (status) {
             [self.tableView reloadData];
         }
     }];

@@ -9,7 +9,10 @@
 #import "QRShowViewController.h"
 
 @interface QRShowViewController ()
-
+{
+    NSArray *bgList;
+    int i;
+}
 @end
 
 @implementation QRShowViewController
@@ -23,20 +26,69 @@
             self.code.text = [[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"inviter_code"];
             [self.headImg sd_setImageWithURL:[NSURL URLWithString:[[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"member_avatar"]]];
             [self.img sd_setImageWithURL:[NSURL URLWithString:[[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"qrcode_url"]]];
-            [self.bgImg sd_setImageWithURL:[NSURL URLWithString:[[[data safeDictionaryForKey:@"result"]safeArrayForKey:@"img_bg_list"][0] safeStringForKey:@"adv_code"]]];
-            
+            bgList = [[data safeDictionaryForKey:@"result"]safeArrayForKey:@"img_bg_list"];
+            NSString *bgUrl = [[bgList objectAtIndex:i] safeStringForKey:@"adv_code"];
+            [self.bgImg sd_setImageWithURL:[NSURL URLWithString:bgUrl]];
         }
     }];
+    self.moreView.frame = ScreenBounds;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setRightBarButtonWithTitle:@"..."];
 }
-*/
 
+-(void)rightbarButtonDidTap:(UIButton *)button
+{
+    if (self.moreView.superview == self.view) {
+        [self.moreView removeFromSuperview];
+    }
+    else
+        [self.view addSubview:self.moreView];
+}
+
+- (IBAction)disMoreView:(UIButton *)sender {
+    [self.moreView removeFromSuperview];
+}
+
+- (IBAction)menuAct:(UIButton *)sender {
+    [self.moreView removeFromSuperview];
+    if (sender.tag==0) {
+        if (bgList.count>0) {
+            i++;
+            if (i==bgList.count) {
+                i=0;
+            }
+            NSString *bgUrl = [[bgList objectAtIndex:i] safeStringForKey:@"adv_code"];
+            [self.bgImg sd_setImageWithURL:[NSURL URLWithString:bgUrl]];
+        }
+    }
+    if (sender.tag==1) {
+        
+    }
+    if (sender.tag==2) {
+        
+    }
+    if (sender.tag==3) {
+        UIImage *image =  [self nomalSnapshotImage];
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+    }
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"保存相册成功"];
+}
+
+- (UIImage *)nomalSnapshotImage
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.size, NO, [UIScreen mainScreen].scale);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return snapshotImage;
+}
 @end

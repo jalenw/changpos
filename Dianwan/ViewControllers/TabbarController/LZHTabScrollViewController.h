@@ -49,6 +49,10 @@
 - (UIColor*)selectTabTextColor;
 //指示线的颜色
 - (UIColor*)indicatorColor;
+//设置按钮背景颜色
+-(UIColor *)BtnbackgroundColor;
+//设置标示view的顶部距离
+- (CGFloat)indicatorTop;
 
 - (CGFloat)topHeaderWidth;
 

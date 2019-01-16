@@ -36,17 +36,23 @@
             <point key="canvasLocation" x="157" y="50"/>
         </view>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="113" id="2ma-Wf-rdJ">
-            <rect key="frame" x="0.0" y="0.0" width="540" height="113"/>
+            <rect key="frame" x="0.0" y="0.0" width="540" height="115"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ma-Wf-rdJ" id="AwZ-Ry-eYW">
-                <rect key="frame" x="0.0" y="0.0" width="540" height="112.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="540" height="114.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" restorationIdentifier="MineHeadView" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-wY-ELh" customClass="MineHeadView">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="112.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="114.5"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOz-K4-ufJ">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Gng-Ds-RrN"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygZ-Ph-dYP">
-                                <rect key="frame" x="106" y="47" width="92" height="18.5"/>
+                                <rect key="frame" x="106" y="47" width="92" height="20.5"/>
                                 <state key="normal" title="未登录或注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -77,16 +83,15 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d1-Px-a7k">
-                                <rect key="frame" x="106" y="0.0" width="434" height="112.5"/>
+                                <rect key="frame" x="106" y="0.0" width="434" height="114.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8do-XK-zZV">
-                                        <rect key="frame" x="372" y="66.5" width="46" height="46"/>
-                                        <color key="backgroundColor" red="0.39554278939999998" green="0.98105400799999998" blue="0.3340028786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="372" y="68.5" width="46" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="Dyt-KL-7FW"/>
                                             <constraint firstAttribute="height" constant="46" id="Fz5-cf-kB8"/>
                                         </constraints>
-                                        <state key="normal" image="我的_修改资料"/>
+                                        <state key="normal" image="bixie"/>
                                         <connections>
                                             <action selector="gotoUserInfoVCAction:" destination="-1" eventType="touchUpInside" id="fBc-kw-IxY"/>
                                         </connections>
@@ -181,8 +186,11 @@
                             <constraint firstItem="HtL-8s-4io" firstAttribute="centerX" secondItem="NHE-V4-Npq" secondAttribute="centerX" id="6h8-I8-MmS"/>
                             <constraint firstItem="ygZ-Ph-dYP" firstAttribute="top" secondItem="Evh-Oc-bq0" secondAttribute="top" constant="47" id="DcJ-28-ALG"/>
                             <constraint firstItem="HtL-8s-4io" firstAttribute="centerY" secondItem="NHE-V4-Npq" secondAttribute="centerY" id="FxJ-tG-Rnd"/>
+                            <constraint firstItem="oOz-K4-ufJ" firstAttribute="top" secondItem="wwg-wY-ELh" secondAttribute="top" id="Hgg-0E-N71"/>
+                            <constraint firstItem="Evh-Oc-bq0" firstAttribute="trailing" secondItem="oOz-K4-ufJ" secondAttribute="trailing" id="MAW-ki-NZo"/>
                             <constraint firstItem="Evh-Oc-bq0" firstAttribute="bottom" secondItem="ygZ-Ph-dYP" secondAttribute="bottom" constant="47" id="SLL-S1-uUT"/>
                             <constraint firstItem="NHE-V4-Npq" firstAttribute="top" secondItem="Evh-Oc-bq0" secondAttribute="top" constant="24" id="UeM-SL-rhL"/>
+                            <constraint firstItem="oOz-K4-ufJ" firstAttribute="leading" secondItem="Evh-Oc-bq0" secondAttribute="leading" id="dcp-Qa-Pw9"/>
                             <constraint firstItem="NHE-V4-Npq" firstAttribute="leading" secondItem="Evh-Oc-bq0" secondAttribute="leading" constant="24" id="diK-X1-CHi"/>
                             <constraint firstItem="6d1-Px-a7k" firstAttribute="trailing" secondItem="Evh-Oc-bq0" secondAttribute="trailing" id="fBW-X8-GRF"/>
                             <constraint firstItem="ygZ-Ph-dYP" firstAttribute="leading" secondItem="NHE-V4-Npq" secondAttribute="trailing" constant="16" id="ghl-Yy-n5J"/>
@@ -205,7 +213,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="我的_修改资料" width="14" height="14"/>
+        <image name="bixie" width="7.1999998092651367" height="7.1999998092651367"/>
         <image name="我的_青铜会员" width="66" height="25"/>
         <image name="默认头像 copy 3" width="68" height="68"/>
     </resources>

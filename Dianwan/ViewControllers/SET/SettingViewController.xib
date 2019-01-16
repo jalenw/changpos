@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,21 +29,20 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="NMy-IH-EJu">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="NMy-IH-EJu">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="45"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NMy-IH-EJu" id="vPB-dQ-l4a">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="89.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="44.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xna-nH-5vM">
-                        <rect key="frame" x="71.5" y="0.0" width="250" height="89.5"/>
-                        <color key="backgroundColor" red="0.98431372549019602" green="0.71372549019607845" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="40" y="0.0" width="250" height="44.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="250" id="7bu-hv-pe0"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <state key="normal" title="退出登录">
+                        <state key="normal" backgroundImage="tcdl_1">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
@@ -55,7 +54,7 @@
                     <constraint firstItem="xna-nH-5vM" firstAttribute="centerY" secondItem="vPB-dQ-l4a" secondAttribute="centerY" id="hM4-8I-9yu"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="11" y="603"/>
+            <point key="canvasLocation" x="115" y="572"/>
         </tableViewCell>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="spl-Nx-zbN">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -160,4 +159,7 @@
             <point key="canvasLocation" x="22" y="1224"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="tcdl_1" width="103.68000030517578" height="19.680000305175781"/>
+    </resources>
 </document>

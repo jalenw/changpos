@@ -49,7 +49,6 @@
                                    };
         [[ServiceForUser manager]postMethodName:@"mobile/member/member_approve" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
             if (status) {
-                if([data safeIntForKey:@"code"]==200){
                         //认证后提交资料用户信息资料
                     NSDictionary * dict =  @{
                                             @"member_avatar":self.name,
@@ -61,20 +60,13 @@
                     [[ServiceForUser manager]postMethodName:@"mobile/member/edit_member_info" params:dict block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
                        [SVProgressHUD dismiss];
                         if (status) {
-                            if([data safeIntForKey:@"code"]==200){
-                               //提示认证成功
+                            //提示认证成功
                                 self.truenameSuccessView.frame =self.view.bounds;
                                 self.truenameSuccessView.hidden =NO;
-                            }else{
-                                NSLog(@"%@",[NSString stringWithFormat:@"%@",requestFailed]);
-                            }
                         }
-                        else{
-                            [AlertHelper showAlertWithTitle:[data safeStringForKey:@"message"]];
-                        }
+                        
                     }];
-                }
-            }else{
+                }else{
                 [AlertHelper showAlertWithTitle:[data safeStringForKey:@"message"]];
             }
 

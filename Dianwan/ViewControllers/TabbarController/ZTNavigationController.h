@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ZTNavigationController : UINavigationController
+@property(nonatomic,strong)NSString *navImage;
 
 @end

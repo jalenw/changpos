@@ -26,6 +26,10 @@
     return @[@"商户",@"伙伴"];
 }
 
+-(UIColor *)BtnbackgroundColor{
+    return RGB(46, 48, 58);
+}
+
 - (BOOL)isAllowScroll{
     return NO;
 }
@@ -39,8 +43,7 @@
 
 
 -(UIColor *)indicatorColor{
-    return RGB(241, 228, 142);
-}
+    return  RGB(251, 185, 55);}
 
 -(CGFloat)indicatorWidth{
     return 80;

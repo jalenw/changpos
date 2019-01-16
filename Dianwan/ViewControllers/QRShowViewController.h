@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *code;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImg;
+@property (strong, nonatomic) IBOutlet UIView *moreView;
+- (IBAction)disMoreView:(UIButton *)sender;
+- (IBAction)menuAct:(UIButton *)sender;
 
 @end
 

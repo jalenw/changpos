@@ -18,7 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
-    [self setRightBarButtonWithTitle:@"取消"];
     // Do any additional setup after loading the view from its nib.
 }
 

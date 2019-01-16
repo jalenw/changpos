@@ -17,8 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"业务申请";
-    [self setRightBarButtonWithTitle:@"申请明细"];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setRightBarButtonWithTitle:@"申请明细"];
 }
 
 - (void)rightbarButtonDidTap:(UIButton*)button

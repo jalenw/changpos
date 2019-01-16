@@ -110,8 +110,6 @@
 		8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7021EB273E002C6717 /* ToolManager.m */; };
 		8E6D1EAC21EB273F002C6717 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7221EB273E002C6717 /* SettingViewController.m */; };
 		8E6D1EAD21EB273F002C6717 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7321EB273E002C6717 /* SettingViewController.xib */; };
-		8E6D1EB021EB273F002C6717 /* MyFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7A21EB273F002C6717 /* MyFViewController.m */; };
-		8E6D1EB121EB273F002C6717 /* MyFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */; };
 		8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E7F21EB273F002C6717 /* CountdownManager.m */; };
 		8E6D1EBB21EB2A48002C6717 /* PayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1EB821EB2A46002C6717 /* PayViewController.xib */; };
 		8E6D1EBC21EB2A48002C6717 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1EBA21EB2A47002C6717 /* PayViewController.m */; };
@@ -729,9 +727,6 @@
 		8E6D1E7221EB273E002C6717 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		8E6D1E7321EB273E002C6717 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		8E6D1E7421EB273E002C6717 /* MineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeadView.h; sourceTree = "<group>"; };
-		8E6D1E7A21EB273F002C6717 /* MyFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFViewController.m; sourceTree = "<group>"; };
-		8E6D1E7B21EB273F002C6717 /* MyFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFViewController.h; sourceTree = "<group>"; };
-		8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFViewController.xib; sourceTree = "<group>"; };
 		8E6D1E7E21EB273F002C6717 /* CountdownManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownManager.h; sourceTree = "<group>"; };
 		8E6D1E7F21EB273F002C6717 /* CountdownManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownManager.m; sourceTree = "<group>"; };
 		8E6D1EB821EB2A46002C6717 /* PayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayViewController.xib; sourceTree = "<group>"; };
@@ -1838,16 +1833,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		8E6D1E7921EB273F002C6717 /* Myfriend */ = {
-			isa = PBXGroup;
-			children = (
-				8E6D1E7B21EB273F002C6717 /* MyFViewController.h */,
-				8E6D1E7A21EB273F002C6717 /* MyFViewController.m */,
-				8E6D1E7C21EB273F002C6717 /* MyFViewController.xib */,
-			);
-			path = Myfriend;
-			sourceTree = "<group>";
-		};
 		8E6D1E7D21EB273F002C6717 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
@@ -2385,7 +2370,6 @@
 				8E6D1E7D21EB273F002C6717 /* Countdown */,
 				8E6D1E4C21EB273E002C6717 /* HooDatePicker */,
 				8E6D1E1B21EB273D002C6717 /* MyBankcard */,
-				8E6D1E7921EB273F002C6717 /* Myfriend */,
 				8E6D1E5121EB273E002C6717 /* SET */,
 				8E6D1E3021EB273E002C6717 /* SetUserInfo */,
 				8E6D1E3C21EB273E002C6717 /* TrueName */,
@@ -3663,7 +3647,6 @@
 				CDC88E4E1D8691E000CE03CE /* LaunchScreen.storyboard in Resources */,
 				8EB4E52E21201FAE00BC563B /* chatBar_colorMore_location@2x.png in Resources */,
 				8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */,
-				8E6D1EB121EB273F002C6717 /* MyFViewController.xib in Resources */,
 				8EB4E54821201FAE00BC563B /* messageSendFail@2x.png in Resources */,
 				8EB4E4FE21201FAE00BC563B /* VoiceSearchFeedback007.png in Resources */,
 				8EB4E4E021201FAE00BC563B /* chatBar_more_cardSelected.png in Resources */,
@@ -3888,7 +3871,6 @@
 				98C059421F2305CB007AC0B6 /* User+CoreDataProperties.m in Sources */,
 				8E9FE2CE212E72B900D26955 /* MJRefreshFooter.m in Sources */,
 				8E6D1EBC21EB2A48002C6717 /* PayViewController.m in Sources */,
-				8E6D1EB021EB273F002C6717 /* MyFViewController.m in Sources */,
 				8EEF4BAD211D8CB500DE1E36 /* EaseChineseToPinyin.m in Sources */,
 				CDC88FF91D8698BF00CE03CE /* Reachability.m in Sources */,
 				04395EDB1F233EC10074865E /* TZGifPhotoPreviewController.m in Sources */,

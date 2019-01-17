@@ -8,6 +8,7 @@
 
 #import "BusinessHandlingViewController.h"
 #import "ApplyDetailViewController.h"
+#import "ModifyRateAndPriceViewController.h"
 @interface BusinessHandlingViewController ()
 
 @end
@@ -33,5 +34,8 @@
 }
 
 - (IBAction)menuAct:(UIButton *)sender {
+    ModifyRateAndPriceViewController *vc = [[ModifyRateAndPriceViewController alloc]init];
+    vc.type = sender.tag;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

@@ -32,14 +32,8 @@
         }else{
             [AlertHelper showAlertWithTitle:error];
         }
-        
     }];
-    
 }
-
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

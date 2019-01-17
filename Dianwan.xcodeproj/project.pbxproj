@@ -62,6 +62,8 @@
 		8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664E72169BF040022DF94 /* NavigationMapViewViewController.m */; };
 		8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4664E82169BF040022DF94 /* NavigationMapViewViewController.xib */; };
 		8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664EC2169BFD70022DF94 /* MKAnnotation.m */; };
+		8E591B1121EED3F900279630 /* ModifyRateAndPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */; };
+		8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -648,6 +650,9 @@
 		8E4664E92169BF040022DF94 /* NavigationMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMapViewViewController.h; sourceTree = "<group>"; };
 		8E4664EC2169BFD70022DF94 /* MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotation.m; sourceTree = "<group>"; };
 		8E4664ED2169BFD70022DF94 /* MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
+		8E591B0E21EED3F900279630 /* ModifyRateAndPriceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyRateAndPriceViewController.h; sourceTree = "<group>"; };
+		8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyRateAndPriceViewController.m; sourceTree = "<group>"; };
+		8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyRateAndPriceViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -1882,15 +1887,18 @@
 		8E71088B21E72C0400CB11B9 /* Businesshandling */ = {
 			isa = PBXGroup;
 			children = (
-				2FA24E6F21EC921800565459 /* ApplyShowDetailViewController.h */,
-				2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */,
-				2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */,
 				8E71088D21E72C5D00CB11B9 /* BusinessHandlingViewController.h */,
 				8E71088E21E72C5D00CB11B9 /* BusinessHandlingViewController.m */,
 				8E71088F21E72C5D00CB11B9 /* BusinessHandlingViewController.xib */,
 				8E7108B121E86F0100CB11B9 /* ApplyDetailViewController.h */,
 				8E7108B221E86F0100CB11B9 /* ApplyDetailViewController.m */,
 				8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */,
+				2FA24E6F21EC921800565459 /* ApplyShowDetailViewController.h */,
+				2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */,
+				2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */,
+				8E591B0E21EED3F900279630 /* ModifyRateAndPriceViewController.h */,
+				8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */,
+				8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */,
 			);
 			name = Businesshandling;
 			sourceTree = "<group>";
@@ -3626,6 +3634,7 @@
 				9816D96A1F258E39000FCD7E /* FriendListCell.xib in Resources */,
 				8EB4E51921201FAE00BC563B /* chatBar_more_cameraSelected@2x.png in Resources */,
 				8EB4E50521201FAE00BC563B /* VoiceSearchFeedback002@2x.png in Resources */,
+				8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */,
 				8EB4E50921201FAE00BC563B /* VoiceSearchFeedback015.png in Resources */,
 				8EB4E4F621201FAE00BC563B /* VoiceSearchFeedback005@2x.png in Resources */,
 				8EB4E4C921201FAE00BC563B /* call_silence@2x.png in Resources */,
@@ -3961,6 +3970,7 @@
 				8E9FE2D2212E72B900D26955 /* UIScrollView+MJExtension.m in Sources */,
 				8E7108AA21E737B100CB11B9 /* MerchantTableViewCell.m in Sources */,
 				CDC890011D8698BF00CE03CE /* AFURLSessionManager.m in Sources */,
+				8E591B1121EED3F900279630 /* ModifyRateAndPriceViewController.m in Sources */,
 				8E6D1E9F21EB273F002C6717 /* PaySetPWViewController.m in Sources */,
 				8EEF4BFB211D8CB500DE1E36 /* EaseViewController.m in Sources */,
 				04395EE81F2342BE0074865E /* LZHAlertView.m in Sources */,

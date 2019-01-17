@@ -21,8 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"反馈意见";
-
+//    self.title = @"反馈意见";
+    
     self.view.backgroundColor =RGB(48, 46, 58);
     self.submit.layer.cornerRadius = 21;
     self.submit.layer.masksToBounds = YES;
@@ -44,15 +44,8 @@
      NSString *feedbaackStr =  textview.text;
     [[ServiceForUser manager]postMethodName:@"mobile/memberfeedback/feedback_add" params:@{@"content":feedbaackStr} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
-            if([data safeIntForKey:@"code"]==200){
                 [AlertHelper showAlertWithTitle:@"提交成功" duration:3];
                 [self.navigationController popViewControllerAnimated:YES];
-                
-               
-            }else{
-                NSLog(@"%@",requestFailed);
-            }
-            
         }
         else
             [AlertHelper showAlertWithTitle:error];

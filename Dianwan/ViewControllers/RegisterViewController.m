@@ -74,21 +74,20 @@
     self.phoneTF.tag =1;
     self.codeTF.delegate =self;
     self.codeTF.tag =2;
-    self.pwTextFileds.delegate =self;
-    self.pwTextFiled.tag =2;
+    self.passwordTF.delegate =self;
+    self.passwordTF.tag =3;
+    self.confirmPasswordTF.delegate =self;
+    self.confirmPasswordTF.tag=3;
     self.pwTextFiled.delegate =self;
     self.pwTextFileds.tag =2;
-    
-
+    self.pwTextFileds.delegate =self;
+    self.pwTextFiled.tag=2;
     
     self.view.backgroundColor = RGB(48, 46, 58);
 }
 
-
-
-
-    
-    - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//限制输入
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
     
     {
         if(textField.tag == 1){
@@ -97,12 +96,19 @@
                }
              NSUInteger length = textField.text.length + string.length - range.length;
              return length <= 11;
-        }else{
+        }else if(textField.tag == 2){
             if (range.length + range.location > textField.text.length) {
                 return NO;
                 }
             NSUInteger length = textField.text.length + string.length - range.length;
             return length <= 6;
+        }
+            else {
+                if (range.length + range.location > textField.text.length) {
+                    return NO;
+                }
+                NSUInteger length = textField.text.length + string.length - range.length;
+                return length <= 16;
         }
            
     }
@@ -113,10 +119,10 @@
 #pragma mark - 按钮点击
 
 - (IBAction)clickGetCodeBtn:(UIButton *)sender {
-//    if(self.phoneTF.text.length!=11){
-//        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"请输入正确手机号"];
-//        return;
-//    }
+    if(![Tooles valiMobile:self.phoneTF.text]){
+        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"请输入正确手机号"];
+        return;
+    }
     WEAKSELF
     [self.registerViewModel requestCAPTCHAByAccount:_phoneTF.text Success:^(NSInteger time) {
         [SVProgressHUD showSuccessWithStatus:@"验证码已发送"];
@@ -132,6 +138,41 @@
        [SVProgressHUD showImage:nil status:@"请阅读并同意《用户注册协议》"];
         return;
     }
+    if([Tooles isEmpty:self.codeTF.text]){
+        [SVProgressHUD showImage:nil status:@"验证码不能为空"];
+        return;
+    }
+    if([Tooles isEmpty:self.passwordTF.text]){
+        [SVProgressHUD showImage:nil status:@"请输入登录密码"];
+        return;
+    }
+    
+    if(![self.confirmPasswordTF.text isEqualToString:self.passwordTF.text]){
+        [SVProgressHUD showImage:nil status:@"两次输入的登录密码不一致，请确认后再试"];
+        return;
+    }
+    if([Tooles isEmpty:self.confirmPasswordTF.text]){
+        [SVProgressHUD showImage:nil status:@"确认密码不能为空"];
+        return;
+    }
+    if([Tooles isEmpty:self.pwTextFiled.text]){
+        [SVProgressHUD showImage:nil status:@"请输入支付密码"];
+        return;
+    }
+    if (![Tooles checkTextMin:6 Max:16 Text:self.passwordTF.text]) {
+        [SVProgressHUD showImage:nil status:@"请设置6-16位的字母或数字密码"];
+        return;
+    }
+    if([Tooles isEmpty:self.pwTextFileds.text]){
+        [SVProgressHUD showImage:nil status:@"确认支付密码不能为空"];
+        return;
+    }
+    if(![self.confirmPasswordTF.text isEqualToString:self.passwordTF.text]){
+        [SVProgressHUD showImage:nil status:@"两次输入的登录密码不一致，请确认后再试"];
+        return;
+    }
+    
+    
     HIDE_KEY_BOARD
     [SVProgressHUD show];
     WEAKSELF
@@ -145,11 +186,6 @@
                                         Success:^(NSString *phone, NSString *password) {
                                             [AlertHelper showAlertWithTitle:@"注册成功"];
 
-//                                            if (self.resgiterSuccess){
-//                                                self.resgiterSuccess(phone,password);
-//                                            }
-//                                            [weakSelf.navigationController popViewControllerAnimated:YES];
-                                            
                                             AppDelegateInstance.window.rootViewController = [[ZTNavigationController alloc]initWithRootViewController:[[LoginViewController alloc]init]];
                                         } Failure:^(NSString *msg) {
                                             [AlertHelper showAlertWithTitle:msg];
@@ -161,12 +197,7 @@
     
     CommonUIWebViewController *web = [[CommonUIWebViewController alloc]init];
     web.address = @"http://www.gdzuanqian.net/dist/index.html#/Agreement";
-    [self.navigationController pushViewController:web animated:YES];
-//    [WebManager gotoWebByUrl:[NSString stringWithFormat:@"http://www.gdzuanqian.net/dist/index.html#/Agreement"]
-//                       Title:@""
-//         LastTimeIsHiddenNav:NO
-//                          VC:self];
-    
+    [self.navigationController pushViewController:web animated:YES];    
     
 }
 - (IBAction)selectAgreement:(UIButton *)sender {

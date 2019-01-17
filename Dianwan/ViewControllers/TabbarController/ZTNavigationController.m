@@ -31,10 +31,14 @@
     disableTextAttrs[NSForegroundColorAttributeName] = RGB(123, 123, 123);
     disableTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:16];
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
+    
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *image =[UIImage imageNamed:_navImage];
+    self.navigationItem.titleView =[[UIImageView alloc]initWithImage:image];
     // Do any additional setup after loading the view.
 }
 

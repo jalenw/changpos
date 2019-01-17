@@ -26,6 +26,10 @@
     self.StringLabel.text =self.tipsLabelStr;
     //创建密码输入控价
     self.pasView = [[SYPasswordView alloc] initWithFrame:CGRectMake(30, 20, self.view.frame.size.width - 60, 45)];
+    //zyf
+    self.pasView.layer.cornerRadius = 5;
+    self.pasView.layer.masksToBounds =YES;
+    
     [self.view addSubview:_pasView];
     
     self.pasView.el_topToBottom(_StringLabel,20).el_rightToSuperView(30).el_leftToSuperView(30).el_toHeight(45);

@@ -52,6 +52,7 @@
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn setTitle:@"退出" forState:UIControlStateNormal ];
     [btn setBackgroundColor:[UIColor colorWithRed:245/255.0 green:183/255.0 blue:56/255.0 alpha:1]];
+//    [btn setBackgroundImage:[UIImage imageNamed:@"tcdl_1"] forState:UIControlStateNormal];
     
    [ btn addTarget:self action:@selector(loginOutAction) forControlEvents:UIControlEventTouchUpInside ];
     

@@ -43,6 +43,9 @@
     //生成分割线
     for (int i = 0; i < kDotCount - 1; i++) {
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMinX(self.textField.frame) + (i + 1) * width, 0, 1, K_Field_Height)];
+        //zyf
+        lineView.layer.cornerRadius = 5;
+        lineView.layer.masksToBounds =YES;
        
         lineView.backgroundColor= [UIColor colorWithRed:234/255.0 green:234/255.0 blue:234/255.0 alpha:1];
         [self addSubview:lineView];
@@ -145,6 +148,11 @@
 {
     if (!_textField) {
         _textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, K_Field_Height)];
+        //zyf
+        _textField.layer.cornerRadius = 5;
+        _textField.layer.masksToBounds =YES;
+        
+        
         _textField.backgroundColor = [UIColor whiteColor];
         //输入的文字颜色为白色
         _textField.textColor = [UIColor whiteColor];

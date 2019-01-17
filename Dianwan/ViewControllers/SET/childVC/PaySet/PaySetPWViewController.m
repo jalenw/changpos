@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title= @"支付设置";
+    self.title= @"短信验证";
     self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;
     self.view.backgroundColor =RGB(48, 46, 58);
 }

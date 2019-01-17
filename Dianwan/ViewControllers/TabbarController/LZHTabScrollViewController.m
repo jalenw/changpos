@@ -62,6 +62,11 @@
     return ThemeColor;
 }
 
+
+- (CGFloat)indicatorTop{
+    return  self.topHeaderView.height-2;
+}
+
 - (void)currentControllerDidChange{
     
 }
@@ -94,7 +99,7 @@
         NSString *buttonTitle = buttonTitles[i];
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(buttonWidth*i, 0, buttonWidth, self.topHeaderView.height)];
         button.tag = 100+i;
-        button.backgroundColor =RGB(46, 48, 58);
+        button.backgroundColor =[self BtnbackgroundColor];
         [button setTitle:buttonTitle forState:UIControlStateNormal];
         [button setTitleColor:[self normalTabTextColor] forState:UIControlStateNormal];
         [button setTitleColor:[self selectTabTextColor] forState:UIControlStateSelected];
@@ -113,7 +118,7 @@
     
     self.topButtonArray = [NSArray arrayWithArray:tempButtonArray];
 //    self.topHeaderView.width/buttonTitles.count-[self indicatorOffset]*2--修改长度
-    self.indicatorView = [[UIView alloc] initWithFrame:CGRectMake([self indicatorOffset], self.topHeaderView.height-2, [self indicatorWidth], 2)];
+    self.indicatorView = [[UIView alloc] initWithFrame:CGRectMake([self indicatorOffset], [self indicatorTop], [self indicatorWidth], 2)];
     self.indicatorView.backgroundColor = [self indicatorColor];
     [self.topHeaderView addSubview:self.indicatorView];
     
@@ -151,7 +156,7 @@
     
     CGFloat buttonWidth = topHeaderWidth/self.topButtonArray.count;
     CGFloat indicatorOffset = [self indicatorOffset];
-    CGFloat indicatorTop = self.topHeaderView.height-2;
+    CGFloat indicatorTop =[self indicatorTop];
     
     NSInteger controllerCount = self.controllerArray.count;
     

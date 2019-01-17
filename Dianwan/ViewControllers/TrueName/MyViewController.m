@@ -16,6 +16,7 @@
 #import "CertificationSuccessViewController.h"
 #import "ChatViewController.h"
 #import "MyPartnerViewController.h"
+#import "messageCenterViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -48,11 +49,11 @@
     
     
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_pay"]];
-    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStyleGrouped];
+    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
     [self.view addSubview:self.mainTableView];
     self.mainTableView.delegate =self;
     self.mainTableView.dataSource =self;
-    self.mainTableView.tableHeaderView.height = 160;
+//    self.mainTableView.tableHeaderView.height = 160;
     
     _tableViewArr = @[@"我的钱包",@"我的库存",@"我的伙伴",@"积分与会员",@"我的银行卡",@"消息中心",@"业务申请",@"实名认证",@"在线客服"];
 }
@@ -89,7 +90,7 @@
 #pragma mark--delegate
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.section == 0){
+    if(indexPath.row == 0){
         _headUserInfoCell.selectionStyle =UITableViewCellSelectionStyleNone;
         return _headUserInfoCell;
     }else{
@@ -100,7 +101,7 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MineCell];
         }
         cell.textLabel.font = [UIFont systemFontOfSize:15];
-        cell.textLabel.text = self.tableViewArr[indexPath.row];
+        cell.textLabel.text = self.tableViewArr[indexPath.row-1];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle =UITableViewCellSelectionStyleNone;
         return cell;
@@ -109,8 +110,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 0){
-        return ScreenWidth *113/375;
+    if(indexPath.row == 0){
+        return ScreenWidth *115/375;
     }else{
         return 52;
     }
@@ -118,15 +119,15 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(section == 0){
-        return 1;
-    }else{
-        return self.tableViewArr.count;
-    }
+//    if(section == 0){
+//        return 1;
+//    }else{
+        return self.tableViewArr.count+1;
+//    }
 }
 
 //-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
@@ -140,31 +141,31 @@
 //    return 10;
 //}
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section ==0) {
-        //设置经黄色线条
-        UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 2)];
-        headView.backgroundColor =[UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1];
-        return headView;
-    }
-    
-    return nil;
-    
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section ==0) {
-        return 2;
-    }else{
-        return 0;
-    }
-    
-}
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    if (section ==0) {
+//        //设置经黄色线条
+//        UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 2)];
+//        headView.backgroundColor =[UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1];
+//        return headView;
+//    }
+//
+//    return nil;
+//
+//}
+//
+//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+////    if (section ==0) {
+////        return 2;
+////    }else{
+//        return 0;
+////    }
+//
+//}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    if (indexPath.section==1) {
+//    if (indexPath.section==1) {
         if(indexPath.row==0){
             
         }
@@ -172,28 +173,34 @@
             
         }
         if(indexPath.row==2){
+            
+        }
+        if(indexPath.row==3){
             //我的伙伴
             MyPartnerViewController *mypartener =[[MyPartnerViewController alloc]init];
             [self.navigationController pushViewController:mypartener animated:YES];
         }
-        if(indexPath.row==3){
+        if(indexPath.row==4){
             
         }
-        if(indexPath.row==4){
+        if(indexPath.row==5){
             //我的银行卡
             CardBindViewController *mycard = [[CardBindViewController alloc]init];
             [self.navigationController pushViewController:mycard animated:YES];
         }
-        if(indexPath.row==5){
+        if(indexPath.row==6){
+            //消息中心
+            messageCenterViewController *message =[[messageCenterViewController alloc]init];
+            [self.navigationController pushViewController:message animated:YES];
             
         }
-        if(indexPath.row==6){
+        if(indexPath.row==7){
             //业务申请
             BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
             [self.navigationController pushViewController:Business animated:YES];
             
         }
-        if(indexPath.row==7){
+        if(indexPath.row==8){
             //实名认证
             if(AppDelegateInstance.defaultUser.is_approve==0){
                 TrueNameViewController *truenameVC = [[TrueNameViewController alloc]init];
@@ -205,13 +212,13 @@
           
             
         }
-        if(indexPath.row==8){
+        if(indexPath.row==9){
             NSString *chat_id = [AppDelegateInstance.customerService safeStringForKey:@"chat_id"];
             ChatViewController *chatController = [[ChatViewController alloc] initWithConversationChatter:chat_id conversationType:eConversationTypeChat];
             [self.navigationController pushViewController:chatController animated:YES];
             
         }
-    }
+//    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -225,12 +232,8 @@
     [[ServiceForUser manager]postMethodName:@"mobile/member/get_member_info" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if([data safeIntForKey:@"code"]==200){
                 AppDelegateInstance.defaultUser = [User insertOrReplaceWithDictionary:[data safeDictionaryForKey:@"result"] context:AppDelegateInstance.managedObjectContext];
                 [self setUI];
-            }else{
-                NSLog(@"%@",[NSString stringWithFormat:@"%@",requestFailed]);
-            }
         }
         else
             [AlertHelper showAlertWithTitle:error];

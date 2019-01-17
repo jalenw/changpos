@@ -84,14 +84,9 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/sms_register" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
             if (status) {
-                if([data safeIntForKey:@"code"]==200){
-                     registerSuccess(account,pwd);
-                }else{
-                    NSLog(@"%@",[NSString stringWithFormat:@"%@",requestFailed]);
-                }
-            }
-       
-        else [AlertHelper showAlertWithTitle:error];
+                registerSuccess(account,pwd);
+            }else
+                [AlertHelper showAlertWithTitle:error];
         
     }];
 
@@ -119,11 +114,7 @@
         [SVProgressHUD dismiss];
         
         if (status) {
-            if([data safeIntForKey:@"code"]==200){
                 suc(60);
-            }else{
-                NSLog(@"%@",[NSString stringWithFormat:@"%@",requestFailed]);
-            }
         }
         
         else [AlertHelper showAlertWithTitle:error];

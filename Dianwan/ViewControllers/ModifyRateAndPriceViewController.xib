@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModifyRateAndPriceViewController">
             <connections>
-                <outlet property="awardView" destination="RII-zM-Dth" id="mas-Is-H34"/>
                 <outlet property="modifyTf" destination="g9x-ZB-867" id="cgF-Hj-0d0"/>
                 <outlet property="modifyTitleLb" destination="bvo-Yf-AsS" id="Ja2-vi-oxZ"/>
                 <outlet property="modifyView" destination="ulH-N2-RgP" id="aUn-rX-Amh"/>
@@ -24,6 +23,7 @@
                 <outlet property="rate3Lb" destination="wZN-nM-DzI" id="YqP-Yo-oCP"/>
                 <outlet property="rate4Lb" destination="1JW-kx-3lq" id="q48-WL-3HO"/>
                 <outlet property="rate5Lb" destination="egZ-Tr-iZT" id="jPZ-84-hOp"/>
+                <outlet property="rewardView" destination="RII-zM-Dth" id="Y7F-LR-7vf"/>
                 <outlet property="snLabel" destination="lkw-7k-ckg" id="ZVl-nV-vn1"/>
                 <outlet property="snView" destination="qvx-Bm-nUh" id="vJm-Qb-W7b"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -314,11 +314,6 @@
                     <state key="normal" title="提交申请">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="15"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="snAct:" destination="-1" eventType="touchUpInside" id="0M4-SV-VMe"/>
                     </connections>

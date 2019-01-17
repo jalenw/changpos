@@ -11,6 +11,7 @@
 #import "FirstCollectionViewCell.h"
 #import "BusinessHandlingViewController.h"
 #import "MyPartnerViewController.h"
+#import "MyStoreViewController.h"
 @interface FirstViewController ()
 {
     NSArray *adArray;
@@ -113,8 +114,8 @@
         [self.navigationController pushViewController:controller animated:YES];
     }
     if (sender.tag==2) {
-//        BusinessHandlingViewController *controller = [[BusinessHandlingViewController alloc] init];
-//        [self.navigationController pushViewController:controller animated:YES];
+        MyStoreViewController *controller = [[MyStoreViewController alloc] init];
+        [self.navigationController pushViewController:controller animated:YES];
     }
     if (sender.tag==3) {
         BusinessHandlingViewController *controller = [[BusinessHandlingViewController alloc] init];

@@ -31,7 +31,7 @@
         UIBarButtonItem *leftSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
         leftSpace.width = -20;
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
-        [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"feihao_2"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
         [self.navigationItem sx_setLeftBarButtonItem:backBarItem];

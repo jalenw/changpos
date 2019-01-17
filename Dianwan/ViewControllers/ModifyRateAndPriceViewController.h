@@ -11,10 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ModifyRateAndPriceViewController : BaseViewController
+@property (nonatomic) NSInteger type;//0，费率 1，结算底价  2，奖励金额
 @property (weak, nonatomic) IBOutlet UIView *productView;
 @property (weak, nonatomic) IBOutlet UIView *snView;
 @property (weak, nonatomic) IBOutlet UIView *payView;
-@property (weak, nonatomic) IBOutlet UIView *awardView;
+@property (weak, nonatomic) IBOutlet UIView *rewardView;
 @property (weak, nonatomic) IBOutlet UITextField *productTf;
 @property (weak, nonatomic) IBOutlet UITextField *snLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rate1Lb;

@@ -17,6 +17,7 @@
 #import "ChatViewController.h"
 #import "MyPartnerViewController.h"
 #import "messageCenterViewController.h"
+#import "MyStoreViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -170,7 +171,8 @@
             
         }
         if(indexPath.row==1){
-            
+            MyStoreViewController *controller = [[MyStoreViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
         }
         if(indexPath.row==2){
             

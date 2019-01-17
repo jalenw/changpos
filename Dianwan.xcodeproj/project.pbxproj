@@ -78,6 +78,8 @@
 		8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664EC2169BFD70022DF94 /* MKAnnotation.m */; };
 		8E591B1121EED3F900279630 /* ModifyRateAndPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */; };
 		8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */; };
+		8E591B1921F072BD00279630 /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B1721F072BD00279630 /* MyStoreViewController.m */; };
+		8E591B1A21F072BD00279630 /* MyStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1821F072BD00279630 /* MyStoreViewController.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -688,6 +690,9 @@
 		8E591B0E21EED3F900279630 /* ModifyRateAndPriceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyRateAndPriceViewController.h; sourceTree = "<group>"; };
 		8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyRateAndPriceViewController.m; sourceTree = "<group>"; };
 		8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyRateAndPriceViewController.xib; sourceTree = "<group>"; };
+		8E591B1621F072BD00279630 /* MyStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStoreViewController.h; sourceTree = "<group>"; };
+		8E591B1721F072BD00279630 /* MyStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStoreViewController.m; sourceTree = "<group>"; };
+		8E591B1821F072BD00279630 /* MyStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoreViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -1741,6 +1746,16 @@
 			name = WebViewController;
 			sourceTree = "<group>";
 		};
+		8E591B1421F072A800279630 /* MyStore */ = {
+			isa = PBXGroup;
+			children = (
+				8E591B1621F072BD00279630 /* MyStoreViewController.h */,
+				8E591B1721F072BD00279630 /* MyStoreViewController.m */,
+				8E591B1821F072BD00279630 /* MyStoreViewController.xib */,
+			);
+			name = MyStore;
+			sourceTree = "<group>";
+		};
 		8E6D1E0921EB261C002C6717 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -2419,6 +2434,7 @@
 		8EDA41421F22F813000CBA40 /* FirstPage */ = {
 			isa = PBXGroup;
 			children = (
+				8E591B1421F072A800279630 /* MyStore */,
 				8E71089221E72F4200CB11B9 /* MyPartner */,
 				8E71088B21E72C0400CB11B9 /* Businesshandling */,
 				8EA1DC3121E48D0000A8A501 /* Cell */,
@@ -3754,6 +3770,7 @@
 				8E6D1E9821EB273F002C6717 /* PerfectInformationViewController.xib in Resources */,
 				8EBF664421E1B157001C4A0D /* InformationViewController.xib in Resources */,
 				8EB4E53B21201FAE00BC563B /* chatBar_faceSelected.png in Resources */,
+				8E591B1A21F072BD00279630 /* MyStoreViewController.xib in Resources */,
 				8EEF4C15211D8CB500DE1E36 /* EaseUIResource.bundle in Resources */,
 				8E71089721E72FB900CB11B9 /* MyPartnerViewController.xib in Resources */,
 				8EB4E4D221201FAE00BC563B /* chat_receiver_bg@2x.png in Resources */,
@@ -3995,6 +4012,7 @@
 				CDC890741D8698C000CE03CE /* pinyin.c in Sources */,
 				8EB4E42521201CC500BC563B /* UserProfileManager.m in Sources */,
 				8EEF4C11211D8CB500DE1E36 /* EaseSDKHelper.m in Sources */,
+				8E591B1921F072BD00279630 /* MyStoreViewController.m in Sources */,
 				0432ECEB1F271CB5008D7AA3 /* AliPayManager.m in Sources */,
 				CDC8906E1D8698C000CE03CE /* DBHelper.m in Sources */,
 				CDC8906B1D8698C000CE03CE /* AlertHelper.m in Sources */,

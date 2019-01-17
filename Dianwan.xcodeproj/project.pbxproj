@@ -80,6 +80,8 @@
 		8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */; };
 		8E591B1921F072BD00279630 /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B1721F072BD00279630 /* MyStoreViewController.m */; };
 		8E591B1A21F072BD00279630 /* MyStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1821F072BD00279630 /* MyStoreViewController.xib */; };
+		8E591B1E21F075B900279630 /* AllocateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B1C21F075B900279630 /* AllocateViewController.m */; };
+		8E591B1F21F075B900279630 /* AllocateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1D21F075B900279630 /* AllocateViewController.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -693,6 +695,9 @@
 		8E591B1621F072BD00279630 /* MyStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStoreViewController.h; sourceTree = "<group>"; };
 		8E591B1721F072BD00279630 /* MyStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStoreViewController.m; sourceTree = "<group>"; };
 		8E591B1821F072BD00279630 /* MyStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStoreViewController.xib; sourceTree = "<group>"; };
+		8E591B1B21F075B900279630 /* AllocateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocateViewController.h; sourceTree = "<group>"; };
+		8E591B1C21F075B900279630 /* AllocateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllocateViewController.m; sourceTree = "<group>"; };
+		8E591B1D21F075B900279630 /* AllocateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllocateViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -1752,6 +1757,9 @@
 				8E591B1621F072BD00279630 /* MyStoreViewController.h */,
 				8E591B1721F072BD00279630 /* MyStoreViewController.m */,
 				8E591B1821F072BD00279630 /* MyStoreViewController.xib */,
+				8E591B1B21F075B900279630 /* AllocateViewController.h */,
+				8E591B1C21F075B900279630 /* AllocateViewController.m */,
+				8E591B1D21F075B900279630 /* AllocateViewController.xib */,
 			);
 			name = MyStore;
 			sourceTree = "<group>";
@@ -3918,6 +3926,7 @@
 				CD6323C11EE54C1100D033F4 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				8EB4E4FA21201FAE00BC563B /* VoiceSearchFeedback015@2x.png in Resources */,
 				8EB4E51221201FAE00BC563B /* VoiceSearchFeedback008@2x.png in Resources */,
+				8E591B1F21F075B900279630 /* AllocateViewController.xib in Resources */,
 				8EB4E4D321201FAE00BC563B /* chat_receiver_audio_playing002@2x.png in Resources */,
 				CD6323B51EE54C1100D033F4 /* ShareSDKConfigFile.bundle in Resources */,
 				8E6D1EA421EB273F002C6717 /* UserFeedBackViewController.xib in Resources */,
@@ -3953,6 +3962,7 @@
 				CD06662A1E8CB53700CCD49A /* MainViewController.m in Sources */,
 				04EBFC381F25D79C00C4DE83 /* LZHAreaPickerView.m in Sources */,
 				8EB4E3F8212009AD00BC563B /* EMSDWebImageCompat.m in Sources */,
+				8E591B1E21F075B900279630 /* AllocateViewController.m in Sources */,
 				8EB4E3EC212009AD00BC563B /* NSData+EMImageContentType.m in Sources */,
 				8E7108A021E72FFD00CB11B9 /* PartnersViewController.m in Sources */,
 				CDC88FFA1D8698BF00CE03CE /* HTTPClient.m in Sources */,

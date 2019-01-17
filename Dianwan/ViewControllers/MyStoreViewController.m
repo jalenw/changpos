@@ -7,7 +7,7 @@
 //
 
 #import "MyStoreViewController.h"
-
+#import "TransfersDetailViewController.h"
 @interface MyStoreViewController ()
 
 @end
@@ -28,6 +28,8 @@
 
 -(void)rightbarButtonDidTap:(UIButton *)button
 {
+    TransfersDetailViewController *tran = [[TransfersDetailViewController alloc]init];
+    [self.navigationController pushViewController:tran animated:YES];
 }
 - (IBAction)confirmAct:(UIButton *)sender {
 }

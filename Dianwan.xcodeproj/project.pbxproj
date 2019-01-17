@@ -33,9 +33,25 @@
 		04395EEB1F2350970074865E /* SecurityTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04395EEA1F2350970074865E /* SecurityTextField.m */; };
 		04EBFC351F25D60F00C4DE83 /* LZHActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBFC341F25D60F00C4DE83 /* LZHActionSheetView.m */; };
 		04EBFC381F25D79C00C4DE83 /* LZHAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EBFC371F25D79C00C4DE83 /* LZHAreaPickerView.m */; };
+		2F02F9FB21F0A15A001182E7 /* RankingParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F9F921F0A15A001182E7 /* RankingParentViewController.m */; };
+		2F02F9FC21F0A15A001182E7 /* RankingParentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02F9FA21F0A15A001182E7 /* RankingParentViewController.xib */; };
+		2F02FA0021F0A3B4001182E7 /* ActivationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02F9FE21F0A3B4001182E7 /* ActivationListViewController.m */; };
+		2F02FA0121F0A3B4001182E7 /* ActivationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02F9FF21F0A3B4001182E7 /* ActivationListViewController.xib */; };
+		2F02FA0521F0A3D9001182E7 /* RunningWaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02FA0321F0A3D9001182E7 /* RunningWaterViewController.m */; };
+		2F02FA0621F0A3D9001182E7 /* RunningWaterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02FA0421F0A3D9001182E7 /* RunningWaterViewController.xib */; };
+		2F02FA0B21F0A471001182E7 /* RunningWaterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02FA0921F0A471001182E7 /* RunningWaterTableViewCell.m */; };
+		2F02FA0C21F0A471001182E7 /* RunningWaterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02FA0A21F0A471001182E7 /* RunningWaterTableViewCell.xib */; };
+		2F02FA1021F0AF34001182E7 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */; };
+		2F02FA1121F0AF34001182E7 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */; };
 		2FA24E6C21EC918000565459 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA24E6A21EC917F00565459 /* libEaseMobClientSDK.a */; };
 		2FA24E7021EC921800565459 /* ApplyShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */; };
 		2FA24E7121EC921800565459 /* ApplyShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */; };
+		2FA7F38221F0844E00C7DB50 /* TransfersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F38021F0844E00C7DB50 /* TransfersDetailViewController.m */; };
+		2FA7F38321F0844E00C7DB50 /* TransfersDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38121F0844E00C7DB50 /* TransfersDetailViewController.xib */; };
+		2FA7F38721F0868100C7DB50 /* TransfresTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F38521F0868100C7DB50 /* TransfresTableViewCell.m */; };
+		2FA7F38821F0868100C7DB50 /* TransfresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38621F0868100C7DB50 /* TransfresTableViewCell.xib */; };
+		2FA7F38C21F0930500C7DB50 /* TransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */; };
+		2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */; };
 		2FB8362221EEDBE00028A376 /* messageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362021EEDBE00028A376 /* messageCenterViewController.m */; };
 		2FB8362321EEDBE00028A376 /* messageCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362121EEDBE00028A376 /* messageCenterViewController.xib */; };
 		2FB8362721EEDCA40028A376 /* withdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362521EEDCA40028A376 /* withdrawalViewController.m */; };
@@ -616,10 +632,34 @@
 		04EBFC341F25D60F00C4DE83 /* LZHActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHActionSheetView.m; sourceTree = "<group>"; };
 		04EBFC361F25D79C00C4DE83 /* LZHAreaPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHAreaPickerView.h; sourceTree = "<group>"; };
 		04EBFC371F25D79C00C4DE83 /* LZHAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHAreaPickerView.m; sourceTree = "<group>"; };
+		2F02F9F821F0A15A001182E7 /* RankingParentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingParentViewController.h; sourceTree = "<group>"; };
+		2F02F9F921F0A15A001182E7 /* RankingParentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingParentViewController.m; sourceTree = "<group>"; };
+		2F02F9FA21F0A15A001182E7 /* RankingParentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingParentViewController.xib; sourceTree = "<group>"; };
+		2F02F9FD21F0A3B4001182E7 /* ActivationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivationListViewController.h; sourceTree = "<group>"; };
+		2F02F9FE21F0A3B4001182E7 /* ActivationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivationListViewController.m; sourceTree = "<group>"; };
+		2F02F9FF21F0A3B4001182E7 /* ActivationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivationListViewController.xib; sourceTree = "<group>"; };
+		2F02FA0221F0A3D9001182E7 /* RunningWaterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunningWaterViewController.h; sourceTree = "<group>"; };
+		2F02FA0321F0A3D9001182E7 /* RunningWaterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunningWaterViewController.m; sourceTree = "<group>"; };
+		2F02FA0421F0A3D9001182E7 /* RunningWaterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningWaterViewController.xib; sourceTree = "<group>"; };
+		2F02FA0821F0A471001182E7 /* RunningWaterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunningWaterTableViewCell.h; sourceTree = "<group>"; };
+		2F02FA0921F0A471001182E7 /* RunningWaterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunningWaterTableViewCell.m; sourceTree = "<group>"; };
+		2F02FA0A21F0A471001182E7 /* RunningWaterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunningWaterTableViewCell.xib; sourceTree = "<group>"; };
+		2F02FA0D21F0AF34001182E7 /* FirstTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
+		2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
+		2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		2FA24E6A21EC917F00565459 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyShowDetailViewController.xib; sourceTree = "<group>"; };
 		2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyShowDetailViewController.m; sourceTree = "<group>"; };
 		2FA24E6F21EC921800565459 /* ApplyShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyShowDetailViewController.h; sourceTree = "<group>"; };
+		2FA7F37F21F0844E00C7DB50 /* TransfersDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfersDetailViewController.h; sourceTree = "<group>"; };
+		2FA7F38021F0844E00C7DB50 /* TransfersDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfersDetailViewController.m; sourceTree = "<group>"; };
+		2FA7F38121F0844E00C7DB50 /* TransfersDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfersDetailViewController.xib; sourceTree = "<group>"; };
+		2FA7F38421F0868100C7DB50 /* TransfresTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfresTableViewCell.h; sourceTree = "<group>"; };
+		2FA7F38521F0868100C7DB50 /* TransfresTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfresTableViewCell.m; sourceTree = "<group>"; };
+		2FA7F38621F0868100C7DB50 /* TransfresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfresTableViewCell.xib; sourceTree = "<group>"; };
+		2FA7F38921F0930500C7DB50 /* TransfersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfersViewController.h; sourceTree = "<group>"; };
+		2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfersViewController.m; sourceTree = "<group>"; };
+		2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfersViewController.xib; sourceTree = "<group>"; };
 		2FB8361F21EEDBE00028A376 /* messageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messageCenterViewController.h; sourceTree = "<group>"; };
 		2FB8362021EEDBE00028A376 /* messageCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = messageCenterViewController.m; sourceTree = "<group>"; };
 		2FB8362121EEDBE00028A376 /* messageCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageCenterViewController.xib; sourceTree = "<group>"; };
@@ -1601,6 +1641,52 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
+		2F02F9F621F0A119001182E7 /* RankingList */ = {
+			isa = PBXGroup;
+			children = (
+				2F02FA0721F0A3E3001182E7 /* Cell */,
+				2F02F9F821F0A15A001182E7 /* RankingParentViewController.h */,
+				2F02F9F921F0A15A001182E7 /* RankingParentViewController.m */,
+				2F02F9FA21F0A15A001182E7 /* RankingParentViewController.xib */,
+				2F02F9FD21F0A3B4001182E7 /* ActivationListViewController.h */,
+				2F02F9FE21F0A3B4001182E7 /* ActivationListViewController.m */,
+				2F02F9FF21F0A3B4001182E7 /* ActivationListViewController.xib */,
+				2F02FA0221F0A3D9001182E7 /* RunningWaterViewController.h */,
+				2F02FA0321F0A3D9001182E7 /* RunningWaterViewController.m */,
+				2F02FA0421F0A3D9001182E7 /* RunningWaterViewController.xib */,
+			);
+			name = RankingList;
+			sourceTree = "<group>";
+		};
+		2F02FA0721F0A3E3001182E7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F02FA0821F0A471001182E7 /* RunningWaterTableViewCell.h */,
+				2F02FA0921F0A471001182E7 /* RunningWaterTableViewCell.m */,
+				2F02FA0A21F0A471001182E7 /* RunningWaterTableViewCell.xib */,
+				2F02FA0D21F0AF34001182E7 /* FirstTableViewCell.h */,
+				2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */,
+				2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		2FA7F37D21F0841100C7DB50 /* TransfersDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2FA7F37F21F0844E00C7DB50 /* TransfersDetailViewController.h */,
+				2FA7F38021F0844E00C7DB50 /* TransfersDetailViewController.m */,
+				2FA7F38121F0844E00C7DB50 /* TransfersDetailViewController.xib */,
+				2FA7F38421F0868100C7DB50 /* TransfresTableViewCell.h */,
+				2FA7F38521F0868100C7DB50 /* TransfresTableViewCell.m */,
+				2FA7F38621F0868100C7DB50 /* TransfresTableViewCell.xib */,
+				2FA7F38921F0930500C7DB50 /* TransfersViewController.h */,
+				2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */,
+				2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */,
+			);
+			path = TransfersDetail;
+			sourceTree = "<group>";
+		};
 		2FB8361E21EEDBB80028A376 /* messageCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -2442,6 +2528,7 @@
 		8EDA41421F22F813000CBA40 /* FirstPage */ = {
 			isa = PBXGroup;
 			children = (
+				2F02F9F621F0A119001182E7 /* RankingList */,
 				8E591B1421F072A800279630 /* MyStore */,
 				8E71089221E72F4200CB11B9 /* MyPartner */,
 				8E71088B21E72C0400CB11B9 /* Businesshandling */,
@@ -2470,6 +2557,7 @@
 		8EDA41441F22F82C000CBA40 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				2FA7F37D21F0841100C7DB50 /* TransfersDetail */,
 				2FB8361E21EEDBB80028A376 /* messageCenter */,
 				8E6D1E7D21EB273F002C6717 /* Countdown */,
 				8E6D1E4C21EB273E002C6717 /* HooDatePicker */,
@@ -3727,6 +3815,7 @@
 			files = (
 				8EB4E4E321201FAE00BC563B /* chatBar_more_cardSelected@2x.png in Resources */,
 				8EB4E4E221201FAE00BC563B /* chatBar_textBg@2x.png in Resources */,
+				2F02FA0621F0A3D9001182E7 /* RunningWaterViewController.xib in Resources */,
 				9816D96A1F258E39000FCD7E /* FriendListCell.xib in Resources */,
 				2FD7366D21EEE7C800B59D8F /* RewardTableViewCell.xib in Resources */,
 				2FB8362321EEDBE00028A376 /* messageCenterViewController.xib in Resources */,
@@ -3738,11 +3827,13 @@
 				8EB4E4C921201FAE00BC563B /* call_silence@2x.png in Resources */,
 				8ED4A879211197F70038E719 /* FirstViewController.xib in Resources */,
 				8EB4E51121201FAE00BC563B /* VoiceSearchFeedback016@2x.png in Resources */,
+				2F02FA0C21F0A471001182E7 /* RunningWaterTableViewCell.xib in Resources */,
 				8E6D1EF521EB2ACB002C6717 /* RemoveBindCardViewController.xib in Resources */,
 				8E6D1EC121EB2A5C002C6717 /* SetPayPwViewController.xib in Resources */,
 				8EB4E51E21201FAE00BC563B /* chatBar_more_location@2x.png in Resources */,
 				8EEF4A91211D8C9600DE1E36 /* EaseMob.bundle in Resources */,
 				8EB4E4E121201FAE00BC563B /* chatBar_more_face.png in Resources */,
+				2F02FA1121F0AF34001182E7 /* FirstTableViewCell.xib in Resources */,
 				8EB4E53221201FAE00BC563B /* chatBar_colorMore_videoCallSelected@2x.png in Resources */,
 				8E71089121E72C5D00CB11B9 /* BusinessHandlingViewController.xib in Resources */,
 				8EB4E4F021201FAE00BC563B /* VoiceSearchFeedback003@2x.png in Resources */,
@@ -3765,6 +3856,7 @@
 				8EB4E50B21201FAE00BC563B /* VoiceSearchFeedback014.png in Resources */,
 				8EB4E50C21201FAE00BC563B /* VoiceSearchFeedback002.png in Resources */,
 				8EB4E4E721201FAE00BC563B /* call_out@2x.png in Resources */,
+				2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */,
 				8EB4E4F521201FAE00BC563B /* VoiceSearchFeedback019.png in Resources */,
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
 				8EB4E4F721201FAE00BC563B /* VoiceSearchFeedback018.png in Resources */,
@@ -3817,12 +3909,14 @@
 				8EB4E52021201FAE00BC563B /* chatBar_more_photo.png in Resources */,
 				8EB4E50821201FAE00BC563B /* VoiceSearchFeedback012@2x.png in Resources */,
 				CD6323C31EE54C1100D033F4 /* WeiboSDK.bundle in Resources */,
+				2F02FA0121F0A3B4001182E7 /* ActivationListViewController.xib in Resources */,
 				8EB4E54521201FAE00BC563B /* call_out_h.png in Resources */,
 				8E6D1EF321EB2ACB002C6717 /* CardCellTableViewCell.xib in Resources */,
 				8EB4E51821201FAE00BC563B /* chatBar_recordSelectedBg@2x.png in Resources */,
 				8EB4E54721201FAE00BC563B /* imageDownloadFail@2x.png in Resources */,
 				8EB4E52821201FAE00BC563B /* chatBar_recordBg@2x.png in Resources */,
 				90A2F2101D8E7CB600AB04CF /* Assets.xcassets in Resources */,
+				2FA7F38321F0844E00C7DB50 /* TransfersDetailViewController.xib in Resources */,
 				8E6D1E9221EB273F002C6717 /* CertificationSuccessViewController.xib in Resources */,
 				8EB4E50321201FAE00BC563B /* VoiceSearchFeedback010.png in Resources */,
 				8EB4E4CE21201FAE00BC563B /* chat_location_detail_disclosure.png in Resources */,
@@ -3874,6 +3968,7 @@
 				8EB4E4EB21201FAE00BC563B /* chat_sender_audio_playing_001@2x.png in Resources */,
 				8E6D1EA021EB273F002C6717 /* PWInputViewController.xib in Resources */,
 				8EB4E51C21201FAE00BC563B /* chatBar_more_camera.png in Resources */,
+				2FA7F38821F0868100C7DB50 /* TransfresTableViewCell.xib in Resources */,
 				8EB4E53421201FAE00BC563B /* chatBar_colorMore_photoSelected@2x.png in Resources */,
 				8EB4E53121201FAE00BC563B /* chatBar_colorMore_camera@2x.png in Resources */,
 				8EB4E4D521201FAE00BC563B /* chat_receiver_audio_playing000@2x.png in Resources */,
@@ -3905,6 +4000,7 @@
 				8EBF663F21E1B14A001C4A0D /* QRShowViewController.xib in Resources */,
 				CD6323C51EE54C1100D033F4 /* README.txt in Resources */,
 				2FB8362821EEDCA40028A376 /* withdrawalViewController.xib in Resources */,
+				2F02F9FC21F0A15A001182E7 /* RankingParentViewController.xib in Resources */,
 				8EB4E4E421201FAE00BC563B /* chatBar_more_card@2x.png in Resources */,
 				8EDA41411F22F731000CBA40 /* LoginViewController.xib in Resources */,
 				8EB4E53A21201FAE00BC563B /* chatBar_record.png in Resources */,
@@ -3972,6 +4068,7 @@
 				8EEF4BDF211D8CB500DE1E36 /* PSTCollectionView.m in Sources */,
 				8EB4E3F2212009AD00BC563B /* EMSDWebImageDecoder.m in Sources */,
 				2FD7366721EEE5CB00B59D8F /* WithdrawalTableViewCell.m in Sources */,
+				2F02F9FB21F0A15A001182E7 /* RankingParentViewController.m in Sources */,
 				8EEF4BDB211D8CB500DE1E36 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				CDC88E401D8691E000CE03CE /* AppDelegate.m in Sources */,
 				CD3D81A41EA9FF3600F6AC20 /* SBJSON.m in Sources */,
@@ -4013,6 +4110,7 @@
 				8E6D1E9621EB273F002C6717 /* TruenameView.m in Sources */,
 				CDC88FFC1D8698BF00CE03CE /* AFHTTPSessionManager.m in Sources */,
 				8E9FE2D5212E72B900D26955 /* MJRefreshGifHeader.m in Sources */,
+				2F02FA0B21F0A471001182E7 /* RunningWaterTableViewCell.m in Sources */,
 				8EEF4BC5211D8CB500DE1E36 /* EMVoiceConverter.mm in Sources */,
 				CDC890791D8698C000CE03CE /* UIViewController+DismissKeyboard.m in Sources */,
 				8EEF4BFA211D8CB500DE1E36 /* EaseMessageViewController.m in Sources */,
@@ -4040,6 +4138,7 @@
 				8E9FE2D3212E72B900D26955 /* MJRefreshComponent.m in Sources */,
 				8E9FE2D4212E72B900D26955 /* UIView+MJExtension.m in Sources */,
 				8EEF4BDD211D8CB500DE1E36 /* PSTGridLayoutSection.m in Sources */,
+				2FA7F38C21F0930500C7DB50 /* TransfersViewController.m in Sources */,
 				8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */,
 				8EEF4BDE211D8CB500DE1E36 /* PSTCollectionViewItemKey.m in Sources */,
 				2FFBAE8F21EC4BAA00C9EBAE /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -4073,6 +4172,7 @@
 				8E42A8BC1F26DADB0026ED07 /* CLLocation+Sino.m in Sources */,
 				8EEF4C10211D8CB500DE1E36 /* EaseMessageHelper.m in Sources */,
 				2FFBAE9521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				2F02FA0021F0A3B4001182E7 /* ActivationListViewController.m in Sources */,
 				CD06663C1E8CBB6500CCD49A /* SVProgressHUD.m in Sources */,
 				CD3D81A21EA9FF3600F6AC20 /* NSObject+SBJSON.m in Sources */,
 				8E6D1E9A21EB273F002C6717 /* TrueNameViewController.m in Sources */,
@@ -4104,6 +4204,7 @@
 				04395EE41F233EC10074865E /* TZVideoPlayerController.m in Sources */,
 				8EEF4C0C211D8CB500DE1E36 /* EaseBubbleView.m in Sources */,
 				8EEF4BDA211D8CB500DE1E36 /* PSTCollectionViewData.m in Sources */,
+				2F02FA1021F0AF34001182E7 /* FirstTableViewCell.m in Sources */,
 				8EEF4BFD211D8CB500DE1E36 /* EaseConversationCell.m in Sources */,
 				8EEF4C0D211D8CB500DE1E36 /* EaseBubbleView+Video.m in Sources */,
 				8EEF4BD0211D8CB500DE1E36 /* MWTapDetectingImageView.m in Sources */,
@@ -4121,6 +4222,7 @@
 				8ED4A878211197F70038E719 /* FirstViewController.m in Sources */,
 				8EEF4BCB211D8CB500DE1E36 /* EMAudioPlayerUtil.m in Sources */,
 				8EEF4BD5211D8CB500DE1E36 /* DACircularProgressView.m in Sources */,
+				2FA7F38221F0844E00C7DB50 /* TransfersDetailViewController.m in Sources */,
 				8EB4E3F4212009AD00BC563B /* EMSDWebImageManager.m in Sources */,
 				8EEF4BA9211D8CB500DE1E36 /* UIViewController+DismissKeyboard.m in Sources */,
 				8E6D1E9921EB273F002C6717 /* MyViewController.m in Sources */,
@@ -4157,10 +4259,12 @@
 				8E71089B21E72FEF00CB11B9 /* MerchantViewController.m in Sources */,
 				CDC890731D8698C000CE03CE /* PhotoBrowser.m in Sources */,
 				8E412B861F23572100A40CE6 /* ForgetViewController.m in Sources */,
+				2FA7F38721F0868100C7DB50 /* TransfresTableViewCell.m in Sources */,
 				8EEF4BE2211D8CB500DE1E36 /* PSTGridLayoutItem.m in Sources */,
 				8EB4E42A21201CC500BC563B /* CustomMessageCell.m in Sources */,
 				8EBF663921E1B13D001C4A0D /* StatisticViewController.m in Sources */,
 				8EB4E42621201CC500BC563B /* InvitationManager.m in Sources */,
+				2F02FA0521F0A3D9001182E7 /* RunningWaterViewController.m in Sources */,
 				8EEF4C01211D8CB500DE1E36 /* EaseChatBarMoreView.m in Sources */,
 				8EEF4BA8211D8CB500DE1E36 /* NSString+Valid.m in Sources */,
 				8EEF4BF4211D8CB500DE1E36 /* MBProgressHUD.m in Sources */,

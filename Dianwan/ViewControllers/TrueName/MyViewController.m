@@ -20,7 +20,7 @@
 #import "MyStoreViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
-@property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
+//@property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
 @property (weak, nonatomic) IBOutlet UIView *isLoginView;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (strong, nonatomic) IBOutlet UITableViewCell *headUserInfoCell;
@@ -54,7 +54,6 @@
     [self.view addSubview:self.mainTableView];
     self.mainTableView.delegate =self;
     self.mainTableView.dataSource =self;
-//    self.mainTableView.tableHeaderView.height = 160;
     
     _tableViewArr = @[@"我的钱包",@"我的库存",@"我的伙伴",@"积分与会员",@"我的银行卡",@"消息中心",@"业务申请",@"实名认证",@"在线客服"];
 }
@@ -124,58 +123,24 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if(section == 0){
-//        return 1;
-//    }else{
         return self.tableViewArr.count+1;
-//    }
 }
 
-//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
-//    headView.backgroundColor =[UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1];
-//    return headView;
-//
-//}
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 10;
-//}
 
-//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    if (section ==0) {
-//        //设置经黄色线条
-//        UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 2)];
-//        headView.backgroundColor =[UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1];
-//        return headView;
-//    }
-//
-//    return nil;
-//
-//}
-//
-//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-////    if (section ==0) {
-////        return 2;
-////    }else{
-//        return 0;
-////    }
-//
-//}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
-//    if (indexPath.section==1) {
         if(indexPath.row==0){
             
         }
         if(indexPath.row==1){
-            MyStoreViewController *controller = [[MyStoreViewController alloc] init];
-            [self.navigationController pushViewController:controller animated:YES];
+          
         }
         if(indexPath.row==2){
-            
+            //我的库存
+            MyStoreViewController *controller = [[MyStoreViewController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
         }
         if(indexPath.row==3){
             //我的伙伴
@@ -220,7 +185,6 @@
             [self.navigationController pushViewController:chatController animated:YES];
             
         }
-//    }
 }
 
 -(void)viewWillAppear:(BOOL)animated

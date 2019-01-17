@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,6 @@
                 <outlet property="nameLabel" destination="8rE-vk-euN" id="pYN-Jc-2Vx"/>
                 <outlet property="phoneLabel" destination="Tyf-iL-Do3" id="Uf2-OM-un0"/>
                 <outlet property="phoneNumLabel" destination="Tyf-iL-Do3" id="1Kj-z1-3UP"/>
-                <outlet property="smallHeadView" destination="wwg-wY-ELh" id="Pza-yt-Q2W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,7 +41,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="540" height="114.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" restorationIdentifier="MineHeadView" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-wY-ELh" customClass="MineHeadView">
+                    <view contentMode="scaleToFill" restorationIdentifier="MineHeadView" translatesAutoresizingMaskIntoConstraints="NO" id="wwg-wY-ELh">
                         <rect key="frame" x="0.0" y="0.0" width="540" height="114.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oOz-K4-ufJ">
@@ -219,7 +218,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bixie" width="30" height="30"/>
+        <image name="bixie" width="7.1999998092651367" height="7.1999998092651367"/>
         <image name="我的_青铜会员" width="66" height="25"/>
         <image name="默认头像 copy 3" width="68" height="68"/>
     </resources>

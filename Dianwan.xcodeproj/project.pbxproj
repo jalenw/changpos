@@ -82,6 +82,10 @@
 		8E591B1A21F072BD00279630 /* MyStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1821F072BD00279630 /* MyStoreViewController.xib */; };
 		8E591B1E21F075B900279630 /* AllocateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B1C21F075B900279630 /* AllocateViewController.m */; };
 		8E591B1F21F075B900279630 /* AllocateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1D21F075B900279630 /* AllocateViewController.xib */; };
+		8E591B2321F07EA700279630 /* ApplyOweDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B2121F07EA700279630 /* ApplyOweDeviceViewController.m */; };
+		8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2221F07EA700279630 /* ApplyOweDeviceViewController.xib */; };
+		8E591B2821F082B100279630 /* OweDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */; };
+		8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -698,6 +702,12 @@
 		8E591B1B21F075B900279630 /* AllocateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllocateViewController.h; sourceTree = "<group>"; };
 		8E591B1C21F075B900279630 /* AllocateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllocateViewController.m; sourceTree = "<group>"; };
 		8E591B1D21F075B900279630 /* AllocateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllocateViewController.xib; sourceTree = "<group>"; };
+		8E591B2021F07EA700279630 /* ApplyOweDeviceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyOweDeviceViewController.h; sourceTree = "<group>"; };
+		8E591B2121F07EA700279630 /* ApplyOweDeviceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyOweDeviceViewController.m; sourceTree = "<group>"; };
+		8E591B2221F07EA700279630 /* ApplyOweDeviceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyOweDeviceViewController.xib; sourceTree = "<group>"; };
+		8E591B2521F082B100279630 /* OweDeviceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OweDeviceTableViewCell.h; sourceTree = "<group>"; };
+		8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OweDeviceTableViewCell.m; sourceTree = "<group>"; };
+		8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OweDeviceTableViewCell.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -1993,6 +2003,9 @@
 				8E591B0E21EED3F900279630 /* ModifyRateAndPriceViewController.h */,
 				8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */,
 				8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */,
+				8E591B2021F07EA700279630 /* ApplyOweDeviceViewController.h */,
+				8E591B2121F07EA700279630 /* ApplyOweDeviceViewController.m */,
+				8E591B2221F07EA700279630 /* ApplyOweDeviceViewController.xib */,
 			);
 			name = Businesshandling;
 			sourceTree = "<group>";
@@ -2058,6 +2071,9 @@
 				8E7108B621E8717200CB11B9 /* ApplyDetailTableViewCell.h */,
 				8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */,
 				8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */,
+				8E591B2521F082B100279630 /* OweDeviceTableViewCell.h */,
+				8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */,
+				8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -3766,6 +3782,7 @@
 				8EB4E50C21201FAE00BC563B /* VoiceSearchFeedback002.png in Resources */,
 				8EB4E4E721201FAE00BC563B /* call_out@2x.png in Resources */,
 				8EB4E4F521201FAE00BC563B /* VoiceSearchFeedback019.png in Resources */,
+				8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */,
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
 				8EB4E4F721201FAE00BC563B /* VoiceSearchFeedback018.png in Resources */,
 				8EB4E51721201FAE00BC563B /* call_out.png in Resources */,
@@ -3902,6 +3919,7 @@
 				8EB4E4EF21201FAE00BC563B /* VoiceSearchFeedback011@2x.png in Resources */,
 				8EB4E4C721201FAE00BC563B /* call_silence_h.png in Resources */,
 				8EB4E52D21201FAE00BC563B /* chatBar_colorMore_video@2x.png in Resources */,
+				8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */,
 				8EBF663F21E1B14A001C4A0D /* QRShowViewController.xib in Resources */,
 				CD6323C51EE54C1100D033F4 /* README.txt in Resources */,
 				2FB8362821EEDCA40028A376 /* withdrawalViewController.xib in Resources */,
@@ -3949,6 +3967,7 @@
 				985A8B0C1F94AD7C00B5DDB9 /* UIBarButtonItem+SXCreate.m in Sources */,
 				985A8B0D1F94AD7C00B5DDB9 /* UINavigationController+SXFullScreen.m in Sources */,
 				985A8B0E1F94AD7C00B5DDB9 /* UINavigationItem+SXFixSpace.m in Sources */,
+				8E591B2821F082B100279630 /* OweDeviceTableViewCell.m in Sources */,
 				8EEF4BC9211D8CB500DE1E36 /* EMCDDeviceManager+Microphone.m in Sources */,
 				8EB4E411212019F600BC563B /* EMGifImage.m in Sources */,
 				8E6D1EF421EB2ACB002C6717 /* CardCellTableViewCell.m in Sources */,
@@ -4064,6 +4083,7 @@
 				2FD7366C21EEE7C800B59D8F /* RewardTableViewCell.m in Sources */,
 				8EEF4BAC211D8CB500DE1E36 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				8EEF4C00211D8CB500DE1E36 /* EaseBaseMessageCell.m in Sources */,
+				8E591B2321F07EA700279630 /* ApplyOweDeviceViewController.m in Sources */,
 				8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */,
 				8EEF4BAB211D8CB500DE1E36 /* EaseMessageReadManager.m in Sources */,
 				8EEF4BD8211D8CB500DE1E36 /* PSTCollectionViewCell.m in Sources */,

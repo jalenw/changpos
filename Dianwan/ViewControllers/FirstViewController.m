@@ -12,6 +12,7 @@
 #import "BusinessHandlingViewController.h"
 #import "MyPartnerViewController.h"
 #import "MyStoreViewController.h"
+#import "RankingParentViewController.h"
 @interface FirstViewController ()
 {
     NSArray *adArray;
@@ -103,6 +104,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)rankinglistAct:(UIButton *)sender {
+    RankingParentViewController *ranking =[[RankingParentViewController alloc]init];
+    [self.navigationController pushViewController:ranking animated:YES];
+    
+}
+
 - (IBAction)menuAct:(UIButton *)sender {
     if (sender.tag==0) {
         CommonUIWebViewController *controller = [[CommonUIWebViewController alloc] init];

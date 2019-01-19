@@ -13,6 +13,7 @@ typedef void (^LZHAreaPickerViewBlock)(NSDictionary *dict);
 @interface LZHAreaPickerView : UIView
 @property (nonatomic, strong) NSArray *array;//字典数组
 @property (nonatomic, strong) NSString *name;//字典key
+@property (nonatomic, strong) NSArray *nameArray;//字典串
 @property (nonatomic, strong) LZHAreaPickerViewBlock block;
 @property (nonatomic, readonly) UIPickerView *pickerView;
 - (void)setBlock:(LZHAreaPickerViewBlock)block;

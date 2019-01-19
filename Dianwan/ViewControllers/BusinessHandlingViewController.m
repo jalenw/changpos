@@ -9,6 +9,7 @@
 #import "BusinessHandlingViewController.h"
 #import "ApplyDetailViewController.h"
 #import "ModifyRateAndPriceViewController.h"
+#import "ApplyOweDeviceViewController.h"
 @interface BusinessHandlingViewController ()
 
 @end
@@ -34,8 +35,15 @@
 }
 
 - (IBAction)menuAct:(UIButton *)sender {
-    ModifyRateAndPriceViewController *vc = [[ModifyRateAndPriceViewController alloc]init];
-    vc.type = sender.tag;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (sender.tag==3) {
+        ApplyOweDeviceViewController *vc = [[ApplyOweDeviceViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else
+    {
+        ModifyRateAndPriceViewController *vc = [[ModifyRateAndPriceViewController alloc]init];
+        vc.type = sender.tag;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 @end

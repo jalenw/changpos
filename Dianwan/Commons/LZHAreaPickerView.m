@@ -91,9 +91,21 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth/2, 21)];
     label.textAlignment = NSTextAlignmentCenter;
     if (component == 0) {
-            NSDictionary *dict = [self.array objectAtIndex:row];
-            NSString *name = [dict safeStringForKey:self.name];
-            label.text = name;
+        NSDictionary *dict = [self.array objectAtIndex:row];
+        NSString *name;
+        if (self.nameArray.count>0) {
+            NSMutableString *mutStr = [[NSMutableString alloc]init];
+            for (NSString *str in self.nameArray) {
+                [mutStr appendString:[dict safeStringForKey:str]];
+                [mutStr appendString:@" "];
+            }
+            name = mutStr;
+        }
+        else
+        {
+            name = [dict safeStringForKey:self.name];
+        }
+        label.text = name;
     }
     return label;
 }

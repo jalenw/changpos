@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplyOweDeviceViewController">
             <connections>
                 <outlet property="headView" destination="lfo-Ih-7g6" id="9r0-iz-HmL"/>
+                <outlet property="model" destination="Lwd-7f-wHa" id="poy-Il-dVv"/>
+                <outlet property="name" destination="MW1-5E-5Zp" id="qYM-Cj-6J1"/>
                 <outlet property="tableView" destination="Jfx-iV-LWD" id="M5H-UX-Gac"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,10 +24,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jfx-iV-LWD">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jfx-iV-LWD">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="goG-ba-wqq"/>
+                        <outlet property="delegate" destination="-1" id="hw6-1F-db2"/>
+                    </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc7-Gw-oDG">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
@@ -56,6 +62,9 @@
                     <state key="normal" title="删除输入框" image="yuanjian_1">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="subtractAct:" destination="-1" eventType="touchUpInside" id="Oei-GO-P2A"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAZ-O6-Ayp">
                     <rect key="frame" x="147" y="0.0" width="228" height="44"/>
@@ -66,6 +75,9 @@
                     <state key="normal" title="增加SN号与终端号录入" image="yuanjia_1">
                         <color key="titleColor" red="1" green="0.61960784310000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="addAct:" destination="-1" eventType="touchUpInside" id="wJK-Fh-c0O"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6k-3A-oN7">
                     <rect key="frame" x="147" y="0.0" width="1" height="44"/>

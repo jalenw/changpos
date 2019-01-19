@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)removeModifyView:(UIButton *)sender;
 - (IBAction)confirmModifyView:(UIButton *)sender;
 
+- (IBAction)confirmAct:(UIButton *)sender;
 @end
 
 NS_ASSUME_NONNULL_END

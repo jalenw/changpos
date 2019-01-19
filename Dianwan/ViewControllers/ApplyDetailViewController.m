@@ -92,7 +92,6 @@
     applyshow.idNum =[dataList[indexPath.row] safeIntForKey:@"id"];
     [self.navigationController pushViewController:applyshow animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

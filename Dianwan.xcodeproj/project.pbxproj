@@ -102,6 +102,8 @@
 		8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2221F07EA700279630 /* ApplyOweDeviceViewController.xib */; };
 		8E591B2821F082B100279630 /* OweDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */; };
 		8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */; };
+		8E591B2F21F2F45B00279630 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */; };
+		8E591B3021F2F45B00279630 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -748,6 +750,9 @@
 		8E591B2521F082B100279630 /* OweDeviceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OweDeviceTableViewCell.h; sourceTree = "<group>"; };
 		8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OweDeviceTableViewCell.m; sourceTree = "<group>"; };
 		8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OweDeviceTableViewCell.xib; sourceTree = "<group>"; };
+		8E591B2C21F2F45B00279630 /* StoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
+		8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
+		8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -2160,6 +2165,9 @@
 				8E591B2521F082B100279630 /* OweDeviceTableViewCell.h */,
 				8E591B2621F082B100279630 /* OweDeviceTableViewCell.m */,
 				8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */,
+				8E591B2C21F2F45B00279630 /* StoreTableViewCell.h */,
+				8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */,
+				8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -3838,6 +3846,7 @@
 				8EB4E51921201FAE00BC563B /* chatBar_more_cameraSelected@2x.png in Resources */,
 				8EB4E50521201FAE00BC563B /* VoiceSearchFeedback002@2x.png in Resources */,
 				8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */,
+				8E591B3021F2F45B00279630 /* StoreTableViewCell.xib in Resources */,
 				8EB4E50921201FAE00BC563B /* VoiceSearchFeedback015.png in Resources */,
 				8EB4E4F621201FAE00BC563B /* VoiceSearchFeedback005@2x.png in Resources */,
 				8EB4E4C921201FAE00BC563B /* call_silence@2x.png in Resources */,
@@ -4246,6 +4255,7 @@
 				8EB4E3F4212009AD00BC563B /* EMSDWebImageManager.m in Sources */,
 				8EEF4BA9211D8CB500DE1E36 /* UIViewController+DismissKeyboard.m in Sources */,
 				8E6D1E9921EB273F002C6717 /* MyViewController.m in Sources */,
+				8E591B2F21F2F45B00279630 /* StoreTableViewCell.m in Sources */,
 				8E6D1E9C21EB273F002C6717 /* HooDatePicker.m in Sources */,
 				8E6D1E1621EB261C002C6717 /* HMScannerMaskView.m in Sources */,
 				8EEF4BD1211D8CB500DE1E36 /* MWPhoto.m in Sources */,

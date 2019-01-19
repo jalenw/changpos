@@ -55,7 +55,7 @@
     self.mainTableView.delegate =self;
     self.mainTableView.dataSource =self;
     
-    _tableViewArr = @[@"我的钱包",@"我的库存",@"我的伙伴",@"积分与会员",@"我的银行卡",@"消息中心",@"业务申请",@"实名认证",@"在线客服"];
+    _tableViewArr = @[@"我的钱包",@"库存管理",@"渠道管理",@"业务申请",@"我的银行卡",@"消息中心",@"积分与会员",@"实名认证",@"在线客服"];
 }
 
 
@@ -138,17 +138,19 @@
           
         }
         if(indexPath.row==2){
-            //我的库存
+            //库存管理
             MyStoreViewController *controller = [[MyStoreViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
         if(indexPath.row==3){
-            //我的伙伴
+            //渠道管理
             MyPartnerViewController *mypartener =[[MyPartnerViewController alloc]init];
             [self.navigationController pushViewController:mypartener animated:YES];
         }
         if(indexPath.row==4){
-            
+            //业务申请
+            BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
+            [self.navigationController pushViewController:Business animated:YES];
         }
         if(indexPath.row==5){
             //我的银行卡
@@ -162,9 +164,7 @@
             
         }
         if(indexPath.row==7){
-            //业务申请
-            BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
-            [self.navigationController pushViewController:Business animated:YES];
+          
             
         }
         if(indexPath.row==8){

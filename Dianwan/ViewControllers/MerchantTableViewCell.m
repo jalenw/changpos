@@ -36,7 +36,7 @@
     //开始绑定数据到UI
     self.timeLabel.text = [[_dict safeStringForKey:@"actication_time"] substringToIndex:[_dict safeStringForKey:@"actication_time"].length -8 ];
     self.nameLabel.text = [_dict safeStringForKey:@"goods_name"];
-    self.snNumLabel.text =[NSString stringWithFormat:@"SN号:%@",[_dict safeStringForKey:@"sn_code"]];
+    self.snNumLabel.text =[NSString stringWithFormat:@"%@",[_dict safeStringForKey:@"sn_code"]];
     
     NSMutableAttributedString *attribut = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"lg_av_amount"]]];
     //目的是想改变 ‘/’前面的字体的属性，所以找到目标的range

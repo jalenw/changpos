@@ -22,7 +22,7 @@
 }
 
 - (NSArray<NSString *> *)buttonTitleArray{
-    return @[@"商户",@"伙伴"];
+    return @[@"商户",@"渠道"];
 }
 
 -(UIColor *)BtnbackgroundColor{

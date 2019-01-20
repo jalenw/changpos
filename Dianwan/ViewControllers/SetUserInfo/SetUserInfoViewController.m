@@ -173,10 +173,8 @@
     } block:^(NSDictionary *responseObject, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-//            if([responseObject safeIntForKey:@"code"]==200){
                 _picurl =[responseObject safeStringForKey:@"result"];
                 
-//            }
         }else{
             [AlertHelper showAlertWithTitle:[responseObject safeStringForKey:@"message"]];
         }
@@ -259,7 +257,7 @@
     [self.userAcover sd_setImageWithURL:[NSURL URLWithString:AppDelegateInstance.defaultUser.member_avatar]];
     self.nameLabel.text = AppDelegateInstance.defaultUser.truename;
     self.ageLabel.text = [NSString stringWithFormat:@"%@",AppDelegateInstance.defaultUser.age];
-    self.sexLabel.text = [NSString stringWithFormat:@"%@",AppDelegateInstance.defaultUser.sex];
+    self.sexLabel.text = [NSString stringWithFormat:@"%hd",AppDelegateInstance.defaultUser.sex];
     self.cityLabel.text = AppDelegateInstance.defaultUser.evolution_city;
     self.idCardLabel.text =AppDelegateInstance.defaultUser.idcard;
     

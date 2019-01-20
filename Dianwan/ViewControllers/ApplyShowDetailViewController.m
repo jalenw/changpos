@@ -64,18 +64,22 @@
     switch ([[dict safeStringForKey:@"examine_type"] integerValue]) {
         case 0:
             self.stateLabel.text = @"待上级审核 ";
+            self.stateLabel.textColor = RGB(230, 185, 55);
             break;
         case 1:
             
             self.stateLabel.text = @"待平台审核 ";
+            self.stateLabel.textColor = RGB(230, 185, 55);
             break;
         case 2:
             
             self.stateLabel.text = @"审核通过 ";
+            self.stateLabel.textColor = RGB(230, 185, 55);
             break;
         case 3:
             
             self.stateLabel.text = @"审核失败 ";
+              self.stateLabel.textColor = RGB(190, 0, 0);
             break;
             
     }
@@ -85,14 +89,5 @@
   
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

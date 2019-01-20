@@ -31,6 +31,7 @@
     _cityArr = [NSMutableArray array];
     
     self.maintableview = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.maintableview.tableFooterView = [[UIView alloc]init];
     [self.view addSubview:self.maintableview];
     self.maintableview.delegate =self;
     self.maintableview.dataSource =self;

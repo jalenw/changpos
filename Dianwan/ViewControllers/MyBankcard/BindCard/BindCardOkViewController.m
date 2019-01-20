@@ -9,7 +9,7 @@
 #import "BindCardOkViewController.h"
 #import "ToolManager.h"
 #import "CountdownManager.h"
-@interface BindCardOkViewController ()<CountdownManagerDelegate>
+@interface BindCardOkViewController ()<CountdownManagerDelegate,UITextFieldDelegate>
 
 @property (strong, nonatomic) CountdownManager * countDownManager;
 @property (weak, nonatomic) IBOutlet UIView *bindSuccview;
@@ -32,7 +32,41 @@
     self.view.backgroundColor = RGB(48, 46, 58);
     self.userNameLabel.text = AppDelegateInstance.defaultUser.member_name;
     self.IDLabel.text =  AppDelegateInstance.defaultUser.idcard;
+    self.phoneLabel.delegate =self;
+    self.phoneLabel.tag =2;
+    self.codeLabel.delegate =self;
+     self.phoneLabel.tag =1;
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+
+{
+    if(textField.tag == 2){
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 11;
+        return NO;
+    }
+    if(textField.tag == 3){
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 16;
+        return NO;
+    }
+    else{
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 6;
+    }
+    
+}
+
 
 -(void)addsubviews{
     self.BindSelectview.frame = self.view.bounds;
@@ -84,13 +118,8 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
                  weakSelf.countDownManager.registTime = 60;
                 [weakSelf.countDownManager timerStart];
-                
-            }else{
-                NSLog(@"手机验证错误---%@",requestFailed);
-            }
         }else{
             [AlertHelper showAlertWithTitle:error];
         }

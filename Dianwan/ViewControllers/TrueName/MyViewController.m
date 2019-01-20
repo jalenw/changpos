@@ -18,6 +18,7 @@
 #import "MyPartnerViewController.h"
 #import "messageCenterViewController.h"
 #import "MyStoreViewController.h"
+#import "CreditsAndMembersViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 //@property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -52,10 +53,12 @@
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_pay"]];
     self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
     [self.view addSubview:self.mainTableView];
+    self.view.backgroundColor = RGB(48, 46, 58);
+    self.mainTableView.backgroundColor = RGB(48, 46, 58);
     self.mainTableView.delegate =self;
     self.mainTableView.dataSource =self;
     
-    _tableViewArr = @[@"我的钱包",@"我的库存",@"我的伙伴",@"积分与会员",@"我的银行卡",@"消息中心",@"业务申请",@"实名认证",@"在线客服"];
+    _tableViewArr = @[@"我的钱包",@"库存管理",@"渠道管理",@"业务申请",@"我的银行卡",@"消息中心",@"积分与会员",@"实名认证",@"在线客服"];
 }
 
 
@@ -138,17 +141,19 @@
           
         }
         if(indexPath.row==2){
-            //我的库存
+            //库存管理
             MyStoreViewController *controller = [[MyStoreViewController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
         if(indexPath.row==3){
-            //我的伙伴
+            //渠道管理
             MyPartnerViewController *mypartener =[[MyPartnerViewController alloc]init];
             [self.navigationController pushViewController:mypartener animated:YES];
         }
         if(indexPath.row==4){
-            
+            //业务申请
+            BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
+            [self.navigationController pushViewController:Business animated:YES];
         }
         if(indexPath.row==5){
             //我的银行卡
@@ -162,10 +167,9 @@
             
         }
         if(indexPath.row==7){
-            //业务申请
-            BusinessHandlingViewController *  Business = [[BusinessHandlingViewController alloc]init];
-            [self.navigationController pushViewController:Business animated:YES];
-            
+          //积分与会员
+            CreditsAndMembersViewController *credittandmember = [[CreditsAndMembersViewController alloc]init];
+            [self.navigationController pushViewController:credittandmember animated:YES];
         }
         if(indexPath.row==8){
             //实名认证
@@ -192,20 +196,6 @@
     [super viewWillAppear:animated];
     [self setUI];
 }
-
-- (void)getuserInfo{
-    [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/member/get_member_info" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
-        [SVProgressHUD dismiss];
-        if (status) {
-                AppDelegateInstance.defaultUser = [User insertOrReplaceWithDictionary:[data safeDictionaryForKey:@"result"] context:AppDelegateInstance.managedObjectContext];
-                [self setUI];
-        }
-        else
-            [AlertHelper showAlertWithTitle:error];
-    }];
-}
-
 
 - (IBAction)gotoUserInfoVCAction:(UIButton *)sender {
     SetUserInfoViewController *setuserinfo =[[SetUserInfoViewController alloc]init];

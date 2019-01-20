@@ -24,6 +24,8 @@
     dataList = [[NSMutableArray alloc]init];
     page = 1;
     [self refreshData];
+    self.tableView.backgroundColor =RGB(48, 46, 58);
+    self.view.backgroundColor = RGB(48, 46, 58);
     self.tableView.separatorStyle = UITableViewCellEditingStyleNone;
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         page = 1;

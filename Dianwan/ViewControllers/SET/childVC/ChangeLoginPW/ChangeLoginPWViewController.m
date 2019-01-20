@@ -12,7 +12,6 @@
 @interface ChangeLoginPWViewController ()<CountdownManagerDelegate,UITextFieldDelegate>
 
 @property (strong, nonatomic) CountdownManager * countDownManager;
-//@property (strong, nonatomic) NSString *type;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
 @property (weak, nonatomic) IBOutlet UITextField *codeTF;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
@@ -24,13 +23,6 @@
 
 @implementation ChangeLoginPWViewController
 
-//-(instancetype)initWithType:(NSString *)type{
-//    self=[super init];
-//    if (self) {
-//        self.type = type;
-//    }
-//    return self;
-//}
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -40,7 +32,6 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];;
     
     self.countDownManager.delegate = self;
-//    [IQKeyboardManager sharedManager].enable = YES;
 }
 
 
@@ -56,16 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"修改登录密码";
-//    if ([self.type isEqualToString:@"2"]) {
-        self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;
-        self.phoneTF.delegate =self;
-        self.phoneTF.tag =4;
-        
-//    }else{
-//        self.phoneTF.tag =1;
-//        self.phoneTF.delegate =self;
-//    }
-    
+    self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;    
     self.passwordTF.delegate =self;
     self.passwordTF.tag =3;
     self.confirmPWTF.delegate =self;
@@ -77,15 +59,8 @@
 
 
 - (IBAction)securityTextAction:(UIButton *)sender {
-    self.securityBtn.selected = !sender.isSelected;
-    if(!self.securityBtn.selected){
-        self.passwordTF.secureTextEntry =NO;
-        self.confirmPWTF.secureTextEntry =NO;
-        
-    }else{
-        self.passwordTF.secureTextEntry =YES;  self.confirmPWTF.secureTextEntry =YES;
-        
-    }
+        self.passwordTF.secureTextEntry =!self.passwordTF.secureTextEntry;
+        self.confirmPWTF.secureTextEntry = self.passwordTF.secureTextEntry;
 }
 
 
@@ -200,12 +175,8 @@
             NSLog(@"error=%@",error);
             [SVProgressHUD dismiss];
             if (status) {
-                if ([data safeIntForKey:@"code"]==200) {
                     [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"]];
                          suc();
-                }else{
-                    fal([NSString stringWithFormat:@"%@",requestFailed]);
-                }
             }else{
                 [AlertHelper showAlertWithTitle:[NSString stringWithFormat:@"%@",error]];
             }
@@ -233,25 +204,7 @@
           return length <= 16;
         return NO;
     }
-    
-    if(textField.tag == 4){
-        if (range.length + range.location > textField.text.length) {
-            return NO;
-        }
-         NSUInteger length = textField.text.length + string.length - range.length;
-        
-        self.codeTF.text =@"";
-       return length <= 11;
-    }
-    
-    if(textField.tag == 1){
-        if (range.length + range.location > textField.text.length) {
-            return NO;
-        }
-        NSUInteger length = textField.text.length + string.length - range.length;
-        self.codeTF.text =@"";
-        return length <= 11;
-    }else{
+    else{
         if (range.length + range.location > textField.text.length) {
             return NO;
             }
@@ -284,13 +237,9 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
                 suc(60);
-               
-            }else{
-                
-            }
-        }
+        }else
+            [AlertHelper showAlertWithTitle:error];
         
     }];
 

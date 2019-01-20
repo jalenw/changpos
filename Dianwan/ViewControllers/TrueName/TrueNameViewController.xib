@@ -137,12 +137,11 @@
                 </label>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU0-Hv-uqJ">
                     <rect key="frame" x="57.5" y="225" width="260" height="164"/>
-                    <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="164" id="8lu-VB-ovT"/>
                         <constraint firstAttribute="width" constant="260" id="hJW-UV-6Ts"/>
                     </constraints>
-                    <state key="normal" image="拍摄身份证人像页"/>
+                    <state key="normal" image="sf_1"/>
                     <connections>
                         <action selector="uploadicon:" destination="vXp-0F-4Q7" eventType="touchUpInside" id="tod-pi-kzi"/>
                     </connections>
@@ -155,12 +154,11 @@
                 </label>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdf-Cg-Rgz">
                     <rect key="frame" x="57.5" y="461" width="260" height="164"/>
-                    <color key="backgroundColor" red="0.98105400799999998" green="0.49155341159999999" blue="0.43432419389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="164" id="MsT-7h-LjY"/>
                         <constraint firstAttribute="width" constant="260" id="TLX-oH-jsy"/>
                     </constraints>
-                    <state key="normal" image="拍摄身份证国徽页"/>
+                    <state key="normal" image="sf_2"/>
                     <connections>
                         <action selector="uploadicon:" destination="vXp-0F-4Q7" eventType="touchUpInside" id="5Cp-iN-RHT"/>
                     </connections>
@@ -232,7 +230,7 @@
         </view>
     </objects>
     <resources>
-        <image name="拍摄身份证人像页" width="240" height="164"/>
-        <image name="拍摄身份证国徽页" width="240" height="164"/>
+        <image name="sf_1" width="115" height="78.239997863769531"/>
+        <image name="sf_2" width="115" height="78.239997863769531"/>
     </resources>
 </document>

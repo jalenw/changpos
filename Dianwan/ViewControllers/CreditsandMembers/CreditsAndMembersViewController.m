@@ -1,28 +1,37 @@
 //
-//  MyPartnerViewController.m
+//  CreditsAndMembersViewController.m
 //  Dianwan
 //
-//  Created by 黄哲麟 on 2019/1/10.
-//  Copyright © 2019年 intexh. All rights reserved.
+//  Created by Yang on 2019/1/20.
+//  Copyright © 2019 intexh. All rights reserved.
 //
 
-#import "MyPartnerViewController.h"
+#import "CreditsAndMembersViewController.h"
+
 #import "PartnersViewController.h"
 #import "MerchantViewController.h"
-@interface MyPartnerViewController ()<UITextFieldDelegate>
+#import "CommonViewController.h"
+@interface CreditsAndMembersViewController ()
+@property (weak, nonatomic) IBOutlet UIView *titleview;
 
 @end
 
-@implementation MyPartnerViewController
+@implementation CreditsAndMembersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
-    [self setRightBarButtonWithTitle:@"取消"];
+    self.title =@"我的积分";
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setcountAct:) name:@"allcountNot" object:nil];
+    self.titleview.backgroundColor = RGB( 48, 46,58);
+}
+-(void)setcountAct:(NSNotification *)not{
+     NSString *userinfo = not.object;
+    self.allcountLabel.text  =userinfo;
 }
 
 - (NSArray<NSString *> *)buttonTitleArray{
-    return @[@"商户",@"渠道"];
+    return @[@"签到",@"激活",@"交易",@"采购",@"发展"];
 }
 
 -(UIColor *)BtnbackgroundColor{
@@ -45,16 +54,14 @@
     return  RGB(251, 185, 55);}
 
 -(CGFloat)indicatorWidth{
-    return 80;
+    return 30;
 }
 
 - (CGFloat)indicatorOffset{
-     return (ScreenWidth/2-80)/2;
+    return (ScreenWidth/5-30)/2;
 }
 
--(void)rightbarButtonDidTap:(UIButton *)button{
-    self.searchTf.text =@"";
-}
+
 
 - (void)setupControllers{
     self.scrollView.top = 0;
@@ -70,12 +77,32 @@
     for (int i = 0; i < titleArray.count; ++i) {
         UIViewController *controller = nil;
         if(i == 0){
-            MerchantViewController *subController = [[MerchantViewController alloc] init];
+            CommonViewController *subController = [[CommonViewController alloc] init];
+            subController.type = @"signin";
             controller = subController;
             [self addChildViewController:controller];
             self.currentController = controller;
         }else if (i == 1){
-            PartnersViewController *subController = [[PartnersViewController alloc] init];
+            CommonViewController *subController = [[CommonViewController alloc] init];
+            subController.type = @"activation";
+            controller = subController;
+            [self addChildViewController:controller];
+        }
+        if(i == 2){
+            CommonViewController *subController = [[CommonViewController alloc] init];
+            subController.type = @"trading";
+            controller = subController;
+            [self addChildViewController:controller];
+           
+        }else if (i == 3){
+            CommonViewController *subController = [[CommonViewController alloc] init];
+            subController.type = @"order";
+            controller = subController;
+            [self addChildViewController:controller];
+        }
+        if(i == 4){
+            CommonViewController *subController = [[CommonViewController alloc] init];
+            subController.type = @"inviter";
             controller = subController;
             [self addChildViewController:controller];
         }
@@ -89,21 +116,11 @@
     self.scrollView.contentSize = CGSizeMake(ScreenWidth*titleArray.count, 0);
     self.topHeaderView.top = 0;
     self.topHeaderView.backgroundColor = [UIColor clearColor];
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 160, ScreenWidth, 44)];
     [topView addSubview:self.topHeaderView];
-    [self.view addSubview:topView];
-    self.searchView.width = ScreenWidth-120;
-    self.searchTf.returnKeyType = UIReturnKeySearch;
-    self.searchTf.delegate = self;
-    self.navigationItem.titleView = self.searchView;
-}
+    [self.view addSubview:topView];}
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotificationSearch" object:textField.text];
-    [textField resignFirstResponder];
-    return YES;
-}
+
 
 - (CGFloat)topHeaderWidth{
     return ScreenWidth;
@@ -113,6 +130,8 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     return view;
 }
-
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"allcountNot" object:self];
+}
 
 @end

@@ -57,10 +57,12 @@
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        [cell.roleBt addTarget:self action:@selector(roleAct:) forControlEvents:UIControlEventTouchUpInside];
     }
     if (array.count>0) {
         NSDictionary *dict = array[indexPath.row];
         cell.dict = dict;
+        cell.roleBt.tag = indexPath.row;
     }
     return cell;
 }
@@ -73,4 +75,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+-(void)roleAct:(UIButton*)button
+{
+    
+}
 @end

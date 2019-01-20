@@ -91,13 +91,9 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
                  weakSelf.countDownManager.payPwdTime = 60;
                  [weakSelf.countDownManager timerStart];
            
-            }else{//开发输出错误
-                  NSLog(@"手机验证错误---%@",requestFailed);
-            }
         }else{
              [AlertHelper showAlertWithTitle:error];
         }
@@ -121,7 +117,6 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/check_sms_captcha" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
                 PWInputViewController *PWinputVC = [[PWInputViewController alloc]init];
                 PWinputVC.navigationItem.title = @"完善资料";
                 //1---我的页面---设置修改新密码
@@ -129,9 +124,7 @@
                 PWinputVC.codeStr = self.codeTextFiled.text;
                 PWinputVC.tipsLabelStr =@"设置支付密码，以添加银行卡";
                 [self.navigationController pushViewController:PWinputVC animated:YES];
-            }else{
-               NSLog(@"设置验证码错误------%@",requestFailed);
-            }
+          
         } else{
                [AlertHelper showAlertWithTitle:error];
         }

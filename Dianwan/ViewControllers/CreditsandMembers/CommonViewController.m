@@ -1,77 +1,81 @@
 //
-//  rewardViewController.m
+//  CommonViewController.m
 //  Dianwan
 //
-//  Created by Yang on 2019/1/16.
+//  Created by Yang on 2019/1/20.
 //  Copyright © 2019 intexh. All rights reserved.
 //
 
-#import "rewardViewController.h"
-#import "RewardtableViewCell.h"
+#import "CommonViewController.h"
+#import "CommonTableViewCell.h"
 
-@interface rewardViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CommonViewController ()
 {
     NSMutableArray *dataList;
     int page;
 }
 @end
 
-@implementation rewardViewController
+@implementation CommonViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     dataList = [[NSMutableArray alloc]init];
     page = 1;
     [self refreshData];
-    self.mainTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
-     self.mainTableview.backgroundColor = RGB(48, 46, 58);
-    [self.mainTableview addLegendHeaderWithRefreshingBlock:^{
+    self.tableView.separatorStyle = UITableViewCellAccessoryNone;
+    self.tableView.backgroundColor = RGB(48, 46, 58);
+    self.view.backgroundColor = RGB(48, 46, 58);
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
         page = 1;
         [dataList removeAllObjects];
         [self refreshData];
     }];
-    [self.mainTableview addLegendFooterWithRefreshingBlock:^{
+    [self.tableView addLegendFooterWithRefreshingBlock:^{
         page ++;
         [self refreshData];
     }];
 }
 
-
 -(void)refreshData
 {
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
-
     [param setValue:@(page) forKey:@"page"];
-    [[ServiceForUser manager]postMethodName:@"mobile/member/reward_log" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+     WEAKSELF
+    [param setValue:self.type forKey:@"type"];
+    [[ServiceForUser manager]postMethodName:@"mobile/memberpoints/pointslog" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
-            [self.mainTableview headerEndRefreshing];
+            [self.tableView headerEndRefreshing];
         }
         else
         {
-            [self.mainTableview footerEndRefreshing];
+            [self.tableView footerEndRefreshing];
         }
         if (status) {
-            NSArray *dataArray = [data safeArrayForKey:@"result"];
+            NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            NSArray *dataArray = [result safeArrayForKey:@"log_list"];
+            
+            //返回总积分
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"allcountNot" object:[NSString stringWithFormat:@"%@",[result safeStringForKey:@"total_points"]]];
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
-            [self.mainTableview reloadData];
-        }else
-            [AlertHelper showAlertWithTitle:error];
+            [self.tableView reloadData];
+        }
     }];
 }
 
-#pragma mark ---datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return dataList.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *cellIdentifier = @"RewardTableViewCell";
-    RewardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *cellIdentifier = @"CommonTableViewCell";
+    CommonTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+//        cell.backgroundColor = RGB(48, 46, 58);
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.row];
@@ -81,22 +85,10 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *content = [dataList[indexPath.row] safeStringForKey:@"push_message"];
-    CGFloat height= [Tooles sizeWithFont:[UIFont systemFontOfSize:17] maxSize:CGSizeMake(ScreenWidth-64, MAXFLOAT)  string:content].height;
-   
-         return 86+height+16;
-    
-   
+    return 90;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
--(void)dealloc
-{
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-}
-
 @end

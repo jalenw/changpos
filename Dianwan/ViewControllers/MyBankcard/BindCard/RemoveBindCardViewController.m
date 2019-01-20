@@ -27,8 +27,8 @@
 }
 
 -(void)setUI{
-    self.cardNumberLabel.text =self.model.bank_card;
-    self.cardBankNameLabel.text =self.model.bank_name;
+    self.cardNumberLabel.text = [NSString stringWithFormat:@"**** **** **** %@",[self.model.bank_card substringFromIndex:self.model.bank_card.length-4]];
+    self.cardBankNameLabel.text = self.model.bank_name;
     [self.bankImageView sd_setImageWithURL:[NSURL URLWithString:self.model.bank_img]];
 }
 
@@ -42,13 +42,9 @@
     [[ServiceForUser manager]postMethodName:@"mobile/member_bank/del_bank_card" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
-                [SVProgressHUD showSuccessWithStatus:@"解绑成功"];
+                [AlertHelper showAlertWithTitle:@"解绑成功" duration:3];
                 [self.navigationController popViewControllerAnimated:YES];
-                
-            }else{
-                [AlertHelper showAlertWithTitle:error];
-            }
+            
         }else{
             NSLog(@"手机验证错误---%@",requestFailed);
         }

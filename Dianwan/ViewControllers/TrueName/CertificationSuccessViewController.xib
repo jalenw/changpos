@@ -65,38 +65,26 @@
                             <rect key="frame" x="0.0" y="117" width="343" height="296"/>
                             <color key="backgroundColor" red="0.1803921568627451" green="0.18823529411764706" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="已实名" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-yU-uCF">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ysm_1" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-yU-uCF">
                             <rect key="frame" x="251" y="24" width="68" height="68"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="68" id="KwT-Jd-wLs"/>
                                 <constraint firstAttribute="height" constant="68" id="nnh-mw-2rg"/>
                             </constraints>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="已实名认证" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-oe-lc6">
-                            <rect key="frame" x="123" y="189" width="90" height="100"/>
-                            <color key="backgroundColor" red="0.39554278939999998" green="0.98105400799999998" blue="0.3340028786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sm_1" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-oe-lc6">
+                            <rect key="frame" x="126.5" y="189" width="90" height="150"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="MdH-UF-MaH"/>
+                                <constraint firstAttribute="height" constant="150" id="MdH-UF-MaH"/>
+                                <constraint firstAttribute="width" constant="90" id="sa9-VZ-gEN"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已实名认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgr-sf-HW3">
-                            <rect key="frame" x="123" y="313" width="97" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="7EW-IW-gFb"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                            <color key="textColor" red="0.99215686274509807" green="0.82352941176470584" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="ga6-yU-uCF" firstAttribute="top" secondItem="jld-Gi-L4h" secondAttribute="top" constant="24" id="5Q0-0e-B2R"/>
-                        <constraint firstItem="zgr-sf-HW3" firstAttribute="trailing" secondItem="AJy-oe-lc6" secondAttribute="trailing" constant="7" id="6Zc-5F-4fV"/>
                         <constraint firstAttribute="bottom" secondItem="KED-Rb-QSI" secondAttribute="bottom" id="9l9-UZ-IWa"/>
-                        <constraint firstItem="zgr-sf-HW3" firstAttribute="leading" secondItem="AJy-oe-lc6" secondAttribute="leading" id="BiQ-Hf-qpH"/>
                         <constraint firstItem="YXa-Cr-i2s" firstAttribute="top" secondItem="sKa-3c-rDK" secondAttribute="top" id="MNt-XG-Jpm"/>
-                        <constraint firstItem="zgr-sf-HW3" firstAttribute="top" secondItem="AJy-oe-lc6" secondAttribute="bottom" constant="24" id="MeD-vC-ZCj"/>
                         <constraint firstItem="3Xs-LA-Sni" firstAttribute="top" secondItem="sKa-3c-rDK" secondAttribute="bottom" constant="24" id="PlF-rV-gKe"/>
                         <constraint firstItem="3Xs-LA-Sni" firstAttribute="leading" secondItem="sKa-3c-rDK" secondAttribute="leading" id="T7m-J3-542"/>
                         <constraint firstItem="sKa-3c-rDK" firstAttribute="top" secondItem="jld-Gi-L4h" secondAttribute="top" constant="24" id="WNX-Fl-cWa"/>
@@ -110,7 +98,7 @@
                         <constraint firstAttribute="trailing" secondItem="ga6-yU-uCF" secondAttribute="trailing" constant="24" id="jpN-KH-ehM"/>
                         <constraint firstItem="KED-Rb-QSI" firstAttribute="top" secondItem="3Xs-LA-Sni" secondAttribute="bottom" id="kog-j8-Lrk"/>
                         <constraint firstItem="YXa-Cr-i2s" firstAttribute="leading" secondItem="sKa-3c-rDK" secondAttribute="trailing" constant="8" id="qaL-Dv-Txp"/>
-                        <constraint firstItem="AJy-oe-lc6" firstAttribute="centerX" secondItem="jld-Gi-L4h" secondAttribute="centerX" constant="-3.5" id="s4l-Nk-PiP"/>
+                        <constraint firstItem="AJy-oe-lc6" firstAttribute="centerX" secondItem="jld-Gi-L4h" secondAttribute="centerX" id="s4l-Nk-PiP"/>
                         <constraint firstItem="sKa-3c-rDK" firstAttribute="leading" secondItem="jld-Gi-L4h" secondAttribute="leading" constant="24" id="vlM-Dt-6R6"/>
                     </constraints>
                 </view>
@@ -126,7 +114,7 @@
         </view>
     </objects>
     <resources>
-        <image name="已实名" width="72" height="57"/>
-        <image name="已实名认证" width="88" height="100"/>
+        <image name="sm_1" width="49.439998626708984" height="71.519996643066406"/>
+        <image name="ysm_1" width="35.759998321533203" height="31.920000076293945"/>
     </resources>
 </document>

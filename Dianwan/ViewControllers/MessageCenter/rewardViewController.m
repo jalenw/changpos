@@ -1,85 +1,80 @@
 //
-//  MerchantViewController.m
+//  rewardViewController.m
 //  Dianwan
 //
-//  Created by 黄哲麟 on 2019/1/10.
-//  Copyright © 2019年 intexh. All rights reserved.
+//  Created by Yang on 2019/1/16.
+//  Copyright © 2019 intexh. All rights reserved.
 //
 
-#import "MerchantViewController.h"
-#import "MerchantTableViewCell.h"
-@interface MerchantViewController ()
+#import "rewardViewController.h"
+#import "RewardtableViewCell.h"
+
+@interface rewardViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *dataList;
     int page;
 }
 @end
 
-@implementation MerchantViewController
+@implementation rewardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keywordDidChange:) name:@"kNotificationSearch" object:nil];
     dataList = [[NSMutableArray alloc]init];
     page = 1;
     [self refreshData];
-    self.tableView.backgroundColor = RGB(48, 46, 58);
-    [self.tableView addLegendHeaderWithRefreshingBlock:^{
+    self.mainTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+     self.mainTableview.backgroundColor = RGB(48, 46, 58);
+    [self.mainTableview addLegendHeaderWithRefreshingBlock:^{
         page = 1;
         [dataList removeAllObjects];
         [self refreshData];
     }];
-    [self.tableView addLegendFooterWithRefreshingBlock:^{
+    [self.mainTableview addLegendFooterWithRefreshingBlock:^{
         page ++;
         [self refreshData];
     }];
 }
 
-- (void)keywordDidChange:(NSNotification *)notification
-{
-    self.keyword = notification.object;
-    page = 1;
-    [dataList removeAllObjects];
-    [self refreshData];
-}
 
 -(void)refreshData
 {
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
-    if (self.keyword.length>0) {
-        [param setValue:self.keyword forKey:@"sn_code"];
-    }
+
     [param setValue:@(page) forKey:@"page"];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/listOfMyBusiness" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    
+    [SVProgressHUD show];
+    [[ServiceForUser manager]postMethodName:@"mobile/member/reward_log" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
         if (page==1) {
-            [self.tableView headerEndRefreshing];
+            [self.mainTableview headerEndRefreshing];
         }
         else
         {
-            [self.tableView footerEndRefreshing];
+            [self.mainTableview footerEndRefreshing];
         }
         if (status) {
-            NSDictionary *result = [data safeDictionaryForKey:@"result"];
-            NSArray *dataArray = [result safeArrayForKey:@"data"];
+            NSArray *dataArray = [data safeArrayForKey:@"result"];
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
-            [self.tableView reloadData];
-        }
+            [self.mainTableview reloadData];
+        }else
+            [AlertHelper showAlertWithTitle:error];
     }];
 }
 
+#pragma mark ---datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return dataList.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *cellIdentifier = @"MerchantTableViewCell";
-    MerchantTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *cellIdentifier = @"RewardTableViewCell";
+    RewardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        cell.backgroundColor = RGB(48, 46, 58);
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.row];
@@ -89,7 +84,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    
+    NSString *content = [dataList[indexPath.row] safeStringForKey:@"push_message"];
+    CGFloat height= [Tooles sizeWithFont:[UIFont systemFontOfSize:17] maxSize:CGSizeMake(ScreenWidth-64, MAXFLOAT)  string:content].height;
+   
+         return 86+height+16;
+    
+   
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,4 +101,5 @@
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
 @end

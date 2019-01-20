@@ -23,7 +23,7 @@
 -(void)setUI{
     [self.acoverImageView sd_setImageWithURL:[NSURL URLWithString:AppDelegateInstance.defaultUser.member_avatar]];
     self.usernameLabel.text =[NSString stringWithFormat:@"%@", AppDelegateInstance.defaultUser.member_name];
-    self.cardNumberLabel.text =[NSString stringWithFormat:@"%@", AppDelegateInstance.defaultUser.idcard];
+    self.cardNumberLabel.text =[NSString stringWithFormat:@"%@*** **** **** *****%@",[ AppDelegateInstance.defaultUser.idcard substringToIndex:1],[ AppDelegateInstance.defaultUser.idcard substringFromIndex:AppDelegateInstance.defaultUser.idcard.length -1]];
 }
 
 

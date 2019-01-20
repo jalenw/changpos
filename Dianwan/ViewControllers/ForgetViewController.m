@@ -9,7 +9,7 @@
 #import "ForgetViewController.h"
 #import "CountdownManager.h"
 
-@interface ForgetViewController ()<CountdownManagerDelegate>
+@interface ForgetViewController ()<CountdownManagerDelegate,UITextFieldDelegate>
 {
     int i;
 }
@@ -50,6 +50,44 @@
     self.rePassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.rePassword.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     [self setupForDismissKeyboard];
     self.title = @"忘记密码";
+    self.phone.delegate =self;
+    self.phone.tag =1;
+    self.password.delegate =self;
+    self.password.tag =3;
+    self.rePassword.delegate =self;
+    self.rePassword.tag =3;
+    self.code.tag =2;
+    self.code.delegate =self;
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+
+{
+    if(textField.tag == 1){
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 11;
+        return NO;
+    }
+    if(textField.tag == 3){
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 16;
+        return NO;
+    }
+    else{
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger length = textField.text.length + string.length - range.length;
+        return length <= 6;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +96,7 @@
 }
 
 - (IBAction)getCodeAct:(UIButton *)sender {
-    [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:@{@"phone":self.phone.text,@"type":@"1"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:@{@"phone":self.phone.text,@"type":@"3"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
             self.countDownManager.registTime = 60;
             [self.countDownManager timerStart];

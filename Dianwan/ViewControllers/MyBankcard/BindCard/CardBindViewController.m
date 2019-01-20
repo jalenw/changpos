@@ -53,9 +53,13 @@
     [self.view addSubview:_mainTbleview];
     
     _addCard = [[UIButton alloc]initWithFrame:CGRectMake(50,ScreenHeight -152-64-16, ScreenWidth-100, 52)];
-    _addCard.titleLabel.text = @"添加银行卡";
+    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
+    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _addCard.layer.cornerRadius =5;
+    _addCard.layer.masksToBounds=YES;
     [_addCard addTarget:self action:@selector(addCardAction) forControlEvents:UIControlEventTouchUpInside];
-    _addCard.backgroundColor = [UIColor blueColor];
+    _addCard.backgroundColor = RGB(251, 182, 8);
+    _addCard.hidden = YES;
     [self.view addSubview:_addCard];
     
 }
@@ -146,7 +150,6 @@
     [[ServiceForUser manager]postMethodName:@"mobile/member_bank/index" params:@{@"client":@"ios"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            if ([data safeIntForKey:@"code"]==200) {
                 NSArray *result =[data objectForKey:@"result"];
                 [weakSelf.modelArr removeAllObjects];
                 
@@ -170,12 +173,11 @@
                 model.bank_img = [result[i] safeStringForKey:@"bank_img"];
                 model.user_name = [result[i] safeStringForKey:@"user_name"];
                 model.bank_card = [result[i] safeStringForKey:@"bank_card"];
+                model.bank_name = [result[i] safeStringForKey:@"bank_name"];
+                
                 [weakSelf.modelArr addObject:model];
             }
             [weakSelf.mainTbleview reloadData];
-        }else{
-               NSLog(@"绑定失败---%@",requestFailed);
-        }
     }else{
             [AlertHelper showAlertWithTitle:error];
          }

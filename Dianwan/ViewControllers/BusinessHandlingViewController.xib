@@ -97,7 +97,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xle-X7-dBU">
-                    <rect key="frame" x="24" y="280" width="343" height="50"/>
+                    <rect key="frame" x="16" y="280" width="343" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="钱客通商户入网"/>
                     <userDefinedRuntimeAttributes>
@@ -116,7 +116,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWD-0o-64F">
-                    <rect key="frame" x="24" y="350" width="343" height="50"/>
+                    <rect key="frame" x="16" y="350" width="343" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="钱客通结算卡修改申请"/>
                     <userDefinedRuntimeAttributes>

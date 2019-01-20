@@ -43,6 +43,14 @@
 		2F02FA0C21F0A471001182E7 /* RunningWaterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02FA0A21F0A471001182E7 /* RunningWaterTableViewCell.xib */; };
 		2F02FA1021F0AF34001182E7 /* FirstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */; };
 		2F02FA1121F0AF34001182E7 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */; };
+		2F106AD721F4804C001D29D6 /* CreditsAndMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F106AD521F4804C001D29D6 /* CreditsAndMembersViewController.m */; };
+		2F106AD821F4804C001D29D6 /* CreditsAndMembersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F106AD621F4804C001D29D6 /* CreditsAndMembersViewController.xib */; };
+		2F106ADF21F48250001D29D6 /* CommonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F106ADD21F48250001D29D6 /* CommonTableViewCell.m */; };
+		2F106AE021F48250001D29D6 /* CommonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F106ADE21F48250001D29D6 /* CommonTableViewCell.xib */; };
+		2F106AE421F4831E001D29D6 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F106AE221F4831E001D29D6 /* CommonViewController.m */; };
+		2F106AE521F4831E001D29D6 /* CommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F106AE321F4831E001D29D6 /* CommonViewController.xib */; };
+		2F106AE921F4A8F0001D29D6 /* IntegralRulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F106AE721F4A8F0001D29D6 /* IntegralRulesViewController.m */; };
+		2F106AEA21F4A8F0001D29D6 /* IntegralRulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F106AE821F4A8F0001D29D6 /* IntegralRulesViewController.xib */; };
 		2FA24E6C21EC918000565459 /* libEaseMobClientSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA24E6A21EC917F00565459 /* libEaseMobClientSDK.a */; };
 		2FA24E7021EC921800565459 /* ApplyShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */; };
 		2FA24E7121EC921800565459 /* ApplyShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */; };
@@ -653,6 +661,18 @@
 		2F02FA0D21F0AF34001182E7 /* FirstTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTableViewCell.h; sourceTree = "<group>"; };
 		2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTableViewCell.m; sourceTree = "<group>"; };
 		2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		2F106AD421F4804C001D29D6 /* CreditsAndMembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditsAndMembersViewController.h; sourceTree = "<group>"; };
+		2F106AD521F4804C001D29D6 /* CreditsAndMembersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditsAndMembersViewController.m; sourceTree = "<group>"; };
+		2F106AD621F4804C001D29D6 /* CreditsAndMembersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsAndMembersViewController.xib; sourceTree = "<group>"; };
+		2F106ADC21F48250001D29D6 /* CommonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTableViewCell.h; sourceTree = "<group>"; };
+		2F106ADD21F48250001D29D6 /* CommonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonTableViewCell.m; sourceTree = "<group>"; };
+		2F106ADE21F48250001D29D6 /* CommonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonTableViewCell.xib; sourceTree = "<group>"; };
+		2F106AE121F4831E001D29D6 /* CommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		2F106AE221F4831E001D29D6 /* CommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		2F106AE321F4831E001D29D6 /* CommonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonViewController.xib; sourceTree = "<group>"; };
+		2F106AE621F4A8F0001D29D6 /* IntegralRulesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegralRulesViewController.h; sourceTree = "<group>"; };
+		2F106AE721F4A8F0001D29D6 /* IntegralRulesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntegralRulesViewController.m; sourceTree = "<group>"; };
+		2F106AE821F4A8F0001D29D6 /* IntegralRulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntegralRulesViewController.xib; sourceTree = "<group>"; };
 		2FA24E6A21EC917F00565459 /* libEaseMobClientSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEaseMobClientSDK.a; sourceTree = "<group>"; };
 		2FA24E6D21EC921700565459 /* ApplyShowDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyShowDetailViewController.xib; sourceTree = "<group>"; };
 		2FA24E6E21EC921700565459 /* ApplyShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyShowDetailViewController.m; sourceTree = "<group>"; };
@@ -1656,6 +1676,30 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
+		2F0070A921F47F410040A359 /* CreditsandMembers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreditsandMembers;
+			sourceTree = "<group>";
+		};
+		2F0070AC21F47F6C0040A359 /* CreditsandMembers */ = {
+			isa = PBXGroup;
+			children = (
+				2F106ADB21F48230001D29D6 /* Cell */,
+				2F106AD421F4804C001D29D6 /* CreditsAndMembersViewController.h */,
+				2F106AD521F4804C001D29D6 /* CreditsAndMembersViewController.m */,
+				2F106AD621F4804C001D29D6 /* CreditsAndMembersViewController.xib */,
+				2F106AE121F4831E001D29D6 /* CommonViewController.h */,
+				2F106AE221F4831E001D29D6 /* CommonViewController.m */,
+				2F106AE321F4831E001D29D6 /* CommonViewController.xib */,
+				2F106AE621F4A8F0001D29D6 /* IntegralRulesViewController.h */,
+				2F106AE721F4A8F0001D29D6 /* IntegralRulesViewController.m */,
+				2F106AE821F4A8F0001D29D6 /* IntegralRulesViewController.xib */,
+			);
+			path = CreditsandMembers;
+			sourceTree = "<group>";
+		};
 		2F02F9F621F0A119001182E7 /* RankingList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1686,6 +1730,16 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		2F106ADB21F48230001D29D6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F106ADC21F48250001D29D6 /* CommonTableViewCell.h */,
+				2F106ADD21F48250001D29D6 /* CommonTableViewCell.m */,
+				2F106ADE21F48250001D29D6 /* CommonTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2FA7F37D21F0841100C7DB50 /* TransfersDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1702,7 +1756,7 @@
 			path = TransfersDetail;
 			sourceTree = "<group>";
 		};
-		2FB8361E21EEDBB80028A376 /* messageCenter */ = {
+		2FB8361E21EEDBB80028A376 /* MessageCenter */ = {
 			isa = PBXGroup;
 			children = (
 				2FD7366221EEE57D00B59D8F /* Cell */,
@@ -1722,7 +1776,7 @@
 				2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */,
 				2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */,
 			);
-			path = messageCenter;
+			path = MessageCenter;
 			sourceTree = "<group>";
 		};
 		2FD7366221EEE57D00B59D8F /* Cell */ = {
@@ -2581,8 +2635,10 @@
 		8EDA41441F22F82C000CBA40 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				2F0070AC21F47F6C0040A359 /* CreditsandMembers */,
+				2F0070A921F47F410040A359 /* CreditsandMembers */,
 				2FA7F37D21F0841100C7DB50 /* TransfersDetail */,
-				2FB8361E21EEDBB80028A376 /* messageCenter */,
+				2FB8361E21EEDBB80028A376 /* MessageCenter */,
 				8E6D1E7D21EB273F002C6717 /* Countdown */,
 				8E6D1E4C21EB273E002C6717 /* HooDatePicker */,
 				8E6D1E1B21EB273D002C6717 /* MyBankcard */,
@@ -3922,10 +3978,12 @@
 				8EB4E4D921201FAE00BC563B /* callBg@2x.png in Resources */,
 				8EB4E4C821201FAE00BC563B /* call_out_h@2x.png in Resources */,
 				8EB4E50E21201FAE00BC563B /* VoiceSearchFeedback017.png in Resources */,
+				2F106AE521F4831E001D29D6 /* CommonViewController.xib in Resources */,
 				8E7108A521E7316700CB11B9 /* LZHTabScrollViewController.xib in Resources */,
 				04395EDE1F233EC10074865E /* TZImagePickerController.bundle in Resources */,
 				8E6D1E9321EB273F002C6717 /* MyViewController.xib in Resources */,
 				8EB4E4F421201FAE00BC563B /* VoiceSearchFeedback017@2x.png in Resources */,
+				2F106AEA21F4A8F0001D29D6 /* IntegralRulesViewController.xib in Resources */,
 				8EB4E4F921201FAE00BC563B /* VoiceSearchFeedback019@2x.png in Resources */,
 				2FA24E7021EC921800565459 /* ApplyShowDetailViewController.xib in Resources */,
 				8EB4E51421201FAE00BC563B /* VoiceSearchFeedback018@2x.png in Resources */,
@@ -3976,6 +4034,7 @@
 				8EB4E51021201FAE00BC563B /* VoiceSearchFeedback020@2x.png in Resources */,
 				8EB4E4ED21201FAE00BC563B /* chat_sender_audio_playing_002@2x.png in Resources */,
 				8EB4E52B21201FAE00BC563B /* chatBar_colorMore_videoSelected@2x.png in Resources */,
+				2F106AE021F48250001D29D6 /* CommonTableViewCell.xib in Resources */,
 				8EB4E4CC21201FAE00BC563B /* chat_location_annotation_someone@2x.png in Resources */,
 				8E6D1E1921EB261C002C6717 /* HMScanner.bundle in Resources */,
 				8EB4E4EA21201FAE00BC563B /* chat_sender_bg.png in Resources */,
@@ -3992,6 +4051,7 @@
 				8EB4E53821201FAE00BC563B /* chatBar_face.png in Resources */,
 				8EB4E4DF21201FAE00BC563B /* chatBar_more_card.png in Resources */,
 				8EB4E4EB21201FAE00BC563B /* chat_sender_audio_playing_001@2x.png in Resources */,
+				2F106AD821F4804C001D29D6 /* CreditsAndMembersViewController.xib in Resources */,
 				8E6D1EA021EB273F002C6717 /* PWInputViewController.xib in Resources */,
 				8EB4E51C21201FAE00BC563B /* chatBar_more_camera.png in Resources */,
 				2FA7F38821F0868100C7DB50 /* TransfresTableViewCell.xib in Resources */,
@@ -4219,6 +4279,7 @@
 				8EEF4BCE211D8CB500DE1E36 /* MWCaptionView.m in Sources */,
 				04395EE11F233EC10074865E /* TZPhotoPreviewCell.m in Sources */,
 				98AEBAB21F18676700E6483B /* NSDate+Helper.m in Sources */,
+				2F106AE421F4831E001D29D6 /* CommonViewController.m in Sources */,
 				8E9FE2D0212E72B900D26955 /* MJRefreshLegendHeader.m in Sources */,
 				8EB4E3F1212009AD00BC563B /* EMSDImageCache.m in Sources */,
 				CDC890701D8698C000CE03CE /* NSDictionary+Safe.m in Sources */,
@@ -4226,6 +4287,7 @@
 				2FFBAE8E21EC4BAA00C9EBAE /* IQKeyboardManager.m in Sources */,
 				04395EE21F233EC10074865E /* TZPhotoPreviewController.m in Sources */,
 				8E42A8BD1F26DADB0026ED07 /* LocationService.m in Sources */,
+				2F106ADF21F48250001D29D6 /* CommonTableViewCell.m in Sources */,
 				8EEF4BF9211D8CB500DE1E36 /* EaseRefreshTableViewController.m in Sources */,
 				8EEF4BCF211D8CB500DE1E36 /* MWZoomingScrollView.m in Sources */,
 				8EB4E3F0212009AD00BC563B /* UIView+EMWebCacheOperation.m in Sources */,
@@ -4242,6 +4304,7 @@
 				8EEF4C14211D8CB500DE1E36 /* EaseUI.m in Sources */,
 				8EEF4BCA211D8CB500DE1E36 /* EMAudioRecorderUtil.m in Sources */,
 				04395ED91F233EC10074865E /* TZAssetCell.m in Sources */,
+				2F106AE921F4A8F0001D29D6 /* IntegralRulesViewController.m in Sources */,
 				8EEF4BDC211D8CB500DE1E36 /* PSTCollectionViewUpdateItem.m in Sources */,
 				8EEF4BD2211D8CB500DE1E36 /* MWTapDetectingView.m in Sources */,
 				8EEF4BA7211D8CB500DE1E36 /* NSDate+Category.m in Sources */,
@@ -4320,6 +4383,7 @@
 				8E6D1E0821EB2488002C6717 /* SelectRegistViewController.m in Sources */,
 				8EEF4BD9211D8CB500DE1E36 /* PSTGridLayoutInfo.m in Sources */,
 				CD3D81A61EA9FF3600F6AC20 /* SBJsonParser.m in Sources */,
+				2F106AD721F4804C001D29D6 /* CreditsAndMembersViewController.m in Sources */,
 				8EEF4BCC211D8CB500DE1E36 /* EMCDDeviceManagerBase.m in Sources */,
 				04395EE01F233EC10074865E /* TZPhotoPickerController.m in Sources */,
 				8EEF4BAE211D8CB500DE1E36 /* EaseEmoji.m in Sources */,

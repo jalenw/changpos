@@ -36,6 +36,11 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self refreshData];
+}
+
 -(void)refreshData
 {
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];

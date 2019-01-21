@@ -431,20 +431,19 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-Kp-MCv">
-                    <rect key="frame" x="39" y="560.5" width="40" height="30"/>
+                    <rect key="frame" x="60" y="567" width="18" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="XcF-95-FLe"/>
-                        <constraint firstAttribute="width" constant="40" id="fgj-fU-yHW"/>
+                        <constraint firstAttribute="height" constant="17" id="XcF-95-FLe"/>
+                        <constraint firstAttribute="width" constant="18" id="fgj-fU-yHW"/>
                     </constraints>
-                    <state key="normal" image="icon_勾选_n"/>
-                    <state key="selected" image="icon_勾选_sel"/>
+                    <state key="normal" image="dage"/>
+                    <state key="selected" image="dage"/>
                     <connections>
                         <action selector="selectAgreement:" destination="-1" eventType="touchUpInside" id="vVz-UQ-lSR"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录页logo+slogan-1" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-Ff-zd1">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="未标题-1" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-Ff-zd1">
                     <rect key="frame" x="133" y="28" width="109" height="80"/>
-                    <color key="backgroundColor" red="0.95686274510000002" green="0.74901960779999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="bbR-bk-JZ4"/>
                     </constraints>
@@ -469,7 +468,7 @@
                 <constraint firstItem="lpe-Eu-2il" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="79" id="GI5-pw-Ur4"/>
                 <constraint firstItem="u6d-rR-HYP" firstAttribute="width" secondItem="agf-Ba-Bqy" secondAttribute="width" id="Hbi-mX-m12"/>
                 <constraint firstItem="agf-Ba-Bqy" firstAttribute="width" secondItem="gkT-EY-DgW" secondAttribute="width" id="IvA-Tw-bbB"/>
-                <constraint firstItem="lpe-Eu-2il" firstAttribute="leading" secondItem="laZ-Kp-MCv" secondAttribute="trailing" id="Kpz-8h-Pak"/>
+                <constraint firstItem="lpe-Eu-2il" firstAttribute="leading" secondItem="laZ-Kp-MCv" secondAttribute="trailing" constant="1" id="Kpz-8h-Pak"/>
                 <constraint firstItem="5TU-xd-1I4" firstAttribute="top" secondItem="1TF-5U-hSK" secondAttribute="bottom" constant="9" id="MlR-4b-xOL"/>
                 <constraint firstAttribute="trailing" secondItem="5TU-xd-1I4" secondAttribute="trailing" constant="16" id="NDA-V3-Vci"/>
                 <constraint firstItem="laZ-Kp-MCv" firstAttribute="centerY" secondItem="lpe-Eu-2il" secondAttribute="centerY" id="RBv-Jy-txd"/>
@@ -490,12 +489,11 @@
                 <constraint firstItem="gkT-EY-DgW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="yVv-Bv-1l6"/>
                 <constraint firstItem="C8C-Im-J8a" firstAttribute="height" secondItem="gkT-EY-DgW" secondAttribute="height" id="zAq-4O-maS"/>
             </constraints>
-            <point key="canvasLocation" x="199.19999999999999" y="225.33733133433284"/>
+            <point key="canvasLocation" x="-263.19999999999999" y="152.47376311844079"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_勾选_n" width="22" height="22"/>
-        <image name="icon_勾选_sel" width="20" height="20"/>
-        <image name="登录页logo+slogan-1" width="160" height="118"/>
+        <image name="dage" width="9.3599996566772461" height="9.119999885559082"/>
+        <image name="未标题-1" width="83" height="50.159999847412109"/>
     </resources>
 </document>

@@ -49,8 +49,8 @@
                                 <constraint firstAttribute="height" constant="1" id="WTa-ar-UbU"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的展业地区" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-u7-dLd">
-                            <rect key="frame" x="97" y="0.0" width="270" height="58"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的展业地区" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-u7-dLd">
+                            <rect key="frame" x="95" y="0.0" width="270" height="58"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
@@ -296,7 +296,7 @@
                 <constraint firstItem="yxP-4i-aOy" firstAttribute="top" secondItem="X6X-dn-84F" secondAttribute="bottom" id="xhw-xd-S3Z"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-282" y="-427"/>
+            <point key="canvasLocation" x="87" y="-351"/>
         </view>
         <view contentMode="scaleToFill" id="UoD-NF-SaV">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

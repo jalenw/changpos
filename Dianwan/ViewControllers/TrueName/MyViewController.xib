@@ -18,7 +18,7 @@
                 <outlet property="headUserInfoCell" destination="2ma-Wf-rdJ" id="1Wr-5K-J5L"/>
                 <outlet property="integralLabel" destination="uR0-4j-IUH" id="5CN-ZX-2td"/>
                 <outlet property="isLoginView" destination="6d1-Px-a7k" id="wgR-Ma-lWp"/>
-                <outlet property="levelImageView" destination="HtL-8s-4io" id="hFW-6E-nq7"/>
+                <outlet property="levelImageView" destination="X9F-av-p3b" id="GQN-Hm-1Dt"/>
                 <outlet property="loginBtn" destination="ygZ-Ph-dYP" id="rCy-VG-gOI"/>
                 <outlet property="nameLabel" destination="8rE-vk-euN" id="pYN-Jc-2Vx"/>
                 <outlet property="phoneLabel" destination="Tyf-iL-Do3" id="Uf2-OM-un0"/>
@@ -91,10 +91,10 @@
                                 <rect key="frame" x="106" y="0.0" width="434" height="114.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8do-XK-zZV">
-                                        <rect key="frame" x="372" y="68.5" width="46" height="46"/>
+                                        <rect key="frame" x="383" y="89.5" width="25" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="Dyt-KL-7FW"/>
-                                            <constraint firstAttribute="height" constant="46" id="Fz5-cf-kB8"/>
+                                            <constraint firstAttribute="width" constant="25" id="Dyt-KL-7FW"/>
+                                            <constraint firstAttribute="height" constant="25" id="Fz5-cf-kB8"/>
                                         </constraints>
                                         <state key="normal" image="bixie"/>
                                         <connections>
@@ -142,11 +142,11 @@
                                         <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的_青铜会员" translatesAutoresizingMaskIntoConstraints="NO" id="X9F-av-p3b">
-                                        <rect key="frame" x="352" y="0.0" width="66" height="25"/>
-                                        <color key="backgroundColor" red="0.98105400799999998" green="0.49155341159999999" blue="0.43432419389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X9F-av-p3b">
+                                        <rect key="frame" x="352" y="0.0" width="80" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="aAs-uL-pwM"/>
+                                            <constraint firstAttribute="width" constant="80" id="bw6-eQ-Y7h"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyf-iL-Do3">
@@ -166,11 +166,11 @@
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.13333333333333333" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Cdi-94-L1s" firstAttribute="leading" secondItem="6d1-Px-a7k" secondAttribute="leading" id="44s-xT-HUx"/>
-                                    <constraint firstAttribute="trailing" secondItem="X9F-av-p3b" secondAttribute="trailing" constant="16" id="9wF-1e-hSZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="X9F-av-p3b" secondAttribute="trailing" constant="2" id="9wF-1e-hSZ"/>
                                     <constraint firstItem="8rE-vk-euN" firstAttribute="centerY" secondItem="Tyf-iL-Do3" secondAttribute="centerY" id="Cbx-8q-267"/>
                                     <constraint firstItem="8rE-vk-euN" firstAttribute="leading" secondItem="6d1-Px-a7k" secondAttribute="leading" id="DM5-kl-aPp"/>
                                     <constraint firstAttribute="bottom" secondItem="8do-XK-zZV" secondAttribute="bottom" id="L1z-Y8-SeY"/>
-                                    <constraint firstAttribute="trailing" secondItem="8do-XK-zZV" secondAttribute="trailing" constant="16" id="L8e-Rc-cPm"/>
+                                    <constraint firstAttribute="trailing" secondItem="8do-XK-zZV" secondAttribute="trailing" constant="26" id="L8e-Rc-cPm"/>
                                     <constraint firstItem="Tyf-iL-Do3" firstAttribute="top" secondItem="6d1-Px-a7k" secondAttribute="top" constant="24" id="O6K-0v-1HF"/>
                                     <constraint firstItem="Cdi-94-L1s" firstAttribute="top" secondItem="8rE-vk-euN" secondAttribute="bottom" constant="8" id="RDC-1n-veU"/>
                                     <constraint firstItem="uR0-4j-IUH" firstAttribute="centerY" secondItem="PFA-tU-sAR" secondAttribute="centerY" id="Rmr-Xu-wcz"/>
@@ -214,12 +214,11 @@
                     <constraint firstItem="wwg-wY-ELh" firstAttribute="leading" secondItem="AwZ-Ry-eYW" secondAttribute="leading" id="zYX-cK-c8D"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="3374" y="-1148"/>
+            <point key="canvasLocation" x="2974" y="-1199"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bixie" width="7.1999998092651367" height="7.1999998092651367"/>
-        <image name="我的_青铜会员" width="66" height="25"/>
         <image name="默认头像 copy 3" width="68" height="68"/>
     </resources>
 </document>

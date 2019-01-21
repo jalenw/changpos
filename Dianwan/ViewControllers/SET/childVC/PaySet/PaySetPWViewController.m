@@ -24,7 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title= @"短信验证";
+//    self.title= @"短信验证";
+    UIImageView *nav =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"shez_1"]];
+    [nav sizeToFit];
+    self.navigationItem.titleView = nav;
     self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;
     self.view.backgroundColor =RGB(48, 46, 58);
 }

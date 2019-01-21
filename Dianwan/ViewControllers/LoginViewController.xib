@@ -22,10 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="登录页logo+slogan-3" id="YEJ-Rc-feH">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="未标题-1" id="YEJ-Rc-feH">
                     <rect key="frame" x="106" y="40" width="163" height="118"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" id="aZL-EP-T8A">
                     <rect key="frame" x="16" y="198" width="343" height="49"/>
@@ -72,10 +71,10 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NxJ-pZ-oWM">
-                            <rect key="frame" x="288" y="6" width="40" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NxJ-pZ-oWM">
+                            <rect key="frame" x="293" y="14" width="30" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="yanj_1"/>
                             <connections>
                                 <action selector="codeAction:" destination="-1" eventType="touchUpInside" id="tPu-zq-TuJ"/>
                             </connections>
@@ -138,11 +137,12 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="-140.80000000000001" y="35.082458770614693"/>
+            <point key="canvasLocation" x="-141.59999999999999" y="34.632683658170919"/>
         </view>
     </objects>
     <resources>
         <image name="back" width="20" height="20"/>
-        <image name="登录页logo+slogan-3" width="16" height="16"/>
+        <image name="yanj_1" width="12.239999771118164" height="8.1599998474121094"/>
+        <image name="未标题-1" width="83" height="50.159999847412109"/>
     </resources>
 </document>

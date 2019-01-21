@@ -34,10 +34,13 @@
     [super viewDidLoad];
    
    
+    UIImageView *nav =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"shez_1"]];
+    [nav sizeToFit];
+    self.navigationItem.titleView = nav;
+    
+    
     _titleArr = @[_changePWCell,_paySetCell,_clearCell,_feedBackCell,_aboutUsCell];
 
-   self.title =@"设置";
-    
     _maintableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 70 * 6) style:UITableViewStyleGrouped];
     self.maintableview.scrollEnabled = NO;
     [self.view addSubview:self.maintableview];

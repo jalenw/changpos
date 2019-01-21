@@ -17,7 +17,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *IdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *integralLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *bgView;
-
 
 @end

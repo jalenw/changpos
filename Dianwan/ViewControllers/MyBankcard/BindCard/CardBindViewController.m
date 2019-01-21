@@ -53,8 +53,9 @@
     [self.view addSubview:_mainTbleview];
     
     _addCard = [[UIButton alloc]initWithFrame:CGRectMake(50,ScreenHeight -152-64-16, ScreenWidth-100, 52)];
-    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
-    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
+//    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [_addCard setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal]
     _addCard.layer.cornerRadius =5;
     _addCard.layer.masksToBounds=YES;
     [_addCard addTarget:self action:@selector(addCardAction) forControlEvents:UIControlEventTouchUpInside];

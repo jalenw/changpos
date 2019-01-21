@@ -60,12 +60,12 @@
 		2FA7F38821F0868100C7DB50 /* TransfresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38621F0868100C7DB50 /* TransfresTableViewCell.xib */; };
 		2FA7F38C21F0930500C7DB50 /* TransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */; };
 		2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */; };
-		2FB8362221EEDBE00028A376 /* messageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362021EEDBE00028A376 /* messageCenterViewController.m */; };
-		2FB8362321EEDBE00028A376 /* messageCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362121EEDBE00028A376 /* messageCenterViewController.xib */; };
-		2FB8362721EEDCA40028A376 /* withdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362521EEDCA40028A376 /* withdrawalViewController.m */; };
-		2FB8362821EEDCA40028A376 /* withdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362621EEDCA40028A376 /* withdrawalViewController.xib */; };
-		2FB8362C21EEDCC20028A376 /* rewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362A21EEDCC20028A376 /* rewardViewController.m */; };
-		2FB8362D21EEDCC20028A376 /* rewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362B21EEDCC20028A376 /* rewardViewController.xib */; };
+		2FB8362221EEDBE00028A376 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362021EEDBE00028A376 /* MessageCenterViewController.m */; };
+		2FB8362321EEDBE00028A376 /* MessageCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362121EEDBE00028A376 /* MessageCenterViewController.xib */; };
+		2FB8362721EEDCA40028A376 /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362521EEDCA40028A376 /* WithdrawalViewController.m */; };
+		2FB8362821EEDCA40028A376 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362621EEDCA40028A376 /* WithdrawalViewController.xib */; };
+		2FB8362C21EEDCC20028A376 /* RewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362A21EEDCC20028A376 /* RewardViewController.m */; };
+		2FB8362D21EEDCC20028A376 /* RewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362B21EEDCC20028A376 /* RewardViewController.xib */; };
 		2FB8363121EEDD030028A376 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362F21EEDD030028A376 /* SystemViewController.m */; };
 		2FB8363221EEDD030028A376 /* SystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8363021EEDD030028A376 /* SystemViewController.xib */; };
 		2FD7366721EEE5CB00B59D8F /* WithdrawalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7366521EEE5CB00B59D8F /* WithdrawalTableViewCell.m */; };
@@ -696,15 +696,15 @@
 		2FA7F38921F0930500C7DB50 /* TransfersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfersViewController.h; sourceTree = "<group>"; };
 		2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfersViewController.m; sourceTree = "<group>"; };
 		2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfersViewController.xib; sourceTree = "<group>"; };
-		2FB8361F21EEDBE00028A376 /* messageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messageCenterViewController.h; sourceTree = "<group>"; };
-		2FB8362021EEDBE00028A376 /* messageCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = messageCenterViewController.m; sourceTree = "<group>"; };
-		2FB8362121EEDBE00028A376 /* messageCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = messageCenterViewController.xib; sourceTree = "<group>"; };
-		2FB8362421EEDCA40028A376 /* withdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = withdrawalViewController.h; sourceTree = "<group>"; };
-		2FB8362521EEDCA40028A376 /* withdrawalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = withdrawalViewController.m; sourceTree = "<group>"; };
-		2FB8362621EEDCA40028A376 /* withdrawalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = withdrawalViewController.xib; sourceTree = "<group>"; };
-		2FB8362921EEDCC20028A376 /* rewardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rewardViewController.h; sourceTree = "<group>"; };
-		2FB8362A21EEDCC20028A376 /* rewardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rewardViewController.m; sourceTree = "<group>"; };
-		2FB8362B21EEDCC20028A376 /* rewardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = rewardViewController.xib; sourceTree = "<group>"; };
+		2FB8361F21EEDBE00028A376 /* MessageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
+		2FB8362021EEDBE00028A376 /* MessageCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterViewController.m; sourceTree = "<group>"; };
+		2FB8362121EEDBE00028A376 /* MessageCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCenterViewController.xib; sourceTree = "<group>"; };
+		2FB8362421EEDCA40028A376 /* WithdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
+		2FB8362521EEDCA40028A376 /* WithdrawalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
+		2FB8362621EEDCA40028A376 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
+		2FB8362921EEDCC20028A376 /* RewardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardViewController.h; sourceTree = "<group>"; };
+		2FB8362A21EEDCC20028A376 /* RewardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardViewController.m; sourceTree = "<group>"; };
+		2FB8362B21EEDCC20028A376 /* RewardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardViewController.xib; sourceTree = "<group>"; };
 		2FB8362E21EEDD030028A376 /* SystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
 		2FB8362F21EEDD030028A376 /* SystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemViewController.m; sourceTree = "<group>"; };
 		2FB8363021EEDD030028A376 /* SystemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemViewController.xib; sourceTree = "<group>"; };
@@ -1701,13 +1701,6 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
-		2F0070A921F47F410040A359 /* CreditsandMembers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CreditsandMembers;
-			sourceTree = "<group>";
-		};
 		2F0070AC21F47F6C0040A359 /* CreditsandMembers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1785,15 +1778,15 @@
 			isa = PBXGroup;
 			children = (
 				2FD7366221EEE57D00B59D8F /* Cell */,
-				2FB8361F21EEDBE00028A376 /* messageCenterViewController.h */,
-				2FB8362021EEDBE00028A376 /* messageCenterViewController.m */,
-				2FB8362121EEDBE00028A376 /* messageCenterViewController.xib */,
-				2FB8362421EEDCA40028A376 /* withdrawalViewController.h */,
-				2FB8362521EEDCA40028A376 /* withdrawalViewController.m */,
-				2FB8362621EEDCA40028A376 /* withdrawalViewController.xib */,
-				2FB8362921EEDCC20028A376 /* rewardViewController.h */,
-				2FB8362A21EEDCC20028A376 /* rewardViewController.m */,
-				2FB8362B21EEDCC20028A376 /* rewardViewController.xib */,
+				2FB8361F21EEDBE00028A376 /* MessageCenterViewController.h */,
+				2FB8362021EEDBE00028A376 /* MessageCenterViewController.m */,
+				2FB8362121EEDBE00028A376 /* MessageCenterViewController.xib */,
+				2FB8362421EEDCA40028A376 /* WithdrawalViewController.h */,
+				2FB8362521EEDCA40028A376 /* WithdrawalViewController.m */,
+				2FB8362621EEDCA40028A376 /* WithdrawalViewController.xib */,
+				2FB8362921EEDCC20028A376 /* RewardViewController.h */,
+				2FB8362A21EEDCC20028A376 /* RewardViewController.m */,
+				2FB8362B21EEDCC20028A376 /* RewardViewController.xib */,
 				2FB8362E21EEDD030028A376 /* SystemViewController.h */,
 				2FB8362F21EEDD030028A376 /* SystemViewController.m */,
 				2FB8363021EEDD030028A376 /* SystemViewController.xib */,
@@ -2676,7 +2669,6 @@
 			isa = PBXGroup;
 			children = (
 				2F0070AC21F47F6C0040A359 /* CreditsandMembers */,
-				2F0070A921F47F410040A359 /* CreditsandMembers */,
 				2FA7F37D21F0841100C7DB50 /* TransfersDetail */,
 				2FB8361E21EEDBB80028A376 /* MessageCenter */,
 				8E6D1E7D21EB273F002C6717 /* Countdown */,
@@ -3938,7 +3930,7 @@
 				2F02FA0621F0A3D9001182E7 /* RunningWaterViewController.xib in Resources */,
 				9816D96A1F258E39000FCD7E /* FriendListCell.xib in Resources */,
 				2FD7366D21EEE7C800B59D8F /* RewardTableViewCell.xib in Resources */,
-				2FB8362321EEDBE00028A376 /* messageCenterViewController.xib in Resources */,
+				2FB8362321EEDBE00028A376 /* MessageCenterViewController.xib in Resources */,
 				8EB4E51921201FAE00BC563B /* chatBar_more_cameraSelected@2x.png in Resources */,
 				8EB4E50521201FAE00BC563B /* VoiceSearchFeedback002@2x.png in Resources */,
 				8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */,
@@ -4067,7 +4059,7 @@
 				8EB4E53021201FAE00BC563B /* chatBar_colorMore_photo@2x.png in Resources */,
 				8EB4E4DA21201FAE00BC563B /* faceDelete@2x.png in Resources */,
 				8EB4E52F21201FAE00BC563B /* chatBar_colorMore_audioCall@2x.png in Resources */,
-				2FB8362D21EEDCC20028A376 /* rewardViewController.xib in Resources */,
+				2FB8362D21EEDCC20028A376 /* RewardViewController.xib in Resources */,
 				CD6323C71EE54C1100D033F4 /* ShareSDK.bundle in Resources */,
 				8EB4E53E21201FAE00BC563B /* chatBar_keyboardSelected@2x.png in Resources */,
 				8EB4E4EC21201FAE00BC563B /* chat_sender_bg@2x.png in Resources */,
@@ -4130,7 +4122,7 @@
 				8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */,
 				8EBF663F21E1B14A001C4A0D /* QRShowViewController.xib in Resources */,
 				CD6323C51EE54C1100D033F4 /* README.txt in Resources */,
-				2FB8362821EEDCA40028A376 /* withdrawalViewController.xib in Resources */,
+				2FB8362821EEDCA40028A376 /* WithdrawalViewController.xib in Resources */,
 				2F02F9FC21F0A15A001182E7 /* RankingParentViewController.xib in Resources */,
 				8EB4E4E421201FAE00BC563B /* chatBar_more_card@2x.png in Resources */,
 				8EDA41411F22F731000CBA40 /* LoginViewController.xib in Resources */,
@@ -4279,7 +4271,7 @@
 				8EEF4C0A211D8CB500DE1E36 /* EaseBubbleView+Location.m in Sources */,
 				8E6D1E9D21EB273F002C6717 /* NSDate+HooDatePicker.m in Sources */,
 				8EB4E3FA212009AD00BC563B /* UIImageView+EMHighlightedWebCache.m in Sources */,
-				2FB8362C21EEDCC20028A376 /* rewardViewController.m in Sources */,
+				2FB8362C21EEDCC20028A376 /* RewardViewController.m in Sources */,
 				8EEF4BC7211D8CB500DE1E36 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				CDC890761D8698C000CE03CE /* Tooles.m in Sources */,
 				8EB4E3EB212009AD00BC563B /* EMSDWebImageDownloader.m in Sources */,
@@ -4304,7 +4296,7 @@
 				8EEF4BAB211D8CB500DE1E36 /* EaseMessageReadManager.m in Sources */,
 				8EEF4BD8211D8CB500DE1E36 /* PSTCollectionViewCell.m in Sources */,
 				8EEF4BE0211D8CB500DE1E36 /* PSTGridLayoutRow.m in Sources */,
-				2FB8362221EEDBE00028A376 /* messageCenterViewController.m in Sources */,
+				2FB8362221EEDBE00028A376 /* MessageCenterViewController.m in Sources */,
 				9816D9891F259418000FCD7E /* happy.xcdatamodeld in Sources */,
 				8E42A8BC1F26DADB0026ED07 /* CLLocation+Sino.m in Sources */,
 				8EEF4C10211D8CB500DE1E36 /* EaseMessageHelper.m in Sources */,
@@ -4455,7 +4447,7 @@
 				8EB4E3BF2120065F00BC563B /* AppDelegate+EaseMob.m in Sources */,
 				04395EDF1F233EC10074865E /* TZImagePickerController.m in Sources */,
 				8E6D1EEF21EB2ACB002C6717 /* CardBindViewController.m in Sources */,
-				2FB8362721EEDCA40028A376 /* withdrawalViewController.m in Sources */,
+				2FB8362721EEDCA40028A376 /* WithdrawalViewController.m in Sources */,
 				8E6D1EA221EB273F002C6717 /* PWInputViewController.m in Sources */,
 				8EB4E42721201CC500BC563B /* ChatViewController.m in Sources */,
 				8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */,

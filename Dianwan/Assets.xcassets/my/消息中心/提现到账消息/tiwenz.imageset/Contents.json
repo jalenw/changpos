@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "tiwenz.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tiwenz.png",
       "scale" : "2x"
     },
     {

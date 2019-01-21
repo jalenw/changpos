@@ -16,7 +16,7 @@
 #import "CertificationSuccessViewController.h"
 #import "ChatViewController.h"
 #import "MyPartnerViewController.h"
-#import "messageCenterViewController.h"
+#import "MessageCenterViewController.h"
 #import "MyStoreViewController.h"
 #import "CreditsAndMembersViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -72,14 +72,12 @@
     self.IdLabel.text =[NSString stringWithFormat:@"ID:%lld",AppDelegateInstance.defaultUser.member_id];
     self.integralLabel.text =[NSString stringWithFormat:@"%lld",AppDelegateInstance.defaultUser.member_points];
     if (AppDelegateInstance.defaultUser.member_level  ==1) {
-        [_levelImageView setImage:[UIImage imageNamed: @"我的_青铜会员-1"]];
-        [_bgView setImage:[UIImage imageNamed: @"青铜会员头像框-1"]];
+        [_levelImageView setImage:[UIImage imageNamed:@"byhy_1"]];
+    
     }else  if(AppDelegateInstance.defaultUser.member_level  ==2) {
-        [_levelImageView setImage:[UIImage imageNamed: @"我的_白银会员-1"]];
-        [_bgView setImage:[UIImage imageNamed: @"白银会员头像框-1"]];
+        [_levelImageView setImage:[UIImage imageNamed: @"byhy_2"]];
     }else{
-        [_levelImageView setImage:[UIImage imageNamed: @"我的_黄金会员-1"]];
-        [_bgView setImage:[UIImage imageNamed: @"黄金会员头像框-1"]];
+        [_levelImageView setImage:[UIImage imageNamed: @"byhy_3"]];
     }
 }
 
@@ -163,7 +161,7 @@
         }
         if(indexPath.row==6){
             //消息中心
-            messageCenterViewController *message =[[messageCenterViewController alloc]init];
+            MessageCenterViewController *message =[[MessageCenterViewController alloc]init];
             [self.navigationController pushViewController:message animated:YES];
             
         }

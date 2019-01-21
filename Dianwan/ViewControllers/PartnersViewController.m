@@ -8,6 +8,7 @@
 
 #import "PartnersViewController.h"
 #import "PartnersTableViewCell.h"
+#import "MyStoreViewController.h"
 @interface PartnersViewController ()
 {
     NSMutableArray *dataList;
@@ -102,6 +103,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = dataList[indexPath.row];
+    MyStoreViewController *vc = [[MyStoreViewController alloc]init];
+    vc.others_member_id = [dict safeStringForKey:@"member_id"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

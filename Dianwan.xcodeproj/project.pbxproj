@@ -112,6 +112,12 @@
 		8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2721F082B100279630 /* OweDeviceTableViewCell.xib */; };
 		8E591B2F21F2F45B00279630 /* StoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */; };
 		8E591B3021F2F45B00279630 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */; };
+		8E591B3621F4B8C200279630 /* ActivedStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B3421F4B8C200279630 /* ActivedStoreViewController.m */; };
+		8E591B3721F4B8C200279630 /* ActivedStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B3521F4B8C200279630 /* ActivedStoreViewController.xib */; };
+		8E591B3C21F4B93700279630 /* NoActivedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B3A21F4B93700279630 /* NoActivedListViewController.m */; };
+		8E591B3D21F4B93700279630 /* NoActivedListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B3B21F4B93700279630 /* NoActivedListViewController.xib */; };
+		8E591B4121F4B94A00279630 /* ActivedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B3F21F4B94A00279630 /* ActivedViewController.m */; };
+		8E591B4221F4B94A00279630 /* ActivedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B4021F4B94A00279630 /* ActivedViewController.xib */; };
 		8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */; };
 		8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */; };
 		8E6D1E0621EB2488002C6717 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1DFF21EB2487002C6717 /* RegisterViewModel.m */; };
@@ -481,6 +487,10 @@
 		8EEF4C15211D8CB500DE1E36 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8EEF4BA5211D8CB500DE1E36 /* EaseUIResource.bundle */; };
 		8EEF4C3A211D8DC700DE1E36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF4C39211D8DBE00DE1E36 /* MobileCoreServices.framework */; };
 		8EEF4C3C211D8DDE00DE1E36 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEF4C3B211D8DD800DE1E36 /* CFNetwork.framework */; };
+		8EF3AF9121F5BF200003FB35 /* ToolTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3AF8F21F5BF200003FB35 /* ToolTableViewCell.m */; };
+		8EF3AF9221F5BF200003FB35 /* ToolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF3AF9021F5BF200003FB35 /* ToolTableViewCell.xib */; };
+		8EF3AF9821F5FFDB0003FB35 /* RoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3AF9621F5FFDB0003FB35 /* RoleViewController.m */; };
+		8EF3AF9921F5FFDB0003FB35 /* RoleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF3AF9721F5FFDB0003FB35 /* RoleViewController.xib */; };
 		8EFC60D61F25864A0088E00A /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC60D51F25864A0088E00A /* AdView.m */; };
 		90A2F2101D8E7CB600AB04CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A2F20F1D8E7CB600AB04CF /* Assets.xcassets */; };
 		9816D9691F258E39000FCD7E /* FriendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9816D9641F258E39000FCD7E /* FriendListCell.m */; };
@@ -773,6 +783,15 @@
 		8E591B2C21F2F45B00279630 /* StoreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreTableViewCell.h; sourceTree = "<group>"; };
 		8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreTableViewCell.m; sourceTree = "<group>"; };
 		8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
+		8E591B3321F4B8C200279630 /* ActivedStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivedStoreViewController.h; sourceTree = "<group>"; };
+		8E591B3421F4B8C200279630 /* ActivedStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivedStoreViewController.m; sourceTree = "<group>"; };
+		8E591B3521F4B8C200279630 /* ActivedStoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivedStoreViewController.xib; sourceTree = "<group>"; };
+		8E591B3921F4B93700279630 /* NoActivedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoActivedListViewController.h; sourceTree = "<group>"; };
+		8E591B3A21F4B93700279630 /* NoActivedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoActivedListViewController.m; sourceTree = "<group>"; };
+		8E591B3B21F4B93700279630 /* NoActivedListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoActivedListViewController.xib; sourceTree = "<group>"; };
+		8E591B3E21F4B94A00279630 /* ActivedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivedViewController.h; sourceTree = "<group>"; };
+		8E591B3F21F4B94A00279630 /* ActivedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivedViewController.m; sourceTree = "<group>"; };
+		8E591B4021F4B94A00279630 /* ActivedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivedViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		8E6D1DFE21EB2487002C6717 /* SelectRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectRegistViewController.xib; sourceTree = "<group>"; };
@@ -1422,6 +1441,12 @@
 		8EEF4BA5211D8CB500DE1E36 /* EaseUIResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EaseUIResource.bundle; sourceTree = "<group>"; };
 		8EEF4C39211D8DBE00DE1E36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8EEF4C3B211D8DD800DE1E36 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8EF3AF8E21F5BF200003FB35 /* ToolTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolTableViewCell.h; sourceTree = "<group>"; };
+		8EF3AF8F21F5BF200003FB35 /* ToolTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolTableViewCell.m; sourceTree = "<group>"; };
+		8EF3AF9021F5BF200003FB35 /* ToolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolTableViewCell.xib; sourceTree = "<group>"; };
+		8EF3AF9521F5FFDB0003FB35 /* RoleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoleViewController.h; sourceTree = "<group>"; };
+		8EF3AF9621F5FFDB0003FB35 /* RoleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoleViewController.m; sourceTree = "<group>"; };
+		8EF3AF9721F5FFDB0003FB35 /* RoleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoleViewController.xib; sourceTree = "<group>"; };
 		8EFC60D41F25864A0088E00A /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		8EFC60D51F25864A0088E00A /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		90A2F20F1D8E7CB600AB04CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1915,6 +1940,18 @@
 				8E591B1B21F075B900279630 /* AllocateViewController.h */,
 				8E591B1C21F075B900279630 /* AllocateViewController.m */,
 				8E591B1D21F075B900279630 /* AllocateViewController.xib */,
+				8E591B3321F4B8C200279630 /* ActivedStoreViewController.h */,
+				8E591B3421F4B8C200279630 /* ActivedStoreViewController.m */,
+				8E591B3521F4B8C200279630 /* ActivedStoreViewController.xib */,
+				8E591B3921F4B93700279630 /* NoActivedListViewController.h */,
+				8E591B3A21F4B93700279630 /* NoActivedListViewController.m */,
+				8E591B3B21F4B93700279630 /* NoActivedListViewController.xib */,
+				8E591B3E21F4B94A00279630 /* ActivedViewController.h */,
+				8E591B3F21F4B94A00279630 /* ActivedViewController.m */,
+				8E591B4021F4B94A00279630 /* ActivedViewController.xib */,
+				8EF3AF9521F5FFDB0003FB35 /* RoleViewController.h */,
+				8EF3AF9621F5FFDB0003FB35 /* RoleViewController.m */,
+				8EF3AF9721F5FFDB0003FB35 /* RoleViewController.xib */,
 			);
 			name = MyStore;
 			sourceTree = "<group>";
@@ -2222,6 +2259,9 @@
 				8E591B2C21F2F45B00279630 /* StoreTableViewCell.h */,
 				8E591B2D21F2F45B00279630 /* StoreTableViewCell.m */,
 				8E591B2E21F2F45B00279630 /* StoreTableViewCell.xib */,
+				8EF3AF8E21F5BF200003FB35 /* ToolTableViewCell.h */,
+				8EF3AF8F21F5BF200003FB35 /* ToolTableViewCell.m */,
+				8EF3AF9021F5BF200003FB35 /* ToolTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -3915,6 +3955,7 @@
 				8EEF4A91211D8C9600DE1E36 /* EaseMob.bundle in Resources */,
 				8EB4E4E121201FAE00BC563B /* chatBar_more_face.png in Resources */,
 				2F02FA1121F0AF34001182E7 /* FirstTableViewCell.xib in Resources */,
+				8EF3AF9221F5BF200003FB35 /* ToolTableViewCell.xib in Resources */,
 				8EB4E53221201FAE00BC563B /* chatBar_colorMore_videoCallSelected@2x.png in Resources */,
 				8E71089121E72C5D00CB11B9 /* BusinessHandlingViewController.xib in Resources */,
 				8EB4E4F021201FAE00BC563B /* VoiceSearchFeedback003@2x.png in Resources */,
@@ -3947,6 +3988,7 @@
 				8EDA41531F22F85C000CBA40 /* FriendsViewController.xib in Resources */,
 				8EB4E4CA21201FAE00BC563B /* chat_location_preview@2x.png in Resources */,
 				8EB4E54321201FAE00BC563B /* chatBar_faceSelected@2x.png in Resources */,
+				8E591B3D21F4B93700279630 /* NoActivedListViewController.xib in Resources */,
 				8EB4E4E921201FAE00BC563B /* chat_sender_audio_playing_003@2x.png in Resources */,
 				8EB4E53621201FAE00BC563B /* chatBar_colorMore_videoCall@2x.png in Resources */,
 				8E6D1E9821EB273F002C6717 /* PerfectInformationViewController.xib in Resources */,
@@ -3966,6 +4008,7 @@
 				8E6D1EA721EB273F002C6717 /* ChangeLoginPWViewController.xib in Resources */,
 				8EB4E4FC21201FAE00BC563B /* VoiceSearchFeedback020.png in Resources */,
 				8EA1DC3621E48D3300A8A501 /* FirstCollectionViewCell.xib in Resources */,
+				8E591B3721F4B8C200279630 /* ActivedStoreViewController.xib in Resources */,
 				8EB4E4D421201FAE00BC563B /* chat_receiver_bg.png in Resources */,
 				8EEF4BF3211D8CB500DE1E36 /* MWPhotoBrowser.bundle in Resources */,
 				8EB4E4D121201FAE00BC563B /* chat_location_detail_disclosureHL@2x.png in Resources */,
@@ -4072,6 +4115,7 @@
 				8EB4E4D821201FAE00BC563B /* chat_receiver_audio_playing001@2x.png in Resources */,
 				8EB4E50A21201FAE00BC563B /* VoiceSearchFeedback001.png in Resources */,
 				2FD7366821EEE5CB00B59D8F /* WithdrawalTableViewCell.xib in Resources */,
+				8EF3AF9921F5FFDB0003FB35 /* RoleViewController.xib in Resources */,
 				8EB4E54421201FAE00BC563B /* chatBar_recordBg.png in Resources */,
 				8EB4E4DB21201FAE00BC563B /* faceDelete.png in Resources */,
 				8E6D1E8D21EB273F002C6717 /* SetUserInfoViewController.xib in Resources */,
@@ -4092,6 +4136,7 @@
 				8EDA41411F22F731000CBA40 /* LoginViewController.xib in Resources */,
 				8EB4E53A21201FAE00BC563B /* chatBar_record.png in Resources */,
 				8E412B891F23572100A40CE6 /* RegViewController.xib in Resources */,
+				8E591B4221F4B94A00279630 /* ActivedViewController.xib in Resources */,
 				8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */,
 				8EB4E52221201FAE00BC563B /* chatBar_more_photo@2x.png in Resources */,
 				8E6D1E8121EB273F002C6717 /* MyBankCardViewController.xib in Resources */,
@@ -4146,6 +4191,7 @@
 				CD06662A1E8CB53700CCD49A /* MainViewController.m in Sources */,
 				04EBFC381F25D79C00C4DE83 /* LZHAreaPickerView.m in Sources */,
 				8EB4E3F8212009AD00BC563B /* EMSDWebImageCompat.m in Sources */,
+				8E591B4121F4B94A00279630 /* ActivedViewController.m in Sources */,
 				8E591B1E21F075B900279630 /* AllocateViewController.m in Sources */,
 				8EB4E3EC212009AD00BC563B /* NSData+EMImageContentType.m in Sources */,
 				8E7108A021E72FFD00CB11B9 /* PartnersViewController.m in Sources */,
@@ -4242,8 +4288,10 @@
 				8EEF4C02211D8CB500DE1E36 /* EaseImageView.m in Sources */,
 				8EEF4C12211D8CB500DE1E36 /* EaseMessageHelper+RemoveAfterRead.m in Sources */,
 				8E6D1EA121EB273F002C6717 /* SYPasswordView.m in Sources */,
+				8EF3AF9121F5BF200003FB35 /* ToolTableViewCell.m in Sources */,
 				CD06662B1E8CB53700CCD49A /* UIBarButtonItem+Extension.m in Sources */,
 				8E9FE2CC212E72B900D26955 /* UIScrollView+MJRefresh.m in Sources */,
+				8E591B3C21F4B93700279630 /* NoActivedListViewController.m in Sources */,
 				04395EE31F233EC10074865E /* TZProgressView.m in Sources */,
 				8EDA41401F22F731000CBA40 /* LoginViewController.m in Sources */,
 				9816D9691F258E39000FCD7E /* FriendListCell.m in Sources */,
@@ -4272,6 +4320,7 @@
 				8E7108AA21E737B100CB11B9 /* MerchantTableViewCell.m in Sources */,
 				CDC890011D8698BF00CE03CE /* AFURLSessionManager.m in Sources */,
 				8E591B1121EED3F900279630 /* ModifyRateAndPriceViewController.m in Sources */,
+				8EF3AF9821F5FFDB0003FB35 /* RoleViewController.m in Sources */,
 				8E6D1E9F21EB273F002C6717 /* PaySetPWViewController.m in Sources */,
 				8EEF4BFB211D8CB500DE1E36 /* EaseViewController.m in Sources */,
 				04395EE81F2342BE0074865E /* LZHAlertView.m in Sources */,
@@ -4328,6 +4377,7 @@
 				04395EDD1F233EC10074865E /* TZImageManager.m in Sources */,
 				8EB4E3F6212009AD00BC563B /* UIImage+EMGIF.m in Sources */,
 				2FFBAE8921EC4BAA00C9EBAE /* IQNSArray+Sort.m in Sources */,
+				8E591B3621F4B8C200279630 /* ActivedStoreViewController.m in Sources */,
 				8E6D1E0721EB2488002C6717 /* RegisterViewController.m in Sources */,
 				8E6D1E1721EB261C002C6717 /* HMScannerViewController.m in Sources */,
 				8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */,

@@ -9,6 +9,9 @@
 #import "MyStoreViewController.h"
 #import "TransfersDetailViewController.h"
 #import "StoreTableViewCell.h"
+#import "ActivedStoreViewController.h"
+#import "AllocateViewController.h"
+#import "RoleViewController.h"
 @interface MyStoreViewController ()
 {
     NSArray *array;
@@ -19,7 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的机具";
+    if (self.others_member_id) {
+        self.title = @"伙伴的库存";
+    }
+    else
+        self.title = @"我的机具";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -27,8 +34,12 @@
 {
     [super viewWillAppear:animated];
     [self setRightBarButtonWithTitle:@"调拨明细"];
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (self.others_member_id) {
+        [param setValue:self.others_member_id forKey:@"others_member_id"];
+    }
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
@@ -45,6 +56,8 @@
     [self.navigationController pushViewController:tran animated:YES];
 }
 - (IBAction)confirmAct:(UIButton *)sender {
+    AllocateViewController *vc = [[AllocateViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -73,10 +86,33 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = array[indexPath.row];
+    ActivedStoreViewController *vc = [[ActivedStoreViewController alloc]init];
+    if (self.others_member_id) {
+        vc.others_member_id = self.others_member_id;
+    }
+    vc.goods_id = [dict safeStringForKey:@"goods_id"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)roleAct:(UIButton*)button
 {
-    
+    NSDictionary *dict = array[button.tag];
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (self.others_member_id) {
+        [param setValue:self.others_member_id forKey:@"others_member_id"];
+    }
+    [param setValue:[dict safeStringForKey:@"goods_id"] forKey:@"goods_id"];
+    [SVProgressHUD show];
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myProductRateInfo" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
+        if (status) {
+            RoleViewController *vc = [[RoleViewController alloc]init];
+            vc.dict = [data safeDictionaryForKey:@"result"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            [AlertHelper showAlertWithTitle:error];
+        }
+    }];
 }
 @end

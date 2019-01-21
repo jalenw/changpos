@@ -42,10 +42,7 @@
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
 
     [param setValue:@(page) forKey:@"page"];
-    
-    [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/member/reward_log" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
-        [SVProgressHUD dismiss];
         if (page==1) {
             [self.mainTableview headerEndRefreshing];
         }

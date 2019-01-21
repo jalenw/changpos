@@ -26,14 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addChildVc:[[FirstViewController alloc] init] title:@"首页" image:@"" selectedImage:@""];
-    [self addChildVc:[[StatisticViewController alloc] init] title:@"统计" image:@"" selectedImage:@""];
+    [self addChildVc:[[FirstViewController alloc] init] title:@"" image:@"sytub" selectedImage:@"sytub_1"];
+    [self addChildVc:[[StatisticViewController alloc] init] title:@"" image:@"tjtub" selectedImage:@"tjtub_1"];
 //    EaseConversationListViewController *chatVc = [[EaseConversationListViewController alloc] init];
 //    chatVc.delegate = self;
 //    [self addChildVc:chatVc title:@"消息" image:@"" selectedImage:@""];
-    [self addChildVc:[[QRShowViewController alloc] init] title:@"二维码" image:@"" selectedImage:@""];
-    [self addChildVc:[[InformationViewController alloc] init] title:@"资讯" image:@"" selectedImage:@""];
-    [self addChildVc:[[MyViewController alloc] init] title:@"我的" image:@"" selectedImage:@""];
+    [self addChildVc:[[QRShowViewController alloc] init] title:@"" image:@"ewmjtub" selectedImage:@"ewmjtub_1"];
+    [self addChildVc:[[InformationViewController alloc] init] title:@"" image:@"zxtub" selectedImage:@"zxtub_1"];
+    [self addChildVc:[[MyViewController alloc] init] title:@"" image:@"wdtub" selectedImage:@"wdtub_1"];
     
 //   tabbar中间按钮
 //    ZTTabBar *tabBar = [[ZTTabBar alloc] init];
@@ -60,10 +60,13 @@
     // 设置子控制器的文字(可以设置tabBar和navigationBar的文字)
     childVc.title = title;
     
+    childVc.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     // 设置子控制器的tabBarItem图片
-    childVc.tabBarItem.image = [UIImage imageNamed:image];
+    UIImage *t = [self createNewImageWithColor:[UIImage imageNamed:image] multiple:0.5];
+    childVc.tabBarItem.image = [t imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] ;
     // 禁用图片渲染
-    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *t2 = [self createNewImageWithColor:[UIImage imageNamed:selectedImage] multiple:0.5];
+    childVc.tabBarItem.selectedImage = [t2 imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     // 设置文字的样式
     [childVc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : RGB(123, 123, 123)} forState:UIControlStateNormal];
@@ -79,6 +82,33 @@
     ZTNavigationController *navigationVc = [[ZTNavigationController alloc] initWithRootViewController:childVc];
     // 添加子控制器
     [self addChildViewController:navigationVc];
+}
+
+- (UIImage *) createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple
+{
+    CGFloat newMultiple = multiple;
+    if (multiple == 0) {
+        newMultiple = 1;
+    }
+    else if((fabs(multiple) > 0 && fabs(multiple) < 1) || (fabs(multiple)>1 && fabs(multiple)<2))
+    {
+        newMultiple = multiple;
+    }
+    else
+    {
+        newMultiple = 1;
+    }
+    CGFloat w = image.size.width*newMultiple;
+    CGFloat h = image.size.height*newMultiple;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    UIImage *tempImage = nil;
+    CGRect imageFrame = CGRectMake(0, 0, w, h);
+    UIGraphicsBeginImageContextWithOptions(imageFrame.size, NO, scale);
+    [[UIBezierPath bezierPathWithRoundedRect:imageFrame cornerRadius:0] addClip];
+    [image drawInRect:imageFrame];
+    tempImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tempImage;
 }
 
 #pragma ZTTabBarDelegate

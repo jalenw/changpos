@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)productAct:(UIButton *)sender;
 - (IBAction)snAct:(UIButton *)sender;
 - (IBAction)partnerAct:(UIButton *)sender;
+- (IBAction)confirmAct:(UIButton *)sender;
 
 @end
 

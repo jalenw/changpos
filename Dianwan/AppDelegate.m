@@ -30,7 +30,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.operationQueue = [NSOperationQueue new];
-    [[UITabBar appearance] setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]]];
+    [[UITabBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)]];
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];

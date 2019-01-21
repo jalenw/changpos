@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
-    [self setRightBarButtonWithTitle:@"取消"];
+//    [self setRightBarButtonWithTitle:@"取消"];
 }
 
 - (NSArray<NSString *> *)buttonTitleArray{
@@ -52,9 +52,9 @@
      return (ScreenWidth/2-80)/2;
 }
 
--(void)rightbarButtonDidTap:(UIButton *)button{
-    self.searchTf.text =@"";
-}
+//-(void)rightbarButtonDidTap:(UIButton *)button{
+//    self.searchTf.text =@"";
+//}
 
 - (void)setupControllers{
     self.scrollView.top = 0;

@@ -40,6 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"我的";
     if (AppDelegateInstance.defaultUser!=nil) {
         self.isLoginView.hidden=NO;
         self.loginBtn.hidden =YES;
@@ -50,7 +51,7 @@
     }
     
     
-    [self setRightBarButtonWithImage:[UIImage imageNamed:@"wechat_pay"]];
+    [self setRightBarButtonWithImage:[UIImage imageNamed:@"设置"]];
     self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
     [self.view addSubview:self.mainTableView];
     self.view.backgroundColor = RGB(48, 46, 58);

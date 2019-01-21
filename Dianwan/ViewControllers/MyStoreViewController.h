@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyStoreViewController : BaseViewController
+@property (strong, nonatomic) NSString *others_member_id;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)confirmAct:(UIButton *)sender;
 

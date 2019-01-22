@@ -114,6 +114,7 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/find_password" params:@{@"phone":self.phone.text,@"password":self.password.text,@"re_password":self.rePassword.text,@"captcha":self.code.text,@"client":@"ios"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
             [AlertHelper showAlertWithTitle:@"修改成功"];
+            [self.navigationController popViewControllerAnimated:YES];
         }
         else [AlertHelper showAlertWithTitle:error];
     }];

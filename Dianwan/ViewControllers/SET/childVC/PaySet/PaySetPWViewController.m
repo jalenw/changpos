@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title= @"短信验证";
+    self.title= @"短信验证";
     UIImageView *nav =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"shez_1"]];
     [nav sizeToFit];
     self.navigationItem.titleView = nav;
@@ -74,7 +74,6 @@
 
 - (IBAction)getCAPTCHA:(UIButton *)sender {
     
-    WEAKSELF
     [SVProgressHUD show];
    if ([_phoneTF.text isEqualToString:@""] ) {
         [AlertHelper showAlertWithTitle:@"手机号不能为空"];
@@ -94,8 +93,8 @@
     [[ServiceForUser manager]postMethodName:@"mobile/connect/get_sms_captcha" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-                 weakSelf.countDownManager.payPwdTime = 60;
-                 [weakSelf.countDownManager timerStart];
+                 self.countDownManager.payPwdTime = 60;
+                 [self.countDownManager timerStart];
            
         }else{
              [AlertHelper showAlertWithTitle:error];

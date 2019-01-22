@@ -99,6 +99,17 @@
     [self.view addSubview:_truenameSuccessView];
     
 }
+- (IBAction)btnSelectedAct:(UIButton *)sender {
+    if(sender.tag==1){
+        self.boyBtn.selected = YES;
+        self.grilBtn.selected = !self.boyBtn.isSelected;
+    }else{
+        self.boyBtn.selected = NO;
+        self.grilBtn.selected = !self.boyBtn.isSelected;
+    }
+    
+}
+
 
 
 //代理，隐藏控件，暂时没有这个字段的接口

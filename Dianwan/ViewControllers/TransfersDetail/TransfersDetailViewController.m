@@ -68,8 +68,12 @@
 }
 
 #pragma mark ---datasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+      return dataList.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dataList.count;
+    return 1;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -80,19 +84,40 @@
         cell = [nib objectAtIndex:0];
     }
     if (dataList.count>0) {
-        NSDictionary *dict = dataList[indexPath.row];
+        NSDictionary *dict = dataList[indexPath.section];
         cell.dict = dict;
     }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 135;
+    return 120;
+}
+//设置边距
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 10;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    view.backgroundColor = RGB(230, 230, 230);
+    return view;
+}
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 1)];
+    view.backgroundColor = RGB(230, 230, 230);
+    return view;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 1;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     TransfersViewController *transfers = [[TransfersViewController alloc]init];
-    transfers.dict = dataList[indexPath.row];
+    transfers.dict = dataList[indexPath.section];
     [self.navigationController pushViewController:transfers animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

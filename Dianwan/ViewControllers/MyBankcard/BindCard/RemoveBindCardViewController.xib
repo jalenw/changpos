@@ -47,11 +47,11 @@
                                 <action selector="removeBankCardAction:" destination="-1" eventType="touchUpInside" id="W8G-Bm-KMt"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提现_银行 copy" translatesAutoresizingMaskIntoConstraints="NO" id="MI3-3y-XXf">
-                            <rect key="frame" x="166.5" y="168" width="42" height="42"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yingkatub_1" translatesAutoresizingMaskIntoConstraints="NO" id="MI3-3y-XXf">
+                            <rect key="frame" x="162.5" y="168" width="50" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="Hko-TI-Whw"/>
-                                <constraint firstAttribute="width" constant="42" id="cgB-jW-khe"/>
+                                <constraint firstAttribute="width" constant="50" id="cgB-jW-khe"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招商银行储蓄卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpl-Gk-Wa3">
@@ -99,6 +99,6 @@
         </view>
     </objects>
     <resources>
-        <image name="提现_银行 copy" width="30" height="30"/>
+        <image name="yingkatub_1" width="25.440000534057617" height="18.479999542236328"/>
     </resources>
 </document>

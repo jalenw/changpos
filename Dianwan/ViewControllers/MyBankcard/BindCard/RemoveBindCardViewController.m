@@ -29,7 +29,7 @@
 -(void)setUI{
     self.cardNumberLabel.text = [NSString stringWithFormat:@"**** **** **** %@",[self.model.bank_card substringFromIndex:self.model.bank_card.length-4]];
     self.cardBankNameLabel.text = self.model.bank_name;
-    [self.bankImageView sd_setImageWithURL:[NSURL URLWithString:self.model.bank_img]];
+//    [self.bankImageView sd_setImageWithURL:[NSURL URLWithString:self.model.bank_img]];
 }
 
 - (IBAction)removeBankCardAction:(UIButton *)sender {

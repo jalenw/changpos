@@ -37,7 +37,7 @@
     self.phonrNumLabel.text = [_dict safeStringForKey:@"member_mobile"];
     
     
-    NSMutableAttributedString *attribut = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"total_price"]]];
+    NSMutableAttributedString *attribut = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"累计:¥%@",[_dict safeStringForKey:@"total_price"]]];
     NSRange range = [[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"total_price"]] rangeOfString:@":"];
     NSRange pointRange = NSMakeRange(0, range.location+1);
     [attribut addAttribute:NSForegroundColorAttributeName

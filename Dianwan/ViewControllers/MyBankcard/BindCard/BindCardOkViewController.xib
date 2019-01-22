@@ -300,80 +300,6 @@
             <viewLayoutGuide key="safeArea" id="OoX-cL-9uv"/>
             <point key="canvasLocation" x="47" y="-818"/>
         </view>
-        <view contentMode="scaleToFill" id="wbO-S2-v2T">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYf-f2-H8n">
-                    <rect key="frame" x="48" y="277" width="279" height="133"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否放弃绑定银行卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXr-cF-BgY">
-                            <rect key="frame" x="61.5" y="34" width="156" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oud-OE-DhG">
-                            <rect key="frame" x="8" y="79" width="263" height="1"/>
-                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="kZp-2n-HAH"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XA-N0-joY">
-                            <rect key="frame" x="46" y="92" width="31" height="30"/>
-                            <state key="normal" title="取消">
-                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drq-0v-kB4">
-                            <rect key="frame" x="139" y="92" width="1" height="40"/>
-                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Unw-vr-dTa"/>
-                                <constraint firstAttribute="width" constant="1" id="ist-zx-1Ty"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYS-PZ-Z0c">
-                            <rect key="frame" x="202" y="92" width="31" height="30"/>
-                            <state key="normal" title="确定">
-                                <color key="titleColor" red="1" green="0.6470588235294118" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="Drq-0v-kB4" firstAttribute="leading" secondItem="3XA-N0-joY" secondAttribute="trailing" constant="62" id="6Dy-S5-A55"/>
-                        <constraint firstItem="FYS-PZ-Z0c" firstAttribute="leading" secondItem="Drq-0v-kB4" secondAttribute="trailing" constant="62" id="6Le-pH-Jt6"/>
-                        <constraint firstItem="oud-OE-DhG" firstAttribute="leading" secondItem="iYf-f2-H8n" secondAttribute="leadingMargin" id="7nH-hM-jhO"/>
-                        <constraint firstItem="oud-OE-DhG" firstAttribute="centerX" secondItem="QXr-cF-BgY" secondAttribute="centerX" id="AOV-iA-sO1"/>
-                        <constraint firstAttribute="height" constant="133" id="FWl-vs-fnw"/>
-                        <constraint firstAttribute="width" constant="279" id="G4o-Vc-BqP"/>
-                        <constraint firstItem="QXr-cF-BgY" firstAttribute="top" secondItem="iYf-f2-H8n" secondAttribute="top" constant="34" id="KTW-dd-fgT"/>
-                        <constraint firstItem="3XA-N0-joY" firstAttribute="top" secondItem="oud-OE-DhG" secondAttribute="bottom" constant="12" id="dfC-cv-f3C"/>
-                        <constraint firstItem="Drq-0v-kB4" firstAttribute="centerX" secondItem="iYf-f2-H8n" secondAttribute="centerX" id="gLN-1t-S1a"/>
-                        <constraint firstItem="oud-OE-DhG" firstAttribute="top" secondItem="QXr-cF-BgY" secondAttribute="bottom" constant="24" id="iAZ-E0-RfG"/>
-                        <constraint firstItem="Drq-0v-kB4" firstAttribute="top" secondItem="oud-OE-DhG" secondAttribute="bottom" constant="12" id="oUq-Uj-khu"/>
-                        <constraint firstItem="QXr-cF-BgY" firstAttribute="centerX" secondItem="iYf-f2-H8n" secondAttribute="centerX" id="rae-cn-c6D"/>
-                        <constraint firstItem="3XA-N0-joY" firstAttribute="centerY" secondItem="FYS-PZ-Z0c" secondAttribute="centerY" id="vXM-4Q-Y4J"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="W2g-f4-ghA"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                </view>
-            </subviews>
-            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.30211900684931509" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="iYf-f2-H8n" firstAttribute="centerX" secondItem="tdf-hH-Lkx" secondAttribute="centerX" id="oh1-do-dej"/>
-                <constraint firstItem="iYf-f2-H8n" firstAttribute="centerY" secondItem="tdf-hH-Lkx" secondAttribute="centerY" id="rF3-VN-pH3"/>
-            </constraints>
-            <viewLayoutGuide key="safeArea" id="tdf-hH-Lkx"/>
-            <point key="canvasLocation" x="-14" y="940"/>
-        </view>
         <view contentMode="scaleToFill" id="Qvk-Se-aIG">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -381,6 +307,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrd-iT-Pgi">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-sl-r7c">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="需要绑定银行卡，是否现在进行银行卡绑定" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-Bg-UTs">
                             <rect key="frame" x="32" y="16" width="279" height="80"/>
                             <constraints>
@@ -390,20 +319,36 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfU-dk-uhq">
-                            <rect key="frame" x="32" y="146" width="98" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <state key="normal" title="取消"/>
-                            <connections>
-                                <action selector="bindSelectedCancledAction:" destination="-1" eventType="touchUpInside" id="u04-XM-2Pp"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qed-vZ-kQ4">
                             <rect key="frame" x="213" y="146" width="98" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <state key="normal" title="绑定"/>
+                            <color key="backgroundColor" red="0.98039215686274506" green="0.68627450980392157" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="绑定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="bindCardAction:" destination="-1" eventType="touchUpInside" id="XPO-pB-hQ8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfU-dk-uhq">
+                            <rect key="frame" x="32" y="146" width="98" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="bindSelectedCancledAction:" destination="-1" eventType="touchUpInside" id="u04-XM-2Pp"/>
                             </connections>
                         </button>
                     </subviews>
@@ -411,8 +356,12 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="264-fo-1nM"/>
                         <constraint firstItem="cFA-Bg-UTs" firstAttribute="leading" secondItem="Jrd-iT-Pgi" secondAttribute="leading" constant="32" id="6gL-91-f6c"/>
+                        <constraint firstItem="lmM-sl-r7c" firstAttribute="top" secondItem="Jrd-iT-Pgi" secondAttribute="top" id="BVY-hu-L0s"/>
+                        <constraint firstAttribute="trailing" secondItem="lmM-sl-r7c" secondAttribute="trailing" id="bI2-u1-361"/>
                         <constraint firstAttribute="trailing" secondItem="cFA-Bg-UTs" secondAttribute="trailing" constant="32" id="iSl-gb-Cda"/>
                         <constraint firstItem="cFA-Bg-UTs" firstAttribute="top" secondItem="Jrd-iT-Pgi" secondAttribute="top" constant="16" id="oe9-km-Qao"/>
+                        <constraint firstItem="lmM-sl-r7c" firstAttribute="leading" secondItem="Jrd-iT-Pgi" secondAttribute="leading" id="pNe-gm-r65"/>
+                        <constraint firstAttribute="bottom" secondItem="lmM-sl-r7c" secondAttribute="bottom" id="tJ9-dX-OK2"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -438,6 +387,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-Q5-Z6V">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="97U-Ve-U2L">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否放弃绑定银行卡" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aR-6R-Ap2">
                             <rect key="frame" x="32" y="16" width="279" height="80"/>
                             <constraints>
@@ -450,7 +402,15 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tz-zW-yzb">
                             <rect key="frame" x="32" y="146" width="98" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <state key="normal" title="取消"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="cancleViewSelectioncancleAction:" destination="-1" eventType="touchUpInside" id="p3d-5h-dAr"/>
                             </connections>
@@ -458,7 +418,15 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clq-JI-OLG">
                             <rect key="frame" x="213" y="146" width="98" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <state key="normal" title="确定"/>
+                            <color key="backgroundColor" red="0.98039215686274506" green="0.68627450980392157" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="cancleBindAction:" destination="-1" eventType="touchUpInside" id="Su2-TY-nXg"/>
                             </connections>
@@ -468,8 +436,12 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="101-QB-0Yd"/>
                         <constraint firstAttribute="trailing" secondItem="9aR-6R-Ap2" secondAttribute="trailing" constant="32" id="Crd-yz-fl2"/>
+                        <constraint firstItem="97U-Ve-U2L" firstAttribute="top" secondItem="MfV-Q5-Z6V" secondAttribute="top" id="ELc-ct-yDl"/>
+                        <constraint firstAttribute="bottom" secondItem="97U-Ve-U2L" secondAttribute="bottom" id="TIW-oP-U1o"/>
+                        <constraint firstAttribute="trailing" secondItem="97U-Ve-U2L" secondAttribute="trailing" id="Zt8-oe-GXY"/>
                         <constraint firstItem="9aR-6R-Ap2" firstAttribute="leading" secondItem="MfV-Q5-Z6V" secondAttribute="leading" constant="32" id="e6h-1X-Y32"/>
                         <constraint firstItem="9aR-6R-Ap2" firstAttribute="top" secondItem="MfV-Q5-Z6V" secondAttribute="top" constant="16" id="gFo-te-rtz"/>
+                        <constraint firstItem="97U-Ve-U2L" firstAttribute="leading" secondItem="MfV-Q5-Z6V" secondAttribute="leading" id="iSr-Lw-jSK"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -485,7 +457,7 @@
                 <constraint firstItem="wyR-Qd-sAi" firstAttribute="trailing" secondItem="MfV-Q5-Z6V" secondAttribute="trailing" constant="16" id="tJ2-IO-nHE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="wyR-Qd-sAi"/>
-            <point key="canvasLocation" x="1196" y="399"/>
+            <point key="canvasLocation" x="1196" y="398.95052473763121"/>
         </view>
         <view contentMode="scaleToFill" id="7O9-Q6-zfC">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -494,6 +466,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4h-7R-FWv">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-5n-j6w">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜您，绑定成功" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-h4-5QF">
                             <rect key="frame" x="32" y="16" width="279" height="80"/>
                             <constraints>
@@ -504,14 +480,20 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU9-Rf-Diy">
-                            <rect key="frame" x="46.5" y="154" width="250" height="30"/>
+                            <rect key="frame" x="46.5" y="144" width="250" height="40"/>
                             <color key="backgroundColor" red="0.98431372549019602" green="0.71372549019607845" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Mai-Of-PRj"/>
                                 <constraint firstAttribute="width" constant="250" id="zPh-Pz-IAb"/>
                             </constraints>
                             <state key="normal" title="下一步">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backAction:" destination="-1" eventType="touchUpInside" id="xqb-Ga-7me"/>
                                 <action selector="cancleBindAction:" destination="-1" eventType="touchUpInside" id="Wey-5N-gKP"/>
@@ -541,7 +523,10 @@
                 <constraint firstItem="X4h-7R-FWv" firstAttribute="top" secondItem="49W-QF-RwE" secondAttribute="top" constant="180" id="dmr-tU-29h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="49W-QF-RwE"/>
-            <point key="canvasLocation" x="881" y="1042"/>
+            <point key="canvasLocation" x="880.79999999999995" y="1041.2293853073463"/>
         </view>
     </objects>
+    <resources>
+        <image name="tankuang_1" width="159.36000061035156" height="93.599998474121094"/>
+    </resources>
 </document>

@@ -50,6 +50,8 @@
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
+        
+        self.backgroundColor = RGB(48, 46, 58);
 //        self.nameTextFiled.delegate =self;
 //        self.idCardNumber.delegate =self;
     }

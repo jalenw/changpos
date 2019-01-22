@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的银行卡背景" translatesAutoresizingMaskIntoConstraints="NO" id="1Ew-K6-wzu">
                                 <rect key="frame" x="0.0" y="0.0" width="314" height="150.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提现_银行 copy" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="银行卡icon" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
                                 <rect key="frame" x="24" y="16" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="5az-wu-zRj"/>
@@ -87,11 +88,11 @@
                 <outlet property="cardTypeImageView" destination="bdz-v1-rtv" id="MXU-f9-lN0"/>
                 <outlet property="cardTypeLabel" destination="SF4-ua-ZWQ" id="8AQ-CA-oU2"/>
             </connections>
-            <point key="canvasLocation" x="-109" y="-52.5"/>
+            <point key="canvasLocation" x="186" y="-14"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="我的银行卡背景" width="343" height="112"/>
-        <image name="提现_银行 copy" width="30" height="30"/>
+        <image name="银行卡icon" width="105" height="75"/>
     </resources>
 </document>

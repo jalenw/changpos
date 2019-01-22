@@ -53,8 +53,8 @@
     [self.view addSubview:_mainTbleview];
     
     _addCard = [[UIButton alloc]initWithFrame:CGRectMake(50,ScreenHeight -152-64-16, ScreenWidth-100, 52)];
-//    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
-//    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
+    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 //    [_addCard setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal]
     _addCard.layer.cornerRadius =5;
     _addCard.layer.masksToBounds=YES;
@@ -155,12 +155,15 @@
                 [weakSelf.modelArr removeAllObjects];
                 
                 if(result.count==0){
-                    self.mainTbleview.backgroundColor = [UIColor clearColor];
+//                    self.mainTbleview.backgroundColor = [UIColor clearColor];
+
+                    self.mainTbleview.hidden =YES;
                     self.noCARDlABEL.hidden = NO;
                     self.noCardImageView.hidden = NO;
                     self.addCard.hidden =NO;
                     _hascard =NO;
                 }else{
+                    self.mainTbleview.hidden =NO;
                     self.noCARDlABEL.hidden = YES;
                     self.noCardImageView.hidden = YES;
                     self.addCard.hidden =YES;

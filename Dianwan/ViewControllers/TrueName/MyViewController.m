@@ -66,7 +66,9 @@
 
 //设置数据
 -(void)setUI{
-    [self.acoverImageView sd_setImageWithURL:[NSURL URLWithString:AppDelegateInstance.defaultUser.member_avatar]];
+    if(AppDelegateInstance.defaultUser.member_avatar.length>0){
+          [self.acoverImageView sd_setImageWithURL:[NSURL URLWithString:AppDelegateInstance.defaultUser.member_avatar]];
+    }
     self.nameLabel.text = AppDelegateInstance.defaultUser.truename;
     self.phoneLabel.text =AppDelegateInstance.defaultUser.member_mobile;
     self.IdLabel.text =[NSString stringWithFormat:@"ID:%lld",AppDelegateInstance.defaultUser.member_id];

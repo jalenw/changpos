@@ -35,7 +35,7 @@
     self.phoneLabel.delegate =self;
     self.phoneLabel.tag =2;
     self.codeLabel.delegate =self;
-     self.phoneLabel.tag =1;
+    self.codeLabel.tag=1;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string

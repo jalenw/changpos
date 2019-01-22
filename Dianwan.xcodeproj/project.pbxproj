@@ -74,6 +74,7 @@
 		2FD7366D21EEE7C800B59D8F /* RewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7366B21EEE7C800B59D8F /* RewardTableViewCell.xib */; };
 		2FD7367221EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */; };
 		2FD7367321EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */; };
+		2FDF3D6021F750AC0028C8CD /* 默认头像.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FDF3D5E21F750AC0028C8CD /* 默认头像.png */; };
 		2FFBAE8921EC4BAA00C9EBAE /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6821EC4BA900C9EBAE /* IQNSArray+Sort.m */; };
 		2FFBAE8A21EC4BAA00C9EBAE /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6A21EC4BA900C9EBAE /* IQUIScrollView+Additions.m */; };
 		2FFBAE8B21EC4BAA00C9EBAE /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6C21EC4BAA00C9EBAE /* IQUITextFieldView+Additions.m */; };
@@ -717,6 +718,7 @@
 		2FD7366F21EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowWithdrawaldetailsViewController.h; sourceTree = "<group>"; };
 		2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowWithdrawaldetailsViewController.m; sourceTree = "<group>"; };
 		2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowWithdrawaldetailsViewController.xib; sourceTree = "<group>"; };
+		2FDF3D5E21F750AC0028C8CD /* 默认头像.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "默认头像.png"; sourceTree = "<group>"; };
 		2FFBAE6721EC4BA900C9EBAE /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		2FFBAE6821EC4BA900C9EBAE /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
 		2FFBAE6921EC4BA900C9EBAE /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
@@ -3652,6 +3654,7 @@
 				8EB4E3BE2120065F00BC563B /* AppDelegate+EaseMob.h */,
 				8EB4E3BD2120065F00BC563B /* AppDelegate+EaseMob.m */,
 				90A2F20F1D8E7CB600AB04CF /* Assets.xcassets */,
+				2FDF3D5E21F750AC0028C8CD /* 默认头像.png */,
 				CDC88E4C1D8691E000CE03CE /* LaunchScreen.storyboard */,
 				CDC88E4F1D8691E000CE03CE /* Info.plist */,
 				CDC88E3B1D8691E000CE03CE /* Supporting Files */,
@@ -4140,6 +4143,7 @@
 				0432ECEF1F271CC4008D7AA3 /* AlipaySDK.bundle in Resources */,
 				8EB4E54A21201FAE00BC563B /* chatListCellHead.png in Resources */,
 				8E6D1E8B21EB273F002C6717 /* City2ViewController.xib in Resources */,
+				2FDF3D6021F750AC0028C8CD /* 默认头像.png in Resources */,
 				8EB4E4F121201FAE00BC563B /* VoiceSearchFeedback001@2x.png in Resources */,
 				8E412B871F23572100A40CE6 /* ForgetViewController.xib in Resources */,
 				8EB4E53D21201FAE00BC563B /* chatBar_keyboardSelected.png in Resources */,

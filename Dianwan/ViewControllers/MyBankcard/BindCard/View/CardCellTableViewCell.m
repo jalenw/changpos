@@ -30,7 +30,7 @@
 }
 -(void)setModel:(CardInfoModel *)model{
     _model =model;
-//    [self.cardTypeImageView sd_setImageWithURL:[NSURL URLWithString:_model.bank_img]];
+    [self.cardTypeImageView sd_setImageWithURL:[NSURL URLWithString:_model.bank_img]];
     self.cardBanckLabel.text =_model.bank_name;
     NSString *cardNum = [_model.bank_card substringWithRange:NSMakeRange(_model.bank_card.length-4, 4)];
 //rhgfogervf'j'o's'j'd

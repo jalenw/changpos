@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "qiesheng_1.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "feihao_4.png",
       "scale" : "2x"
     },
     {

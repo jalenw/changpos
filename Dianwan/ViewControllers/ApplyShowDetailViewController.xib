@@ -16,10 +16,12 @@
                 <outlet property="agressBtn" destination="NbP-vc-2np" id="njb-UA-etH"/>
                 <outlet property="changeRateLabel" destination="vVR-Gc-vAu" id="shI-W3-oOI"/>
                 <outlet property="disagressBtn" destination="Ao7-7l-S9H" id="0cU-jf-bfD"/>
+                <outlet property="feilvChanggeView" destination="PxF-Vr-hcm" id="m4O-1T-4Gw"/>
                 <outlet property="machineModeLabel" destination="Kof-VH-q1l" id="WM8-Yn-mBo"/>
                 <outlet property="machineNameLabel" destination="pyV-SF-0Ch" id="T9q-Ez-dJb"/>
                 <outlet property="nameLabel" destination="te4-HX-NRf" id="x8m-3Q-w6A"/>
                 <outlet property="phoneNumLabel" destination="udH-tF-j31" id="Jos-ED-AwL"/>
+                <outlet property="rateChangeLabel" destination="vVR-Gc-vAu" id="eBt-JV-gkj"/>
                 <outlet property="stateLabel" destination="DIV-u5-amP" id="uLF-F8-DcS"/>
                 <outlet property="titlelLabel" destination="Qsx-7s-ksl" id="1Oc-Oc-HeL"/>
                 <outlet property="view" destination="Z0Z-KG-kc0" id="oqk-z1-rk4"/>
@@ -328,7 +330,7 @@
                                         <constraint firstAttribute="height" constant="1" id="LRv-vD-0FM"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVR-Gc-vAu">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVR-Gc-vAu">
                                     <rect key="frame" x="85" y="0.0" width="258" height="40"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -339,7 +341,6 @@
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="15Q-9T-LY1"/>
                                 <constraint firstItem="vVR-Gc-vAu" firstAttribute="top" secondItem="Tjf-ah-1NW" secondAttribute="top" id="1W4-KN-Hqg"/>
-                                <constraint firstAttribute="height" constant="40" id="Dac-xW-8zN"/>
                                 <constraint firstAttribute="trailing" secondItem="oN8-Xp-nIF" secondAttribute="trailing" id="Jk2-Kt-2dD"/>
                                 <constraint firstItem="qQT-P6-emb" firstAttribute="centerY" secondItem="PxF-Vr-hcm" secondAttribute="centerY" id="SrW-We-j9s"/>
                                 <constraint firstItem="oN8-Xp-nIF" firstAttribute="leading" secondItem="PxF-Vr-hcm" secondAttribute="leading" constant="15" id="X0w-ZE-C4B"/>
@@ -477,7 +478,7 @@
                 <constraint firstItem="Ao7-7l-S9H" firstAttribute="leading" secondItem="rjM-w5-bP0" secondAttribute="leading" id="rCN-TX-ckI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="rjM-w5-bP0"/>
-            <point key="canvasLocation" x="164" y="38"/>
+            <point key="canvasLocation" x="-20" y="-6"/>
         </view>
     </objects>
 </document>

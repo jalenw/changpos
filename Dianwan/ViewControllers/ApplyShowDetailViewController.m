@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titlelLabel;
 @property (weak, nonatomic) IBOutlet UIButton *agressBtn;
 @property (weak, nonatomic) IBOutlet UIButton *disagressBtn;
+@property (weak, nonatomic) IBOutlet UIView *feilvChanggeView;
+@property (weak, nonatomic) IBOutlet UILabel *rateChangeLabel;
 
 @end
 
@@ -56,6 +58,11 @@
         self.agressBtn.hidden =NO;
         self.disagressBtn.hidden =NO;
     }
+    
+//   CGRect frame= self.feilvChanggeView.frame;
+//    frame.size.height =[Tooles sizeWithFont:[UIFont systemFontOfSize:17] maxSize:CGSizeMake(self.rateChangeLabel.width, MAXFLOAT) string:[dict safeStringForKey:@"decoration"]].height;
+//        self.rateChangeLabel.frame =frame;
+//    self.feilvChanggeView.frame =frame;
     
      self.titlelLabel.text =[dict safeStringForKey:@"title"];
     self.nameLabel.text =[dict safeStringForKey:@"member_name"];

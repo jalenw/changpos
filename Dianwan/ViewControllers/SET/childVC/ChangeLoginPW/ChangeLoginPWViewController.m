@@ -43,10 +43,13 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+     self.countDownManager.delegate = nil;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"修改登录密码";
+    [self setupNav];
+//    self.navigationItem.title = @"修改登录密码";
+    
     self.phoneTF.text =AppDelegateInstance.defaultUser.member_mobile;    
     self.passwordTF.delegate =self;
     self.passwordTF.tag =3;
@@ -54,8 +57,28 @@
     self.confirmPWTF.tag =3;
     self.codeTF.tag =2;
     self.codeTF.delegate =self;
+   
 }
 
+-(void)setupNav{
+    UILabel *titleview = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+    titleview.text = @"修改登录密码";
+    titleview.textAlignment = NSTextAlignmentCenter;
+    [titleview setTextColor:[UIColor blackColor]];
+    self.navigationItem.titleView =titleview;
+    
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(-15, 0, 44, 44)];
+    [button setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backBarItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+     self.navigationItem.leftBarButtonItems = @[backBarItem];
+    
+    [self.navigationItem sx_setLeftBarButtonItem:backBarItem];
+}
+
+-(void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 - (IBAction)securityTextAction:(UIButton *)sender {

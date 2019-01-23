@@ -97,7 +97,7 @@
                 <outlet property="transferserLabel" destination="VwG-z5-gDD" id="0k2-mk-CRL"/>
                 <outlet property="typeStateLabel" destination="bs7-p3-AL5" id="qFI-iY-Qiq"/>
             </connections>
-            <point key="canvasLocation" x="64" y="-39.130434782608695"/>
+            <point key="canvasLocation" x="270" y="-56"/>
         </tableViewCell>
     </objects>
 </document>

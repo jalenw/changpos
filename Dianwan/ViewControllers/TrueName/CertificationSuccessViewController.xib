@@ -26,7 +26,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jld-Gi-L4h">
                     <rect key="frame" x="16" y="36" width="343" height="413"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sKa-3c-rDK">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sKa-3c-rDK">
                             <rect key="frame" x="24" y="24" width="68" height="68"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="68" id="RMK-NG-XeE"/>
@@ -65,14 +65,14 @@
                             <rect key="frame" x="0.0" y="117" width="343" height="296"/>
                             <color key="backgroundColor" red="0.1803921568627451" green="0.18823529411764706" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ysm_1" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-yU-uCF">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ysm_1" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-yU-uCF">
                             <rect key="frame" x="251" y="24" width="68" height="68"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="68" id="KwT-Jd-wLs"/>
                                 <constraint firstAttribute="height" constant="68" id="nnh-mw-2rg"/>
                             </constraints>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sm_1" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-oe-lc6">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sm_1" translatesAutoresizingMaskIntoConstraints="NO" id="AJy-oe-lc6">
                             <rect key="frame" x="126.5" y="189" width="90" height="150"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="MdH-UF-MaH"/>

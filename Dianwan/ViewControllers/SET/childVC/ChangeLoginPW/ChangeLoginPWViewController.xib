@@ -165,13 +165,13 @@
                                 <constraint firstAttribute="height" constant="1" id="cwk-e9-nCX"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU2-la-E1C">
-                            <rect key="frame" x="304" y="13.5" width="22" height="22"/>
-                            <color key="backgroundColor" red="0.99215686270000003" green="0.82352941180000006" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <button opaque="NO" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU2-la-E1C">
+                            <rect key="frame" x="304" y="16.5" width="22" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="22" id="iSu-Et-FGD"/>
                             </constraints>
-                            <state key="normal" image="输入密码_可见"/>
+                            <color key="tintColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" backgroundImage="yanj_1"/>
                             <state key="selected" image="输入密码_不可见"/>
                             <connections>
                                 <action selector="securityTextAction:" destination="-1" eventType="touchUpInside" id="hIb-c6-JyT"/>
@@ -289,7 +289,7 @@
         </view>
     </objects>
     <resources>
+        <image name="yanj_1" width="12.239999771118164" height="8.1599998474121094"/>
         <image name="输入密码_不可见" width="16" height="16"/>
-        <image name="输入密码_可见" width="16" height="16"/>
     </resources>
 </document>

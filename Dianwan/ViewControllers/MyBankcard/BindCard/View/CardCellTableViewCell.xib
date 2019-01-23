@@ -22,10 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xq-VJ-DcM">
                         <rect key="frame" x="16" y="0.0" width="314" height="150.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的银行卡背景" translatesAutoresizingMaskIntoConstraints="NO" id="1Ew-K6-wzu">
-                                <rect key="frame" x="0.0" y="0.0" width="314" height="150.5"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="银行卡icon" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="银行卡icon" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
                                 <rect key="frame" x="24" y="16" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="5az-wu-zRj"/>
@@ -59,11 +56,7 @@
                             <constraint firstItem="bdz-v1-rtv" firstAttribute="leading" secondItem="adB-Zr-MOQ" secondAttribute="leading" constant="24" id="BYB-WA-Dn5"/>
                             <constraint firstItem="osa-4H-p2g" firstAttribute="leading" secondItem="bdz-v1-rtv" secondAttribute="trailing" constant="8" id="CdJ-W5-JzT"/>
                             <constraint firstItem="SF4-ua-ZWQ" firstAttribute="leading" secondItem="bdz-v1-rtv" secondAttribute="trailing" constant="8" id="Edi-uu-Pfm"/>
-                            <constraint firstAttribute="bottom" secondItem="1Ew-K6-wzu" secondAttribute="bottom" id="PEr-rZ-19B"/>
-                            <constraint firstItem="1Ew-K6-wzu" firstAttribute="top" secondItem="adB-Zr-MOQ" secondAttribute="top" id="QiM-iL-G8T"/>
-                            <constraint firstAttribute="trailing" secondItem="1Ew-K6-wzu" secondAttribute="trailing" id="SuT-KS-Jpq"/>
                             <constraint firstItem="SF4-ua-ZWQ" firstAttribute="top" secondItem="osa-4H-p2g" secondAttribute="bottom" constant="5" id="Toc-wG-d3r"/>
-                            <constraint firstItem="1Ew-K6-wzu" firstAttribute="leading" secondItem="adB-Zr-MOQ" secondAttribute="leading" id="U1I-SW-3fv"/>
                             <constraint firstItem="SF4-ua-ZWQ" firstAttribute="top" secondItem="osa-4H-p2g" secondAttribute="bottom" constant="5" id="Uzc-Rr-Eep"/>
                             <constraint firstItem="hH3-rx-OVs" firstAttribute="top" secondItem="SF4-ua-ZWQ" secondAttribute="bottom" constant="8" id="WD0-46-nQo"/>
                             <constraint firstItem="osa-4H-p2g" firstAttribute="top" secondItem="bdz-v1-rtv" secondAttribute="top" id="bm4-Xt-LEB"/>
@@ -92,7 +85,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="我的银行卡背景" width="343" height="112"/>
         <image name="银行卡icon" width="105" height="75"/>
     </resources>
 </document>

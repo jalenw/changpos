@@ -74,6 +74,8 @@
 		2FD7366D21EEE7C800B59D8F /* RewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7366B21EEE7C800B59D8F /* RewardTableViewCell.xib */; };
 		2FD7367221EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */; };
 		2FD7367321EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */; };
+		2FF228FF21F8875C009A079A /* SystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF228FD21F8875C009A079A /* SystemTableViewCell.m */; };
+		2FF2290021F8875C009A079A /* SystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */; };
 		2FFBAE8921EC4BAA00C9EBAE /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6821EC4BA900C9EBAE /* IQNSArray+Sort.m */; };
 		2FFBAE8A21EC4BAA00C9EBAE /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6A21EC4BA900C9EBAE /* IQUIScrollView+Additions.m */; };
 		2FFBAE8B21EC4BAA00C9EBAE /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6C21EC4BAA00C9EBAE /* IQUITextFieldView+Additions.m */; };
@@ -129,8 +131,6 @@
 		8E6D1E1821EB261C002C6717 /* HMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E0F21EB261C002C6717 /* HMScanner.m */; };
 		8E6D1E1921EB261C002C6717 /* HMScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1021EB261C002C6717 /* HMScanner.bundle */; };
 		8E6D1E1A21EB261C002C6717 /* HMScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1221EB261C002C6717 /* HMScannerController.m */; };
-		8E6D1E8021EB273F002C6717 /* MyBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */; };
-		8E6D1E8121EB273F002C6717 /* MyBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */; };
 		8E6D1E8B21EB273F002C6717 /* City2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3121EB273E002C6717 /* City2ViewController.xib */; };
 		8E6D1E8C21EB273F002C6717 /* cityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3421EB273E002C6717 /* cityModel.m */; };
 		8E6D1E8D21EB273F002C6717 /* SetUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6D1E3621EB273E002C6717 /* SetUserInfoViewController.xib */; };
@@ -717,6 +717,9 @@
 		2FD7366F21EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowWithdrawaldetailsViewController.h; sourceTree = "<group>"; };
 		2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowWithdrawaldetailsViewController.m; sourceTree = "<group>"; };
 		2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowWithdrawaldetailsViewController.xib; sourceTree = "<group>"; };
+		2FF228FC21F8875C009A079A /* SystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemTableViewCell.h; sourceTree = "<group>"; };
+		2FF228FD21F8875C009A079A /* SystemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemTableViewCell.m; sourceTree = "<group>"; };
+		2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemTableViewCell.xib; sourceTree = "<group>"; };
 		2FFBAE6721EC4BA900C9EBAE /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		2FFBAE6821EC4BA900C9EBAE /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
 		2FFBAE6921EC4BA900C9EBAE /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
@@ -811,9 +814,6 @@
 		8E6D1E1221EB261C002C6717 /* HMScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerController.m; sourceTree = "<group>"; };
 		8E6D1E1321EB261C002C6717 /* HMScannerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerBorder.h; sourceTree = "<group>"; };
 		8E6D1E1421EB261C002C6717 /* HMScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerViewController.h; sourceTree = "<group>"; };
-		8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBankCardViewController.m; sourceTree = "<group>"; };
-		8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyBankCardViewController.xib; sourceTree = "<group>"; };
-		8E6D1E1E21EB273D002C6717 /* MyBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBankCardViewController.h; sourceTree = "<group>"; };
 		8E6D1E3121EB273E002C6717 /* City2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = City2ViewController.xib; sourceTree = "<group>"; };
 		8E6D1E3221EB273E002C6717 /* CityTableviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityTableviewViewController.h; sourceTree = "<group>"; };
 		8E6D1E3321EB273E002C6717 /* SetUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUserInfoViewController.h; sourceTree = "<group>"; };
@@ -1793,6 +1793,9 @@
 				2FD7366F21EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.h */,
 				2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */,
 				2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */,
+				2FF228FC21F8875C009A079A /* SystemTableViewCell.h */,
+				2FF228FD21F8875C009A079A /* SystemTableViewCell.m */,
+				2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */,
 			);
 			path = MessageCenter;
 			sourceTree = "<group>";
@@ -1971,9 +1974,6 @@
 			isa = PBXGroup;
 			children = (
 				8E6D1EDC21EB2ACB002C6717 /* BindCard */,
-				8E6D1E1C21EB273D002C6717 /* MyBankCardViewController.m */,
-				8E6D1E1D21EB273D002C6717 /* MyBankCardViewController.xib */,
-				8E6D1E1E21EB273D002C6717 /* MyBankCardViewController.h */,
 			);
 			path = MyBankcard;
 			sourceTree = "<group>";
@@ -3933,6 +3933,7 @@
 				2FB8362321EEDBE00028A376 /* MessageCenterViewController.xib in Resources */,
 				8EB4E51921201FAE00BC563B /* chatBar_more_cameraSelected@2x.png in Resources */,
 				8EB4E50521201FAE00BC563B /* VoiceSearchFeedback002@2x.png in Resources */,
+				2FF2290021F8875C009A079A /* SystemTableViewCell.xib in Resources */,
 				8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */,
 				8E591B3021F2F45B00279630 /* StoreTableViewCell.xib in Resources */,
 				8EB4E50921201FAE00BC563B /* VoiceSearchFeedback015.png in Resources */,
@@ -4131,7 +4132,6 @@
 				8E591B4221F4B94A00279630 /* ActivedViewController.xib in Resources */,
 				8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */,
 				8EB4E52221201FAE00BC563B /* chatBar_more_photo@2x.png in Resources */,
-				8E6D1E8121EB273F002C6717 /* MyBankCardViewController.xib in Resources */,
 				8EB4E4E821201FAE00BC563B /* chat_sender_audio_playing_full@2x.png in Resources */,
 				8E6D1E0421EB2488002C6717 /* RegisterViewController.xib in Resources */,
 				8EB4E4CB21201FAE00BC563B /* chat_location_annotation_someone.png in Resources */,
@@ -4161,7 +4161,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E6D1E8021EB273F002C6717 /* MyBankCardViewController.m in Sources */,
 				985A8B0B1F94AD7C00B5DDB9 /* NSObject+SXRuntime.m in Sources */,
 				8E980B5E211035FC00C7B6DA /* SystemMsgViewController.m in Sources */,
 				8EEF4BF8211D8CB500DE1E36 /* EaseUsersListViewController.m in Sources */,
@@ -4384,6 +4383,7 @@
 				8E6D1EA321EB273F002C6717 /* UserFeedBackViewController.m in Sources */,
 				04EBFC351F25D60F00C4DE83 /* LZHActionSheetView.m in Sources */,
 				8EEF4BD7211D8CB500DE1E36 /* PSTCollectionViewFlowLayout.m in Sources */,
+				2FF228FF21F8875C009A079A /* SystemTableViewCell.m in Sources */,
 				8EC5C89820F884040041A34A /* UIView+XibLayout.m in Sources */,
 				8EEF4BB4211D8CB500DE1E36 /* EaseConversationModel.m in Sources */,
 				8E71089021E72C5D00CB11B9 /* BusinessHandlingViewController.m in Sources */,

@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"申请详情";
+    self.title = @"费改通知";
     dataList = [[NSMutableArray alloc]init];
     page = 1;
     [self refreshData];

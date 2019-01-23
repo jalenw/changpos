@@ -64,6 +64,7 @@
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfMerchants" object:@(dataList.count)];
             [self.tableView reloadData];
         }
     }];

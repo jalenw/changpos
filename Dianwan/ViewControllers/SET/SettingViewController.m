@@ -32,12 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-   
-    UIImageView *nav =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"shez_1"]];
-    [nav sizeToFit];
-    self.navigationItem.titleView = nav;
-    
+    self.title = @"设置";
     
     _titleArr = @[_changePWCell,_paySetCell,_clearCell,_feedBackCell,_aboutUsCell];
 

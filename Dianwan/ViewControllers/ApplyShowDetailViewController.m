@@ -27,8 +27,6 @@
 @implementation ApplyShowDetailViewController
 
 - (IBAction)dealApplyAction:(UIButton *)sender {
-    NSLog(@"%ld",(long)sender.tag);
-    NSLog(@"%@",[NSString stringWithFormat:@"%d",self.idNum]);
     
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/parentExamine" params:@{@"id":@(self.idNum),@"type":@(sender.tag)} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {

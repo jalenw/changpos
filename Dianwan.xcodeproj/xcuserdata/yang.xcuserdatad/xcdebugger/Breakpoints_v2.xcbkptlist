@@ -52,7 +52,7 @@
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/TrueName/PerfectInformationViewController.m"
-                  timestampString = "569937590.313309"
+                  timestampString = "570035653.160383"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -67,7 +67,7 @@
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/TrueName/PerfectInformationViewController.m"
-                  timestampString = "569937590.317197"
+                  timestampString = "570035653.1645761"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -82,7 +82,7 @@
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/TrueName/PerfectInformationViewController.m"
-                  timestampString = "569937590.321095"
+                  timestampString = "570035653.1688991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -163,7 +163,7 @@
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/TrueName/PerfectInformationViewController.m"
-                  timestampString = "569937590.347625"
+                  timestampString = "570035653.198922"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -178,7 +178,7 @@
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/TrueName/PerfectInformationViewController.m"
-                  timestampString = "569937590.351541"
+                  timestampString = "570035653.203401"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -191,11 +191,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
-            timestampString = "569929118.435873"
+            timestampString = "570035652.463324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -204,49 +204,49 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SetUserInfoViewController rightbarButtonDidTap:]"
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
-                  timestampString = "569937590.361883"
+                  timestampString = "570031634.127251"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "1964">
+                  offsetFromSymbolStart = "2099">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__50-[SetUserInfoViewController rightbarButtonDidTap:]_block_invoke"
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
-                  timestampString = "569937590.366293"
+                  timestampString = "570031634.1310199"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "67"
                   endingLineNumber = "67"
-                  offsetFromSymbolStart = "144">
+                  offsetFromSymbolStart = "116">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_.129"
                   moduleName = "Dianwan"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/yang/changpos/Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
-                  timestampString = "569937590.370832"
+                  timestampString = "570031634.1348031"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "66"
                   endingLineNumber = "66"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -281,6 +281,54 @@
             endingLineNumber = "33"
             landmarkName = "-changePartnerscount:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
+            timestampString = "570035652.463897"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/SetUserInfo/SetUserInfoViewController.m"
+            timestampString = "570035652.464099"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/RoleViewController.h"
+            timestampString = "570034080.511611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

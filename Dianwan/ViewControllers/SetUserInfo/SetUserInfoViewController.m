@@ -163,9 +163,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = info[UIImagePickerControllerEditedImage];
-    UIImage *cutImage = [self cutImage:image];
-    self.userAcover.contentMode =UIViewContentModeScaleAspectFit;
-    [self.userAcover setImage:cutImage];
+//    UIImage *cutImage = [self cutImage:image];
+    self.userAcover.contentMode =UIViewContentModeScaleAspectFill;
+    [self.userAcover setImage:image];
     NSData *imgData = UIImageJPEGRepresentation(image, 1);
     [SVProgressHUD show];
     [[ServiceForUser manager] postFileWithActionOp:@"mobile/member/img_upload" andData:imgData andUploadFileName:[Tooles getUploadImageName] andUploadKeyName:@"name" and:@"image/jpeg" params:@{} progress:^(NSProgress *uploadProgress) {
@@ -257,7 +257,7 @@
     [self.userAcover sd_setImageWithURL:[NSURL URLWithString:AppDelegateInstance.defaultUser.member_avatar]];
     self.nameLabel.text = AppDelegateInstance.defaultUser.truename;
     self.ageLabel.text = [NSString stringWithFormat:@"%@",AppDelegateInstance.defaultUser.age];
-    self.sexLabel.text = [NSString stringWithFormat:@"%hd",AppDelegateInstance.defaultUser.sex];
+    self.sexLabel.text = AppDelegateInstance.defaultUser.sex;
     self.cityLabel.text = AppDelegateInstance.defaultUser.evolution_city;
     self.idCardLabel.text =AppDelegateInstance.defaultUser.idcard;
     

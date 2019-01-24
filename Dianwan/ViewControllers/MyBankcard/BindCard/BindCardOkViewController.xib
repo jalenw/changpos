@@ -307,7 +307,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrd-iT-Pgi">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-sl-r7c">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="lmM-sl-r7c">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="需要绑定银行卡，是否现在进行银行卡绑定" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-Bg-UTs">
@@ -387,7 +387,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-Q5-Z6V">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="97U-Ve-U2L">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="97U-Ve-U2L">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否放弃绑定银行卡" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aR-6R-Ap2">
@@ -466,7 +466,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4h-7R-FWv">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-5n-j6w">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-5n-j6w">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>

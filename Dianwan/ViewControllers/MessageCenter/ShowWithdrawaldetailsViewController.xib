@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="提现icon" translatesAutoresizingMaskIntoConstraints="NO" id="Kfo-mB-t8h">
-                    <rect key="frame" x="147.5" y="36" width="70" height="70"/>
+                    <rect key="frame" x="152.5" y="36" width="70" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="B2S-up-UxN"/>
                         <constraint firstAttribute="height" constant="70" id="fkd-IR-M1C"/>
@@ -448,7 +448,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ko2-4x-J5I" secondAttribute="trailing" constant="16" id="bEO-ny-CE2"/>
                 <constraint firstItem="ko2-4x-J5I" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="geD-J0-L2z"/>
                 <constraint firstItem="JgS-cq-q01" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="qLi-Hv-cyV"/>
-                <constraint firstItem="Kfo-mB-t8h" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" constant="-5" id="y3e-BC-7t9"/>
+                <constraint firstItem="Kfo-mB-t8h" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="y3e-BC-7t9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="472.80000000000001" y="-615.74212893553226"/>

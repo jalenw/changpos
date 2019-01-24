@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title=@"消息中心";
+    self.title=@"消息";
 //    UIImageView *nav =[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"shez_1"]];
 //    [nav sizeToFit];
 //

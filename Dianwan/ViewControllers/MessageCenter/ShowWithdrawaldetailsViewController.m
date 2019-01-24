@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title=@"我的银行卡";
     [self setupDict];
     self.view.backgroundColor = RGB(48, 46, 58);
     self.contentview.backgroundColor =RGB(48, 46, 58);
@@ -32,7 +33,7 @@
      self.bankNameLabel.text = [self.dict safeStringForKey:@"pdc_bank_name"];
      self.statueLabel.text = [self.dict safeStringForKey:@"pdc_payment_state"];
      self.idLabel.text = [self.dict safeStringForKey:@""];
-    self.poundageLabel.text = [self.dict safeStringForKey:@""];
+     self.poundageLabel.text = [self.dict safeStringForKey:@""];
     
     
 }

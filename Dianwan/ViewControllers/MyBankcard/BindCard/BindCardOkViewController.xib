@@ -127,7 +127,7 @@
                             <rect key="frame" x="95" y="0.0" width="270" height="49"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYu-ar-gfx">
                             <rect key="frame" x="15" y="48" width="344" height="1"/>

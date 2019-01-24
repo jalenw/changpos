@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,15 +22,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-Xw-L18">
                         <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-ye-L9V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tx_1" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-ye-L9V">
                                 <rect key="frame" x="16" y="5" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.98105400799999998" green="0.49155341159999999" blue="0.43432419389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4OE-xa-oDK"/>
                                     <constraint firstAttribute="width" constant="50" id="PAU-nl-YkJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -92,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sy-Gd-w8C">
-                                <rect key="frame" x="97.5" y="16" width="39.5" height="19.5"/>
+                                <rect key="frame" x="97.5" y="16" width="39.5" height="28.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -126,6 +125,7 @@
                             <constraint firstItem="hyT-aZ-oMl" firstAttribute="top" secondItem="2hN-Py-eKi" secondAttribute="top" constant="16" id="NvF-dV-Eov"/>
                             <constraint firstItem="1d2-WE-5sD" firstAttribute="leading" secondItem="2hN-Py-eKi" secondAttribute="leading" constant="16" id="Rff-Lh-QWT"/>
                             <constraint firstItem="hyT-aZ-oMl" firstAttribute="centerY" secondItem="cD7-TC-ePM" secondAttribute="centerY" id="UQ7-AS-z0M"/>
+                            <constraint firstItem="5Sy-Gd-w8C" firstAttribute="centerY" secondItem="ZUQ-wL-iVr" secondAttribute="centerY" id="WIw-CR-NVl"/>
                             <constraint firstItem="ZUQ-wL-iVr" firstAttribute="trailing" secondItem="Mzt-pT-bP0" secondAttribute="trailing" id="Xyq-jg-DNa"/>
                             <constraint firstItem="cD7-TC-ePM" firstAttribute="height" secondItem="Mzt-pT-bP0" secondAttribute="height" id="a76-gi-BKk"/>
                             <constraint firstItem="Zcy-TO-E9l" firstAttribute="leading" secondItem="1d2-WE-5sD" secondAttribute="trailing" constant="16" id="dkF-xh-qHc"/>
@@ -161,4 +161,7 @@
             <point key="canvasLocation" x="248.80000000000001" y="-165.51724137931035"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="tx_1" width="19.680000305175781" height="19.680000305175781"/>
+    </resources>
 </document>

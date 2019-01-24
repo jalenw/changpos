@@ -8,5 +8,5 @@
 
 #import "BaseViewController.h"
 
-@interface ChangeLoginPWViewController : BaseViewController
+@interface ChangeLoginPWViewController : UIViewController
 @end

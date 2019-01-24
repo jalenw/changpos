@@ -31,13 +31,6 @@
                         <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fuhao_1" translatesAutoresizingMaskIntoConstraints="NO" id="Pw9-Sb-xwj">
-                        <rect key="frame" x="258" y="40.5" width="15" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="RTf-sX-q65"/>
-                            <constraint firstAttribute="width" constant="15" id="U5Z-nm-WhA"/>
-                        </constraints>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41C-iB-o6x">
                         <rect key="frame" x="16" y="103.5" width="273" height="1"/>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,13 +56,11 @@
                     <constraint firstItem="Nip-Qi-q2v" firstAttribute="leading" secondItem="t3L-bN-PcI" secondAttribute="leading" id="AaZ-1a-Qov"/>
                     <constraint firstItem="t3L-bN-PcI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="BpO-pt-w0v"/>
                     <constraint firstAttribute="trailing" secondItem="41C-iB-o6x" secondAttribute="trailing" id="KKh-b9-4kb"/>
-                    <constraint firstItem="Pw9-Sb-xwj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ojc-Xg-WbL"/>
                     <constraint firstItem="Sm6-Wo-HbV" firstAttribute="centerY" secondItem="Nip-Qi-q2v" secondAttribute="centerY" id="Q7P-SA-tpt"/>
                     <constraint firstItem="t3L-bN-PcI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="aHy-76-SgR"/>
                     <constraint firstItem="Nip-Qi-q2v" firstAttribute="top" secondItem="t3L-bN-PcI" secondAttribute="bottom" constant="8" id="kfc-B7-w7u"/>
                     <constraint firstAttribute="bottom" secondItem="41C-iB-o6x" secondAttribute="bottom" id="lQk-dt-Lbt"/>
                     <constraint firstItem="41C-iB-o6x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nlh-7y-vAH"/>
-                    <constraint firstAttribute="trailing" secondItem="Pw9-Sb-xwj" secondAttribute="trailing" constant="16" id="nxe-xo-xag"/>
                     <constraint firstItem="Sm6-Wo-HbV" firstAttribute="top" secondItem="RiS-fp-hlj" secondAttribute="bottom" constant="8" id="pLI-2A-0Bk"/>
                     <constraint firstAttribute="trailingMargin" secondItem="RiS-fp-hlj" secondAttribute="trailing" id="t5P-zU-a9s"/>
                     <constraint firstItem="RiS-fp-hlj" firstAttribute="centerY" secondItem="t3L-bN-PcI" secondAttribute="centerY" id="y2U-3D-UXw"/>
@@ -85,7 +76,4 @@
             <point key="canvasLocation" x="150" y="95"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="fuhao_1" width="3.3599998950958252" height="5.7600002288818359"/>
-    </resources>
 </document>

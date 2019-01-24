@@ -9,7 +9,10 @@
 #import "MyPartnerViewController.h"
 #import "PartnersViewController.h"
 #import "MerchantViewController.h"
-@interface MyPartnerViewController ()<UITextFieldDelegate>
+@interface MyPartnerViewController ()<UITextFieldDelegate>{
+     NSString *merchants;
+     NSString *partners;
+}
 
 @end
 
@@ -18,12 +21,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
-//    [self setRightBarButtonWithTitle:@"取消"];
+    [self setRightBarButtonWithTitle:@"取消"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeMerchantscount:) name:@"kNotificationNumberOfMerchants" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changePartnerscount:) name:@"kNotificationNumberOfPartners" object:nil];
+}
+-(void)changeMerchantscount:(NSNotification *)notification{
+    merchants =[NSString stringWithFormat:@"商户(%@)",notification.object];
+    [(UIButton *)self.topButtonArray[0] setTitle:merchants forState:UIControlStateNormal];
+}
+-(void)changePartnerscount:(NSNotification *)notification{
+    partners =[NSString stringWithFormat:@"渠道(%@)",notification.object];
+    [(UIButton *)self.topButtonArray[1] setTitle:partners forState:UIControlStateNormal];
 }
 
+
 - (NSArray<NSString *> *)buttonTitleArray{
-    return @[@"商户",@"渠道"];
+    merchants =@"商户";
+    partners =@"渠道";
+    return @[merchants,partners];
 }
+
 
 -(UIColor *)BtnbackgroundColor{
     return RGB(48, 46, 58);
@@ -52,9 +69,9 @@
      return (ScreenWidth/2-80)/2;
 }
 
-//-(void)rightbarButtonDidTap:(UIButton *)button{
-//    self.searchTf.text =@"";
-//}
+-(void)rightbarButtonDidTap:(UIButton *)button{
+    self.searchTf.text =@"";
+}
 
 - (void)setupControllers{
     self.scrollView.top = 0;
@@ -114,5 +131,9 @@
     return view;
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 @end

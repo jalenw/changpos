@@ -47,7 +47,7 @@
                                 <action selector="removeBankCardAction:" destination="-1" eventType="touchUpInside" id="W8G-Bm-KMt"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yingkatub_1" translatesAutoresizingMaskIntoConstraints="NO" id="MI3-3y-XXf">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yingkatub_1" translatesAutoresizingMaskIntoConstraints="NO" id="MI3-3y-XXf">
                             <rect key="frame" x="162.5" y="168" width="50" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="Hko-TI-Whw"/>

@@ -42,7 +42,7 @@
                 <constraint firstItem="a5u-y9-O8n" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="nUu-g3-cUI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="530.39999999999998" y="-40.029985007496258"/>
+            <point key="canvasLocation" x="329" y="-114"/>
         </view>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="95" id="YWk-AN-ppx">
             <rect key="frame" x="0.0" y="0.0" width="346" height="95"/>

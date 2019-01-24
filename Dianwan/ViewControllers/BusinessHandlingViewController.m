@@ -18,14 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"业务申请";
+    self.title = @"费率调整";
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self setRightBarButtonWithTitle:@"申请明细"];
+    [self setRightBarButtonWithTitle:@"费改通知"];
 }
 
 - (void)rightbarButtonDidTap:(UIButton*)button

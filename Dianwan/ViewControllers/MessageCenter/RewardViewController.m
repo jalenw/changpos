@@ -81,11 +81,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *content = [dataList[indexPath.row] safeStringForKey:@"push_message"];
-    CGFloat height= [Tooles sizeWithFont:[UIFont systemFontOfSize:17] maxSize:CGSizeMake(ScreenWidth-64, MAXFLOAT)  string:content].height;
-   
-         return 86+height+16;
+    if(dataList.count>0){
+        NSString *content = [dataList[indexPath.row] safeStringForKey:@"push_message"];
+        CGFloat height= [Tooles sizeWithFont:[UIFont systemFontOfSize:17] maxSize:CGSizeMake(ScreenWidth-64, MAXFLOAT)  string:content].height;
+        
+        return 86+height+16;
+    }
+    else{
+        return 0;
+    }
     
    
 }

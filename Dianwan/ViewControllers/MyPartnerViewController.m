@@ -26,7 +26,7 @@
 }
 
 -(UIColor *)BtnbackgroundColor{
-    return RGB(46, 48, 58);
+    return RGB(48, 46, 58);
 }
 
 - (BOOL)isAllowScroll{

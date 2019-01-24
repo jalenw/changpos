@@ -43,7 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor =RGB(46, 48, 58);
+    self.view.backgroundColor = RGB(48, 46, 58);
     self.phone.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.phone.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.code.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.code.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.password.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.password.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];

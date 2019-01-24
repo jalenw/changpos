@@ -94,12 +94,24 @@
 		8E412B871F23572100A40CE6 /* ForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B801F23572100A40CE6 /* ForgetViewController.xib */; };
 		8E412B881F23572100A40CE6 /* RegViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B821F23572100A40CE6 /* RegViewController.m */; };
 		8E412B891F23572100A40CE6 /* RegViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B831F23572100A40CE6 /* RegViewController.xib */; };
+		8E42033A21F9B28D001994C5 /* ProfitDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */; };
+		8E42033B21F9B28D001994C5 /* ProfitDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */; };
 		8E42A8BC1F26DADB0026ED07 /* CLLocation+Sino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8B91F26DADB0026ED07 /* CLLocation+Sino.m */; };
 		8E42A8BD1F26DADB0026ED07 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8BB1F26DADB0026ED07 /* LocationService.m */; };
 		8E4664E52169BBCB0022DF94 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4664E42169BBCB0022DF94 /* libstdc++.6.0.9.tbd */; };
 		8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664E72169BF040022DF94 /* NavigationMapViewViewController.m */; };
 		8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4664E82169BF040022DF94 /* NavigationMapViewViewController.xib */; };
 		8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664EC2169BFD70022DF94 /* MKAnnotation.m */; };
+		8E4BACA721F85900003F94C5 /* MyProfitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BACA521F85900003F94C5 /* MyProfitViewController.m */; };
+		8E4BACA821F85900003F94C5 /* MyProfitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BACA621F85900003F94C5 /* MyProfitViewController.xib */; };
+		8E4BACAC21F85A5A003F94C5 /* TotalProfitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BACAA21F85A5A003F94C5 /* TotalProfitViewController.m */; };
+		8E4BACAD21F85A5A003F94C5 /* TotalProfitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BACAB21F85A5A003F94C5 /* TotalProfitViewController.xib */; };
+		8E4BACB121F85A6A003F94C5 /* PersonProfitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BACAF21F85A6A003F94C5 /* PersonProfitViewController.m */; };
+		8E4BACB221F85A6A003F94C5 /* PersonProfitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BACB021F85A6A003F94C5 /* PersonProfitViewController.xib */; };
+		8E4BACB621F85A76003F94C5 /* TeamProfitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BACB421F85A76003F94C5 /* TeamProfitViewController.m */; };
+		8E4BACB721F85A76003F94C5 /* TeamProfitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BACB521F85A76003F94C5 /* TeamProfitViewController.xib */; };
+		8E4BACBB21F8618B003F94C5 /* MyProfitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BACB921F8618B003F94C5 /* MyProfitDetailViewController.m */; };
+		8E4BACBC21F8618B003F94C5 /* MyProfitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BACBA21F8618B003F94C5 /* MyProfitDetailViewController.xib */; };
 		8E591B1121EED3F900279630 /* ModifyRateAndPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */; };
 		8E591B1221EED3FA00279630 /* ModifyRateAndPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */; };
 		8E591B1921F072BD00279630 /* MyStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E591B1721F072BD00279630 /* MyStoreViewController.m */; };
@@ -755,6 +767,9 @@
 		8E412B811F23572100A40CE6 /* RegViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegViewController.h; sourceTree = "<group>"; };
 		8E412B821F23572100A40CE6 /* RegViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegViewController.m; sourceTree = "<group>"; };
 		8E412B831F23572100A40CE6 /* RegViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegViewController.xib; sourceTree = "<group>"; };
+		8E42033721F9B28D001994C5 /* ProfitDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfitDetailTableViewCell.h; sourceTree = "<group>"; };
+		8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfitDetailTableViewCell.m; sourceTree = "<group>"; };
+		8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfitDetailTableViewCell.xib; sourceTree = "<group>"; };
 		8E42A8B81F26DADB0026ED07 /* CLLocation+Sino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Sino.h"; sourceTree = "<group>"; };
 		8E42A8B91F26DADB0026ED07 /* CLLocation+Sino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Sino.m"; sourceTree = "<group>"; };
 		8E42A8BA1F26DADB0026ED07 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
@@ -765,6 +780,21 @@
 		8E4664E92169BF040022DF94 /* NavigationMapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMapViewViewController.h; sourceTree = "<group>"; };
 		8E4664EC2169BFD70022DF94 /* MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKAnnotation.m; sourceTree = "<group>"; };
 		8E4664ED2169BFD70022DF94 /* MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKAnnotation.h; sourceTree = "<group>"; };
+		8E4BACA421F85900003F94C5 /* MyProfitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProfitViewController.h; sourceTree = "<group>"; };
+		8E4BACA521F85900003F94C5 /* MyProfitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProfitViewController.m; sourceTree = "<group>"; };
+		8E4BACA621F85900003F94C5 /* MyProfitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfitViewController.xib; sourceTree = "<group>"; };
+		8E4BACA921F85A5A003F94C5 /* TotalProfitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TotalProfitViewController.h; sourceTree = "<group>"; };
+		8E4BACAA21F85A5A003F94C5 /* TotalProfitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TotalProfitViewController.m; sourceTree = "<group>"; };
+		8E4BACAB21F85A5A003F94C5 /* TotalProfitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalProfitViewController.xib; sourceTree = "<group>"; };
+		8E4BACAE21F85A6A003F94C5 /* PersonProfitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonProfitViewController.h; sourceTree = "<group>"; };
+		8E4BACAF21F85A6A003F94C5 /* PersonProfitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonProfitViewController.m; sourceTree = "<group>"; };
+		8E4BACB021F85A6A003F94C5 /* PersonProfitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonProfitViewController.xib; sourceTree = "<group>"; };
+		8E4BACB321F85A76003F94C5 /* TeamProfitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamProfitViewController.h; sourceTree = "<group>"; };
+		8E4BACB421F85A76003F94C5 /* TeamProfitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeamProfitViewController.m; sourceTree = "<group>"; };
+		8E4BACB521F85A76003F94C5 /* TeamProfitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamProfitViewController.xib; sourceTree = "<group>"; };
+		8E4BACB821F8618A003F94C5 /* MyProfitDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyProfitDetailViewController.h; sourceTree = "<group>"; };
+		8E4BACB921F8618B003F94C5 /* MyProfitDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyProfitDetailViewController.m; sourceTree = "<group>"; };
+		8E4BACBA21F8618B003F94C5 /* MyProfitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyProfitDetailViewController.xib; sourceTree = "<group>"; };
 		8E591B0E21EED3F900279630 /* ModifyRateAndPriceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyRateAndPriceViewController.h; sourceTree = "<group>"; };
 		8E591B0F21EED3F900279630 /* ModifyRateAndPriceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyRateAndPriceViewController.m; sourceTree = "<group>"; };
 		8E591B1021EED3F900279630 /* ModifyRateAndPriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyRateAndPriceViewController.xib; sourceTree = "<group>"; };
@@ -1924,6 +1954,28 @@
 			name = WebViewController;
 			sourceTree = "<group>";
 		};
+		8E4BACA321F858E6003F94C5 /* MyProfit */ = {
+			isa = PBXGroup;
+			children = (
+				8E4BACA421F85900003F94C5 /* MyProfitViewController.h */,
+				8E4BACA521F85900003F94C5 /* MyProfitViewController.m */,
+				8E4BACA621F85900003F94C5 /* MyProfitViewController.xib */,
+				8E4BACA921F85A5A003F94C5 /* TotalProfitViewController.h */,
+				8E4BACAA21F85A5A003F94C5 /* TotalProfitViewController.m */,
+				8E4BACAB21F85A5A003F94C5 /* TotalProfitViewController.xib */,
+				8E4BACAE21F85A6A003F94C5 /* PersonProfitViewController.h */,
+				8E4BACAF21F85A6A003F94C5 /* PersonProfitViewController.m */,
+				8E4BACB021F85A6A003F94C5 /* PersonProfitViewController.xib */,
+				8E4BACB321F85A76003F94C5 /* TeamProfitViewController.h */,
+				8E4BACB421F85A76003F94C5 /* TeamProfitViewController.m */,
+				8E4BACB521F85A76003F94C5 /* TeamProfitViewController.xib */,
+				8E4BACB821F8618A003F94C5 /* MyProfitDetailViewController.h */,
+				8E4BACB921F8618B003F94C5 /* MyProfitDetailViewController.m */,
+				8E4BACBA21F8618B003F94C5 /* MyProfitDetailViewController.xib */,
+			);
+			name = MyProfit;
+			sourceTree = "<group>";
+		};
 		8E591B1421F072A800279630 /* MyStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -2255,6 +2307,9 @@
 				8EF3AF8E21F5BF200003FB35 /* ToolTableViewCell.h */,
 				8EF3AF8F21F5BF200003FB35 /* ToolTableViewCell.m */,
 				8EF3AF9021F5BF200003FB35 /* ToolTableViewCell.xib */,
+				8E42033721F9B28D001994C5 /* ProfitDetailTableViewCell.h */,
+				8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */,
+				8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -2639,6 +2694,7 @@
 		8EDA41421F22F813000CBA40 /* FirstPage */ = {
 			isa = PBXGroup;
 			children = (
+				8E4BACA321F858E6003F94C5 /* MyProfit */,
 				2F02F9F621F0A119001182E7 /* RankingList */,
 				8E591B1421F072A800279630 /* MyStore */,
 				8E71089221E72F4200CB11B9 /* MyPartner */,
@@ -3972,6 +4028,7 @@
 				8EB4E4E721201FAE00BC563B /* call_out@2x.png in Resources */,
 				2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */,
 				8EB4E4F521201FAE00BC563B /* VoiceSearchFeedback019.png in Resources */,
+				8E4BACBC21F8618B003F94C5 /* MyProfitDetailViewController.xib in Resources */,
 				8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */,
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
 				8EB4E4F721201FAE00BC563B /* VoiceSearchFeedback018.png in Resources */,
@@ -4006,6 +4063,7 @@
 				8EB4E4D121201FAE00BC563B /* chat_location_detail_disclosureHL@2x.png in Resources */,
 				8EB4E50721201FAE00BC563B /* VoiceSearchFeedback011.png in Resources */,
 				8EB4E50F21201FAE00BC563B /* VoiceSearchFeedback003.png in Resources */,
+				8E4BACAD21F85A5A003F94C5 /* TotalProfitViewController.xib in Resources */,
 				8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */,
 				8EB4E54221201FAE00BC563B /* chatBar_more.png in Resources */,
 				2FD7367321EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib in Resources */,
@@ -4054,6 +4112,7 @@
 				8EB4E4F821201FAE00BC563B /* VoiceSearchFeedback007@2x.png in Resources */,
 				8E6D1EF021EB2ACB002C6717 /* BindCardOkViewController.xib in Resources */,
 				8EB4E54021201FAE00BC563B /* chatBar_moreSelected@2x.png in Resources */,
+				8E4BACB221F85A6A003F94C5 /* PersonProfitViewController.xib in Resources */,
 				8EB4E52521201FAE00BC563B /* chatBar_recordSelected@2x.png in Resources */,
 				8EB4E50D21201FAE00BC563B /* VoiceSearchFeedback016.png in Resources */,
 				8EB4E53021201FAE00BC563B /* chatBar_colorMore_photo@2x.png in Resources */,
@@ -4080,6 +4139,7 @@
 				8EB4E4EE21201FAE00BC563B /* chat_sender_audio_playing_000@2x.png in Resources */,
 				8EB4E4DD21201FAE00BC563B /* chatBar_textBg.png in Resources */,
 				8EB4E51A21201FAE00BC563B /* chatBar_more_photoSelected.png in Resources */,
+				8E4BACA821F85900003F94C5 /* MyProfitViewController.xib in Resources */,
 				8EB4E53F21201FAE00BC563B /* chatBar_recordSelectedBg.png in Resources */,
 				8E6D1EA621EB273F002C6717 /* PWConfirmViewController.xib in Resources */,
 				8EB4E53321201FAE00BC563B /* chatBar_colorMore_audioCallSelected@2x.png in Resources */,
@@ -4097,6 +4157,7 @@
 				8E6D1EED21EB2ACB002C6717 /* CardBindViewController.xib in Resources */,
 				8E71089C21E72FEF00CB11B9 /* MerchantViewController.xib in Resources */,
 				8EB4E52121201FAE00BC563B /* chatBar_more_camera@2x.png in Resources */,
+				8E42033B21F9B28D001994C5 /* ProfitDetailTableViewCell.xib in Resources */,
 				8EB4E4F321201FAE00BC563B /* VoiceSearchFeedback009@2x.png in Resources */,
 				8EB4E52A21201FAE00BC563B /* chatBar_face@2x.png in Resources */,
 				8EB4E4E521201FAE00BC563B /* chatBar_more_face@2x.png in Resources */,
@@ -4119,6 +4180,7 @@
 				8EB4E4EF21201FAE00BC563B /* VoiceSearchFeedback011@2x.png in Resources */,
 				8EB4E4C721201FAE00BC563B /* call_silence_h.png in Resources */,
 				8EB4E52D21201FAE00BC563B /* chatBar_colorMore_video@2x.png in Resources */,
+				8E4BACB721F85A76003F94C5 /* TeamProfitViewController.xib in Resources */,
 				8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */,
 				8EBF663F21E1B14A001C4A0D /* QRShowViewController.xib in Resources */,
 				CD6323C51EE54C1100D033F4 /* README.txt in Resources */,
@@ -4234,6 +4296,7 @@
 				8EEF4C13211D8CB500DE1E36 /* EaseMessageHelper+Revoke.m in Sources */,
 				2FFBAE9321EC4BAA00C9EBAE /* IQTitleBarButtonItem.m in Sources */,
 				8E6D1E9621EB273F002C6717 /* TruenameView.m in Sources */,
+				8E4BACBB21F8618B003F94C5 /* MyProfitDetailViewController.m in Sources */,
 				CDC88FFC1D8698BF00CE03CE /* AFHTTPSessionManager.m in Sources */,
 				8E9FE2D5212E72B900D26955 /* MJRefreshGifHeader.m in Sources */,
 				2F02FA0B21F0A471001182E7 /* RunningWaterTableViewCell.m in Sources */,
@@ -4256,6 +4319,7 @@
 				8E9FE2D1212E72B900D26955 /* MJRefreshLegendFooter.m in Sources */,
 				8E6D1EC021EB2A5C002C6717 /* SetPayPwViewController.m in Sources */,
 				CDC890711D8698C000CE03CE /* NSError+Helper.m in Sources */,
+				8E42033A21F9B28D001994C5 /* ProfitDetailTableViewCell.m in Sources */,
 				8EB4E3F7212009AD00BC563B /* EMSDWebImageDownloaderOperation.m in Sources */,
 				98C059411F2305CB007AC0B6 /* User.m in Sources */,
 				8E6D1EF121EB2ACB002C6717 /* CardInfoModel.m in Sources */,
@@ -4315,12 +4379,14 @@
 				8EF3AF9821F5FFDB0003FB35 /* RoleViewController.m in Sources */,
 				8E6D1E9F21EB273F002C6717 /* PaySetPWViewController.m in Sources */,
 				8EEF4BFB211D8CB500DE1E36 /* EaseViewController.m in Sources */,
+				8E4BACA721F85900003F94C5 /* MyProfitViewController.m in Sources */,
 				04395EE81F2342BE0074865E /* LZHAlertView.m in Sources */,
 				8EEF4C03211D8CB500DE1E36 /* EaseFacialView.m in Sources */,
 				8EEF4BCE211D8CB500DE1E36 /* MWCaptionView.m in Sources */,
 				04395EE11F233EC10074865E /* TZPhotoPreviewCell.m in Sources */,
 				98AEBAB21F18676700E6483B /* NSDate+Helper.m in Sources */,
 				2F106AE421F4831E001D29D6 /* CommonViewController.m in Sources */,
+				8E4BACB121F85A6A003F94C5 /* PersonProfitViewController.m in Sources */,
 				8E9FE2D0212E72B900D26955 /* MJRefreshLegendHeader.m in Sources */,
 				8EB4E3F1212009AD00BC563B /* EMSDImageCache.m in Sources */,
 				CDC890701D8698C000CE03CE /* NSDictionary+Safe.m in Sources */,
@@ -4330,6 +4396,7 @@
 				8E42A8BD1F26DADB0026ED07 /* LocationService.m in Sources */,
 				2F106ADF21F48250001D29D6 /* CommonTableViewCell.m in Sources */,
 				8EEF4BF9211D8CB500DE1E36 /* EaseRefreshTableViewController.m in Sources */,
+				8E4BACAC21F85A5A003F94C5 /* TotalProfitViewController.m in Sources */,
 				8EEF4BCF211D8CB500DE1E36 /* MWZoomingScrollView.m in Sources */,
 				8EB4E3F0212009AD00BC563B /* UIView+EMWebCacheOperation.m in Sources */,
 				CDC890001D8698BF00CE03CE /* AFURLResponseSerialization.m in Sources */,
@@ -4409,6 +4476,7 @@
 				CDC88FFF1D8698BF00CE03CE /* AFURLRequestSerialization.m in Sources */,
 				0413AA4B1F2879C5006F2743 /* ShareHelper.m in Sources */,
 				8EB4E3F5212009AD00BC563B /* UIImage+EMWebP.m in Sources */,
+				8E4BACB621F85A76003F94C5 /* TeamProfitViewController.m in Sources */,
 				8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */,
 				8E6D1E9121EB273F002C6717 /* City2ViewController.m in Sources */,
 				8E6D1EF221EB2ACB002C6717 /* BindCardOkViewController.m in Sources */,

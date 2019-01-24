@@ -101,7 +101,7 @@
     [object tryUpdateFromDict:dict forKey:@"member_level" propertyType:PropertyTypeInt];
     [object tryUpdateFromDict:dict forKey:@"idcard" propertyType:PropertyTypeString];
     [object tryUpdateFromDict:dict forKey:@"member_points" propertyType:PropertyTypeLonglong];
-    [object tryUpdateFromDict:dict forKey:@"sex" propertyType:PropertyTypeInt];
+    [object tryUpdateFromDict:dict forKey:@"sex" propertyType:PropertyTypeString];
     [object tryUpdateFromDict:dict forKey:@"truename" propertyType:PropertyTypeString];
 }
 @end

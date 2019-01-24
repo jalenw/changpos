@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *rankTurnover;
 @property (weak, nonatomic) IBOutlet UILabel *rankActivity;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+- (IBAction)moreAct:(UIButton *)sender;
 - (IBAction)menuAct:(UIButton *)sender;
 @end

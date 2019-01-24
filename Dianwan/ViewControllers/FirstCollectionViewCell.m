@@ -59,7 +59,7 @@
     l.drawInside = NO;
     l.xEntrySpace = 7.0;
     l.yEntrySpace = 0.0;
-    l.yOffset = 0.0;
+    l.yOffset = 10;
 }
 
 -(void)setDict:(NSDictionary *)dict
@@ -82,11 +82,11 @@
     dataSet.sliceSpace = 2.0;
     NSMutableArray *colors = [[NSMutableArray alloc] init];
     [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
-    [colors addObjectsFromArray:ChartColorTemplates.joyful];
-    [colors addObjectsFromArray:ChartColorTemplates.colorful];
-    [colors addObjectsFromArray:ChartColorTemplates.liberty];
-    [colors addObjectsFromArray:ChartColorTemplates.pastel];
-    [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
+//    [colors addObjectsFromArray:ChartColorTemplates.joyful];
+//    [colors addObjectsFromArray:ChartColorTemplates.colorful];
+//    [colors addObjectsFromArray:ChartColorTemplates.liberty];
+//    [colors addObjectsFromArray:ChartColorTemplates.pastel];
+//    [colors addObject:[UIColor colorWithRed:51/255.f green:181/255.f blue:229/255.f alpha:1.f]];
     dataSet.colors = colors;
     dataSet.valueLinePart1OffsetPercentage = 0.8;
     dataSet.valueLinePart1Length = 0.2;

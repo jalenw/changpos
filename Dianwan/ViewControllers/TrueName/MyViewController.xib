@@ -59,7 +59,7 @@
                                     <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="ByO-bU-bJE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="默认头像" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-V4-Npq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="默认头像" translatesAutoresizingMaskIntoConstraints="NO" id="NHE-V4-Npq">
                                 <rect key="frame" x="24" y="24" width="66" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="EVg-gE-EMY"/>
@@ -200,7 +200,7 @@
                     <constraint firstItem="wwg-wY-ELh" firstAttribute="leading" secondItem="AwZ-Ry-eYW" secondAttribute="leading" id="zYX-cK-c8D"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="2736" y="-1447"/>
+            <point key="canvasLocation" x="2709" y="-1781"/>
         </tableViewCell>
     </objects>
     <resources>

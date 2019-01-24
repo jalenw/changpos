@@ -50,7 +50,7 @@
                                         <constraint firstAttribute="height" constant="1" id="ygE-NM-9ix"/>
                                     </constraints>
                                 </view>
-                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-jG-u61">
+                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-jG-u61">
                                     <rect key="frame" x="257" y="7.5" width="70" height="70"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="XJ1-zT-vSW"/>

@@ -8,12 +8,15 @@
 
 #import "MyProfitDetailViewController.h"
 #import "ProfitDetailTableViewCell.h"
-@interface MyProfitDetailViewController ()
+#import "HooDatePicker.h"
+@interface MyProfitDetailViewController ()<HooDatePickerDelegate>
 {
     NSMutableArray *dataList;
     int page;
     NSString *search_date_star;
     NSString *search_date_end;
+    HooDatePicker *beginDatePicker;
+    HooDatePicker *endDatePicker;
 }
 @end
 
@@ -105,5 +108,39 @@
 }
 
 - (IBAction)chooseDateAct:(UIButton *)sender {
+    if (beginDatePicker==nil) {
+        beginDatePicker = [[HooDatePicker alloc] initWithSuperView:self.view];
+        [beginDatePicker setTitle:@"起始时间"];
+        beginDatePicker.delegate = self;
+        beginDatePicker.datePickerMode = HooDatePickerModeDate;
+    }
+    [beginDatePicker show];
+}
+
+- (void)datePicker:(HooDatePicker *)datePicker didSelectedDate:(NSDate *)date
+{
+    if (datePicker==beginDatePicker) {
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+        dateFormatter.dateFormat=@"yyyy-MM-dd";
+        search_date_star =[dateFormatter stringFromDate:date];
+        
+        if (endDatePicker==nil) {
+            endDatePicker = [[HooDatePicker alloc] initWithSuperView:self.view];
+            [endDatePicker setTitle:@"结束时间"];
+            endDatePicker.delegate = self;
+            endDatePicker.datePickerMode = HooDatePickerModeDate;
+        }
+        [endDatePicker show];
+    }
+    if (datePicker==endDatePicker) {
+        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+        dateFormatter.dateFormat=@"yyyy-MM-dd";
+        search_date_end =[dateFormatter stringFromDate:date];
+        
+        page = 1;
+        [dataList removeAllObjects];
+        [self refreshData];
+        [self.monthBt setTitle:@"回到本月" forState:UIControlStateNormal];
+    }
 }
 @end

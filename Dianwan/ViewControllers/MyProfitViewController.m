@@ -25,12 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的收益";
-    [self setRightBarButtonWithTitle:@"收益明细"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self setRightBarButtonWithTitle:@"收益明细"];
     [self getData];
 }
 

@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="headerView" destination="Rbu-bf-BpR" id="kfi-1E-5CA"/>
                 <outlet property="incomeLb" destination="yJd-kK-cnr" id="i3Y-LE-Su1"/>
+                <outlet property="monthBt" destination="T3p-7R-Nf9" id="cwr-Yx-h6P"/>
                 <outlet property="spendLb" destination="keV-Q2-lgJ" id="m3b-7K-qxD"/>
                 <outlet property="tableView" destination="UMj-1U-J2L" id="4fH-2d-0NX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

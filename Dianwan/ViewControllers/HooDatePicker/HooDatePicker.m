@@ -13,9 +13,9 @@ static NSString  * const kSureButtonItemTitle = @"确定";
 static NSString  * const kCancelButtonItemTitle = @"取消";
 
 // Constants sizes :
-static CGFloat const kHooDatePickerHeight = 290.0f;
+static CGFloat const kHooDatePickerHeight = 260.0f;
 
-static CGFloat const kHooDatePickerHeaderHeight = 35.0f;
+static CGFloat const kHooDatePickerHeaderHeight = 44.0f;
 
 static CGFloat const kHooDatePickerButtonHeaderWidth = 40.0f;
 
@@ -300,7 +300,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     
     // ScrollView Months
     
-    _scrollViewMonths = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kHooDatePickerHeaderHeight + kHooDatePickerHeaderBottomMargin, width, self.frame.size.height - kHooDatePickerHeaderHeight - kHooDatePickerHeaderBottomMargin-50)];
+    _scrollViewMonths = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kHooDatePickerHeaderHeight + kHooDatePickerHeaderBottomMargin, width, self.frame.size.height - kHooDatePickerHeaderHeight - kHooDatePickerHeaderBottomMargin)];
     _scrollViewMonths.tag = ScrollViewTagValue_MONTHS;
     _scrollViewMonths.delegate = self;
     _scrollViewMonths.backgroundColor = kHooDatePickerScrolViewBackgroundColor;
@@ -378,7 +378,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     
     // ScrollView Years
     
-    _scrollViewYears = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kHooDatePickerHeaderHeight + kHooDatePickerHeaderBottomMargin, width, self.frame.size.height - kHooDatePickerHeaderHeight - kHooDatePickerHeaderBottomMargin-50)];
+    _scrollViewYears = [[UIScrollView alloc] initWithFrame:CGRectMake(x, kHooDatePickerHeaderHeight + kHooDatePickerHeaderBottomMargin, width, self.frame.size.height - kHooDatePickerHeaderHeight - kHooDatePickerHeaderBottomMargin)];
     _scrollViewYears.tag = ScrollViewTagValue_YEARS;
     _scrollViewYears.delegate = self;
     _scrollViewYears.backgroundColor = kHooDatePickerScrolViewBackgroundColor;
@@ -764,7 +764,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 - (void)actionButtonCancel:(UIButton *)sender {
     
-//    [self dismiss];
+    [self dismiss];
     
     if ([self.delegate respondsToSelector:@selector(datePicker:didCancel:)]) {
         [self.delegate datePicker:self didCancel:sender];
@@ -773,7 +773,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 - (void)actionButtonValid:(UIButton *)sender {
     
-//    [self dismiss];
+    [self dismiss];
     
     if ([self.delegate respondsToSelector:@selector(datePicker:didSelectedDate:)]) {
         [self.delegate datePicker:self didSelectedDate:[self getDate]];
@@ -828,6 +828,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
         int indexYears = [self getIndexForScrollViewPosition:_scrollViewYears];
         [self highlightLabelInArray:_labelsYears atIndex:indexYears];
     }
+    
     [UIView animateWithDuration:kHooDatePickerAnimationDuration delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.frame = CGRectMake(self.frame.origin.x, _superView.frame.size.height - kHooDatePickerHeight, self.frame.size.width, self.frame.size.height);
     } completion:^(BOOL finished) {
@@ -1513,32 +1514,35 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 - (UIView *)headerView {
     if (!_headerView) {
-        _headerView.backgroundColor = [UIColor whiteColor];
-        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+        _headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, kHooDatePickerHeaderHeight)];
         // Button Cancel
-        UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake((self.frame.size.width/4), self.frame.size.height-40, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
+        UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
         [cancelButton setTitle:kCancelButtonItemTitle forState:UIControlStateNormal];
         [cancelButton setTitleColor:self.tintColor forState:UIControlStateNormal];
         [cancelButton addTarget:self action:@selector(actionButtonCancel:) forControlEvents:UIControlEventTouchUpInside];
         [_headerView addSubview:cancelButton];
         
         // Button confirm
-        UIButton *sureButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width -(self.frame.size.width/4), self.frame.size.height-40, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
+        UIButton *sureButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - kHooDatePickerButtonHeaderWidth - kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
         [sureButton setTitle:kSureButtonItemTitle forState:UIControlStateNormal];
-        [sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        sureButton.backgroundColor =self.highlightColor;
+        [sureButton setTitleColor:self.highlightColor forState:UIControlStateNormal];
         [sureButton addTarget:self action:@selector(actionButtonValid:) forControlEvents:UIControlEventTouchUpInside];
         [_headerView addSubview:sureButton];
         
         // Label Title
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0.0, self.frame.size.width, kHooDatePickerHeaderHeight)];
-        _titleLabel.text = @"出生年月";
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(cancelButton.frame) + kHooDatePickerPadding, 0.0, self.frame.size.width - ((kHooDatePickerButtonHeaderWidth + kHooDatePickerPadding * 2) * 2 ), kHooDatePickerHeaderHeight)];
         _titleLabel.font = kHooDatePickerTitleFont;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = self.tintColor;
         [_headerView addSubview:_titleLabel];
     }
     return _headerView;
+}
+
+-(void)setTitle:(NSString *)title
+{
+    _title = title;
+    _titleLabel.text = _title;
 }
 
 - (NSDateFormatter *)dateFormatter {

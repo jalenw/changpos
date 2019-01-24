@@ -14,7 +14,6 @@
 		0432ECF01F271CC4008D7AA3 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0432ECEE1F271CC4008D7AA3 /* AlipaySDK.framework */; };
 		0432ECF41F271CD1008D7AA3 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432ECF31F271CD1008D7AA3 /* WXApiManager.m */; };
 		0432ECF81F271F0B008D7AA3 /* CommonUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432ECF61F271F0B008D7AA3 /* CommonUIWebViewController.m */; };
-		0432ED011F2747ED008D7AA3 /* LZHDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432ED001F2747ED008D7AA3 /* LZHDatePickerView.m */; };
 		04395ED81F233EC10074865E /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 04395EBE1F233EC10074865E /* NSBundle+TZImagePicker.m */; };
 		04395ED91F233EC10074865E /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04395EC01F233EC10074865E /* TZAssetCell.m */; };
 		04395EDA1F233EC10074865E /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04395EC21F233EC10074865E /* TZAssetModel.m */; };
@@ -631,8 +630,6 @@
 		0432ECF31F271CD1008D7AA3 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		0432ECF51F271F0B008D7AA3 /* CommonUIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUIWebViewController.h; sourceTree = "<group>"; };
 		0432ECF61F271F0B008D7AA3 /* CommonUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUIWebViewController.m; sourceTree = "<group>"; };
-		0432ECFF1F2747ED008D7AA3 /* LZHDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHDatePickerView.h; sourceTree = "<group>"; };
-		0432ED001F2747ED008D7AA3 /* LZHDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHDatePickerView.m; sourceTree = "<group>"; };
 		04395EBD1F233EC10074865E /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
 		04395EBE1F233EC10074865E /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
 		04395EBF1F233EC10074865E /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
@@ -3848,8 +3845,6 @@
 				04395EEA1F2350970074865E /* SecurityTextField.m */,
 				04EBFC361F25D79C00C4DE83 /* LZHAreaPickerView.h */,
 				04EBFC371F25D79C00C4DE83 /* LZHAreaPickerView.m */,
-				0432ECFF1F2747ED008D7AA3 /* LZHDatePickerView.h */,
-				0432ED001F2747ED008D7AA3 /* LZHDatePickerView.m */,
 				0413AA461F2879C5006F2743 /* ShareCommonView.h */,
 				0413AA471F2879C5006F2743 /* ShareCommonView.m */,
 				0413AA481F2879C5006F2743 /* ShareHelper.h */,
@@ -4481,7 +4476,6 @@
 				8E6D1E9121EB273F002C6717 /* City2ViewController.m in Sources */,
 				8E6D1EF221EB2ACB002C6717 /* BindCardOkViewController.m in Sources */,
 				CD06662C1E8CB53700CCD49A /* ZTNavigationController.m in Sources */,
-				0432ED011F2747ED008D7AA3 /* LZHDatePickerView.m in Sources */,
 				8EEF4BCD211D8CB500DE1E36 /* MWPhotoBrowser.m in Sources */,
 				8EEF4BC4211D8CB500DE1E36 /* amrFileCodec.mm in Sources */,
 				8E6D1E9721EB273F002C6717 /* PerfectInformationViewController.m in Sources */,

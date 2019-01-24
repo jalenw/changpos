@@ -19,6 +19,7 @@
 #import "MessageCenterViewController.h"
 #import "MyStoreViewController.h"
 #import "CreditsAndMembersViewController.h"
+#import "MyProfitViewController.h"
 @interface MyViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *mainTableView;
 //@property (weak, nonatomic) IBOutlet MineHeadView *smallHeadView;
@@ -136,10 +137,11 @@
     
     
         if(indexPath.row==0){
-            
+
         }
         if(indexPath.row==1){
-          
+            MyProfitViewController *vc = [[MyProfitViewController alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
         if(indexPath.row==2){
             //库存管理

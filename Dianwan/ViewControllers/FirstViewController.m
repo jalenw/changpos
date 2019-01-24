@@ -13,6 +13,7 @@
 #import "MyPartnerViewController.h"
 #import "MyStoreViewController.h"
 #import "RankingParentViewController.h"
+#import "MyProfitViewController.h"
 @interface FirstViewController ()
 {
     NSArray *adArray;
@@ -108,6 +109,11 @@
     RankingParentViewController *ranking =[[RankingParentViewController alloc]init];
     [self.navigationController pushViewController:ranking animated:YES];
     
+}
+
+- (IBAction)moreAct:(UIButton *)sender {
+    MyProfitViewController *vc = [[MyProfitViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)menuAct:(UIButton *)sender {

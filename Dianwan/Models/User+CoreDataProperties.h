@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) int16_t member_level;
 @property (nullable, nonatomic, retain) NSString *push_id;
 @property (nullable, nonatomic, retain) NSString *member_mobile;
-@property (nonatomic, assign) int16_t sex;
+@property (nullable, nonatomic, retain) NSString *sex;
 @property (nonatomic, nullable,retain) NSString *member_name;
 @property (nonatomic ) int64_t member_points;
 @property (nonatomic, nullable,retain) NSString *truename;

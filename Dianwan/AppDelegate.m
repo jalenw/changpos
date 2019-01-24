@@ -52,13 +52,8 @@
     apnsCertName = @"";
 #endif
     
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *appkey = [ud stringForKey:@"identifier_appkey"];
-    if (!appkey)
-    {
-        appkey = key_easemob;
-        [ud setObject:appkey forKey:@"identifier_appkey"];
-    }
+    NSString *appkey = key_easemob;
+
     [self easemobApplication:application
 didFinishLaunchingWithOptions:launchOptions
                       appkey:appkey
@@ -188,7 +183,7 @@ didFinishLaunchingWithOptions:launchOptions
         [cookieStorage setCookie:cookie];
     }
     
-    NSLog(@"%@",AppDelegateInstance.defaultUser.chat_id);
+    NSLog(@"环信d账号密码：%@ %@",AppDelegateInstance.defaultUser.chat_id,AppDelegateInstance.defaultUser.chat_pwd);
     //环信登录
     [[EaseMob sharedInstance].chatManager asyncLoginWithUsername:AppDelegateInstance.defaultUser.chat_id password:AppDelegateInstance.defaultUser.chat_pwd completion:^(NSDictionary *loginInfo, EMError *error) {
         if (!error && loginInfo) {

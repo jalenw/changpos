@@ -92,7 +92,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 71;
+    NSDictionary *dict = dataList[indexPath.row];
+    return [ProfitDetailTableViewCell heightForProfitDetailTableViewCell:dict];
 }
 
 

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *desc;
 @property (weak, nonatomic) IBOutlet UILabel *time;
++(CGFloat)heightForProfitDetailTableViewCell:(NSDictionary *)dict;
 @end
 
 NS_ASSUME_NONNULL_END

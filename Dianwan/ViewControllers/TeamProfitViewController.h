@@ -7,11 +7,17 @@
 //
 
 #import "BaseViewController.h"
-
+#import "Charts/Charts.h"
+#import "Dianwan-Swift.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TeamProfitViewController : BaseViewController
-
+@property (weak, nonatomic) IBOutlet UIButton *weekBt;
+@property (weak, nonatomic) IBOutlet UIButton *monthBt;
+@property (weak, nonatomic) IBOutlet BarChartView *chartView;
+@property (weak, nonatomic) IBOutlet UILabel *todayLb;
+- (IBAction)changeAct:(UIButton *)sender;
+- (IBAction)dateAct:(UIButton *)sender;
 @end
 
 NS_ASSUME_NONNULL_END

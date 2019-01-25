@@ -97,6 +97,7 @@
 		8E412B891F23572100A40CE6 /* RegViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B831F23572100A40CE6 /* RegViewController.xib */; };
 		8E42033A21F9B28D001994C5 /* ProfitDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */; };
 		8E42033B21F9B28D001994C5 /* ProfitDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */; };
+		8E42034421FB0C37001994C5 /* CustomValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42034321FB0C37001994C5 /* CustomValueFormatter.m */; };
 		8E42A8BC1F26DADB0026ED07 /* CLLocation+Sino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8B91F26DADB0026ED07 /* CLLocation+Sino.m */; };
 		8E42A8BD1F26DADB0026ED07 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8BB1F26DADB0026ED07 /* LocationService.m */; };
 		8E4664E52169BBCB0022DF94 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4664E42169BBCB0022DF94 /* libstdc++.6.0.9.tbd */; };
@@ -770,6 +771,8 @@
 		8E42033721F9B28D001994C5 /* ProfitDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfitDetailTableViewCell.h; sourceTree = "<group>"; };
 		8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfitDetailTableViewCell.m; sourceTree = "<group>"; };
 		8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfitDetailTableViewCell.xib; sourceTree = "<group>"; };
+		8E42034221FB0C37001994C5 /* CustomValueFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomValueFormatter.h; sourceTree = "<group>"; };
+		8E42034321FB0C37001994C5 /* CustomValueFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomValueFormatter.m; sourceTree = "<group>"; };
 		8E42A8B81F26DADB0026ED07 /* CLLocation+Sino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Sino.h"; sourceTree = "<group>"; };
 		8E42A8B91F26DADB0026ED07 /* CLLocation+Sino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Sino.m"; sourceTree = "<group>"; };
 		8E42A8BA1F26DADB0026ED07 /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationService.h; sourceTree = "<group>"; };
@@ -3849,6 +3852,8 @@
 				0413AA471F2879C5006F2743 /* ShareCommonView.m */,
 				0413AA481F2879C5006F2743 /* ShareHelper.h */,
 				0413AA491F2879C5006F2743 /* ShareHelper.m */,
+				8E42034221FB0C37001994C5 /* CustomValueFormatter.h */,
+				8E42034321FB0C37001994C5 /* CustomValueFormatter.m */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -4437,6 +4442,7 @@
 				2FFBAE9121EC4BAA00C9EBAE /* IQBarButtonItem.m in Sources */,
 				8EFC60D61F25864A0088E00A /* AdView.m in Sources */,
 				8EEF4BAA211D8CB500DE1E36 /* NSDateFormatter+Category.m in Sources */,
+				8E42034421FB0C37001994C5 /* CustomValueFormatter.m in Sources */,
 				8E6D1EEE21EB2ACB002C6717 /* RemoveBindCardViewController.m in Sources */,
 				8EEF4BC8211D8CB500DE1E36 /* EMCDDeviceManager+Media.m in Sources */,
 				8EDA41521F22F85C000CBA40 /* FriendsViewController.m in Sources */,

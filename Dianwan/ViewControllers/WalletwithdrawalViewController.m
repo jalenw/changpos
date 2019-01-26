@@ -32,8 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self gotoweb];
     self.view.backgroundColor = RGB(48, 46, 58);
     [self getCarddata];
     self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];

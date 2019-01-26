@@ -70,7 +70,7 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSLog(@"变化%@", string);
+   
     if([string isEqualToString:@"\n"]) {
         //按回车关闭键盘
         [textField resignFirstResponder];
@@ -79,12 +79,9 @@
         //判断是不是删除键
         return YES;
     }
-//        else if(textField.text.length == 6){
-//
-//        return NO;
-//    }
-    else if(textField.text.length >= kDotCount) {
-     
+    else if(textField.text.length >= 5 && self.tag ==1111) {
+            _inputAllBlodk(self.textField.text);
+    
         //输入的字符个数大于6，则无法继续输入，返回NO表示禁止输入  zyf增
         NSLog(@"输入的字符个数大于6，忽略输入");
         return NO;
@@ -92,27 +89,6 @@
         return YES;
     }
 }
-
-//-(void)textFieldDidEndEditing:(UITextField *)textField{
-//    if (self.textField.text.length >=5) {
-//          _inputAllBlodk(self.textField.text);
-//    }
-//}
-
-//-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-//    if (self.textField.text.length >=5) {
-//        _inputAllBlodk(self.textField.text);
-//    }
-//    return YES;
-//}
-
-//- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{\
-//    if (self.textField.text.length >=5) {
-//        _inputAllBlodk(self.textField.text);
-//    }
-//    return YES;
-//}
-
 
 
 /**

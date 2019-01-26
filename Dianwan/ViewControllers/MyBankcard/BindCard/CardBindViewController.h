@@ -7,8 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "CardInfoModel.h"
 
 @interface CardBindViewController : BaseViewController
 
+@property(nonatomic,copy)void(^selectCardBlodk)(CardInfoModel  *model);
+
+@property(nonatomic,assign)int typetag;
 
 @end

@@ -13,6 +13,7 @@
 #import "MyProfitDetailViewController.h"
 #import "CardBindViewController.h"
 #import "BlockUIAlertView.h"
+#import "WalletwithdrawalViewController.h"
 #define marginTop 100
 @interface MyProfitViewController ()
 {
@@ -51,6 +52,7 @@
                 else
                 {
                     CardBindViewController *vc = [[CardBindViewController alloc]init];
+                    vc.typetag=100;////100为普通跳转 zyf
                     [self.navigationController pushViewController:vc animated:YES];
                 }
               
@@ -149,5 +151,8 @@
     return view;
 }
 - (IBAction)getMoneyAct:(UIButton *)sender {
+    WalletwithdrawalViewController *walletwithdrawal = [[WalletwithdrawalViewController alloc]init];
+    walletwithdrawal.price = self.totalLb.text;
+    [self.navigationController pushViewController:walletwithdrawal animated:YES];
 }
 @end

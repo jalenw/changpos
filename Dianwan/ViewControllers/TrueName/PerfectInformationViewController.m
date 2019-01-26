@@ -18,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIView *truenameSuccessView;
 @property (strong, nonatomic) IBOutlet UIView *brithdaySelectView;
 @property (weak, nonatomic) IBOutlet UIView *brithdayprickView;
+@property (strong, nonatomic)HooDatePicker *datePicker;
 
 @end
 
@@ -87,11 +88,16 @@
 }
 -(void)addsubviews{
     //先创建
-    HooDatePicker *datePicker = [[HooDatePicker alloc] initWithSuperView:self.brithdayprickView];
-    datePicker.title=@"出生年月";
-    datePicker.delegate = self;
-    datePicker.datePickerMode = HooDatePickerModeYearAndMonth;
-    [datePicker show];
+    _datePicker = [[HooDatePicker alloc] initWithSuperView:self.brithdayprickView];
+    _datePicker.title=@"出生年月";
+//    _datePicker.tintColor = [UIColor clearColor];
+//    _datePicker.backgroundColor =[UIColor clearColor];
+//    _datePicker.headerView.backgroundColor = [UIColor clearColor];
+    _datePicker.delegate = self;
+    _datePicker.cancelButton.hidden =YES;
+    _datePicker.sureButton.hidden =YES;
+    _datePicker.datePickerMode = HooDatePickerModeYearAndMonth;
+    [_datePicker show];
     [self.view addSubview:self.brithdaySelectView];
     self.brithdaySelectView.frame =self.view.bounds;
     self.brithdaySelectView.hidden =YES;
@@ -110,15 +116,26 @@
     
 }
 
+- (IBAction)sureBtnclickAct:(UIButton *)sender {
+    if ([self respondsToSelector:@selector(datePicker:didSelectedDate:)]) {
+    [self datePicker:_datePicker didSelectedDate:[_datePicker getDate]];
+    }
+}
+- (IBAction)cancleBtnclickAct:(UIButton *)sender {
+    if ([self respondsToSelector:@selector(datePicker:didCancel:)]) {
+        [self datePicker:_datePicker didCancel:sender];
+    }
+}
 
 
 //代理，隐藏控件，暂时没有这个字段的接口
 - (void)datePicker:(HooDatePicker *)datePicker didCancel:(UIButton *)sender {
-    
+     [_datePicker show];
     self.brithdaySelectView.hidden =YES;
 }
 
 - (void)datePicker:(HooDatePicker *)datePicker didSelectedDate:(NSDate*)date {
+    [_datePicker show];
     //创建一个日期格式化器
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
     dateFormatter.dateFormat=@"yyyy-MM";//指定转date得日期格式化形式

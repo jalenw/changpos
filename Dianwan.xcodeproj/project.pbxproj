@@ -67,6 +67,9 @@
 		2FB8362D21EEDCC20028A376 /* RewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362B21EEDCC20028A376 /* RewardViewController.xib */; };
 		2FB8363121EEDD030028A376 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362F21EEDD030028A376 /* SystemViewController.m */; };
 		2FB8363221EEDD030028A376 /* SystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8363021EEDD030028A376 /* SystemViewController.xib */; };
+		2FD09A2121FB54F800DE1A95 /* WalletwithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD09A1F21FB54F800DE1A95 /* WalletwithdrawalViewController.m */; };
+		2FD09A2221FB54F800DE1A95 /* WalletwithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD09A2021FB54F800DE1A95 /* WalletwithdrawalViewController.xib */; };
+		2FD09A2721FB5BA600DE1A95 /* PassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD09A2521FB5BA500DE1A95 /* PassWordView.m */; };
 		2FD7366721EEE5CB00B59D8F /* WithdrawalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7366521EEE5CB00B59D8F /* WithdrawalTableViewCell.m */; };
 		2FD7366821EEE5CB00B59D8F /* WithdrawalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7366621EEE5CB00B59D8F /* WithdrawalTableViewCell.xib */; };
 		2FD7366C21EEE7C800B59D8F /* RewardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7366A21EEE7C800B59D8F /* RewardTableViewCell.m */; };
@@ -718,6 +721,12 @@
 		2FB8362E21EEDD030028A376 /* SystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
 		2FB8362F21EEDD030028A376 /* SystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemViewController.m; sourceTree = "<group>"; };
 		2FB8363021EEDD030028A376 /* SystemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemViewController.xib; sourceTree = "<group>"; };
+		2FD09A1E21FB54F800DE1A95 /* WalletwithdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletwithdrawalViewController.h; sourceTree = "<group>"; };
+		2FD09A1F21FB54F800DE1A95 /* WalletwithdrawalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletwithdrawalViewController.m; sourceTree = "<group>"; };
+		2FD09A2021FB54F800DE1A95 /* WalletwithdrawalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletwithdrawalViewController.xib; sourceTree = "<group>"; };
+		2FD09A2521FB5BA500DE1A95 /* PassWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordView.m; sourceTree = "<group>"; };
+		2FD09A2621FB5BA600DE1A95 /* PassWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordView.h; sourceTree = "<group>"; };
+		2FD09A2C21FC5D7500DE1A95 /* WebProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebProtocol.h; sourceTree = "<group>"; };
 		2FD7366421EEE5CB00B59D8F /* WithdrawalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalTableViewCell.h; sourceTree = "<group>"; };
 		2FD7366521EEE5CB00B59D8F /* WithdrawalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalTableViewCell.m; sourceTree = "<group>"; };
 		2FD7366621EEE5CB00B59D8F /* WithdrawalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WithdrawalTableViewCell.xib; sourceTree = "<group>"; };
@@ -1830,6 +1839,13 @@
 			path = MessageCenter;
 			sourceTree = "<group>";
 		};
+		2FD09A2421FB5B9800DE1A95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		2FD7366221EEE57D00B59D8F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1951,6 +1967,7 @@
 				8E6D1EBD21EB2A5B002C6717 /* SetPayPwViewController.h */,
 				8E6D1EBE21EB2A5B002C6717 /* SetPayPwViewController.m */,
 				8E6D1EBF21EB2A5C002C6717 /* SetPayPwViewController.xib */,
+				2FD09A2C21FC5D7500DE1A95 /* WebProtocol.h */,
 				0432ECF51F271F0B008D7AA3 /* CommonUIWebViewController.h */,
 				0432ECF61F271F0B008D7AA3 /* CommonUIWebViewController.m */,
 			);
@@ -1960,6 +1977,9 @@
 		8E4BACA321F858E6003F94C5 /* MyProfit */ = {
 			isa = PBXGroup;
 			children = (
+				2FD09A2421FB5B9800DE1A95 /* View */,
+				2FD09A2621FB5BA600DE1A95 /* PassWordView.h */,
+				2FD09A2521FB5BA500DE1A95 /* PassWordView.m */,
 				8E4BACA421F85900003F94C5 /* MyProfitViewController.h */,
 				8E4BACA521F85900003F94C5 /* MyProfitViewController.m */,
 				8E4BACA621F85900003F94C5 /* MyProfitViewController.xib */,
@@ -1975,6 +1995,9 @@
 				8E4BACB821F8618A003F94C5 /* MyProfitDetailViewController.h */,
 				8E4BACB921F8618B003F94C5 /* MyProfitDetailViewController.m */,
 				8E4BACBA21F8618B003F94C5 /* MyProfitDetailViewController.xib */,
+				2FD09A1E21FB54F800DE1A95 /* WalletwithdrawalViewController.h */,
+				2FD09A1F21FB54F800DE1A95 /* WalletwithdrawalViewController.m */,
+				2FD09A2021FB54F800DE1A95 /* WalletwithdrawalViewController.xib */,
 			);
 			name = MyProfit;
 			sourceTree = "<group>";
@@ -4042,6 +4065,7 @@
 				8EB4E4E921201FAE00BC563B /* chat_sender_audio_playing_003@2x.png in Resources */,
 				8EB4E53621201FAE00BC563B /* chatBar_colorMore_videoCall@2x.png in Resources */,
 				8E6D1E9821EB273F002C6717 /* PerfectInformationViewController.xib in Resources */,
+				2FD09A2221FB54F800DE1A95 /* WalletwithdrawalViewController.xib in Resources */,
 				8EBF664421E1B157001C4A0D /* InformationViewController.xib in Resources */,
 				8EB4E53B21201FAE00BC563B /* chatBar_faceSelected.png in Resources */,
 				8E591B1A21F072BD00279630 /* MyStoreViewController.xib in Resources */,
@@ -4233,6 +4257,7 @@
 				8E591B2821F082B100279630 /* OweDeviceTableViewCell.m in Sources */,
 				8EEF4BC9211D8CB500DE1E36 /* EMCDDeviceManager+Microphone.m in Sources */,
 				8EB4E411212019F600BC563B /* EMGifImage.m in Sources */,
+				2FD09A2721FB5BA600DE1A95 /* PassWordView.m in Sources */,
 				8E6D1EF421EB2ACB002C6717 /* CardCellTableViewCell.m in Sources */,
 				8EEF4C08211D8CB500DE1E36 /* EaseChatToolbarItem.m in Sources */,
 				8E9FE2D6212E72B900D26955 /* MJRefreshGifFooter.m in Sources */,
@@ -4515,6 +4540,7 @@
 				8EB4E3BF2120065F00BC563B /* AppDelegate+EaseMob.m in Sources */,
 				04395EDF1F233EC10074865E /* TZImagePickerController.m in Sources */,
 				8E6D1EEF21EB2ACB002C6717 /* CardBindViewController.m in Sources */,
+				2FD09A2121FB54F800DE1A95 /* WalletwithdrawalViewController.m in Sources */,
 				2FB8362721EEDCA40028A376 /* WithdrawalViewController.m in Sources */,
 				8E6D1EA221EB273F002C6717 /* PWInputViewController.m in Sources */,
 				8EB4E42721201CC500BC563B /* ChatViewController.m in Sources */,

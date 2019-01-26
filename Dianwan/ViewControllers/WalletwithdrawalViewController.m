@@ -61,7 +61,7 @@
             }
             self.model = self.cardArray[0];
             self.card_idNum =self.model.card_id;
-             [self setUI];
+            [self setUI];
         }
         else
         {
@@ -83,9 +83,9 @@
     carsh.typetag = 101;//判别是从银行卡跳入海时提现
     WEAKSELF
     carsh.selectCardBlodk =^(CardInfoModel *model){
-        self.model = model;
+        weakSelf.model = model;
         weakSelf.card_idNum = self.model.card_id;
-        [self setUI];
+        [weakSelf setUI];
     };
     
     [self.navigationController pushViewController:carsh animated:YES];
@@ -101,6 +101,11 @@
 
 
 - (IBAction)confirmCarshAction:(UIButton *)sender {
+    if(self.amountTextfiled.text.length==0){
+        [AlertHelper showAlertWithTitle:@"请先输入提现金额"];
+        return;
+    }
+    
     self.passInputWordView.hidden =NO;
     self.moneyNumberLabel.text =self.amountTextfiled.text;
     [self.pwview.pwInputView.textField becomeFirstResponder];
@@ -162,9 +167,10 @@
     NSString *bankName =  [self.model.bank_name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
       web.address  = [NSString stringWithFormat:@"%@order/progress?cardName=%@&service=1&price=%@&time=%@&key=%@&isBack=true",web_url,bankName,self.amountTextfiled.text,strDate,HTTPClientInstance.token];
     [self.navigationController pushViewController:web animated:YES];
+    
+    
 }
 - (IBAction)allTiXianAction:(id)sender {
-    
     self.amountTextfiled.text =[self.price substringFromIndex:1];
 }
 

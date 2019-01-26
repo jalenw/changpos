@@ -23,6 +23,8 @@
 
 #import "PayViewController.h"
 
+#import "MessageCenterViewController.h"
+
 @protocol JSBridgeExport <JSExport>
 //与H5交互协议
 
@@ -37,6 +39,8 @@
 - (void)withdrawal:(NSString*)pay_style :(NSString*)price;
 
 - (void)pay_style:(NSString*)pay_sn;
+
+-(void)goToMessage;
 @end
 
 @interface JSBridge : NSObject <JSBridgeExport>
@@ -84,6 +88,14 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.webViewController pay_style:pay_sn];
     });
+}
+
+
+-(void)goToMessage{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self.webViewController goToMessage];
+    });
+   
 }
 @end
 
@@ -508,4 +520,17 @@
         return;
     }
 }
+
+//前往消息中心
+-(void)goToMessage{
+        MessageCenterViewController *message =[[MessageCenterViewController alloc]init];
+        [self.navigationController pushViewController:message animated:YES];
+    //把输当前控制器从视图栈删除，避免f确认密码返回到第一次输入密码
+    NSMutableArray *tempMarray = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+    [tempMarray removeObject:self];
+    [self.navigationController setViewControllers:tempMarray animated:YES];
+    [self removeFromParentViewController];
+}
+
+
 @end

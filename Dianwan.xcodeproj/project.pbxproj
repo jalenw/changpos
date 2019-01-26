@@ -726,7 +726,6 @@
 		2FD09A2021FB54F800DE1A95 /* WalletwithdrawalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletwithdrawalViewController.xib; sourceTree = "<group>"; };
 		2FD09A2521FB5BA500DE1A95 /* PassWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordView.m; sourceTree = "<group>"; };
 		2FD09A2621FB5BA600DE1A95 /* PassWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordView.h; sourceTree = "<group>"; };
-		2FD09A2C21FC5D7500DE1A95 /* WebProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebProtocol.h; sourceTree = "<group>"; };
 		2FD7366421EEE5CB00B59D8F /* WithdrawalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalTableViewCell.h; sourceTree = "<group>"; };
 		2FD7366521EEE5CB00B59D8F /* WithdrawalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalTableViewCell.m; sourceTree = "<group>"; };
 		2FD7366621EEE5CB00B59D8F /* WithdrawalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WithdrawalTableViewCell.xib; sourceTree = "<group>"; };
@@ -1967,7 +1966,6 @@
 				8E6D1EBD21EB2A5B002C6717 /* SetPayPwViewController.h */,
 				8E6D1EBE21EB2A5B002C6717 /* SetPayPwViewController.m */,
 				8E6D1EBF21EB2A5C002C6717 /* SetPayPwViewController.xib */,
-				2FD09A2C21FC5D7500DE1A95 /* WebProtocol.h */,
 				0432ECF51F271F0B008D7AA3 /* CommonUIWebViewController.h */,
 				0432ECF61F271F0B008D7AA3 /* CommonUIWebViewController.m */,
 			);

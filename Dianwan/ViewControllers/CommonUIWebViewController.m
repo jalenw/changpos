@@ -91,12 +91,12 @@
 }
 
 
--(void)goToMessage{
-    dispatch_async(dispatch_get_main_queue(), ^{
-         [self.webViewController goToMessage];
-    });
-   
-}
+//-(void)goToMessage{
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//         [self.webViewController goToMessage];
+//    });
+//
+//}
 @end
 
 @interface CommonUIWebViewController ()<UITextFieldDelegate,AliPayManagerDelegate,WXApiManagerDelegate>
@@ -522,15 +522,15 @@
 }
 
 //前往消息中心
--(void)goToMessage{
-        MessageCenterViewController *message =[[MessageCenterViewController alloc]init];
-        [self.navigationController pushViewController:message animated:YES];
-    //把输当前控制器从视图栈删除，避免f确认密码返回到第一次输入密码
-    NSMutableArray *tempMarray = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
-    [tempMarray removeObject:self];
-    [self.navigationController setViewControllers:tempMarray animated:YES];
-    [self removeFromParentViewController];
-}
+//-(void)goToMessage{
+//        MessageCenterViewController *message =[[MessageCenterViewController alloc]init];
+//        [self.navigationController pushViewController:message animated:YES];
+//    //把输当前控制器从视图栈删除，避免f确认密码返回到第一次输入密码
+//    NSMutableArray *tempMarray = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+//    [tempMarray removeObject:self];
+//    [self.navigationController setViewControllers:tempMarray animated:YES];
+//    [self removeFromParentViewController];
+//}
 
 
 @end

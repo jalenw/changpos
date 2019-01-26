@@ -32,5 +32,5 @@
 //根据订单号打开选择支付方式，包含钱包支付
 - (void)pay_style:(NSString*)pay_sn;
 
--(void)goToMessage;
+//-(void)goToMessage;
 @end

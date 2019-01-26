@@ -11,6 +11,7 @@
 #import "UIView+EasyLayout.h"
 #import "CardInfoModel.h"
 #import "CardBindViewController.h"
+#import "ShowWithdrawaldetailsViewController.h"
 
 @interface WalletwithdrawalViewController ()
 @property(nonatomic,strong)NSMutableArray *cardArray;
@@ -62,6 +63,8 @@
             self.model = self.cardArray[0];
             self.card_idNum =self.model.card_id;
             [self setUI];
+//
+//            [self gotoMessageVC];
         }
         else
         {
@@ -124,7 +127,7 @@
         [[ServiceForUser manager]postMethodName:@"mobile/recharge/pd_cash_add" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
             [SVProgressHUD dismiss];
             if (status) {
-                [self gotoweb];
+                [self gotoMessageVC];
                 self.passInputWordView.hidden =YES;
                 self.pwview.pwInputView.textField.text =@"";
                 [self.pwview.pwInputView clearUpPassword];
@@ -139,35 +142,34 @@
     };
 }
 
--(void)gotoweb{
-    [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"提现成功"];
-    
+-(void)gotoMessageVC{
     NSInteger dis = 2; //前后的天数
     NSDate*nowDate = [NSDate date];
     NSDate* theDate;
-    
-    if(dis!=0)
-    {
+
+    if(dis!=0){
         NSTimeInterval  oneDay = 24*60*60*1;  //1天的长度
-        
         theDate = [nowDate initWithTimeIntervalSinceNow: +oneDay*dis ];
-        
-    }
-    else
-    {
+    }else{
         theDate = nowDate;
     }
-    
+
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-ddHH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *nowdatestr  =[dateFormatter stringFromDate:nowDate];
+    NSString *strDate =[dateFormatter stringFromDate:theDate];
     
-    NSString *strDate =[[dateFormatter stringFromDate:theDate] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    CommonUIWebViewController *web = [[CommonUIWebViewController alloc]init];
-    NSString *bankName =  [self.model.bank_name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-      web.address  = [NSString stringWithFormat:@"%@order/progress?cardName=%@&service=1&price=%@&time=%@&key=%@&isBack=true",web_url,bankName,self.amountTextfiled.text,strDate,HTTPClientInstance.token];
-    [self.navigationController pushViewController:web animated:YES];
-    
+    NSDictionary *dict = @{//zyf
+                           @"pdc_amount": self.amountTextfiled.text,
+                           @"pdc_bank_name":self.model.bank_name,
+                           @"pdc_expect_time":strDate,
+                           @"pdc_addtime":nowdatestr,
+                           @"pdc_payment_state":@"提现进行中....",
+                           
+                           };
+    ShowWithdrawaldetailsViewController *tixian =[[ShowWithdrawaldetailsViewController alloc]init];
+    tixian.dict = dict;
+    [self.navigationController pushViewController:tixian animated:YES];
     
 }
 - (IBAction)allTiXianAction:(id)sender {

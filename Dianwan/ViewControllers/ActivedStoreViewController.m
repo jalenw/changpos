@@ -103,7 +103,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotificationSearch" object:textField.text];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kSNNotificationSearch" object:textField.text];
     [textField resignFirstResponder];
     return YES;
 }

@@ -9,8 +9,8 @@
 #import "HooDatePicker.h"
 
 // Constants :
-static NSString  * const kSureButtonItemTitle = @"确定";
-static NSString  * const kCancelButtonItemTitle = @"取消";
+static NSString  * const ksureButtonItemTitle = @"确定";
+static NSString  * const kcancelButtonItemTitle = @"取消";
 
 // Constants sizes :
 static CGFloat const kHooDatePickerHeight = 260.0f;
@@ -82,6 +82,7 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 
 }
 
+
 // Data of years, months, days, dates, hours, minutes, seconds
 @property (nonatomic, strong) NSMutableArray *years, *months, *days, *dates, *hours, *minutes, *seconds;
 
@@ -93,8 +94,6 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
 @property (nonatomic, copy) UIView *dimBackgroundView;
 
 @property (nonatomic, strong) UILabel *titleLabel;
-
-@property (nonatomic, strong) UIView *headerView;
 
 @property (nonatomic, strong) UIColor *tintColor;
 
@@ -1516,21 +1515,21 @@ typedef NS_ENUM(NSInteger,ScrollViewTagValue) {
     if (!_headerView) {
         _headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, kHooDatePickerHeaderHeight)];
         // Button Cancel
-        UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
-        [cancelButton setTitle:kCancelButtonItemTitle forState:UIControlStateNormal];
-        [cancelButton setTitleColor:self.tintColor forState:UIControlStateNormal];
-        [cancelButton addTarget:self action:@selector(actionButtonCancel:) forControlEvents:UIControlEventTouchUpInside];
-        [_headerView addSubview:cancelButton];
+        _cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
+        [_cancelButton setTitle:kcancelButtonItemTitle forState:UIControlStateNormal];
+        [_cancelButton setTitleColor:self.tintColor forState:UIControlStateNormal];
+        [_cancelButton addTarget:self action:@selector(actionButtonCancel:) forControlEvents:UIControlEventTouchUpInside];
+        [_headerView addSubview:_cancelButton];
         
         // Button confirm
-        UIButton *sureButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - kHooDatePickerButtonHeaderWidth - kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
-        [sureButton setTitle:kSureButtonItemTitle forState:UIControlStateNormal];
-        [sureButton setTitleColor:self.highlightColor forState:UIControlStateNormal];
-        [sureButton addTarget:self action:@selector(actionButtonValid:) forControlEvents:UIControlEventTouchUpInside];
-        [_headerView addSubview:sureButton];
+        _sureButton = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width - kHooDatePickerButtonHeaderWidth - kHooDatePickerPadding, 0.0, kHooDatePickerButtonHeaderWidth, kHooDatePickerHeaderHeight)];
+        [_sureButton setTitle:ksureButtonItemTitle forState:UIControlStateNormal];
+        [_sureButton setTitleColor:self.highlightColor forState:UIControlStateNormal];
+        [_sureButton addTarget:self action:@selector(actionButtonValid:) forControlEvents:UIControlEventTouchUpInside];
+        [_headerView addSubview:_sureButton];
         
         // Label Title
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(cancelButton.frame) + kHooDatePickerPadding, 0.0, self.frame.size.width - ((kHooDatePickerButtonHeaderWidth + kHooDatePickerPadding * 2) * 2 ), kHooDatePickerHeaderHeight)];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_cancelButton.frame) + kHooDatePickerPadding, 0.0, self.frame.size.width - ((kHooDatePickerButtonHeaderWidth + kHooDatePickerPadding * 2) * 2 ), kHooDatePickerHeaderHeight)];
         _titleLabel.font = kHooDatePickerTitleFont;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.textColor = self.tintColor;

@@ -26,6 +26,17 @@ typedef NS_ENUM(NSInteger,HooDatePickerMode) {
 @end
 
 @interface HooDatePicker : UIControl
+
+//确定取消按钮
+@property (nonatomic,strong)UIButton *cancelButton;
+
+@property (nonatomic,strong)UIButton *sureButton;
+
+@property (nonatomic, strong) UIView *headerView;
+
+- (NSMutableArray*)getDate;
+
+
 /**
  *  Title on the top of HooDatePicker
  */

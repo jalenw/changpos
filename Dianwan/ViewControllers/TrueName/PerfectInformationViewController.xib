@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -400,21 +400,77 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-NR-ANP">
-                    <rect key="frame" x="16" y="168.5" width="343" height="290"/>
+                    <rect key="frame" x="16" y="138.5" width="343" height="350"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-2n-dDU">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="350"/>
+                        </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLg-Kh-gZD">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="290"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="16" y="0.0" width="311" height="260"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="260" id="ygy-YG-BZI"/>
+                            </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCP-pS-7iA">
+                            <rect key="frame" x="50" y="290" width="80" height="40"/>
+                            <color key="backgroundColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Rcw-xc-Bec"/>
+                                <constraint firstAttribute="width" constant="80" id="roD-hC-7zv"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancleBtnclickAct:" destination="-1" eventType="touchUpInside" id="rfd-1j-EuN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7g-zp-BwA">
+                            <rect key="frame" x="213" y="290" width="80" height="40"/>
+                            <color key="backgroundColor" red="0.99215686274509807" green="0.71372549019607845" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="65H-RW-aAr"/>
+                                <constraint firstAttribute="width" constant="80" id="jMg-Kf-lG8"/>
+                            </constraints>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sureBtnclickAct:" destination="-1" eventType="touchUpInside" id="CpX-E9-zRw"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="GLg-Kh-gZD" firstAttribute="leading" secondItem="vV8-NR-ANP" secondAttribute="leading" id="6ak-j6-gMw"/>
                         <constraint firstItem="GLg-Kh-gZD" firstAttribute="top" secondItem="vV8-NR-ANP" secondAttribute="top" id="9Me-mm-ZmN"/>
-                        <constraint firstAttribute="bottom" secondItem="GLg-Kh-gZD" secondAttribute="bottom" id="Dej-GU-6fW"/>
-                        <constraint firstAttribute="height" constant="290" id="nZW-uV-ttk"/>
-                        <constraint firstAttribute="trailing" secondItem="GLg-Kh-gZD" secondAttribute="trailing" id="wJJ-mK-cCc"/>
+                        <constraint firstAttribute="trailing" secondItem="A7g-zp-BwA" secondAttribute="trailing" constant="50" id="9mU-Wx-fZ0"/>
+                        <constraint firstItem="A7g-zp-BwA" firstAttribute="centerY" secondItem="mCP-pS-7iA" secondAttribute="centerY" id="MLm-rx-0Up"/>
+                        <constraint firstAttribute="trailing" secondItem="Wcm-2n-dDU" secondAttribute="trailing" id="TcW-hn-ZLw"/>
+                        <constraint firstItem="mCP-pS-7iA" firstAttribute="top" secondItem="GLg-Kh-gZD" secondAttribute="bottom" constant="30" id="Vyn-LZ-cp0"/>
+                        <constraint firstItem="GLg-Kh-gZD" firstAttribute="leading" secondItem="vV8-NR-ANP" secondAttribute="leading" constant="16" id="WMR-XM-ofV"/>
+                        <constraint firstItem="mCP-pS-7iA" firstAttribute="leading" secondItem="vV8-NR-ANP" secondAttribute="leading" constant="50" id="bjC-yK-6ud"/>
+                        <constraint firstAttribute="height" constant="350" id="nZW-uV-ttk"/>
+                        <constraint firstAttribute="bottom" secondItem="Wcm-2n-dDU" secondAttribute="bottom" id="t4B-jt-OR5"/>
+                        <constraint firstAttribute="trailing" secondItem="GLg-Kh-gZD" secondAttribute="trailing" constant="16" id="uCB-8E-wdJ"/>
+                        <constraint firstItem="Wcm-2n-dDU" firstAttribute="leading" secondItem="vV8-NR-ANP" secondAttribute="leading" id="ws6-1z-f1a"/>
+                        <constraint firstItem="Wcm-2n-dDU" firstAttribute="top" secondItem="vV8-NR-ANP" secondAttribute="top" id="zbS-4P-dIw"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.29541703345070425" colorSpace="calibratedRGB"/>
@@ -425,14 +481,15 @@
                 <constraint firstItem="oXQ-hU-rlf" firstAttribute="trailing" secondItem="vV8-NR-ANP" secondAttribute="trailing" constant="16" id="pMF-nY-JG7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="oXQ-hU-rlf"/>
-            <point key="canvasLocation" x="-466" y="233"/>
+            <point key="canvasLocation" x="-849" y="224"/>
         </view>
     </objects>
     <resources>
-        <image name="nan" width="28" height="24"/>
-        <image name="nan_1" width="28" height="24"/>
-        <image name="nv" width="28" height="24"/>
-        <image name="nv_1" width="28" height="24"/>
-        <image name="rzcg" width="663" height="389"/>
+        <image name="nan" width="13.439999580383301" height="11.760000228881836"/>
+        <image name="nan_1" width="13.439999580383301" height="11.760000228881836"/>
+        <image name="nv" width="13.439999580383301" height="11.760000228881836"/>
+        <image name="nv_1" width="13.439999580383301" height="11.760000228881836"/>
+        <image name="rzcg" width="159.1199951171875" height="93.360000610351562"/>
+        <image name="tankuang_1" width="159.36000061035156" height="93.599998474121094"/>
     </resources>
 </document>

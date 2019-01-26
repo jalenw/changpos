@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"费率调整";
+    [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 531)];
     // Do any additional setup after loading the view from its nib.
 }
 

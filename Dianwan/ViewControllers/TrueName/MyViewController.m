@@ -140,6 +140,7 @@
 
         }
         if(indexPath.row==1){
+            //
             MyProfitViewController *vc = [[MyProfitViewController alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
         }
@@ -161,6 +162,7 @@
         if(indexPath.row==5){
             //我的银行卡
             CardBindViewController *mycard = [[CardBindViewController alloc]init];
+            mycard.typetag=100;//100为普通跳转。zyf
             [self.navigationController pushViewController:mycard animated:YES];
         }
         if(indexPath.row==6){

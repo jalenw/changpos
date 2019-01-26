@@ -135,28 +135,34 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==self.modelArr.count) {
+       
         [self addCardAction];
+   
     }else{
-        RemoveBindCardViewController *input =[[RemoveBindCardViewController alloc]init];
-        input.model =self.modelArr[indexPath.row];
-        [self.navigationController pushViewController:input animated:YES];
+        //100为普通跳转
+        if(self.typetag==100){
+            RemoveBindCardViewController *input =[[RemoveBindCardViewController alloc]init];
+            input.model =self.modelArr[indexPath.row];
+            [self.navigationController pushViewController:input animated:YES];
+        }else{
+            _selectCardBlodk(self.modelArr[indexPath.row]);
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 
 //获取银行卡列表
 -(void)getCardListAction{
     
-    WEAKSELF
+    
     [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/member_bank/index" params:@{@"client":@"ios"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
                 NSArray *result =[data objectForKey:@"result"];
-                [weakSelf.modelArr removeAllObjects];
+                [self.modelArr removeAllObjects];
                 
                 if(result.count==0){
-//                    self.mainTbleview.backgroundColor = [UIColor clearColor];
-
                     self.mainTbleview.hidden =YES;
                     self.noCARDlABEL.hidden = NO;
                     self.noCardImageView.hidden = NO;
@@ -179,10 +185,10 @@
                 model.bank_card = [result[i] safeStringForKey:@"bank_card"];
                 model.bank_name = [result[i] safeStringForKey:@"bank_name"];
                 
-                [weakSelf.modelArr addObject:model];
+                [self.modelArr addObject:model];
             }
-            [weakSelf.mainTbleview reloadData];
-    }else{
+            [self.mainTbleview reloadData];
+        }else{
             [AlertHelper showAlertWithTitle:error];
          }
     }];

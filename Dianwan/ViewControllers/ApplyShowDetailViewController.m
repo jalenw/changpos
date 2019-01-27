@@ -42,9 +42,9 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [UIApplication sharedApplication].statusBarStyle =UIStatusBarStyleDefault;
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];;
+//    [UIApplication sharedApplication].statusBarStyle =UIStatusBarStyleDefault;
+//    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];;
     
 }
 
@@ -53,15 +53,15 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+//    
+//    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title=@"申请详情";
-    [self setupNav];
+    self.title=@"申请详情";
+//    [self setupNav];
     self.view.backgroundColor = RGB(246, 246, 246);
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/examineAllocationDetail" params:@{@"id":@(self.idNum)} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {

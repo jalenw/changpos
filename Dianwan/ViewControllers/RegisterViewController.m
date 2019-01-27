@@ -49,9 +49,9 @@
     [super viewWillAppear:animated];
     self.countDownManager.delegate = self;
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+//    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
   
         [IQKeyboardManager sharedManager].enable = YES;
         [IQKeyboardManager sharedManager].shouldResignOnTouchOutside=YES;

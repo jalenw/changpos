@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ApplyShowDetailViewController : UIViewController
+@interface ApplyShowDetailViewController : BaseViewController
 @property(nonatomic,assign)int idNum ;
 @end
 

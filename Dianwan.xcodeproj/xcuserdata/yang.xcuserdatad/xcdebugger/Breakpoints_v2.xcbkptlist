@@ -8,7 +8,7 @@
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
-            continueAfterRunningActions = "No"
+            continueAfterRunningActions = "Yes"
             scope = "0"
             stopOnStyle = "0">
          </BreakpointContent>
@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.171163"
+            filePath = "Dianwan/ViewControllers/MerchantTableViewCell.m"
+            timestampString = "570392485.329932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "896"
-            endingLineNumber = "896"
-            landmarkName = "-getDates"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-setDict:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -35,29 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.171934"
+            filePath = "Dianwan/Externs/AFNetworking/AFHTTPSessionManager.m"
+            timestampString = "570392825.365684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "899"
-            endingLineNumber = "899"
-            landmarkName = "-getDates"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.17246"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "913"
-            endingLineNumber = "913"
-            landmarkName = "-getDates"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-POST:parameters:progress:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -67,45 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.172941"
+            filePath = "Dianwan/Externs/AFNetworking/AFHTTPSessionManager.m"
+            timestampString = "570392849.527055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "945"
-            endingLineNumber = "945"
-            landmarkName = "-getDates"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.17339"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "939"
-            endingLineNumber = "939"
-            landmarkName = "-getDates"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/HooDatePicker/HooDatePicker.m"
-            timestampString = "570193757.173842"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "938"
-            endingLineNumber = "938"
-            landmarkName = "-getDates"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "-dataTaskWithHTTPMethod:URLString:parameters:uploadProgress:downloadProgress:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

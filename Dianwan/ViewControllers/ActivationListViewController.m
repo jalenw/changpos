@@ -81,7 +81,7 @@
         }
         if (dataList.count>0) {
             NSDictionary *dict = dataList[indexPath.row];
-            cell.dict = dict;
+//            cell.dict = dict;
         }
         return cell;
     }

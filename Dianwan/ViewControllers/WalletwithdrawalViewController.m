@@ -13,7 +13,11 @@
 #import "CardBindViewController.h"
 #import "ShowWithdrawaldetailsViewController.h"
 
-@interface WalletwithdrawalViewController ()
+@interface WalletwithdrawalViewController ()<UITextFieldDelegate>
+{
+  float  formalities;
+  float singlaFormalities;
+}
 @property(nonatomic,strong)NSMutableArray *cardArray;
 
 
@@ -24,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet PassWordView *pwview;
 @property (weak, nonatomic) IBOutlet UILabel *moneyNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yueLabel;
+@property (weak, nonatomic) IBOutlet UIButton *alltixianBtn;
 @property (weak, nonatomic)  CardInfoModel *model;
 @property (weak, nonatomic)  NSNumber *card_idNum;
 
@@ -33,9 +38,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getFormalities];
     self.title = @"提现";
     self.view.backgroundColor = RGB(48, 46, 58);
     [self getCarddata];
+    [self.amountTextfiled addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
+
+    
+    
     self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
     [self.pwview.pwInputView.textField resignFirstResponder];
     self.passInputWordView.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
@@ -44,6 +54,44 @@
     self.passInputWordView.hidden = YES;
     [self.view addSubview:self.passInputWordView];
 }
+
+#pragma mark -给每个cell中的textfield添加事件，只要值改变就调用此函数
+-(void)changedTextField:(UITextField *)textField
+{
+    if([textField.text integerValue]>1000){
+        [AlertHelper showAlertWithTitle:@"提现金额最高不可超过1000"];
+        
+        return;
+    }
+    if(singlaFormalities >0){
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥xx税费，手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
+    }else{
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥xx税费，实际到账金额￥%f",[textField.text floatValue]];
+    }
+    if (self.amountTextfiled.text.length>0) {
+        self.alltixianBtn.hidden =YES;
+    }else{
+        self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
+        self.alltixianBtn.hidden =NO;
+    }
+    
+}
+
+
+-(void)getFormalities{
+    [[ServiceForUser manager]postMethodName:@"mobile/index/get_pd_cash_setting_info" params:@{} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        if(status){
+            formalities =  [[[data safeDictionaryForKey:@"result"] safeStringForKey:@"pd_cash_service_charge"] floatValue ];
+            singlaFormalities =  [[[data safeDictionaryForKey:@"result"] safeStringForKey:@"single_pd_cash_price"] floatValue ];
+        }
+        else
+        {
+            [AlertHelper showAlertWithTitle:error];
+        }
+    }];
+}
+
+
 
 //获取银行卡列表
 -(void)getCarddata{
@@ -64,8 +112,6 @@
             self.model = self.cardArray[0];
             self.card_idNum =self.model.card_id;
             [self setUI];
-//
-//            [self gotoMessageVC];
         }
         else
         {

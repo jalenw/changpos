@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Charts/Charts.h"
+#import "Dianwan-Swift.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MerchantTableViewCell : UITableViewCell
 @property (strong,nonatomic) NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+
+@property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
 @end
 
 NS_ASSUME_NONNULL_END

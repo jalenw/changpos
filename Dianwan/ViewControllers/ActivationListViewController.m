@@ -70,6 +70,10 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
         FirstTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"FirstTableViewCell" owner:self options:nil][0];
+        if (dataList.count>0) {
+            NSDictionary *dict = dataList[indexPath.row];
+            cell.dict = dict;
+        }
         return cell;
     }else{
         NSString *cellIdentifier = @"RunningWaterTableViewCell";
@@ -81,7 +85,7 @@
         }
         if (dataList.count>0) {
             NSDictionary *dict = dataList[indexPath.row];
-//            cell.dict = dict;
+            cell.dict = dict;
         }
         return cell;
     }

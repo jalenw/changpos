@@ -46,7 +46,13 @@
                      range:pointRange];
     
     self.countNumLabel.attributedText =attribut;
-//    self.countNumLabel.text = [NSString stringWithFormat:@"累计:%@   ",[_dict safeStringForKey:@"lg_av_amount"]];
+    
+    if([[_dict safeStringForKey:@"target_price"] floatValue]>10000){
+        float moneycount =[[_dict safeStringForKey:@"target_price"] floatValue]/10000;
+        self.countLabel.text = [NSString stringWithFormat:@"%0.2f万",moneycount];
+    }else{
+        self.countLabel.text = [_dict safeStringForKey:@"target_price"];
+    }
     
     
 }

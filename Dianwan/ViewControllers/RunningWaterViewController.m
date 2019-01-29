@@ -8,7 +8,7 @@
 
 #import "RunningWaterViewController.h"
 #import "RunningWaterTableViewCell.h"
-
+#import "FirstTableViewCell.h"
 @interface RunningWaterViewController ()
 {
     NSMutableArray *dataList;
@@ -43,7 +43,7 @@
 -(void)refreshData
 {
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
-   
+
     [param setValue:@"trading" forKey:@"type"];
     [[ServiceForUser manager]postMethodName:@"mobile/recharge/earnings_ranking" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
@@ -69,8 +69,17 @@
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row==0) {
+        FirstTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"FirstTableViewCell" owner:self options:nil][0];
+        if (dataList.count>0) {
+            NSDictionary *dict = dataList[indexPath.row];
+            cell.dict = dict;
+        }
+        return cell;
+    }else{
     NSString *cellIdentifier = @"RunningWaterTableViewCell";
     RunningWaterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
@@ -80,13 +89,14 @@
         cell.dict = dict;
     }
     return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row==0){
-    return 120;
+        return 90;
     }else{
-        return 80;
+        return 60;
     }
 }
 

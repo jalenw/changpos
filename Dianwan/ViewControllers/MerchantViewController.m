@@ -50,6 +50,7 @@
         [param setValue:self.keyword forKey:@"sn_code"];
     }
     [param setValue:@(page) forKey:@"page"];
+     [param setValue:@(2.0) forKey:@"version"];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/listOfMyBusiness" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
             [self.tableView headerEndRefreshing];

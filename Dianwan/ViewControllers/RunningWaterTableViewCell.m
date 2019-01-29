@@ -23,8 +23,8 @@
 -(void)setDict:(NSDictionary *)dict{
     _dict =dict;
     self.phoneLabel.text = [_dict safeStringForKey:@"lg_member_name"];
-    self.countLabel.text = [_dict safeStringForKey:@"amount"];
-    self.numLabel.text =[_dict safeStringForKey:@"rownum"];
+    self.countLabel.text =[NSString stringWithFormat:@"%d",[_dict safeIntForKey:@"amount"]];
+    self.numLabel.text =[NSString stringWithFormat:@"%d",[_dict safeIntForKey:@"rownum"]];
     switch ([_dict safeIntForKey:@"level"]) {
         case 1:
              [self.levelImageView setImage:[UIImage imageNamed:@"byhy_1"]];

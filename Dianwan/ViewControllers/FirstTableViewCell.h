@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FirstTableViewCell : UITableViewCell
-
+@property(nonatomic,strong)NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *levelImageView;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @end
 
 NS_ASSUME_NONNULL_END

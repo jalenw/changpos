@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *rankTurnover;
 @property (weak, nonatomic) IBOutlet UILabel *rankActivity;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 - (IBAction)moreAct:(UIButton *)sender;
 - (IBAction)menuAct:(UIButton *)sender;
 @end

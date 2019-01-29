@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"资讯";
+    [[ServiceForUser manager]postMethodName:@"mobile/index/get_inforbg_list" params:@{} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        if (status) {
+            NSString *bgUrl = [[data safeDictionaryForKey:@"result"] safeStringForKey:@"adv_code"];
+            [self.img sd_setImageWithURL:[NSURL URLWithString:bgUrl]];
+        }
+    }];
 }
 
 /*

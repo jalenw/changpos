@@ -65,15 +65,14 @@
 -(void)setDict:(NSDictionary *)dict
 {
     _dict = dict;
-    self.price.text = [NSString stringWithFormat:@"￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"].length>0?[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"]:@""];
-    NSDictionary *nowDict = [[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"];
-    NSArray *array = [[[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"] allKeys];
+    NSDictionary *nowDict = dict;
+    NSArray *array = [dict allKeys];
     NSMutableArray *entries = [[NSMutableArray alloc] init];
     for (int i = 0; i < array.count; i++)
     {
         NSString *key = [array objectAtIndex:i];
         double value = [nowDict safeDoubleForKey:key];
-        NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":@"";
+        NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":[key isEqualToString:@"group_trading"]?@"团队流水":[key isEqualToString:@"personal_trading"]?@"个人流水":[key isEqualToString:@"group_activation"]?@"团队激活量":[key isEqualToString:@"personal_activation"]?@"个人激活量":@"";
         if (value>0) {
             [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
         }
@@ -102,5 +101,11 @@
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
     [data setValueTextColor:UIColor.blackColor];
     _pieChartView.data = data;
+}
+
+-(void)setLabel:(NSString *)label
+{
+    _label = label;
+    self.price.text = [NSString stringWithFormat:@"%@",label];
 }
 @end

@@ -79,7 +79,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXC-OX-5Vl">
-                    <rect key="frame" x="0.0" y="111" width="375" height="235"/>
+                    <rect key="frame" x="0.0" y="111" width="375" height="294"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提现金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COo-1I-3gF">
                             <rect key="frame" x="16" y="16" width="53.5" height="16"/>
@@ -150,7 +150,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="UJO-Fl-VDH" secondAttribute="trailing" constant="16" id="5s9-yM-hpb"/>
-                        <constraint firstAttribute="height" constant="235" id="5xv-eJ-lDw"/>
+                        <constraint firstAttribute="height" constant="294" id="5xv-eJ-lDw"/>
                         <constraint firstItem="Qnn-Ho-k5Q" firstAttribute="leading" secondItem="sXC-OX-5Vl" secondAttribute="leading" constant="64" id="Av7-hU-5p1"/>
                         <constraint firstItem="COo-1I-3gF" firstAttribute="leading" secondItem="sXC-OX-5Vl" secondAttribute="leading" constant="16" id="BSK-DY-J4e"/>
                         <constraint firstItem="MCz-0H-UOg" firstAttribute="top" secondItem="5i8-WM-gqL" secondAttribute="bottom" constant="16" id="KEk-LV-9GA"/>
@@ -182,7 +182,7 @@
                 <constraint firstItem="AUb-wd-pFi" firstAttribute="leading" secondItem="kDP-eY-FAc" secondAttribute="leading" id="l6Q-mG-PQG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="kDP-eY-FAc"/>
-            <point key="canvasLocation" x="624" y="293"/>
+            <point key="canvasLocation" x="623.20000000000005" y="292.80359820089956"/>
         </view>
         <view contentMode="scaleToFill" id="1Vl-N6-lH6">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

@@ -76,6 +76,9 @@
 		2FD7366D21EEE7C800B59D8F /* RewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7366B21EEE7C800B59D8F /* RewardTableViewCell.xib */; };
 		2FD7367221EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */; };
 		2FD7367321EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */; };
+		2FEE42222200804E0094E249 /* HomeStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEE42202200804E0094E249 /* HomeStackView.xib */; };
+		2FEE42252200808A0094E249 /* JXCircleRatioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE4224220080890094E249 /* JXCircleRatioView.m */; };
+		2FEE42282200810C0094E249 /* JXCircleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEE42262200810B0094E249 /* JXCircleModel.m */; };
 		2FF228FF21F8875C009A079A /* SystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF228FD21F8875C009A079A /* SystemTableViewCell.m */; };
 		2FF2290021F8875C009A079A /* SystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */; };
 		2FFBAE8921EC4BAA00C9EBAE /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE6821EC4BA900C9EBAE /* IQNSArray+Sort.m */; };
@@ -735,6 +738,11 @@
 		2FD7366F21EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowWithdrawaldetailsViewController.h; sourceTree = "<group>"; };
 		2FD7367021EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowWithdrawaldetailsViewController.m; sourceTree = "<group>"; };
 		2FD7367121EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowWithdrawaldetailsViewController.xib; sourceTree = "<group>"; };
+		2FEE42202200804E0094E249 /* HomeStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeStackView.xib; sourceTree = "<group>"; };
+		2FEE4223220080890094E249 /* JXCircleRatioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCircleRatioView.h; sourceTree = "<group>"; };
+		2FEE4224220080890094E249 /* JXCircleRatioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCircleRatioView.m; sourceTree = "<group>"; };
+		2FEE42262200810B0094E249 /* JXCircleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXCircleModel.m; sourceTree = "<group>"; };
+		2FEE42272200810C0094E249 /* JXCircleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXCircleModel.h; sourceTree = "<group>"; };
 		2FF228FC21F8875C009A079A /* SystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemTableViewCell.h; sourceTree = "<group>"; };
 		2FF228FD21F8875C009A079A /* SystemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemTableViewCell.m; sourceTree = "<group>"; };
 		2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemTableViewCell.xib; sourceTree = "<group>"; };
@@ -1759,7 +1767,7 @@
 		2F02F9F621F0A119001182E7 /* RankingList */ = {
 			isa = PBXGroup;
 			children = (
-				2F02FA0721F0A3E3001182E7 /* Cell */,
+				2F02FA0721F0A3E3001182E7 /* View */,
 				2F02F9F821F0A15A001182E7 /* RankingParentViewController.h */,
 				2F02F9F921F0A15A001182E7 /* RankingParentViewController.m */,
 				2F02F9FA21F0A15A001182E7 /* RankingParentViewController.xib */,
@@ -1773,9 +1781,14 @@
 			name = RankingList;
 			sourceTree = "<group>";
 		};
-		2F02FA0721F0A3E3001182E7 /* Cell */ = {
+		2F02FA0721F0A3E3001182E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2FEE42272200810C0094E249 /* JXCircleModel.h */,
+				2FEE42262200810B0094E249 /* JXCircleModel.m */,
+				2FEE4223220080890094E249 /* JXCircleRatioView.h */,
+				2FEE4224220080890094E249 /* JXCircleRatioView.m */,
+				2FEE42202200804E0094E249 /* HomeStackView.xib */,
 				2F02FA0821F0A471001182E7 /* RunningWaterTableViewCell.h */,
 				2F02FA0921F0A471001182E7 /* RunningWaterTableViewCell.m */,
 				2F02FA0A21F0A471001182E7 /* RunningWaterTableViewCell.xib */,
@@ -1783,7 +1796,7 @@
 				2F02FA0E21F0AF34001182E7 /* FirstTableViewCell.m */,
 				2F02FA0F21F0AF34001182E7 /* FirstTableViewCell.xib */,
 			);
-			name = Cell;
+			name = View;
 			sourceTree = "<group>";
 		};
 		2F106ADB21F48230001D29D6 /* Cell */ = {
@@ -4210,6 +4223,7 @@
 				2FB8362821EEDCA40028A376 /* WithdrawalViewController.xib in Resources */,
 				2F02F9FC21F0A15A001182E7 /* RankingParentViewController.xib in Resources */,
 				8EB4E4E421201FAE00BC563B /* chatBar_more_card@2x.png in Resources */,
+				2FEE42222200804E0094E249 /* HomeStackView.xib in Resources */,
 				8EDA41411F22F731000CBA40 /* LoginViewController.xib in Resources */,
 				8EB4E53A21201FAE00BC563B /* chatBar_record.png in Resources */,
 				8E412B891F23572100A40CE6 /* RegViewController.xib in Resources */,
@@ -4331,6 +4345,7 @@
 				CDC890741D8698C000CE03CE /* pinyin.c in Sources */,
 				8EB4E42521201CC500BC563B /* UserProfileManager.m in Sources */,
 				8EEF4C11211D8CB500DE1E36 /* EaseSDKHelper.m in Sources */,
+				2FEE42282200810C0094E249 /* JXCircleModel.m in Sources */,
 				8E591B1921F072BD00279630 /* MyStoreViewController.m in Sources */,
 				0432ECEB1F271CB5008D7AA3 /* AliPayManager.m in Sources */,
 				CDC8906E1D8698C000CE03CE /* DBHelper.m in Sources */,
@@ -4515,6 +4530,7 @@
 				8EEF4C0F211D8CB500DE1E36 /* EaseBubbleView+Image.m in Sources */,
 				8E6D1E0821EB2488002C6717 /* SelectRegistViewController.m in Sources */,
 				8EEF4BD9211D8CB500DE1E36 /* PSTGridLayoutInfo.m in Sources */,
+				2FEE42252200808A0094E249 /* JXCircleRatioView.m in Sources */,
 				CD3D81A61EA9FF3600F6AC20 /* SBJsonParser.m in Sources */,
 				2F106AD721F4804C001D29D6 /* CreditsAndMembersViewController.m in Sources */,
 				8EEF4BCC211D8CB500DE1E36 /* EMCDDeviceManagerBase.m in Sources */,

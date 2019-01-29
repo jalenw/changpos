@@ -13,4 +13,5 @@
 @property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (strong, nonatomic) NSDictionary *dict;
+@property (strong, nonatomic) NSString *label;
 @end

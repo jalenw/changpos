@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface InformationViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 
 @end
 

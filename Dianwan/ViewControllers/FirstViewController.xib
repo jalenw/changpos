@@ -14,6 +14,7 @@
                 <outlet property="adView" destination="kKP-Gb-mqt" id="Jc9-40-mWN"/>
                 <outlet property="collectionView" destination="vvb-IW-fqk" id="wFx-2X-mfX"/>
                 <outlet property="headView" destination="rf1-lk-bZT" id="fTz-XU-zrs"/>
+                <outlet property="pageControl" destination="bRk-rH-Sk2" id="tuA-EF-pfn"/>
                 <outlet property="rankActivity" destination="yJm-m9-CYm" id="pwF-I3-bqS"/>
                 <outlet property="rankTurnover" destination="t7b-ja-qAT" id="DKG-OF-z1M"/>
                 <outlet property="scrollView" destination="3dS-Ir-Jfj" id="ao1-uB-Amn"/>
@@ -182,6 +183,17 @@
                                         <action selector="moreAct:" destination="-1" eventType="touchUpInside" id="0Ls-bT-OWZ"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" id="UzS-ct-3px">
+                                    <rect key="frame" x="0.0" y="171" width="375" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <subviews>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="bRk-rH-Sk2">
+                                            <rect key="frame" x="158" y="-4" width="59" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        </pageControl>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>

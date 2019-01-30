@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StatisticViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

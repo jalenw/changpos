@@ -213,6 +213,11 @@
 		8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */; };
 		8E7108B921E8717200CB11B9 /* ApplyDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */; };
 		8E7108BA21E8717200CB11B9 /* ApplyDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */; };
+		8E8AB45622008A810093BE90 /* FirstHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AB45522008A810093BE90 /* FirstHeaderView.m */; };
+		8E8AB45A22008CCC0093BE90 /* StatisticTotalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AB45822008CCC0093BE90 /* StatisticTotalTableViewCell.m */; };
+		8E8AB45B22008CCC0093BE90 /* StatisticTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AB45922008CCC0093BE90 /* StatisticTotalTableViewCell.xib */; };
+		8E8AB45F22008CDC0093BE90 /* StatisticTrendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AB45D22008CDC0093BE90 /* StatisticTrendTableViewCell.m */; };
+		8E8AB46022008CDC0093BE90 /* StatisticTrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AB45E22008CDC0093BE90 /* StatisticTrendTableViewCell.xib */; };
 		8E980B5E211035FC00C7B6DA /* SystemMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */; };
 		8E980B5F211035FC00C7B6DA /* SystemMsgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */; };
 		8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E980B612110373100C7B6DA /* SystemMsgTableViewCell.m */; };
@@ -959,6 +964,14 @@
 		8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyDetailTableViewCell.m; sourceTree = "<group>"; };
 		8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyDetailTableViewCell.xib; sourceTree = "<group>"; };
 		8E7ABFB6211AD30F00EADF76 /* Dianwan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dianwan.entitlements; sourceTree = "<group>"; };
+		8E8AB45422008A810093BE90 /* FirstHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstHeaderView.h; sourceTree = "<group>"; };
+		8E8AB45522008A810093BE90 /* FirstHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstHeaderView.m; sourceTree = "<group>"; };
+		8E8AB45722008CCC0093BE90 /* StatisticTotalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticTotalTableViewCell.h; sourceTree = "<group>"; };
+		8E8AB45822008CCC0093BE90 /* StatisticTotalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticTotalTableViewCell.m; sourceTree = "<group>"; };
+		8E8AB45922008CCC0093BE90 /* StatisticTotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticTotalTableViewCell.xib; sourceTree = "<group>"; };
+		8E8AB45C22008CDC0093BE90 /* StatisticTrendTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticTrendTableViewCell.h; sourceTree = "<group>"; };
+		8E8AB45D22008CDC0093BE90 /* StatisticTrendTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticTrendTableViewCell.m; sourceTree = "<group>"; };
+		8E8AB45E22008CDC0093BE90 /* StatisticTrendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticTrendTableViewCell.xib; sourceTree = "<group>"; };
 		8E980B5B211035FC00C7B6DA /* SystemMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemMsgViewController.h; sourceTree = "<group>"; };
 		8E980B5C211035FC00C7B6DA /* SystemMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemMsgViewController.m; sourceTree = "<group>"; };
 		8E980B5D211035FC00C7B6DA /* SystemMsgViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemMsgViewController.xib; sourceTree = "<group>"; };
@@ -2274,6 +2287,21 @@
 			name = MyPartner;
 			sourceTree = "<group>";
 		};
+		8E8AB45222008A630093BE90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8E8AB45422008A810093BE90 /* FirstHeaderView.h */,
+				8E8AB45522008A810093BE90 /* FirstHeaderView.m */,
+				8E8AB45722008CCC0093BE90 /* StatisticTotalTableViewCell.h */,
+				8E8AB45822008CCC0093BE90 /* StatisticTotalTableViewCell.m */,
+				8E8AB45922008CCC0093BE90 /* StatisticTotalTableViewCell.xib */,
+				8E8AB45C22008CDC0093BE90 /* StatisticTrendTableViewCell.h */,
+				8E8AB45D22008CDC0093BE90 /* StatisticTrendTableViewCell.m */,
+				8E8AB45E22008CDC0093BE90 /* StatisticTrendTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		8E9FE2B4212E72B900D26955 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -2685,6 +2713,7 @@
 		8EBF663321E1B0FD001C4A0D /* Statistic */ = {
 			isa = PBXGroup;
 			children = (
+				8E8AB45222008A630093BE90 /* Cell */,
 				8EBF663621E1B13D001C4A0D /* StatisticViewController.h */,
 				8EBF663721E1B13D001C4A0D /* StatisticViewController.m */,
 				8EBF663821E1B13D001C4A0D /* StatisticViewController.xib */,
@@ -4122,6 +4151,7 @@
 				8EB4E4CE21201FAE00BC563B /* chat_location_detail_disclosure.png in Resources */,
 				8EB4E4FD21201FAE00BC563B /* VoiceSearchFeedback009.png in Resources */,
 				8EB4E4D021201FAE00BC563B /* chat_location_preview.png in Resources */,
+				8E8AB46022008CDC0093BE90 /* StatisticTrendTableViewCell.xib in Resources */,
 				8EB4E51F21201FAE00BC563B /* chatBar_more_locationSelected.png in Resources */,
 				8EB4E4DE21201FAE00BC563B /* chatBar_more_faceSelected.png in Resources */,
 				8EB4E51621201FAE00BC563B /* VoiceSearchFeedback014@2x.png in Resources */,
@@ -4203,6 +4233,7 @@
 				8EB4E4EF21201FAE00BC563B /* VoiceSearchFeedback011@2x.png in Resources */,
 				8EB4E4C721201FAE00BC563B /* call_silence_h.png in Resources */,
 				8EB4E52D21201FAE00BC563B /* chatBar_colorMore_video@2x.png in Resources */,
+				8E8AB45B22008CCC0093BE90 /* StatisticTotalTableViewCell.xib in Resources */,
 				8E4BACB721F85A76003F94C5 /* TeamProfitViewController.xib in Resources */,
 				8E591B2421F07EA700279630 /* ApplyOweDeviceViewController.xib in Resources */,
 				8EBF663F21E1B14A001C4A0D /* QRShowViewController.xib in Resources */,
@@ -4381,6 +4412,7 @@
 				8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */,
 				8EEF4BAB211D8CB500DE1E36 /* EaseMessageReadManager.m in Sources */,
 				8EEF4BD8211D8CB500DE1E36 /* PSTCollectionViewCell.m in Sources */,
+				8E8AB45622008A810093BE90 /* FirstHeaderView.m in Sources */,
 				8EEF4BE0211D8CB500DE1E36 /* PSTGridLayoutRow.m in Sources */,
 				2FB8362221EEDBE00028A376 /* MessageCenterViewController.m in Sources */,
 				9816D9891F259418000FCD7E /* happy.xcdatamodeld in Sources */,
@@ -4471,10 +4503,12 @@
 				8EDA41521F22F85C000CBA40 /* FriendsViewController.m in Sources */,
 				8E6D1EA821EB273F002C6717 /* ChangeLoginPWViewController.m in Sources */,
 				8E6D1E9B21EB273F002C6717 /* MineHeadView.m in Sources */,
+				8E8AB45A22008CCC0093BE90 /* StatisticTotalTableViewCell.m in Sources */,
 				8E6D1EA321EB273F002C6717 /* UserFeedBackViewController.m in Sources */,
 				04EBFC351F25D60F00C4DE83 /* LZHActionSheetView.m in Sources */,
 				8EEF4BD7211D8CB500DE1E36 /* PSTCollectionViewFlowLayout.m in Sources */,
 				2FF228FF21F8875C009A079A /* SystemTableViewCell.m in Sources */,
+				8E8AB45F22008CDC0093BE90 /* StatisticTrendTableViewCell.m in Sources */,
 				8EC5C89820F884040041A34A /* UIView+XibLayout.m in Sources */,
 				8EEF4BB4211D8CB500DE1E36 /* EaseConversationModel.m in Sources */,
 				8E71089021E72C5D00CB11B9 /* BusinessHandlingViewController.m in Sources */,

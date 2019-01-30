@@ -77,27 +77,27 @@
 
 
 
--(void)setupNav{
-    UILabel *titleview = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
-    titleview.text =@"申请详情";
-    titleview.textAlignment = NSTextAlignmentCenter;
-    [titleview setTextColor:[UIColor blackColor]];
-    self.navigationItem.titleView =titleview;
-    
-
-    
-    UIBarButtonItem *leftSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    leftSpace.width = -15;
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(-15, 0, 44, 44)];
-     [button setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    self.navigationItem.leftBarButtonItems = @[leftSpace,rightBarItem];
-    [self.navigationItem sx_setLeftBarButtonItem:rightBarItem];
-}
--(void)back{
-    [self.navigationController popViewControllerAnimated:YES];
-}
+//-(void)setupNav{
+//    UILabel *titleview = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 44)];
+//    titleview.text =@"申请详情";
+//    titleview.textAlignment = NSTextAlignmentCenter;
+//    [titleview setTextColor:[UIColor blackColor]];
+//    self.navigationItem.titleView =titleview;
+//    
+//
+//    
+//    UIBarButtonItem *leftSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+//    leftSpace.width = -15;
+//    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(-15, 0, 44, 44)];
+//     [button setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
+//    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *rightBarItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+//    self.navigationItem.leftBarButtonItems = @[leftSpace,rightBarItem];
+//    [self.navigationItem sx_setLeftBarButtonItem:rightBarItem];
+//}
+//-(void)back{
+//    [self.navigationController popViewControllerAnimated:YES];
+//}
 
 
 

@@ -7,14 +7,17 @@
 //
 
 #import "MerchantTableViewCell.h"
+#import "JXCircleRatioView.h"
+#import "JXCircleModel.h"
 @interface MerchantTableViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageview;
 @property (weak, nonatomic) IBOutlet UILabel *snNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet JXCircleRatioView *circleRatioView;
 
-
+//@property(nonatomic,strong)JXCircleRatioView *circleRatioView;
 @end
 
 @implementation MerchantTableViewCell
@@ -46,13 +49,17 @@
                      range:pointRange];
     
     self.countNumLabel.attributedText =attribut;
+    JXCircleModel *model1 = [[JXCircleModel alloc]init];
+    model1.number = [_dict safeStringForKey:@"lg_av_amount"];
+    model1.color = [UIColor greenColor];
     
-    if([[_dict safeStringForKey:@"target_price"] floatValue]>10000){
-        float moneycount =[[_dict safeStringForKey:@"target_price"] floatValue]/10000;
-        self.countLabel.text = [NSString stringWithFormat:@"%0.2f万",moneycount];
-    }else{
-        self.countLabel.text = [_dict safeStringForKey:@"target_price"];
-    }
+    
+    JXCircleModel *model2 = [[JXCircleModel alloc]init];
+    model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue]] ;
+    model2.color = [UIColor redColor];
+    [self.circleRatioView updateDataArray:@[model1,model2]];
+     self.countLabel.text = [NSString stringWithFormat:@"%0.4f%%",[model1.number floatValue]/[model2.number floatValue]];
+    
     
     
 }

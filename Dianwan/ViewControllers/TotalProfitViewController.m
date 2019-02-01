@@ -208,7 +208,7 @@
         dateFormatter.dateFormat=@"yyyy-MM-dd";
         search_date_end =[dateFormatter stringFromDate:date];
         NSDateComponents *components = [[NSDateComponents alloc]init];
-        components.day = -7;
+        components.day = -6;
         NSDate *startDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:date options:0];
         search_date_star=[dateFormatter stringFromDate:startDate];
         

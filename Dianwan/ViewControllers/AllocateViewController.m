@@ -25,8 +25,12 @@
 }
 
 - (IBAction)productAct:(UIButton *)sender {
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (self.others_member_id) {
+        [param setValue:self.others_member_id forKey:@"others_member_id"];
+    }
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
@@ -86,7 +90,7 @@
 
 - (IBAction)partnerAct:(UIButton *)sender {
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:@{@"rate_action":@"2"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
@@ -128,7 +132,7 @@
         return;
     }
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/initiateATransfer" params:@{@"goods_id":goods_id,@"sn_code":sn_code,@"num":self.totalTf.text,@"member_name":[member_info safeStringForKey:@"member_name"],@"member_mobile":[member_info safeStringForKey:@"member_mobile"]} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/initiateATransferNew" params:@{@"goods_id":goods_id,@"sn_code":sn_code,@"num":self.totalTf.text,@"member_name":[member_info safeStringForKey:@"member_name"],@"member_mobile":[member_info safeStringForKey:@"member_mobile"]} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             [AlertHelper showAlertWithTitle:@"提交成功"];

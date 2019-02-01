@@ -10,6 +10,8 @@
 #import "ApplyDetailViewController.h"
 #import "ModifyRateAndPriceViewController.h"
 #import "ApplyOweDeviceViewController.h"
+#import "ConnectQrCodeViewController.h"
+#import "CardModifyViewController.h"
 @interface BusinessHandlingViewController ()
 
 @end
@@ -39,6 +41,15 @@
     if (sender.tag==3) {
         ApplyOweDeviceViewController *vc = [[ApplyOweDeviceViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (sender.tag==4) {
+        ConnectQrCodeViewController *vc = [[ConnectQrCodeViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (sender.tag==5) {
+        CardModifyViewController *vc = [[CardModifyViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (sender.tag==6) {
+        [AlertHelper showAlertWithTitle:@"功能暂未开通"];
     }
     else
     {

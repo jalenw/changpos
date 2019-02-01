@@ -241,6 +241,10 @@
 		8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1E1C821E5E04B00A8A501 /* File.swift */; };
 		8EA1E1D321E5E12D00A8A501 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; };
 		8EA1E1D421E5E12D00A8A501 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EA385662202A86C005C0260 /* ConnectQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA385642202A86C005C0260 /* ConnectQrCodeViewController.m */; };
+		8EA385672202A86C005C0260 /* ConnectQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA385652202A86C005C0260 /* ConnectQrCodeViewController.xib */; };
+		8EA3856C2202AB41005C0260 /* CardModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA3856A2202AB41005C0260 /* CardModifyViewController.m */; };
+		8EA3856D2202AB41005C0260 /* CardModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA3856B2202AB41005C0260 /* CardModifyViewController.xib */; };
 		8EB4E3BF2120065F00BC563B /* AppDelegate+EaseMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3BD2120065F00BC563B /* AppDelegate+EaseMob.m */; };
 		8EB4E3EB212009AD00BC563B /* EMSDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3CA212009AC00BC563B /* EMSDWebImageDownloader.m */; };
 		8EB4E3EC212009AD00BC563B /* NSData+EMImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4E3CB212009AC00BC563B /* NSData+EMImageContentType.m */; };
@@ -1015,6 +1019,12 @@
 		8EA1E1C721E5E04B00A8A501 /* Dianwan-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dianwan-Bridging-Header.h"; sourceTree = "<group>"; };
 		8EA1E1C821E5E04B00A8A501 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8EA385632202A86C005C0260 /* ConnectQrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectQrCodeViewController.h; sourceTree = "<group>"; };
+		8EA385642202A86C005C0260 /* ConnectQrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectQrCodeViewController.m; sourceTree = "<group>"; };
+		8EA385652202A86C005C0260 /* ConnectQrCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectQrCodeViewController.xib; sourceTree = "<group>"; };
+		8EA385692202AB41005C0260 /* CardModifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardModifyViewController.h; sourceTree = "<group>"; };
+		8EA3856A2202AB41005C0260 /* CardModifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardModifyViewController.m; sourceTree = "<group>"; };
+		8EA3856B2202AB41005C0260 /* CardModifyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardModifyViewController.xib; sourceTree = "<group>"; };
 		8EB4E3BD2120065F00BC563B /* AppDelegate+EaseMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+EaseMob.m"; sourceTree = "<group>"; };
 		8EB4E3BE2120065F00BC563B /* AppDelegate+EaseMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+EaseMob.h"; sourceTree = "<group>"; };
 		8EB4E3CA212009AC00BC563B /* EMSDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSDWebImageDownloader.m; sourceTree = "<group>"; };
@@ -1867,6 +1877,8 @@
 		2FD09A2421FB5B9800DE1A95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2FD09A2621FB5BA600DE1A95 /* PassWordView.h */,
+				2FD09A2521FB5BA500DE1A95 /* PassWordView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2002,8 +2014,6 @@
 			isa = PBXGroup;
 			children = (
 				2FD09A2421FB5B9800DE1A95 /* View */,
-				2FD09A2621FB5BA600DE1A95 /* PassWordView.h */,
-				2FD09A2521FB5BA500DE1A95 /* PassWordView.m */,
 				8E4BACA421F85900003F94C5 /* MyProfitViewController.h */,
 				8E4BACA521F85900003F94C5 /* MyProfitViewController.m */,
 				8E4BACA621F85900003F94C5 /* MyProfitViewController.xib */,
@@ -2280,6 +2290,12 @@
 				8E591B2021F07EA700279630 /* ApplyOweDeviceViewController.h */,
 				8E591B2121F07EA700279630 /* ApplyOweDeviceViewController.m */,
 				8E591B2221F07EA700279630 /* ApplyOweDeviceViewController.xib */,
+				8EA385632202A86C005C0260 /* ConnectQrCodeViewController.h */,
+				8EA385642202A86C005C0260 /* ConnectQrCodeViewController.m */,
+				8EA385652202A86C005C0260 /* ConnectQrCodeViewController.xib */,
+				8EA385692202AB41005C0260 /* CardModifyViewController.h */,
+				8EA3856A2202AB41005C0260 /* CardModifyViewController.m */,
+				8EA3856B2202AB41005C0260 /* CardModifyViewController.xib */,
 			);
 			name = Businesshandling;
 			sourceTree = "<group>";
@@ -4164,9 +4180,11 @@
 				8EB4E4CE21201FAE00BC563B /* chat_location_detail_disclosure.png in Resources */,
 				8EB4E4FD21201FAE00BC563B /* VoiceSearchFeedback009.png in Resources */,
 				8EB4E4D021201FAE00BC563B /* chat_location_preview.png in Resources */,
+				8EA385672202A86C005C0260 /* ConnectQrCodeViewController.xib in Resources */,
 				8E8AB46022008CDC0093BE90 /* StatisticTrendTableViewCell.xib in Resources */,
 				8EB4E51F21201FAE00BC563B /* chatBar_more_locationSelected.png in Resources */,
 				8EB4E4DE21201FAE00BC563B /* chatBar_more_faceSelected.png in Resources */,
+				8EA3856D2202AB41005C0260 /* CardModifyViewController.xib in Resources */,
 				8EB4E51621201FAE00BC563B /* VoiceSearchFeedback014@2x.png in Resources */,
 				8EB4E51521201FAE00BC563B /* VoiceSearchFeedback006@2x.png in Resources */,
 				8E6D1E8E21EB273F002C6717 /* CityTableviewViewController.xib in Resources */,
@@ -4383,6 +4401,7 @@
 				CDC8906B1D8698C000CE03CE /* AlertHelper.m in Sources */,
 				8E9FE2CF212E72B900D26955 /* MJRefreshHeader.m in Sources */,
 				2FA24E7121EC921800565459 /* ApplyShowDetailViewController.m in Sources */,
+				8EA385662202A86C005C0260 /* ConnectQrCodeViewController.m in Sources */,
 				8E6D1E1821EB261C002C6717 /* HMScanner.m in Sources */,
 				8E9FE2D1212E72B900D26955 /* MJRefreshLegendFooter.m in Sources */,
 				8E6D1EC021EB2A5C002C6717 /* SetPayPwViewController.m in Sources */,
@@ -4567,6 +4586,7 @@
 				2FEE42252200808A0094E249 /* JXCircleRatioView.m in Sources */,
 				CD3D81A61EA9FF3600F6AC20 /* SBJsonParser.m in Sources */,
 				2F106AD721F4804C001D29D6 /* CreditsAndMembersViewController.m in Sources */,
+				8EA3856C2202AB41005C0260 /* CardModifyViewController.m in Sources */,
 				8EEF4BCC211D8CB500DE1E36 /* EMCDDeviceManagerBase.m in Sources */,
 				04395EE01F233EC10074865E /* TZPhotoPickerController.m in Sources */,
 				8EEF4BAE211D8CB500DE1E36 /* EaseEmoji.m in Sources */,

@@ -42,8 +42,33 @@
     self.keyword = notification.object;
 //    page = 1;
     [dataList removeAllObjects];
-    [self refreshData];
+    if (self.keyword.length==0) {
+        [self refreshData];
+    }
+    else
+    {
+        [self searchData];
+    }
 }
+
+-(void)searchData
+{
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (self.keyword.length>0) {
+        [param setValue:self.keyword forKey:@"sn_code"];
+    }
+    [param setValue:@"2" forKey:@"machine_type"];
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/searchSNCodeGoods" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        if (status) {
+            NSArray *dataArray = [data safeArrayForKey:@"result"];
+            for ( NSDictionary *dataitem in dataArray) {
+                [dataList addObject:dataitem];
+            }
+            [self.tableView reloadData];
+        }
+    }];
+}
+
 
 -(void)refreshData
 {

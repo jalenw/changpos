@@ -34,7 +34,7 @@
     dateFormatter.dateFormat=@"yyyy-MM-dd";
     NSString *date_end =[dateFormatter stringFromDate:[NSDate date]];
     NSDateComponents *components = [[NSDateComponents alloc]init];
-    components.day = -7;
+    components.day = -6;
     NSDate *startDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:[NSDate date] options:0];
     NSString *date_start =[dateFormatter stringFromDate:startDate];
     self.todayLb.text = [NSString stringWithFormat:@"%@至%@",date_start,date_end];
@@ -60,7 +60,7 @@
     xAxis.drawGridLinesEnabled = YES;
     xAxis.granularity = 1.0;
     xAxis.labelCount = array.count;
-    xAxis.valueFormatter = [[CustomValueFormatter alloc]initForArray:array];
+    xAxis.valueFormatter = [[CustomValueFormatter alloc]initForArray:array endDate:@""];
     
     NSNumberFormatter *leftAxisFormatter = [[NSNumberFormatter alloc] init];
     leftAxisFormatter.minimumFractionDigits = 0;
@@ -143,7 +143,7 @@
         dateFormatter.dateFormat=@"yyyy-MM-dd";
         NSString *date_end =[dateFormatter stringFromDate:[NSDate date]];
         NSDateComponents *components = [[NSDateComponents alloc]init];
-        components.day = -7;
+        components.day = -6;
         NSDate *startDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:[NSDate date] options:0];
         NSString *date_start =[dateFormatter stringFromDate:startDate];
         self.todayLb.text = [NSString stringWithFormat:@"%@至%@",date_start,date_end];
@@ -177,7 +177,7 @@
         dateFormatter.dateFormat=@"yyyy-MM-dd";
         search_date_end =[dateFormatter stringFromDate:date];
         NSDateComponents *components = [[NSDateComponents alloc]init];
-        components.day = -7;
+        components.day = -6;
         NSDate *startDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:date options:0];
         search_date_star=[dateFormatter stringFromDate:startDate];
         

@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CustomValueFormatter : NSObject<IChartAxisValueFormatter>
-- (id)initForArray:(NSArray *)a;
+- (id)initForArray:(NSArray *)a endDate:(NSString*)e;
 @end
 
 NS_ASSUME_NONNULL_END

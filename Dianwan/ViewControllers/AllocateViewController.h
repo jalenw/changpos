@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AllocateViewController : BaseViewController
+@property (strong, nonatomic) NSString *others_member_id;
 @property (weak, nonatomic) IBOutlet UITextField *productTf;
 @property (weak, nonatomic) IBOutlet UITextField *snTf;
 @property (weak, nonatomic) IBOutlet UITextField *totalTf;

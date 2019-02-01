@@ -57,6 +57,9 @@
 }
 - (IBAction)confirmAct:(UIButton *)sender {
     AllocateViewController *vc = [[AllocateViewController alloc]init];
+    if (self.others_member_id) {
+        vc.others_member_id = self.others_member_id;
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -10,7 +10,7 @@
 #import "Charts/Charts.h"
 #import "Dianwan-Swift.h"
 @protocol StatisticTotalTableViewCellDelegate <NSObject>
--(void)showMoreInfoForCell:(NSIndexPath*)path;
+-(void)showMoreInfoForCell:(NSIndexPath*_Nullable)path;
 @end
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSIndexPath *path;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet PieChartView *chartView;
+@property (weak, nonatomic) IBOutlet UILabel *chartLb;
+@property (weak, nonatomic) IBOutlet PieChartView *chartView2;
+@property (weak, nonatomic) IBOutlet UILabel *chartLb2;
 @property (nonatomic, assign) id<StatisticTotalTableViewCellDelegate> delegate;
 - (IBAction)showMoreAct:(UIButton *)sender;
 @end

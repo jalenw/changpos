@@ -59,8 +59,14 @@
         {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             NSArray *data = [result safeArrayForKey:@"data"];
-            for (NSDictionary *dataItem in data) {
-                [dataList addObject:dataItem];
+            if (data.count>0) {
+                for (NSDictionary *dataItem in data) {
+                    [dataList addObject:dataItem];
+                }
+            }
+            else
+            {
+                [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
             [self.tableView footerEndRefreshing];
         }

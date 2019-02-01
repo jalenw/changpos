@@ -57,8 +57,12 @@
             
             //返回总积分
             [[NSNotificationCenter defaultCenter] postNotificationName:@"allcountNot" object:[NSString stringWithFormat:@"%@",[result safeStringForKey:@"total_points"]]];
-            for ( NSDictionary *dataitem in dataArray) {
-                [dataList addObject:dataitem];
+            if (dataArray.count>0) {
+                [dataList addObjectsFromArray:dataArray];
+            }
+            else
+            {
+                [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
             [self.tableView reloadData];
         }

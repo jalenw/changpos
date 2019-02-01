@@ -63,8 +63,12 @@
         if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             NSArray *dataArray = [result safeArrayForKey:@"data"];
-            for ( NSDictionary *dataitem in dataArray) {
-                [dataList addObject:dataitem];
+            if (dataArray.count>0) {
+                [dataList addObjectsFromArray:dataArray];
+            }
+            else
+            {
+                [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
             [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfMerchants" object:@(dataList.count)];
             [self.tableView reloadData];

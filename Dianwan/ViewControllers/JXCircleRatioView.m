@@ -75,7 +75,7 @@ static CGFloat const whiteCircleRadius = 25.0;
 -(void)addCenterCircle{
     UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:whiteCircleRadius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
-    [[UIColor whiteColor] set];
+    [RGB(47, 29, 47) set];
     [arcPath fill];
     [arcPath stroke];
     

@@ -18,6 +18,7 @@
     UILabel *tempLb;
     NSString *goods_id;
     NSString *activate_rewards;
+    NSString *others_member_id;
 }
 @property (assign,nonatomic) BOOL isHaveDian;
 @end
@@ -29,7 +30,7 @@
     [self setupForDismissKeyboard];
     self.modifyView.frame = ScreenBounds;
     if (self.type==0) {
-        self.title = @"修改我的商户费率";
+        self.title = @"修改商户费率";
         self.snView.hidden = NO;
         self.productView.hidden = YES;
         self.rewardView.hidden = YES;
@@ -47,6 +48,32 @@
         self.rewardView.hidden = NO;
         self.payView.hidden = YES;
     }
+}
+
+- (IBAction)partnerAct:(UIButton *)sender {
+    [SVProgressHUD show];
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:@{@"rate_action":@"2"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
+        if (status) {
+            NSArray *array = [data safeArrayForKey:@"result"];
+            if (array.count>0) {
+                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
+                pickerView.array = array;
+                pickerView.name = @"member_name";
+                [pickerView setBlock:^(NSDictionary *dict) {
+                    self.partnerTf.text = [dict safeStringForKey:@"member_name"];
+                    others_member_id = [dict safeStringForKey:@"member_id"];
+                }];
+                [pickerView showPicker];
+            }
+            else
+            {
+                [AlertHelper showAlertWithTitle:@"暂无渠道"];
+            }
+        }else{
+            [AlertHelper showAlertWithTitle:error];
+        }
+    }];
 }
 
 - (IBAction)editAct:(UIButton *)sender {
@@ -80,8 +107,12 @@
 }
 
 - (IBAction)productAct:(UIButton *)sender {
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (others_member_id) {
+        [param setValue:others_member_id forKey:@"others_member_id"];
+    }
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:nil block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
@@ -113,8 +144,13 @@
 
 -(void)loadProductData:(NSString*)productId
 {
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if (others_member_id) {
+        [param setValue:others_member_id forKey:@"others_member_id"];
+    }
+    [param setValue:productId forKey:@"goods_id"];
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/showMyAllocationRateInfo" params:@{@"goods_id":productId} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/showMyAllocationRateInfo" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSDictionary *dict = [data safeDictionaryForKey:@"result"];
@@ -122,7 +158,7 @@
             self.rate2Lb.text = [NSString stringWithFormat:@"%@%%",[dict safeStringForKey:@"lineCard_admin_share"]];
             self.rate3Lb.text = [NSString stringWithFormat:@"%@%%",[dict safeStringForKey:@"bankCard_admin_share"]];
             self.rate4Lb.text = [NSString stringWithFormat:@"%@%%",[dict safeStringForKey:@"quickPay_admin_share"]];
-            self.rate5Lb.text = [NSString stringWithFormat:@"%@%%",[dict safeStringForKey:@"scaveCode_admin_sahre"]];
+            self.rate5Lb.text = [NSString stringWithFormat:@"%@%%",[dict safeStringForKey:@"scaveCode_admin_share"]];
             self.priceLb.text = [NSString stringWithFormat:@"%@元",[dict safeStringForKey:@"activate_rewards"]];
         }else{
             [AlertHelper showAlertWithTitle:error];
@@ -231,6 +267,9 @@
         if (scaveCode_merchant_rate) {
             [params setValue:scaveCode_merchant_rate forKey:@"scaveCode_admin_share"];
         }
+        if (others_member_id) {
+            [params setValue:others_member_id forKey:@"others_member_id"];
+        }
         [SVProgressHUD show];
         [[ServiceForUser manager]postMethodName:@"mobile/Mystock/adjustMyRates" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
             [SVProgressHUD dismiss];
@@ -247,6 +286,9 @@
         NSMutableDictionary *params = [HTTPClientInstance newDefaultParameters];
         [params setValue:goods_id forKey:@"goods_id"];
         [params setValue:activate_rewards forKey:@"activate_rewards"];
+        if (others_member_id) {
+            [params setValue:others_member_id forKey:@"others_member_id"];
+        }
         [SVProgressHUD show];
         [[ServiceForUser manager]postMethodName:@"mobile/Mystock/modifyActivateRewards" params:params block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
             [SVProgressHUD dismiss];

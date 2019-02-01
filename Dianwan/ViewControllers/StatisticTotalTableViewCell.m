@@ -59,17 +59,20 @@
 {
     _path = path;
     if (path.row==0) {
-        self.name.text = @"交易量";
+//        self.name.text = @"交易量";
+        self.img.image = [UIImage imageNamed:@"交易量"];
         self.chartLb.text = @"今日交易量";
         self.chartLb2.text = @"总交易量";
     }
     if (path.row==1) {
-        self.name.text = @"激活量";
+//        self.name.text = @"激活量";
+        self.img.image = [UIImage imageNamed:@"激活量"];
         self.chartLb.text = @"今日激活量";
         self.chartLb2.text = @"总激活量";
     }
     if (path.row==2) {
-        self.name.text = @"总收益";
+//        self.name.text = @"总收益";
+        self.img.image = [UIImage imageNamed:@"总收益"];
         self.chartLb.text = @"今日收益";
         self.chartLb2.text = @"总收益";
     }
@@ -104,6 +107,8 @@
                 PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
                 dataSet.sliceSpace = 2.0;
                 NSMutableArray *colors = [[NSMutableArray alloc] init];
+                [colors addObject:RGB(253, 210, 88)];
+                [colors addObject:RGB(33, 115, 243)];
                 [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
                 dataSet.colors = colors;
                 dataSet.valueLinePart1OffsetPercentage = 0.8;
@@ -131,6 +136,8 @@
                 PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
                 dataSet.sliceSpace = 2.0;
                 NSMutableArray *colors = [[NSMutableArray alloc] init];
+                [colors addObject:RGB(253, 210, 88)];
+                [colors addObject:RGB(33, 115, 243)];
                 [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
                 dataSet.colors = colors;
                 dataSet.valueLinePart1OffsetPercentage = 0.8;

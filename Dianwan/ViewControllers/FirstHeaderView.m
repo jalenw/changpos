@@ -13,9 +13,11 @@
 -(instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
-        self.contentView.backgroundColor = RGB(253, 210, 88);
-        self.label = [[UILabel alloc]initWithFrame:CGRectMake(30, 5, 100, 30)];
-        self.label.font = [UIFont systemFontOfSize:14];
+        UIImageView *img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"btt_1"]];
+        img.frame = CGRectMake(0, 0, ScreenWidth, 40);
+        [self addSubview:img];
+        self.label = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, 100, 30)];
+        self.label.font = [UIFont systemFontOfSize:16];
         self.label.textColor = [UIColor darkGrayColor];
         [self addSubview:self.label];
     }

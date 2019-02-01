@@ -15,6 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StatisticTotalTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UIButton *bt;
 @property (nonatomic, strong) NSIndexPath *path;
 @property (weak, nonatomic) IBOutlet UILabel *name;

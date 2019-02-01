@@ -26,9 +26,9 @@
 
 - (IBAction)productAct:(UIButton *)sender {
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
-    if (self.others_member_id) {
-        [param setValue:self.others_member_id forKey:@"others_member_id"];
-    }
+//    if (self.others_member_id) {
+//        [param setValue:self.others_member_id forKey:@"others_member_id"];
+//    }
     [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myMachine" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
@@ -93,7 +93,7 @@
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:@{@"rate_action":@"2"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
-            NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
+            NSArray *array = [data safeArrayForKey:@"result"];
             if (array.count>0) {
                 LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
                 pickerView.array = array;

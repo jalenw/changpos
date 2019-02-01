@@ -84,7 +84,7 @@
         return 252;
     }
     else
-        return 44;
+        return 44.5;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -109,7 +109,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 1;
+    return 0;
 }
 
 @end

@@ -39,7 +39,7 @@
     self.timeLabel.text = [[_dict safeStringForKey:@"actication_time"] substringToIndex:[_dict safeStringForKey:@"actication_time"].length -8 ];
     self.nameLabel.text = [_dict safeStringForKey:@"goods_name"];
     self.snNumLabel.text =[NSString stringWithFormat:@"%@",[_dict safeStringForKey:@"sn_code"]];
-    
+    self.name.text = [_dict safeStringForKey:@"merchant_name"];
     NSMutableAttributedString *attribut = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"累计 ¥%@",[_dict safeStringForKey:@"lg_av_amount"]]];
     //目的是想改变 ‘/’前面的字体的属性，所以找到目标的range
     NSRange range = [[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"total_price"]] rangeOfString:@":"];
@@ -51,12 +51,12 @@
     self.countNumLabel.attributedText =attribut;
     JXCircleModel *model1 = [[JXCircleModel alloc]init];
     model1.number = [_dict safeStringForKey:@"lg_av_amount"];
-    model1.color =RGB(154, 5, 12);;
+    model1.color = [UIColor greenColor];
     
     
     JXCircleModel *model2 = [[JXCircleModel alloc]init];
     model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue]] ;
-    model2.color = RGB(54, 256, 0);
+    model2.color = [UIColor redColor];
     [self.circleRatioView updateDataArray:@[model1,model2]];
      self.countLabel.text = [NSString stringWithFormat:@"%0.4f%%",[model1.number floatValue]/[model2.number floatValue]];
     

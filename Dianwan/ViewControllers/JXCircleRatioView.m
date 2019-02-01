@@ -10,7 +10,7 @@
 #import "JXCircleModel.h"
 
 /*! 白色圆的半径 */
-static CGFloat const whiteCircleRadius = 25.0;
+static CGFloat const whiteCircleRadius = 35.0;
 
 #define degreesToRadian(x) ( 180.0 / PI * (x))
 

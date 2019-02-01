@@ -27,6 +27,7 @@
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         page = 1;
         [dataList removeAllObjects];
+        [self.tableView.footer setState:MJRefreshFooterStateIdle];
         [self refreshData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
@@ -47,30 +48,22 @@
     [param setValue:@(page) forKey:@"page"];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/examineAllocationInfo" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
-            NSDictionary *result = [data safeDictionaryForKey:@"result"];
-            NSArray *data = [result safeArrayForKey:@"data"];
-            for (NSDictionary *dataItem in data) {
-                [dataList addObject:dataItem];
-            }
-            
             [self.tableView headerEndRefreshing];
         }
         else
         {
+            [self.tableView footerEndRefreshing];
+        }
+        if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             NSArray *data = [result safeArrayForKey:@"data"];
             if (data.count>0) {
-                for (NSDictionary *dataItem in data) {
-                    [dataList addObject:dataItem];
-                }
+                [dataList addObjectsFromArray:data];
             }
             else
             {
                 [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
-            [self.tableView footerEndRefreshing];
-        }
-        if (status) {
             [self.tableView reloadData];
         }
     }];

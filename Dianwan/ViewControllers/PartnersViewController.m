@@ -28,6 +28,7 @@
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         page = 1;
         [dataList removeAllObjects];
+        [self.tableView.footer setState:MJRefreshFooterStateIdle];
         [self refreshData];
     }];
     [self.tableView addLegendFooterWithRefreshingBlock:^{
@@ -98,7 +99,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 212;
+    return 229;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -15,8 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MerchantTableViewCell : UITableViewCell
 @property (strong,nonatomic) NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
-
-@property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 @end
 
 NS_ASSUME_NONNULL_END

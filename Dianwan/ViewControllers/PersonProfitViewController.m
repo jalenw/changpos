@@ -85,6 +85,7 @@
             NSDictionary *nowDict = [[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"];
             NSArray *array = [[[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"now"] allKeys];
             NSMutableArray *entries = [[NSMutableArray alloc] init];
+            BOOL hasData = false;
             for (int i = 0; i < array.count; i++)
             {
                 NSString *key = [array objectAtIndex:i];
@@ -92,6 +93,9 @@
                 NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":@"";
                 if (value>0) {
                     [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+                }
+                if (value>0) {
+                    hasData = true;
                 }
             }
             PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
@@ -108,11 +112,14 @@
             PieChartData *nowData = [[PieChartData alloc] initWithDataSet:dataSet];
             [nowData setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
             [nowData setValueTextColor:UIColor.blackColor];
+            if(hasData){
             self.nowChartView.data = nowData;
+            }
             
             NSDictionary *oldDict = [[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"past"];
             NSArray *oldArray = [[[dict safeDictionaryForKey:@"earnings_info"] safeDictionaryForKey:@"past"] allKeys];
             NSMutableArray *oldEntries = [[NSMutableArray alloc] init];
+            BOOL hasData2 = false;
             for (int i = 0; i < array.count; i++)
             {
                 NSString *key = [oldArray objectAtIndex:i];
@@ -120,6 +127,9 @@
                 NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":@"";
                 if (value>0) {
                     [oldEntries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+                }
+                if (value>0) {
+                    hasData2 = true;
                 }
             }
             PieChartDataSet *oldDataSet = [[PieChartDataSet alloc] initWithValues:oldEntries label:@""];
@@ -132,7 +142,9 @@
             PieChartData *oldData = [[PieChartData alloc] initWithDataSet:oldDataSet];
             [oldData setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
             [oldData setValueTextColor:UIColor.blackColor];
-            self.oldChartView.data = oldData;
+            if (hasData2) {
+                self.oldChartView.data = oldData;
+            }
         }
         else
         {

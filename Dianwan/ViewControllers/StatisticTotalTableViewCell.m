@@ -95,6 +95,8 @@
             if (nowDict) {
                 NSArray *array = [nowDict allKeys];
                 NSMutableArray *entries = [[NSMutableArray alloc] init];
+                BOOL hasData = false;
+                double all = 0;
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
@@ -103,6 +105,19 @@
                     if (value>0) {
                         [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
                     }
+                    if (value>0) {
+                        hasData = true;
+                        all += value;
+                    }
+                }
+                if (path.row==0) {
+                    self.total.text = [NSString stringWithFormat:@"￥%.2f",all];
+                }
+                if (path.row==1) {
+                    self.total.text = [NSString stringWithFormat:@"%d台",(int)all];
+                }
+                if (path.row==2) {
+                    self.total.text = [NSString stringWithFormat:@"￥%.2f",all];
                 }
                 PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
                 dataSet.sliceSpace = 2.0;
@@ -118,12 +133,16 @@
                 PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
                 [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
                 [data setValueTextColor:UIColor.blackColor];
+                if (hasData) {
                 self.chartView.data = data;
+                }
             }
             NSDictionary *totalDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"total"];
             if (totalDict) {
                 NSArray *array = [(totalDict) allKeys];
                 NSMutableArray *entries = [[NSMutableArray alloc] init];
+                BOOL hasData = false;
+                double all = 0;
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
@@ -132,6 +151,19 @@
                     if (value>0) {
                         [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
                     }
+                    if (value>0) {
+                        hasData = true;
+                        all += value;
+                    }
+                }
+                if (path.row==0) {
+                    self.total2.text = [NSString stringWithFormat:@"￥%.2f",all];
+                }
+                if (path.row==1) {
+                    self.total2.text = [NSString stringWithFormat:@"%d台",(int)all];
+                }
+                if (path.row==2) {
+                    self.total2.text = [NSString stringWithFormat:@"￥%.2f",all];
                 }
                 PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
                 dataSet.sliceSpace = 2.0;
@@ -147,7 +179,9 @@
                 PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
                 [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
                 [data setValueTextColor:UIColor.blackColor];
+                if (hasData) {
                 self.chartView2.data = data;
+                }
             }
         }
     }];

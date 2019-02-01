@@ -45,8 +45,19 @@
     NSNumberFormatter *leftAxisFormatter = [[NSNumberFormatter alloc] init];
     leftAxisFormatter.minimumFractionDigits = 0;
     leftAxisFormatter.maximumFractionDigits = 2;
-    leftAxisFormatter.negativeSuffix = @" ￥";
-    leftAxisFormatter.positiveSuffix = @" ￥";
+    if (self.path.row==0) {
+        leftAxisFormatter.negativeSuffix = @" ￥";
+        leftAxisFormatter.positiveSuffix = @" ￥";
+    }
+    if (self.path.row==1) {
+        leftAxisFormatter.negativeSuffix = @" 台";
+        leftAxisFormatter.positiveSuffix = @" 台";
+    }
+    if (self.path.row==2) {
+        leftAxisFormatter.negativeSuffix = @" ￥";
+        leftAxisFormatter.positiveSuffix = @" ￥";
+    }
+
     
     ChartYAxis *leftAxis = _chartView.leftAxis;
     leftAxis.labelFont = [UIFont systemFontOfSize:10.f];

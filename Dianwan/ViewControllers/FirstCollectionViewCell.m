@@ -68,13 +68,15 @@
     NSDictionary *nowDict = dict;
     NSArray *array = [dict allKeys];
     NSMutableArray *entries = [[NSMutableArray alloc] init];
+    BOOL hasData = false;
     for (int i = 0; i < array.count; i++)
     {
         NSString *key = [array objectAtIndex:i];
         double value = [nowDict safeDoubleForKey:key];
         NSString *label = [key isEqualToString:@"group_earnings"]?@"团队流水":[key isEqualToString:@"other_earnings"]?@"其他":[key isEqualToString:@"personal_activation"]?@"个人激活":[key isEqualToString:@"personal_earnings"]?@"个人流水":[key isEqualToString:@"group_trading"]?@"团队流水":[key isEqualToString:@"personal_trading"]?@"个人流水":[key isEqualToString:@"group_activation"]?@"团队激活量":[key isEqualToString:@"personal_activation"]?@"个人激活量":@"";
+        [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
         if (value>0) {
-            [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+            hasData = true;
         }
     }
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
@@ -102,7 +104,9 @@
 //    [data setValueFormatter:[[ChartDefaultValueFormatter alloc] initWithFormatter:pFormatter]];
     [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
     [data setValueTextColor:UIColor.blackColor];
-    _pieChartView.data = data;
+    if (hasData) {
+        _pieChartView.data = data;
+    }
 }
 
 -(void)setLabel:(NSString *)label

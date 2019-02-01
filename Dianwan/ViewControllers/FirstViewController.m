@@ -140,10 +140,10 @@
             [cell setLabel:[NSString stringWithFormat:@"收益:￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"].length>0?[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"]:@""]];
         }
         if (indexPath.row==1) {
-            [cell setLabel:@"激活量"];
+            [cell setLabel:[NSString stringWithFormat:@"激活量:%d台",[now safeIntForKey:@"group_activation"]+[now safeIntForKey:@"personal_activation"]]];
         }
         if (indexPath.row==2) {
-            [cell setLabel:@"交易量"];
+            [cell setLabel:[NSString stringWithFormat:@"交易量:￥%.2f",[now safeDoubleForKey:@"group_trading"]+[now safeDoubleForKey:@"personal_trading"]]];
         }
     }
     return cell;

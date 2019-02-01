@@ -80,7 +80,7 @@
     UIButton *callBt = [UIButton buttonWithType:UIButtonTypeCustom];
     [callBt addTarget:self action:@selector(callService) forControlEvents:UIControlEventTouchUpInside];
     callBt.frame = CGRectMake(0, 0, callView.width, callView.height);
-    [callBt setTitle:@"一键拨打客服电话" forState:UIControlStateNormal];
+    [callBt setImage:[UIImage imageNamed:@"一键拨打客服电话"] forState:UIControlStateNormal];
     [callView addSubview:callBt];
 }
 

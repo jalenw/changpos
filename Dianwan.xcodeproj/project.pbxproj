@@ -216,6 +216,14 @@
 		8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B321E86F0100CB11B9 /* ApplyDetailViewController.xib */; };
 		8E7108B921E8717200CB11B9 /* ApplyDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */; };
 		8E7108BA21E8717200CB11B9 /* ApplyDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */; };
+		8E874AB72203F96F00D15435 /* ApplyCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874AB52203F96F00D15435 /* ApplyCheckViewController.m */; };
+		8E874AB82203F96F00D15435 /* ApplyCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E874AB62203F96F00D15435 /* ApplyCheckViewController.xib */; };
+		8E874ABD2203F9B700D15435 /* ApplyApproveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874ABB2203F9B700D15435 /* ApplyApproveViewController.m */; };
+		8E874ABE2203F9B700D15435 /* ApplyApproveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E874ABC2203F9B700D15435 /* ApplyApproveViewController.xib */; };
+		8E874AC72203FC7900D15435 /* ApplyApproveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874AC52203FC7900D15435 /* ApplyApproveTableViewCell.m */; };
+		8E874AC82203FC7900D15435 /* ApplyApproveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E874AC62203FC7900D15435 /* ApplyApproveTableViewCell.xib */; };
+		8E874ACD22041D4D00D15435 /* CheckDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E874ACB22041D4D00D15435 /* CheckDetailViewController.m */; };
+		8E874ACE22041D4D00D15435 /* CheckDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E874ACC22041D4D00D15435 /* CheckDetailViewController.xib */; };
 		8E8AB45622008A810093BE90 /* FirstHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AB45522008A810093BE90 /* FirstHeaderView.m */; };
 		8E8AB45A22008CCC0093BE90 /* StatisticTotalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8AB45822008CCC0093BE90 /* StatisticTotalTableViewCell.m */; };
 		8E8AB45B22008CCC0093BE90 /* StatisticTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8AB45922008CCC0093BE90 /* StatisticTotalTableViewCell.xib */; };
@@ -976,6 +984,18 @@
 		8E7108B721E8717200CB11B9 /* ApplyDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyDetailTableViewCell.m; sourceTree = "<group>"; };
 		8E7108B821E8717200CB11B9 /* ApplyDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyDetailTableViewCell.xib; sourceTree = "<group>"; };
 		8E7ABFB6211AD30F00EADF76 /* Dianwan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dianwan.entitlements; sourceTree = "<group>"; };
+		8E874AB42203F96F00D15435 /* ApplyCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyCheckViewController.h; sourceTree = "<group>"; };
+		8E874AB52203F96F00D15435 /* ApplyCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyCheckViewController.m; sourceTree = "<group>"; };
+		8E874AB62203F96F00D15435 /* ApplyCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyCheckViewController.xib; sourceTree = "<group>"; };
+		8E874ABA2203F9B700D15435 /* ApplyApproveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyApproveViewController.h; sourceTree = "<group>"; };
+		8E874ABB2203F9B700D15435 /* ApplyApproveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyApproveViewController.m; sourceTree = "<group>"; };
+		8E874ABC2203F9B700D15435 /* ApplyApproveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyApproveViewController.xib; sourceTree = "<group>"; };
+		8E874AC42203FC7900D15435 /* ApplyApproveTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyApproveTableViewCell.h; sourceTree = "<group>"; };
+		8E874AC52203FC7900D15435 /* ApplyApproveTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyApproveTableViewCell.m; sourceTree = "<group>"; };
+		8E874AC62203FC7900D15435 /* ApplyApproveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyApproveTableViewCell.xib; sourceTree = "<group>"; };
+		8E874ACA22041D4D00D15435 /* CheckDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckDetailViewController.h; sourceTree = "<group>"; };
+		8E874ACB22041D4D00D15435 /* CheckDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckDetailViewController.m; sourceTree = "<group>"; };
+		8E874ACC22041D4D00D15435 /* CheckDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckDetailViewController.xib; sourceTree = "<group>"; };
 		8E8AB45422008A810093BE90 /* FirstHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstHeaderView.h; sourceTree = "<group>"; };
 		8E8AB45522008A810093BE90 /* FirstHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstHeaderView.m; sourceTree = "<group>"; };
 		8E8AB45722008CCC0093BE90 /* StatisticTotalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticTotalTableViewCell.h; sourceTree = "<group>"; };
@@ -2296,6 +2316,15 @@
 				8EA385692202AB41005C0260 /* CardModifyViewController.h */,
 				8EA3856A2202AB41005C0260 /* CardModifyViewController.m */,
 				8EA3856B2202AB41005C0260 /* CardModifyViewController.xib */,
+				8E874AB42203F96F00D15435 /* ApplyCheckViewController.h */,
+				8E874AB52203F96F00D15435 /* ApplyCheckViewController.m */,
+				8E874AB62203F96F00D15435 /* ApplyCheckViewController.xib */,
+				8E874ABA2203F9B700D15435 /* ApplyApproveViewController.h */,
+				8E874ABB2203F9B700D15435 /* ApplyApproveViewController.m */,
+				8E874ABC2203F9B700D15435 /* ApplyApproveViewController.xib */,
+				8E874ACA22041D4D00D15435 /* CheckDetailViewController.h */,
+				8E874ACB22041D4D00D15435 /* CheckDetailViewController.m */,
+				8E874ACC22041D4D00D15435 /* CheckDetailViewController.xib */,
 			);
 			name = Businesshandling;
 			sourceTree = "<group>";
@@ -2388,6 +2417,9 @@
 				8E42033721F9B28D001994C5 /* ProfitDetailTableViewCell.h */,
 				8E42033821F9B28D001994C5 /* ProfitDetailTableViewCell.m */,
 				8E42033921F9B28D001994C5 /* ProfitDetailTableViewCell.xib */,
+				8E874AC42203FC7900D15435 /* ApplyApproveTableViewCell.h */,
+				8E874AC52203FC7900D15435 /* ApplyApproveTableViewCell.m */,
+				8E874AC62203FC7900D15435 /* ApplyApproveTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -4108,6 +4140,7 @@
 				8EB4E4E721201FAE00BC563B /* call_out@2x.png in Resources */,
 				2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */,
 				8EB4E4F521201FAE00BC563B /* VoiceSearchFeedback019.png in Resources */,
+				8E874AB82203F96F00D15435 /* ApplyCheckViewController.xib in Resources */,
 				8E4BACBC21F8618B003F94C5 /* MyProfitDetailViewController.xib in Resources */,
 				8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */,
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
@@ -4143,6 +4176,7 @@
 				8EEF4BF3211D8CB500DE1E36 /* MWPhotoBrowser.bundle in Resources */,
 				8EB4E4D121201FAE00BC563B /* chat_location_detail_disclosureHL@2x.png in Resources */,
 				8EB4E50721201FAE00BC563B /* VoiceSearchFeedback011.png in Resources */,
+				8E874ACE22041D4D00D15435 /* CheckDetailViewController.xib in Resources */,
 				8EB4E50F21201FAE00BC563B /* VoiceSearchFeedback003.png in Resources */,
 				8E4BACAD21F85A5A003F94C5 /* TotalProfitViewController.xib in Resources */,
 				8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */,
@@ -4217,6 +4251,7 @@
 				8E6D1E1921EB261C002C6717 /* HMScanner.bundle in Resources */,
 				8EB4E4EA21201FAE00BC563B /* chat_sender_bg.png in Resources */,
 				8EB4E4FB21201FAE00BC563B /* VoiceSearchFeedback008.png in Resources */,
+				8E874AC82203FC7900D15435 /* ApplyApproveTableViewCell.xib in Resources */,
 				8EB4E50621201FAE00BC563B /* VoiceSearchFeedback005.png in Resources */,
 				8EB4E51D21201FAE00BC563B /* chatBar_more_cameraSelected.png in Resources */,
 				8EB4E52321201FAE00BC563B /* chatBar_more_location.png in Resources */,
@@ -4284,6 +4319,7 @@
 				8EB4E4CB21201FAE00BC563B /* chat_location_annotation_someone.png in Resources */,
 				8EB4E4CF21201FAE00BC563B /* chat_location_detail_disclosureHL.png in Resources */,
 				8EB4E52621201FAE00BC563B /* chatBar_moreSelected.png in Resources */,
+				8E874ABE2203F9B700D15435 /* ApplyApproveViewController.xib in Resources */,
 				0432ECEF1F271CC4008D7AA3 /* AlipaySDK.bundle in Resources */,
 				8EB4E54A21201FAE00BC563B /* chatListCellHead.png in Resources */,
 				8E6D1E8B21EB273F002C6717 /* City2ViewController.xib in Resources */,
@@ -4338,6 +4374,7 @@
 				CD3D81A71EA9FF3600F6AC20 /* SBJsonWriter.m in Sources */,
 				8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */,
 				8E7108B421E86F0100CB11B9 /* ApplyDetailViewController.m in Sources */,
+				8E874ACD22041D4D00D15435 /* CheckDetailViewController.m in Sources */,
 				8EEF4BDF211D8CB500DE1E36 /* PSTCollectionView.m in Sources */,
 				8EB4E3F2212009AD00BC563B /* EMSDWebImageDecoder.m in Sources */,
 				2FD7366721EEE5CB00B59D8F /* WithdrawalTableViewCell.m in Sources */,
@@ -4536,6 +4573,7 @@
 				8EEF4BC8211D8CB500DE1E36 /* EMCDDeviceManager+Media.m in Sources */,
 				8EDA41521F22F85C000CBA40 /* FriendsViewController.m in Sources */,
 				8E6D1EA821EB273F002C6717 /* ChangeLoginPWViewController.m in Sources */,
+				8E874AC72203FC7900D15435 /* ApplyApproveTableViewCell.m in Sources */,
 				8E6D1E9B21EB273F002C6717 /* MineHeadView.m in Sources */,
 				8E8AB45A22008CCC0093BE90 /* StatisticTotalTableViewCell.m in Sources */,
 				8E6D1EA321EB273F002C6717 /* UserFeedBackViewController.m in Sources */,
@@ -4545,6 +4583,7 @@
 				8E8AB45F22008CDC0093BE90 /* StatisticTrendTableViewCell.m in Sources */,
 				8EC5C89820F884040041A34A /* UIView+XibLayout.m in Sources */,
 				8EEF4BB4211D8CB500DE1E36 /* EaseConversationModel.m in Sources */,
+				8E874ABD2203F9B700D15435 /* ApplyApproveViewController.m in Sources */,
 				8E71089021E72C5D00CB11B9 /* BusinessHandlingViewController.m in Sources */,
 				8EEF4C09211D8CB500DE1E36 /* EaseBubbleView+Text.m in Sources */,
 				8EE5694020FDC8450048EB38 /* WSTextView.m in Sources */,
@@ -4614,6 +4653,7 @@
 				8EB4E42721201CC500BC563B /* ChatViewController.m in Sources */,
 				8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */,
 				8E6D1E1A21EB261C002C6717 /* HMScannerController.m in Sources */,
+				8E874AB72203F96F00D15435 /* ApplyCheckViewController.m in Sources */,
 				8EEF4BFF211D8CB500DE1E36 /* EaseMessageCell.m in Sources */,
 				8EB4E42E21201D0300BC563B /* UIImageView+HeadImage.m in Sources */,
 				8EEF4C05211D8CB500DE1E36 /* EaseTextView.m in Sources */,

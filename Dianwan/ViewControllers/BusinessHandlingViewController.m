@@ -12,6 +12,7 @@
 #import "ApplyOweDeviceViewController.h"
 #import "ConnectQrCodeViewController.h"
 #import "CardModifyViewController.h"
+#import "ApplyCheckViewController.h"
 @interface BusinessHandlingViewController ()
 
 @end
@@ -49,7 +50,8 @@
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (sender.tag==6) {
-        [AlertHelper showAlertWithTitle:@"功能暂未开通"];
+        ApplyCheckViewController *vc = [[ApplyCheckViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else
     {

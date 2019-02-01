@@ -51,12 +51,12 @@
     self.countNumLabel.attributedText =attribut;
     JXCircleModel *model1 = [[JXCircleModel alloc]init];
     model1.number = [_dict safeStringForKey:@"lg_av_amount"];
-    model1.color = [UIColor greenColor];
+    model1.color =RGB(154, 5, 12);;
     
     
     JXCircleModel *model2 = [[JXCircleModel alloc]init];
     model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue]] ;
-    model2.color = [UIColor redColor];
+    model2.color = RGB(54, 256, 0);
     [self.circleRatioView updateDataArray:@[model1,model2]];
      self.countLabel.text = [NSString stringWithFormat:@"%0.4f%%",[model1.number floatValue]/[model2.number floatValue]];
     

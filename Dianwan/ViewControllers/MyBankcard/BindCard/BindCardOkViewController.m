@@ -21,6 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 @property (strong, nonatomic) IBOutlet UIView *BindSelectview;
 @property (weak, nonatomic) IBOutlet UIView *cancleSelectview;
+@property (weak, nonatomic) IBOutlet UIImageView *nextstepImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *cancleViewSureImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *cancleViewCancleImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *bindViewSureImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *bindViewCancleImageview;
 
 @end
 @implementation BindCardOkViewController
@@ -35,7 +40,20 @@
     self.phoneLabel.delegate =self;
     self.phoneLabel.tag =2;
     self.codeLabel.delegate =self;
-    self.codeLabel.tag=1;
+    self.codeLabel.tag=1;UITapGestureRecognizer *nexttap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backAction)];
+    [self.nextstepImageview addGestureRecognizer:nexttap];
+   
+    UITapGestureRecognizer *cancleViewCancletap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancleBindAction)];
+    [self.cancleViewCancleImageview addGestureRecognizer:cancleViewCancletap];
+    
+    UITapGestureRecognizer *cancleViewSuretap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancleViewSelectioncancleAction)];
+    [self.cancleViewSureImageview addGestureRecognizer:cancleViewSuretap];
+    
+    UITapGestureRecognizer *bindViewSuretap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bindCardAction)];
+    [self.bindViewCancleImageview addGestureRecognizer:bindViewSuretap];
+    
+    UITapGestureRecognizer *bindViewCancletap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bindSelectedCancledAction)];
+    [self.bindViewSureImageview addGestureRecognizer:bindViewCancletap];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -81,18 +99,18 @@
 }
 
 //放弃绑卡选择------放弃，继续绑卡
-- (IBAction)cancleBindAction:(UIButton *)sender {
+- (void)cancleBindAction{
     self.cancleSelectview.hidden =YES;
 }
 
 //放弃绑卡选择------彻底放弃
--(IBAction)cancleViewSelectioncancleAction:(UIButton *)sender {
+-(void)cancleViewSelectioncancleAction {
     self.BindSelectview.hidden=NO;
     self.cancleSelectview.hidden =YES;
 }
 
 //绑定选择-------放弃，放弃绑卡诗图现
-- (IBAction)bindSelectedCancledAction:(UIButton *)sender {
+- (void)bindSelectedCancledAction{
     self.BindSelectview.hidden=YES;
     self.cancleSelectview.hidden =NO;
 }
@@ -153,7 +171,7 @@
 }
 
 
-- (IBAction)backAction:(id)sender {
+- (void)backAction {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
@@ -208,7 +226,7 @@
 }
 
 //绑卡选择q-------确定按钮
-- (IBAction)bindCardAction:(UIButton *)sender {
+- (void)bindCardAction {
     [SVProgressHUD show];
     NSDictionary * params =  @{
                                @"client":@"ios",

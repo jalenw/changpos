@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1f-FF-2ie">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1f-FF-2ie">
                     <rect key="frame" x="100" y="84" width="175" height="25.5"/>
                     <attributedString key="attributedText">
                         <fragment content="输入支付密码">
@@ -33,7 +34,7 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-8r-x5L">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJa-8r-x5L">
                     <rect key="frame" x="60" y="125.5" width="255" height="21"/>
                     <attributedString key="attributedText">
                         <fragment content="输入支付密码以验证">
@@ -46,19 +47,42 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tjyhk" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-nX-F9F">
+                    <rect key="frame" x="60" y="120" width="255" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="M9j-1J-uEU"/>
+                        <constraint firstAttribute="width" constant="255" id="mUh-kn-496"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remm" translatesAutoresizingMaskIntoConstraints="NO" id="ZZe-Ue-wsf">
+                    <rect key="frame" x="100" y="84" width="175" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25.5" id="T7d-SJ-F0A"/>
+                        <constraint firstAttribute="width" constant="175" id="ncl-wT-fLc"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Smp-yv-znD" firstAttribute="trailing" secondItem="IJa-8r-x5L" secondAttribute="trailing" constant="60" id="395-qR-VfM"/>
                 <constraint firstItem="Smp-yv-znD" firstAttribute="trailing" secondItem="v1f-FF-2ie" secondAttribute="trailing" constant="100" id="9rH-pF-2Cl"/>
+                <constraint firstItem="ZZe-Ue-wsf" firstAttribute="centerX" secondItem="Smp-yv-znD" secondAttribute="centerX" id="AEB-4A-OqJ"/>
+                <constraint firstItem="ZZe-Ue-wsf" firstAttribute="top" secondItem="Smp-yv-znD" secondAttribute="top" constant="64" id="D5G-Mc-EVL"/>
                 <constraint firstItem="v1f-FF-2ie" firstAttribute="leading" secondItem="Smp-yv-znD" secondAttribute="leading" constant="100" id="Mat-ab-Y90"/>
+                <constraint firstItem="gzR-nX-F9F" firstAttribute="top" secondItem="Smp-yv-znD" secondAttribute="top" constant="100" id="SWR-Q1-3lf"/>
                 <constraint firstItem="v1f-FF-2ie" firstAttribute="top" secondItem="Smp-yv-znD" secondAttribute="top" constant="64" id="UgK-D0-1Da"/>
                 <constraint firstItem="IJa-8r-x5L" firstAttribute="leading" secondItem="Smp-yv-znD" secondAttribute="leading" constant="60" id="W05-1c-6Jo"/>
                 <constraint firstItem="v1f-FF-2ie" firstAttribute="centerX" secondItem="Smp-yv-znD" secondAttribute="centerX" id="h5G-2P-zAC"/>
+                <constraint firstItem="v1f-FF-2ie" firstAttribute="top" secondItem="Smp-yv-znD" secondAttribute="top" constant="64" id="if3-Qw-WYp"/>
                 <constraint firstItem="IJa-8r-x5L" firstAttribute="top" secondItem="v1f-FF-2ie" secondAttribute="bottom" constant="16" id="l9J-nU-eod"/>
+                <constraint firstItem="gzR-nX-F9F" firstAttribute="centerX" secondItem="Smp-yv-znD" secondAttribute="centerX" id="yfz-aC-W6s"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Smp-yv-znD"/>
             <point key="canvasLocation" x="21" y="-71"/>
         </view>
     </objects>
+    <resources>
+        <image name="remm" width="52.319999694824219" height="9.119999885559082"/>
+        <image name="tjyhk" width="92.879997253417969" height="7.9200000762939453"/>
+    </resources>
 </document>

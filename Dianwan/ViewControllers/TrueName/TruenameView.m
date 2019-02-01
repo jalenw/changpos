@@ -12,10 +12,12 @@
 #import "PerfectInformationViewController.h"
 
 @interface TruenameView ()<UITextFieldDelegate,TZImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *nextstepImageview;
 
 @end
 @implementation TruenameView
 - (IBAction)nextStepAction:(UIButton *)sender {
+
     if ([Tooles isEmpty:self.nameTextFiled.text]) {
          [AlertHelper showAlertWithTitle:@"姓名不能为空"];
         return;
@@ -50,42 +52,14 @@
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
+        self.userInteractionEnabled =YES;
         self.backgroundColor = RGB(48, 46, 58);
-//        self.nameTextFiled.delegate =self;
-//        self.idCardNumber.delegate =self;
+//        UITapGestureRecognizer *nexttap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(nextStepAction)];
+//        [self.nextstepImageview addGestureRecognizer:nexttap];
+        
     }
     return self;
 }
-//
-//- (void)textFieldDidEndEditing:(UITextField *)textField{
-//
-//}
-//
-//- (void)textFieldDidBeginEditing:(UITextField *)textField{
-//
-//
-//
-//}
-//
-//- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-//
-//    [self BtnEnableAction];
-//    return YES;
-//}
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-//{
-//    [self BtnEnableAction];
-//    return YES;
-//
-//}
-////按钮监听
-//-(void)BtnEnableAction{
-//    if (self.nameTextFiled.text.length >0 && self.idCardNumber.text.length!=0 && self.foreImageUrl.length>0 &&self.backImageUrl.length>0) {
-//        self.nextBtn.enabled =YES;
-//        self.nextBtn.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:193.0/255.0 blue:0 alpha:1];
-//    }
-//}
 
 
 - (IBAction)uploadicon:(UIButton *)sender {

@@ -12,9 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
 - (IBAction)regAct:(UIButton *)sender;
-- (IBAction)codeLoginAct:(UIButton *)sender;
-- (IBAction)forgetAct:(UIButton *)sender;
 - (IBAction)loginAct:(UIButton *)sender;
 - (IBAction)backAct:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *forgetPWImageview;
+@property (weak, nonatomic) IBOutlet UIImageView *regImageview;
 
 @end

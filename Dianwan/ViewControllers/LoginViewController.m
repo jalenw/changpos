@@ -25,7 +25,15 @@
     self.phone.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.phone.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.passWord.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.passWord.placeholder attributes:@{NSForegroundColorAttributeName: RGB(196,196,196)}];
     self.navigationController.navigationBarHidden = YES;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(forgetPWAct)];
+    [self.forgetPWImageview addGestureRecognizer:tap];
+    UITapGestureRecognizer *regtap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(regImageviewAct)];
+    [self.regImageview addGestureRecognizer:regtap];
+    
 }
+
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -44,9 +52,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)regAct:(UIButton *)sender {
-    SelectRegistViewController *vc = [[SelectRegistViewController alloc]init];
-//    RegViewController *vc = [[RegViewController alloc]init];
+-(void)regImageviewAct{
+    SelectRegistViewController *vc =[[SelectRegistViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -56,7 +63,7 @@
 }
 
 
-- (IBAction)forgetAct:(UIButton *)sender {
+- (void)forgetPWAct{
     ForgetViewController *vc = [[ForgetViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }

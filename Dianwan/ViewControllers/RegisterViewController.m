@@ -19,6 +19,7 @@
 @property (strong, nonatomic) RegisterViewModel *registerViewModel;
 
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *xieyiImageView;
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordTF;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;
@@ -48,11 +49,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.countDownManager.delegate = self;
-    
-//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-  
+   
         [IQKeyboardManager sharedManager].enable = YES;
         [IQKeyboardManager sharedManager].shouldResignOnTouchOutside=YES;
 }
@@ -61,11 +58,7 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-      [IQKeyboardManager sharedManager].enable = YES;
-//    [UIApplication sharedApplication].statusBarStyle =UIStatusBarStyleDefault;
-//    [self.navigationController.navigationBar setBackgroundImage:[Tooles createImageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];;
-    
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,6 +75,9 @@
     self.pwTextFileds.tag =2;
     self.pwTextFileds.delegate =self;
     self.pwTextFiled.tag=2;
+    UITapGestureRecognizer *xieyitap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAgreeAct)];
+    [self.xieyiImageView addGestureRecognizer:xieyitap];
+    
     
     self.view.backgroundColor = RGB(48, 46, 58);
 }
@@ -193,7 +189,7 @@
                                         }];
 }
 
-- (IBAction)clickAgreemt:(UIButton *)sender {
+- (void)clickAgreeAct{
     
     CommonUIWebViewController *web = [[CommonUIWebViewController alloc]init];
     web.address = @"http://www.gdzuanqian.net/dist/index.html#/Agreement";

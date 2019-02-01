@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *noCardImageView;
 @property (weak, nonatomic) IBOutlet UILabel *noCARDlABEL;
 @property (strong, nonatomic) IBOutlet UITableViewCell *addCardCell;
-@property (strong, nonatomic)UIButton *addCard ;
+@property (strong, nonatomic)UIImageView *addCard ;
 @property (assign, nonatomic)BOOL hascard ;//判断是否已经有绑卡
 
 @end
@@ -52,14 +52,12 @@
     [_mainTbleview registerNib:[UINib nibWithNibName:@"CardCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"CardCellTableViewCell"] ;
     [self.view addSubview:_mainTbleview];
     
-    _addCard = [[UIButton alloc]initWithFrame:CGRectMake(50,ScreenHeight -152-64-16, ScreenWidth-100, 52)];
-    [_addCard setTitle:@"添加银行卡" forState:UIControlStateNormal];
-    [_addCard setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [_addCard setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal]
-    _addCard.layer.cornerRadius =5;
-    _addCard.layer.masksToBounds=YES;
-    [_addCard addTarget:self action:@selector(addCardAction) forControlEvents:UIControlEventTouchUpInside];
-    _addCard.backgroundColor = RGB(251, 182, 8);
+    _addCard = [[UIImageView alloc]initWithFrame:CGRectMake(50,ScreenHeight -152-64-16, ScreenWidth-100, 52)];
+    [_addCard setImage:[UIImage imageNamed:@"tianjyingh_1"]];
+    _addCard.userInteractionEnabled =YES;
+    UITapGestureRecognizer *addcardTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(addCardAction)];
+    [_addCard addGestureRecognizer:addcardTap];
+    _addCard.contentMode=UIViewContentModeScaleAspectFit;
     _addCard.hidden = YES;
     [self.view addSubview:_addCard];
     

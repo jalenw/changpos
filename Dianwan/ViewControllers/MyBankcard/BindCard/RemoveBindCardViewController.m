@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bankImageView;
 @property (weak, nonatomic) IBOutlet UILabel *cardBankNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cardNumberLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *removeImageview;
 
 @end
 
@@ -23,7 +24,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = RGB(48, 46, 58);
     self.card_id =[self.model.card_id stringValue];
+    self.removeImageview.userInteractionEnabled = YES;
+    UITapGestureRecognizer *removetap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(removeBankCardAction)];
     [self  setUI];
+    
 }
 
 -(void)setUI{
@@ -32,7 +36,7 @@
 //    [self.bankImageView sd_setImageWithURL:[NSURL URLWithString:self.model.bank_img]];
 }
 
-- (IBAction)removeBankCardAction:(UIButton *)sender {
+- (void)removeBankCardAction{
 
     [SVProgressHUD show];
     NSDictionary * params =  @{

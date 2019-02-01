@@ -26,7 +26,7 @@
     self.transferserLabel.text =[_dict safeStringForKey:@"member_Initiator"];
     self.receivingerLabel.text=[_dict safeStringForKey:@"recipient_name"];
     self.phoneNumLabel.text =[_dict safeStringForKey:@"recipient_mobile"];
-    self.typeStateLabel.text=[_dict safeIntForKey:@"type"]==1?@"已付款":@"未付款";
+    self.typeStateLabel.text=[_dict safeIntForKey:@"is_type"]==1?@"已付款":@"未付款";
     self.timeLabel.text =[_dict safeStringForKey:@"equipment_time"];
 }
 

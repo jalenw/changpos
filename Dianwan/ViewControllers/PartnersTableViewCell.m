@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *phonrNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *h9Label;
+@property (weak, nonatomic) IBOutlet UILabel *mp70Label;
+@property (weak, nonatomic) IBOutlet UILabel *zibeijiLabel;
 
 @end
 
@@ -31,6 +34,29 @@
 
 -(void)setDict:(NSDictionary *)dict{
     _dict = dict;
+    NSArray *dataarr =[_dict safeArrayForKey:@"activation_info"];
+    
+   
+  
+    
+    
+   
+    NSMutableAttributedString *attribut1 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%d/%d",[dataarr[0] safeIntForKey:@"activation"],[dataarr[0] safeIntForKey:@"total_stock"]]]];
+    NSRange pointRange1 = NSMakeRange(0, [NSString stringWithFormat:@"%d",[dataarr[0] safeIntForKey:@"activation"]].length);
+    [attribut1 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor greenColor]
+                      range:pointRange1];
+    self.h9Label.attributedText =attribut1;
+    
+    NSMutableAttributedString *attribut2 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%d/%d",[dataarr[1] safeIntForKey:@"activation"],[dataarr[1] safeIntForKey:@"total_stock"]]]];
+    NSRange pointRange2 = NSMakeRange(0, [NSString stringWithFormat:@"%d",[dataarr[1] safeIntForKey:@"activation"]].length);
+    [attribut2 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor greenColor]
+                      range:pointRange2];
+    self.mp70Label.attributedText =attribut2;
+//    self.mp70Label.text =[NSString stringWithFormat:@"%d/%d",[dataarr[1] safeIntForKey:@"activation"],[dataarr[1] safeIntForKey:@"total_stock"]] ;
+    self.zibeijiLabel.text =[NSString stringWithFormat:@"%d/%d",[dataarr[2] safeIntForKey:@"activation"],[dataarr[2] safeIntForKey:@"total_stock"]] ;
+    
     
     [self.acoverImageview sd_setImageWithURL:[NSURL URLWithString:[_dict safeStringForKey:@"member_avatar"]]];
     self.nameLabel.text = [_dict safeStringForKey:@"truename"];

@@ -51,6 +51,7 @@
     if (self.keyword.length>0) {
         [param setValue:self.keyword forKey:@"search_key"];
     }
+    [param setValue:@(2.0) forKey:@"version"];
     [param setValue:@(page) forKey:@"page"];
     [[ServiceForUser manager]postMethodName:@"mobile/member/my_partners_list" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (page==1) {
@@ -61,7 +62,6 @@
             [self.tableView footerEndRefreshing];
         }
         if (status) {
-            
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             NSArray *dataArray = [result safeArrayForKey:@"list"];
             for ( NSDictionary *dataitem in dataArray) {
@@ -94,7 +94,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 132;
+    return 212;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

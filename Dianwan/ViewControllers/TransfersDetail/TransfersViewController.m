@@ -16,8 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *snLabel;
 @property (weak, nonatomic) IBOutlet UILabel *machinesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *transfersTimeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *nextImageview;
 @end
 
 @implementation TransfersViewController
@@ -25,10 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title =@"调拨详情";
-    self.view.backgroundColor = RGB(48, 46, 58);
-    [self setupUI];
-    [self.nextButton addTarget:self action:@selector(btnClickAction) forControlEvents:UIControlEventTouchUpInside];
     
+    [self setupUI];
+    self.view.backgroundColor = RGB(48, 46, 58);
+    UITapGestureRecognizer *shoukuan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(btnClickAction)];
+    [self.nextImageview addGestureRecognizer:shoukuan];
 }
 
 -(void)setupUI{
@@ -39,13 +41,12 @@
     self.snLabel.text = [self.dict safeStringForKey:@"sn_code"];
     self.transfersTimeLabel.text = [self.dict safeStringForKey:@"equipment_time"];
     self.machinesCountLabel.text =[NSString stringWithFormat:@"%@",[self.dict safeNumberForKey:@"equipment_num"]];
-    [self.nextButton setTitle:@"已收款" forState:UIControlStateNormal];
     if ([self.dict safeIntForKey:@"is_type"] ==1) {
-        self.nextButton.enabled =NO;
-        self.nextButton.backgroundColor =RGB(125, 125, 125);
+        self.nextImageview.userInteractionEnabled =NO;
+         self.nextImageview.image = [UIImage imageNamed:@"yishouk_2"];
     }else {
-        self.nextButton.enabled =YES;
-        self.nextButton.backgroundColor =RGB(245, 180, 6);
+        self.nextImageview.userInteractionEnabled =YES;
+        self.nextImageview.image = [UIImage imageNamed:@"yishouk_1"];
     }
 }
 -(void)btnClickAction{
@@ -54,8 +55,8 @@
         [SVProgressHUD dismiss];
         if (status) {
             [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"]];
-            self.nextButton.enabled =NO;
-             self.nextButton.backgroundColor =RGB(125, 125, 125);
+            self.nextImageview.userInteractionEnabled =NO;
+            [self.nextImageview setImage:[UIImage imageNamed:@"yishouk_2"]];
         }else{
              [AlertHelper showAlertWithTitle:error];
         }

@@ -28,12 +28,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看详情&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBu-NU-OXz">
-                                <rect key="frame" x="357.5" y="16" width="75.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提现金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyo-ik-vHM">
                                 <rect key="frame" x="194" y="51.5" width="61.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -107,6 +101,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xianqiu_1" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-bD-ZAe">
+                                <rect key="frame" x="357" y="15" width="76" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="bFZ-DM-xIl"/>
+                                    <constraint firstAttribute="width" constant="76" id="u3U-zJ-7Yz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -116,9 +117,11 @@
                             <constraint firstItem="MDt-Vp-zZm" firstAttribute="leading" secondItem="Gba-Cy-35X" secondAttribute="leading" constant="16" id="MgZ-25-l2q"/>
                             <constraint firstItem="hrT-Rt-5Uz" firstAttribute="top" secondItem="ysS-8P-fl9" secondAttribute="bottom" constant="8" id="Nri-rl-MFP"/>
                             <constraint firstItem="Gba-Cy-35X" firstAttribute="trailing" secondItem="hrT-Rt-5Uz" secondAttribute="trailing" constant="16" id="Rj2-Gr-Uvc"/>
+                            <constraint firstItem="xf5-bD-ZAe" firstAttribute="top" secondItem="Gba-Cy-35X" secondAttribute="top" constant="15" id="XJd-xq-nni"/>
                             <constraint firstItem="iJu-yW-Yhu" firstAttribute="top" secondItem="hrT-Rt-5Uz" secondAttribute="bottom" constant="8" id="aTv-SJ-deh"/>
                             <constraint firstItem="Gba-Cy-35X" firstAttribute="trailing" secondItem="ysS-8P-fl9" secondAttribute="trailing" constant="16" id="cIp-pn-UsZ"/>
                             <constraint firstItem="amF-4c-txF" firstAttribute="leading" secondItem="Gba-Cy-35X" secondAttribute="leading" constant="16" id="d1x-hJ-A6U"/>
+                            <constraint firstItem="Gba-Cy-35X" firstAttribute="trailing" secondItem="xf5-bD-ZAe" secondAttribute="trailing" constant="16" id="d56-uv-gyS"/>
                             <constraint firstItem="amF-4c-txF" firstAttribute="top" secondItem="cHz-KB-uKA" secondAttribute="bottom" constant="8" id="da2-Kk-y1T"/>
                             <constraint firstAttribute="trailing" secondItem="cHz-KB-uKA" secondAttribute="trailing" constant="16" id="dfz-UV-Ctr"/>
                             <constraint firstItem="zyo-ik-vHM" firstAttribute="centerX" secondItem="Gba-Cy-35X" secondAttribute="centerX" id="eQo-i4-l9Y"/>
@@ -131,10 +134,8 @@
                             <constraint firstItem="8dh-BA-Erw" firstAttribute="leading" secondItem="Gba-Cy-35X" secondAttribute="leading" constant="16" id="nSF-A1-Jko"/>
                             <constraint firstItem="pC3-h2-JLt" firstAttribute="centerX" secondItem="zyo-ik-vHM" secondAttribute="centerX" id="ndM-Zw-3Mc"/>
                             <constraint firstItem="Gba-Cy-35X" firstAttribute="trailing" secondItem="iJu-yW-Yhu" secondAttribute="trailing" constant="16" id="q17-cA-LXx"/>
-                            <constraint firstItem="UBu-NU-OXz" firstAttribute="top" secondItem="Gba-Cy-35X" secondAttribute="top" constant="16" id="tdE-Za-Sr8"/>
                             <constraint firstItem="pC3-h2-JLt" firstAttribute="top" secondItem="zyo-ik-vHM" secondAttribute="bottom" constant="8" id="uyS-9t-UwW"/>
                             <constraint firstItem="bce-9U-hxH" firstAttribute="top" secondItem="Gba-Cy-35X" secondAttribute="top" constant="16" id="xPU-88-gRF"/>
-                            <constraint firstItem="Gba-Cy-35X" firstAttribute="trailing" secondItem="UBu-NU-OXz" secondAttribute="trailing" constant="16" id="yLV-4F-VZH"/>
                             <constraint firstItem="zyo-ik-vHM" firstAttribute="top" secondItem="bce-9U-hxH" secondAttribute="bottom" constant="16" id="zL0-CH-QXC"/>
                             <constraint firstItem="bce-9U-hxH" firstAttribute="leading" secondItem="Gba-Cy-35X" secondAttribute="leading" constant="16" id="zqG-2X-1YF"/>
                         </constraints>
@@ -161,11 +162,13 @@
                 <outlet property="bankNameLabel" destination="DFN-Co-GzS" id="5mx-rz-Vhy"/>
                 <outlet property="monryCountLabel" destination="pC3-h2-JLt" id="PAe-vV-qig"/>
                 <outlet property="noteLabel" destination="iJu-yW-Yhu" id="Jhw-7F-ZZK"/>
-                <outlet property="timeLabel" destination="UBu-NU-OXz" id="zAI-MO-0Td"/>
                 <outlet property="titleLabel" destination="bce-9U-hxH" id="Hdb-1V-vWU"/>
                 <outlet property="withdRawalTimeLabel" destination="ysS-8P-fl9" id="c5I-tA-wgb"/>
             </connections>
-            <point key="canvasLocation" x="-114" y="-49"/>
+            <point key="canvasLocation" x="-114.40000000000001" y="-49.025487256371818"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="xianqiu_1" width="34.560001373291016" height="8.1599998474121094"/>
+    </resources>
 </document>

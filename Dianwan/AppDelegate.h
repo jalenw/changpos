@@ -16,7 +16,7 @@
 #endif
 #define AppDelegateInstance ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 #define base_url @"http://dev.gdzuanqian.net/index.php/"//AppDelegateInstance.baseUrl.length>0?AppDelegateInstance.baseUrl:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"base_url"]//请求地址
-#define web_url AppDelegateInstance.webUrl.length>0?AppDelegateInstance.webUrl:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"web_url"]//跳转H5页面开头部分
+#define web_url @"http://dev.gdzuanqian.net/dist/index.html#/"//AppDelegateInstance.webUrl.length>0?AppDelegateInstance.webUrl:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"web_url"]//跳转H5页面开头部分
 
 @class User;
 @interface AppDelegate : UIResponder <UIApplicationDelegate,JPUSHRegisterDelegate>

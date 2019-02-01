@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "wdtub.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "wdtub.png",
       "scale" : "2x"
     },
     {

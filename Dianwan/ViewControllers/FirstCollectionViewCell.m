@@ -80,6 +80,8 @@
     PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
     dataSet.sliceSpace = 2.0;
     NSMutableArray *colors = [[NSMutableArray alloc] init];
+    [colors addObject:RGB(253, 210, 88)];
+    [colors addObject:RGB(33, 115, 243)];
     [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
 //    [colors addObjectsFromArray:ChartColorTemplates.joyful];
 //    [colors addObjectsFromArray:ChartColorTemplates.colorful];

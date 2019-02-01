@@ -612,11 +612,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/MyStoreViewController.m"
-            timestampString = "569773347.795851"
+            timestampString = "570702073.979533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-viewWillAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -628,7 +628,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/TabbarController/MainViewController.m"
-            timestampString = "569773347.795928"
+            timestampString = "570687430.347867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -676,7 +676,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.594623"
+            timestampString = "570466436.400206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -756,7 +756,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/MyProfitDetailViewController.m"
-            timestampString = "570113311.906289"
+            timestampString = "570532306.446429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -772,7 +772,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/MyProfitDetailViewController.m"
-            timestampString = "570113311.906405"
+            timestampString = "570532306.446493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -835,7 +835,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/TotalProfitViewController.m"
-            timestampString = "570076375.128899"
+            timestampString = "570706099.036368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -851,7 +851,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/TotalProfitViewController.m"
-            timestampString = "570076375.129333"
+            timestampString = "570706099.0364439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -866,56 +866,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/TeamProfitViewController.m"
-            timestampString = "570113311.906498"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-getData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/TeamProfitViewController.m"
-            timestampString = "570113311.906565"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-getData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/TeamProfitViewController.m"
-            timestampString = "570113311.90662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-getData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.595274"
+            timestampString = "570466436.400484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -931,7 +883,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.595588"
+            timestampString = "570466436.4005539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "210"
@@ -947,7 +899,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.595875"
+            timestampString = "570466436.400612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "212"
@@ -963,7 +915,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.596155"
+            timestampString = "570466436.400669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
@@ -979,7 +931,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.596483"
+            timestampString = "570466436.400725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
@@ -1042,7 +994,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.596771"
+            timestampString = "570466436.400779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "223"
@@ -1105,7 +1057,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.5970531"
+            timestampString = "570466436.4008321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
@@ -1121,7 +1073,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.597331"
+            timestampString = "570466436.400937"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
@@ -1137,7 +1089,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.59761"
+            timestampString = "570466436.401026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
@@ -1153,7 +1105,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.597928"
+            timestampString = "570466436.4010791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "194"
@@ -1169,7 +1121,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.598431"
+            timestampString = "570466436.40113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
@@ -1184,24 +1136,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dianwan/ViewControllers/FirstCollectionViewCell.m"
-            timestampString = "570448359.598972"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-setDict:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/InformationViewController.m"
-            timestampString = "570448359.599035"
+            timestampString = "570466436.401234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -1217,12 +1153,172 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dianwan/ViewControllers/FirstViewController.m"
-            timestampString = "570448359.599089"
+            timestampString = "570466436.401282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/StatisticTotalTableViewCell.m"
+            timestampString = "570706099.0366679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-setPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/StatisticTotalTableViewCell.m"
+            timestampString = "570706099.036719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "-setPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/StatisticTotalTableViewCell.m"
+            timestampString = "570706099.036765"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-setPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/MerchantViewController.m"
+            timestampString = "570620334.771315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/NoActivedListViewController.m"
+            timestampString = "570682598.864359"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-refreshData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/ActivedStoreViewController.m"
+            timestampString = "570620361.780742"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-textFieldShouldReturn:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/ApplyApproveViewController.m"
+            timestampString = "570702073.98005"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/ModifyRateAndPriceViewController.m"
+            timestampString = "570702073.980113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-partnerAct:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/ActivedViewController.m"
+            timestampString = "570705637.352365"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dianwan/ViewControllers/ToolTableViewCell.m"
+            timestampString = "570706099.0369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-setDict:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

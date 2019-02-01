@@ -31,5 +31,9 @@
     if ([dict safeStringForKey:@"actication_time"].length>0) {
         self.timeLb.text = [NSString stringWithFormat:@"激活时间:%@",[dict safeStringForKey:@"actication_time"]];
     }
+    else
+    {
+        self.timeLb.text = @"";
+    }
 }
 @end

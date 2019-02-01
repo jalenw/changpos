@@ -59,7 +59,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="删除输入框" image="yuanjian_1">
+                    <state key="normal" title="删除输入框" image="减号">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -72,7 +72,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <inset key="titleEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="增加SN号与终端号录入" image="yuanjia_1">
+                    <state key="normal" title="增加SN号与终端号录入" image="加号">
                         <color key="titleColor" red="1" green="0.61960784310000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
@@ -151,7 +151,7 @@
         </view>
     </objects>
     <resources>
-        <image name="yuanjia_1" width="21" height="21"/>
-        <image name="yuanjian_1" width="21" height="21"/>
+        <image name="减号" width="21" height="21"/>
+        <image name="加号" width="21" height="21"/>
     </resources>
 </document>

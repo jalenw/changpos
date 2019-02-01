@@ -24,6 +24,8 @@
     [super viewDidLoad];
     if (self.others_member_id) {
         self.title = @"伙伴的库存";
+        self.bt.hidden = YES;
+        self.tableView.frame = ScreenBounds;
     }
     else
         self.title = @"我的机具";
@@ -57,6 +59,9 @@
 }
 - (IBAction)confirmAct:(UIButton *)sender {
     AllocateViewController *vc = [[AllocateViewController alloc]init];
+//    if (self.others_member_id) {
+//        vc.others_member_id = self.others_member_id;
+//    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 

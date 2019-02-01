@@ -8,6 +8,7 @@
 
 #import "MerchantViewController.h"
 #import "MerchantTableViewCell.h"
+#import "RoleViewController.h"
 @interface MerchantViewController ()
 {
     NSMutableArray *dataList;
@@ -96,6 +97,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = dataList[indexPath.row];
+    NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
+    if ([dict safeStringForKey:@"member_id"]) {
+        [param setValue:[dict safeStringForKey:@"member_id"] forKey:@"others_member_id"];
+    }
+    [param setValue:[dict safeStringForKey:@"goods_id"] forKey:@"goods_id"];
+    [SVProgressHUD show];
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/myProductRateInfo" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
+        if (status) {
+            RoleViewController *vc = [[RoleViewController alloc]init];
+            vc.dict = [data safeDictionaryForKey:@"result"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            [AlertHelper showAlertWithTitle:error];
+        }
+    }];
 }
 
 -(void)dealloc

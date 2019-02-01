@@ -29,7 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *modifyTf;
 @property (weak, nonatomic) IBOutlet UILabel *modifyTitleLb;
 
-
+@property (weak, nonatomic) IBOutlet UITextField *partnerTf;
+- (IBAction)partnerAct:(UIButton *)sender;
 - (IBAction)editAct:(UIButton *)sender;
 - (IBAction)productAct:(UIButton *)sender;
 - (IBAction)snAct:(UIButton *)sender;

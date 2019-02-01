@@ -97,6 +97,8 @@
             PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
             dataSet.sliceSpace = 2.0;
             NSMutableArray *colors = [[NSMutableArray alloc] init];
+            [colors addObject:RGB(253, 210, 88)];
+            [colors addObject:RGB(33, 115, 243)];
             [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
             dataSet.colors = colors;
             dataSet.valueLinePart1OffsetPercentage = 0.8;
@@ -208,7 +210,7 @@
         dateFormatter.dateFormat=@"yyyy-MM-dd";
         search_date_end =[dateFormatter stringFromDate:date];
         NSDateComponents *components = [[NSDateComponents alloc]init];
-        components.day = -7;
+        components.day = -6;
         NSDate *startDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:date options:0];
         search_date_star=[dateFormatter stringFromDate:startDate];
         

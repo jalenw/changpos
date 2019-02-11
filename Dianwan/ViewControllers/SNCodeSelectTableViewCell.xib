@@ -26,13 +26,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dage" translatesAutoresizingMaskIntoConstraints="NO" id="Ack-59-SIs">
-                        <rect key="frame" x="247" y="0.0" width="73" height="44"/>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dage" translatesAutoresizingMaskIntoConstraints="NO" id="Ack-59-SIs">
+                        <rect key="frame" x="274" y="0.0" width="46" height="44"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAm-2s-0W0">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="img" destination="Ack-59-SIs" id="XHb-KZ-ghu"/>
+                <outlet property="name" destination="qYs-Ks-FzE" id="rd3-I0-mgJ"/>
+            </connections>
             <point key="canvasLocation" x="132.80000000000001" y="124.13793103448276"/>
         </tableViewCell>
     </objects>

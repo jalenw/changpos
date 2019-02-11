@@ -9,6 +9,7 @@
 #import "AllocateViewController.h"
 #import "LZHAreaPickerView.h"
 #import "FriendsViewController.h"
+#import "SelectSNCodeViewController.h"
 @interface AllocateViewController ()
 {
     NSString *goods_id;
@@ -70,14 +71,23 @@
         if (status) {
             NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"data"];
             if (array.count>0) {
-                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
-                pickerView.array = array;
-                pickerView.name = @"sn_code";
-                [pickerView setBlock:^(NSDictionary *dict) {
-                    self.snTf.text = [dict safeStringForKey:@"sn_code"];
-                    sn_code = [NSString stringWithFormat:@"%lld",[dict safeLongLongForKey:@"sn_code"]];
+                NSMutableArray *sns = [[NSMutableArray alloc]initWithArray:[sn_code componentsSeparatedByString:@","]];
+                SelectSNCodeViewController *vc = [[SelectSNCodeViewController alloc]init];
+                [vc setBlock:^(NSString * str) {
+                    self.snTf.text = str;
+                    sn_code = str;
                 }];
-                [pickerView showPicker];
+                vc.array = array;
+                vc.data = sns;
+                [self.navigationController pushViewController:vc animated:YES];
+//                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
+//                pickerView.array = array;
+//                pickerView.name = @"sn_code";
+//                [pickerView setBlock:^(NSDictionary *dict) {
+//                    self.snTf.text = [dict safeStringForKey:@"sn_code"];
+//                    sn_code = [NSString stringWithFormat:@"%lld",[dict safeLongLongForKey:@"sn_code"]];
+//                }];
+//                [pickerView showPicker];
             }
             else
             {

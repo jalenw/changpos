@@ -58,7 +58,7 @@
             [mutStr appendString:[NSString stringWithFormat:@"%@,",str]];
         }
     }
-    if (array.count>1&&[mutStr hasPrefix:@","]) {
+    if (array.count>1&&[mutStr containsString:@","]) {
         [mutStr replaceCharactersInRange:NSMakeRange(mutStr.length-1, 1) withString:@""];
     }
     [SVProgressHUD show];

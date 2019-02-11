@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PartnersTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (strong,nonatomic) NSDictionary *dict;
 @end
 

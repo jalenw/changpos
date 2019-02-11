@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController
-
 - (UIButton*)setRightBarButtonWithTitle:(NSString*)title;
 - (UIButton*)setRightBarButtonWithImage:(UIImage*)image;
 - (UIButton*)setLeftBarButtonWithImage:(UIImage*)image;

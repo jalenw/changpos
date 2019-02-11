@@ -65,9 +65,9 @@ didFinishLaunchingWithOptions:launchOptions
     [[UINavigationBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:RGB(253, 210, 88)}];
-
-//    [[LocationService sharedInstance]startUpdateLocation];//启动定位
+//    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:RGB(253, 210, 88)}];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
+    //    [[LocationService sharedInstance]startUpdateLocation];//启动定位
     
     [self initSharePlatform];
     

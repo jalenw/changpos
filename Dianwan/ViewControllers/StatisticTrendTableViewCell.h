@@ -16,6 +16,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface StatisticTrendTableViewCell : UITableViewCell<HooDatePickerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UIButton *bt;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (nonatomic, strong) NSIndexPath *path;

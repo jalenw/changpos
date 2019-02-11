@@ -23,7 +23,10 @@
     [super viewDidLoad];
     self.title = @"费率调整";
     [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 531)];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.bts enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj setTitleColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]] forState:UIControlStateNormal];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated

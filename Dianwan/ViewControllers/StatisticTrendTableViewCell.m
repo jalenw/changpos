@@ -82,13 +82,13 @@
 {
     _path = path;
     if (path.row==0) {
-        self.name.text = @"交易量";
+        self.img.image = [UIImage imageNamed:@"交易量"];
     }
     if (path.row==1) {
-        self.name.text = @"激活量";
+        self.img.image = [UIImage imageNamed:@"激活量"];
     }
     if (path.row==2) {
-        self.name.text = @"总收益";
+        self.img.image = [UIImage imageNamed:@"总收益"];
     }
     
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];

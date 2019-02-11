@@ -23,7 +23,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+//    self.bgView.borderColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

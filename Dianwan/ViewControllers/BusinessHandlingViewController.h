@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BusinessHandlingViewController : BaseViewController
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *bts;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)menuAct:(UIButton *)sender;
 

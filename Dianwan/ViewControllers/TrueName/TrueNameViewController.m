@@ -19,6 +19,7 @@
     [super viewDidLoad];
    self.title = @"实名认证";
     UIScrollView *scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    
     [scrollview addSubview:_truenameview];
     
     scrollview.contentSize = CGSizeMake(ScreenWidth,_truenameview.height+20);

@@ -54,8 +54,8 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5J-xs-2BE">
-                            <rect key="frame" x="162.5" y="63" width="50" height="25.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5J-xs-2BE">
+                            <rect key="frame" x="187.5" y="63" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -76,15 +76,27 @@
                         <constraint firstAttribute="bottom" secondItem="xKP-99-Dm2" secondAttribute="bottom" id="sJV-JW-U6N"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="NlH-kz-NuY">
+                    <rect key="frame" x="0.0" y="180" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nEQ-fX-Jby"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="NlH-kz-NuY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5g6-L6-Ppo"/>
+                <constraint firstItem="NlH-kz-NuY" firstAttribute="top" secondItem="1g0-oY-Pda" secondAttribute="bottom" id="DGV-yk-nul"/>
                 <constraint firstItem="1g0-oY-Pda" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YAx-i0-AYZ"/>
+                <constraint firstAttribute="trailing" secondItem="NlH-kz-NuY" secondAttribute="trailing" id="aFD-io-5PD"/>
                 <constraint firstItem="1g0-oY-Pda" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="dob-uO-gQu"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="1g0-oY-Pda" secondAttribute="trailing" id="gmp-B6-ckp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="46" y="36"/>
+            <point key="canvasLocation" x="45.600000000000001" y="35.532233883058474"/>
         </view>
     </objects>
+    <resources>
+        <image name="line" width="747" height="1"/>
+    </resources>
 </document>

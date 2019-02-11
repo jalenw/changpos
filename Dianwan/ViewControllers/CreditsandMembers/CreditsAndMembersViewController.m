@@ -116,7 +116,7 @@
     self.scrollView.contentSize = CGSizeMake(ScreenWidth*titleArray.count, 0);
     self.topHeaderView.top = 0;
     self.topHeaderView.backgroundColor = [UIColor clearColor];
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 160, ScreenWidth, 44)];
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 163, ScreenWidth, 44)];
     [topView addSubview:self.topHeaderView];
     [self.view addSubview:topView];}
 

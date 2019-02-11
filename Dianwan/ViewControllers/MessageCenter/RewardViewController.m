@@ -72,6 +72,7 @@
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.row];

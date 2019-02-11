@@ -9,6 +9,7 @@
 #import "RankingParentViewController.h"
 #import "RunningWaterViewController.h"
 #import "ActivationListViewController.h"
+#import "ListDescriptionViewController.h"
 
 @interface RankingParentViewController ()
 @end
@@ -51,7 +52,8 @@
 }
 
 -(void)rightbarButtonDidTap:(UIButton *)button{
-  
+    ListDescriptionViewController *listDescription = [[ListDescriptionViewController alloc]init];
+    [self.navigationController pushViewController:listDescription animated:YES];
 }
 
 - (void)setupControllers{

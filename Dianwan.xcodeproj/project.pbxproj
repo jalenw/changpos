@@ -59,6 +59,8 @@
 		2FA7F38821F0868100C7DB50 /* TransfresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38621F0868100C7DB50 /* TransfresTableViewCell.xib */; };
 		2FA7F38C21F0930500C7DB50 /* TransfersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */; };
 		2FA7F38D21F0930500C7DB50 /* TransfersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */; };
+		2FB187B6221140840005F967 /* ListDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB187B4221140840005F967 /* ListDescriptionViewController.m */; };
+		2FB187B7221140840005F967 /* ListDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB187B5221140840005F967 /* ListDescriptionViewController.xib */; };
 		2FB8362221EEDBE00028A376 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362021EEDBE00028A376 /* MessageCenterViewController.m */; };
 		2FB8362321EEDBE00028A376 /* MessageCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FB8362121EEDBE00028A376 /* MessageCenterViewController.xib */; };
 		2FB8362721EEDCA40028A376 /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB8362521EEDCA40028A376 /* WithdrawalViewController.m */; };
@@ -733,6 +735,9 @@
 		2FA7F38921F0930500C7DB50 /* TransfersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransfersViewController.h; sourceTree = "<group>"; };
 		2FA7F38A21F0930500C7DB50 /* TransfersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransfersViewController.m; sourceTree = "<group>"; };
 		2FA7F38B21F0930500C7DB50 /* TransfersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransfersViewController.xib; sourceTree = "<group>"; };
+		2FB187B3221140840005F967 /* ListDescriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListDescriptionViewController.h; sourceTree = "<group>"; };
+		2FB187B4221140840005F967 /* ListDescriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListDescriptionViewController.m; sourceTree = "<group>"; };
+		2FB187B5221140840005F967 /* ListDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDescriptionViewController.xib; sourceTree = "<group>"; };
 		2FB8361F21EEDBE00028A376 /* MessageCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterViewController.h; sourceTree = "<group>"; };
 		2FB8362021EEDBE00028A376 /* MessageCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterViewController.m; sourceTree = "<group>"; };
 		2FB8362121EEDBE00028A376 /* MessageCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCenterViewController.xib; sourceTree = "<group>"; };
@@ -1830,6 +1835,9 @@
 				2F02FA0221F0A3D9001182E7 /* RunningWaterViewController.h */,
 				2F02FA0321F0A3D9001182E7 /* RunningWaterViewController.m */,
 				2F02FA0421F0A3D9001182E7 /* RunningWaterViewController.xib */,
+				2FB187B3221140840005F967 /* ListDescriptionViewController.h */,
+				2FB187B4221140840005F967 /* ListDescriptionViewController.m */,
+				2FB187B5221140840005F967 /* ListDescriptionViewController.xib */,
 			);
 			name = RankingList;
 			sourceTree = "<group>";
@@ -3807,8 +3815,8 @@
 			isa = PBXGroup;
 			children = (
 				CDC88E3A1D8691E000CE03CE /* Dianwan */,
-				CDC88E391D8691DF00CE03CE /* Products */,
 				CDED11621DB07BA800BC81F7 /* Frameworks */,
+				CDC88E391D8691DF00CE03CE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -4160,6 +4168,7 @@
 				8E874AB82203F96F00D15435 /* ApplyCheckViewController.xib in Resources */,
 				8E4BACBC21F8618B003F94C5 /* MyProfitDetailViewController.xib in Resources */,
 				8E591B2921F082B100279630 /* OweDeviceTableViewCell.xib in Resources */,
+				2FB187B7221140840005F967 /* ListDescriptionViewController.xib in Resources */,
 				8EB4E52721201FAE00BC563B /* chatBar_recordSelected.png in Resources */,
 				8EB4E4F721201FAE00BC563B /* VoiceSearchFeedback018.png in Resources */,
 				8EB4E51721201FAE00BC563B /* call_out.png in Resources */,
@@ -4480,6 +4489,7 @@
 				8EB4E3FA212009AD00BC563B /* UIImageView+EMHighlightedWebCache.m in Sources */,
 				2FB8362C21EEDCC20028A376 /* RewardViewController.m in Sources */,
 				8EEF4BC7211D8CB500DE1E36 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
+				2FB187B6221140840005F967 /* ListDescriptionViewController.m in Sources */,
 				CDC890761D8698C000CE03CE /* Tooles.m in Sources */,
 				8EB4E3EB212009AD00BC563B /* EMSDWebImageDownloader.m in Sources */,
 				8E412B881F23572100A40CE6 /* RegViewController.m in Sources */,

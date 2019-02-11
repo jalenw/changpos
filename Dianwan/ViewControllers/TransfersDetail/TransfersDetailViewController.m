@@ -39,6 +39,11 @@
         [self refreshData];
     }];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    page = 1;
+    [self refreshData];
+}
 
 
 -(void)refreshData
@@ -79,9 +84,11 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellIdentifier = @"TransfresTableViewCell";
     TransfresTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+   
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        cell.selectionStyle =UITableViewCellSelectionStyleNone;
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.section];
@@ -116,10 +123,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     TransfersViewController *transfers = [[TransfersViewController alloc]init];
     transfers.dict = dataList[indexPath.section];
     [self.navigationController pushViewController:transfers animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
 }
 
 -(void)dealloc

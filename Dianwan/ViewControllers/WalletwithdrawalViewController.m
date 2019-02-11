@@ -40,6 +40,7 @@
     [super viewDidLoad];
     [self getFormalities];
     self.title = @"提现";
+  
     self.view.backgroundColor = RGB(48, 46, 58);
     [self getCarddata];
     [self.amountTextfiled addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
@@ -52,21 +53,22 @@
     self.pwview.pwInputView.tag=1111;//用于标识密码输入完毕自动触发提现请求
     self.passInputWordView.frame =self.view.bounds;
     self.passInputWordView.hidden = YES;
+//      self.passInputWordView.frame=[UIScreen mainScreen].bounds;// self.view.frame;
     [self.view addSubview:self.passInputWordView];
 }
 
 #pragma mark -给每个cell中的textfield添加事件，只要值改变就调用此函数
 -(void)changedTextField:(UITextField *)textField
 {
-    if([textField.text integerValue]>1000){
-        [AlertHelper showAlertWithTitle:@"提现金额最高不可超过1000"];
-        
-        return;
-    }
+//    if([textField.text integerValue]>1000){
+//        [AlertHelper showAlertWithTitle:@"提现金额最高不可超过1000"];
+//
+//        return;
+//    }
     if(singlaFormalities >0){
-        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥xx税费，手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
+        self.yueLabel.text = [NSString stringWithFormat:@"手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
     }else{
-        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥xx税费，实际到账金额￥%f",[textField.text floatValue]];
+        self.yueLabel.text = [NSString stringWithFormat:@"实际到账金额￥%f",[textField.text floatValue]];
     }
     if (self.amountTextfiled.text.length>0) {
         self.alltixianBtn.hidden =YES;

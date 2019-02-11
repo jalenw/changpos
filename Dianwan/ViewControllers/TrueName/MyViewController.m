@@ -53,7 +53,12 @@
     
     
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"设置"]];
-    self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
+    if (IS_IPHONE_Xr) {
+         self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-84-49) style:UITableViewStylePlain];
+    }else{
+         self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
+    }
+   
     [self.view addSubview:self.mainTableView];
     self.view.backgroundColor = RGB(48, 46, 58);
     self.mainTableView.backgroundColor = RGB(48, 46, 58);
@@ -115,11 +120,20 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.row == 0){
-        return ScreenWidth *115/375;
+    if(IS_IPHONE_Xr){
+        if(indexPath.row == 0){
+            return ScreenWidth *115/375;
+        }else{
+            return 62;
+        }
     }else{
-        return 52;
+        if(indexPath.row == 0){
+            return ScreenWidth *115/375;
+        }else{
+            return 52;
+        }
     }
+   
     
 }
 

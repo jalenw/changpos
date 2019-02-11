@@ -8,6 +8,7 @@
 
 #import "ModifyRateAndPriceViewController.h"
 #import "LZHAreaPickerView.h"
+#import "FriendsViewController.h"
 @interface ModifyRateAndPriceViewController ()<UITextViewDelegate>
 {
     NSString *cloud_merchant_rate;
@@ -34,6 +35,7 @@
         self.snView.hidden = NO;
         self.productView.hidden = YES;
         self.rewardView.hidden = YES;
+        self.payView.top = self.snView.bottom;
         self.payView.hidden = NO;
     }else if (self.type==1) {
         self.title = @"申请修改结算底价";
@@ -57,14 +59,21 @@
         if (status) {
             NSArray *array = [data safeArrayForKey:@"result"];
             if (array.count>0) {
-                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
-                pickerView.array = array;
-                pickerView.name = @"member_name";
-                [pickerView setBlock:^(NSDictionary *dict) {
+                FriendsViewController *vc = [[FriendsViewController alloc]init];
+                [vc setBlock:^(NSDictionary *dict) {
                     self.partnerTf.text = [dict safeStringForKey:@"member_name"];
                     others_member_id = [dict safeStringForKey:@"member_id"];
                 }];
-                [pickerView showPicker];
+                vc.data = [array mutableCopy];
+                [self.navigationController pushViewController:vc animated:YES];
+//                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
+//                pickerView.array = array;
+//                pickerView.name = @"member_name";
+//                [pickerView setBlock:^(NSDictionary *dict) {
+//                    self.partnerTf.text = [dict safeStringForKey:@"member_name"];
+//                    others_member_id = [dict safeStringForKey:@"member_id"];
+//                }];
+//                [pickerView showPicker];
             }
             else
             {

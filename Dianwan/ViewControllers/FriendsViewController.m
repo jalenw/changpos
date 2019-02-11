@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"群成员";
+    self.title = @"请选择";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -57,5 +57,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = [self.data objectAtIndex:indexPath.row];
+    self.block(dict);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

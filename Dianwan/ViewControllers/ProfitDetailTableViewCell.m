@@ -25,6 +25,13 @@
 {
     _dict = dict;
     self.name.text = [dict safeStringForKey:@"lg_type"];
+    if ([[dict safeStringForKey:@"lg_av_amount"] containsString:@"+"]) {
+        self.price.textColor = [UIColor redColor];
+    }
+    else
+    {
+        self.price.textColor = [UIColor greenColor];
+    }
     self.price.text = [dict safeStringForKey:@"lg_av_amount"];
     self.desc.text = [dict safeStringForKey:@"lg_desc"];
     [self.desc sizeToFit];

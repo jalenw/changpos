@@ -54,6 +54,7 @@
     
     [self setRightBarButtonWithImage:[UIImage imageNamed:@"设置"]];
     self.mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, ScreenHeight-64-49) style:UITableViewStylePlain];
+    self.mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.mainTableView];
     self.view.backgroundColor = RGB(48, 46, 58);
     self.mainTableView.backgroundColor = RGB(48, 46, 58);
@@ -104,6 +105,9 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MineCell];
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MineCell];
+            UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 51, ScreenWidth, 1)];
+            line.backgroundColor = [UIColor lightGrayColor];
+            [cell.contentView addSubview:line];
         }
         cell.textLabel.font = [UIFont systemFontOfSize:15];
         cell.textLabel.text = self.tableViewArr[indexPath.row-1];

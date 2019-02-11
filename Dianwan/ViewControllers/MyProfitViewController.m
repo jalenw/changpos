@@ -139,6 +139,7 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, marginTop, ScreenWidth, 44)];
     [headerView addSubview:self.topHeaderView];
     [self.view addSubview:headerView];
+    self.topView.width = ScreenWidth;
     [self.view addSubview:self.topView];
 }
 

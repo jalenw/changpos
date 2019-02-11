@@ -95,6 +95,7 @@
 		2FFBAE9421EC4BAA00C9EBAE /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE8321EC4BAA00C9EBAE /* IQToolbar.m */; };
 		2FFBAE9521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE8521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m */; };
 		2FFBAE9621EC4BAA00C9EBAE /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBAE8721EC4BAA00C9EBAE /* IQKeyboardManager.bundle */; };
+		8E0216EB22110AF4000DD2F8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD06664B1E8CD6EB00CCD49A /* libstdc++.6.0.9.tbd */; };
 		8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */; };
 		8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */; };
 		8E412B861F23572100A40CE6 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7F1F23572100A40CE6 /* ForgetViewController.m */; };
@@ -106,7 +107,6 @@
 		8E42034421FB0C37001994C5 /* CustomValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42034321FB0C37001994C5 /* CustomValueFormatter.m */; };
 		8E42A8BC1F26DADB0026ED07 /* CLLocation+Sino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8B91F26DADB0026ED07 /* CLLocation+Sino.m */; };
 		8E42A8BD1F26DADB0026ED07 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E42A8BB1F26DADB0026ED07 /* LocationService.m */; };
-		8E4664E52169BBCB0022DF94 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E4664E42169BBCB0022DF94 /* libstdc++.6.0.9.tbd */; };
 		8E4664EA2169BF040022DF94 /* NavigationMapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664E72169BF040022DF94 /* NavigationMapViewViewController.m */; };
 		8E4664EB2169BF040022DF94 /* NavigationMapViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4664E82169BF040022DF94 /* NavigationMapViewViewController.xib */; };
 		8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4664EC2169BFD70022DF94 /* MKAnnotation.m */; };
@@ -1688,8 +1688,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0216EB22110AF4000DD2F8 /* libstdc++.6.0.9.tbd in Frameworks */,
 				2FA24E6C21EC918000565459 /* libEaseMobClientSDK.a in Frameworks */,
-				8E4664E52169BBCB0022DF94 /* libstdc++.6.0.9.tbd in Frameworks */,
 				8EEF4C3C211D8DDE00DE1E36 /* CFNetwork.framework in Frameworks */,
 				8EEF4C3A211D8DC700DE1E36 /* MobileCoreServices.framework in Frameworks */,
 				8ED176F41F0B45AE00105584 /* libicucore.tbd in Frameworks */,

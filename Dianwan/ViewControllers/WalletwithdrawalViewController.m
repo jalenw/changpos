@@ -51,9 +51,9 @@
     [self.pwview.pwInputView.textField resignFirstResponder];
     self.passInputWordView.center = CGPointMake(ScreenWidth/2, ScreenHeight/2);
     self.pwview.pwInputView.tag=1111;//用于标识密码输入完毕自动触发提现请求
-    self.passInputWordView.frame =self.view.bounds;
+//    self.passInputWordView.frame =self.view.bounds;
     self.passInputWordView.hidden = YES;
-//      self.passInputWordView.frame=[UIScreen mainScreen].bounds;// self.view.frame;
+      self.passInputWordView.frame=[UIScreen mainScreen].bounds;// self.view.frame;
     [self.view addSubview:self.passInputWordView];
 }
 
@@ -65,18 +65,18 @@
 //
 //        return;
 //    }
-    if(singlaFormalities >0){
-        self.yueLabel.text = [NSString stringWithFormat:@"手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
-    }else{
-        self.yueLabel.text = [NSString stringWithFormat:@"实际到账金额￥%f",[textField.text floatValue]];
-    }
-    if (self.amountTextfiled.text.length>0) {
-        self.alltixianBtn.hidden =YES;
-    }else{
-        self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
-        self.alltixianBtn.hidden =NO;
-    }
-    
+//    if(singlaFormalities >0){
+//        self.yueLabel.text = [NSString stringWithFormat:@"手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
+//    }else{
+//        self.yueLabel.text = [NSString stringWithFormat:@"实际到账金额￥%f",[textField.text floatValue]];
+//    }
+//    if (self.amountTextfiled.text.length>0) {
+//        self.alltixianBtn.hidden =YES;
+//    }else{
+//        self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
+//        self.alltixianBtn.hidden =NO;
+//    }
+//    
 }
 
 
@@ -125,6 +125,7 @@
 
 - (IBAction)hiddenAction:(UIButton *)sender {
     [self.pwview.pwInputView clearUpPassword];//取消键盘第一响应
+    [self.pwview.pwInputView.textField resignFirstResponder];
     self.passInputWordView.hidden=YES;
     
 }
@@ -159,7 +160,7 @@
     }
     
     self.passInputWordView.hidden =NO;
-    self.moneyNumberLabel.text =self.amountTextfiled.text;
+    self.moneyNumberLabel.text =[NSString stringWithFormat:@"¥ %@",self.amountTextfiled.text];
     [self.pwview.pwInputView.textField becomeFirstResponder];
     self.pwview.pwInputView.el_topToBottom(self.pwview.stringLabel,20).el_rightToSuperView(14).el_leftToSuperView(14).el_toHeight(45);
     

@@ -87,12 +87,13 @@
 
 
 -(void)addsubviews{
-    self.BindSelectview.frame = self.view.bounds;
+    self.BindSelectview.frame = [UIScreen mainScreen].bounds;//self.view.bounds;
     self.BindSelectview.hidden =YES;
     [self.view addSubview:self.BindSelectview];
-    self.cancleSelectview.frame = self.view.bounds;
+    self.cancleSelectview.frame = [UIScreen mainScreen].bounds;//self.view.bounds;
     self.cancleSelectview.hidden =YES;
-    [self.view addSubview:self.cancleSelectview]; self.bindSuccview.frame = self.view.bounds;
+    [self.view addSubview:self.cancleSelectview];
+    self.bindSuccview.frame =[UIScreen mainScreen].bounds;// self.view.bounds;
     self.bindSuccview.hidden =YES;
     [self.view addSubview:self.bindSuccview];
     

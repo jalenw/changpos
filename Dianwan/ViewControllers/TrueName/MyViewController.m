@@ -110,7 +110,13 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MineCell];
         if (!cell) {
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MineCell];
-            UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 51, ScreenWidth, 1)];
+            UIView *line;
+            if(IS_IPHONE_Xr){
+                 line = [[UIView alloc]initWithFrame:CGRectMake(0, 61, ScreenWidth, 1)];
+            }else{
+                 line = [[UIView alloc]initWithFrame:CGRectMake(0, 51, ScreenWidth, 1)];
+            }
+           
             line.backgroundColor = [UIColor lightGrayColor];
             [cell.contentView addSubview:line];
         }

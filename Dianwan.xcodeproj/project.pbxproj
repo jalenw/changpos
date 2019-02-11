@@ -96,6 +96,10 @@
 		2FFBAE9521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBAE8521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m */; };
 		2FFBAE9621EC4BAA00C9EBAE /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FFBAE8721EC4BAA00C9EBAE /* IQKeyboardManager.bundle */; };
 		8E0216EB22110AF4000DD2F8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD06664B1E8CD6EB00CCD49A /* libstdc++.6.0.9.tbd */; };
+		8E1C0FCC2211511800EFC778 /* SelectSNCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C0FCA2211511800EFC778 /* SelectSNCodeViewController.m */; };
+		8E1C0FCD2211511800EFC778 /* SelectSNCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C0FCB2211511800EFC778 /* SelectSNCodeViewController.xib */; };
+		8E1C0FD2221152F800EFC778 /* SNCodeSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C0FD0221152F800EFC778 /* SNCodeSelectTableViewCell.m */; };
+		8E1C0FD3221152F800EFC778 /* SNCodeSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C0FD1221152F800EFC778 /* SNCodeSelectTableViewCell.xib */; };
 		8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */; };
 		8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */; };
 		8E412B861F23572100A40CE6 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7F1F23572100A40CE6 /* ForgetViewController.m */; };
@@ -792,6 +796,12 @@
 		2FFBAE8421EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		2FFBAE8521EC4BAA00C9EBAE /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		2FFBAE8721EC4BAA00C9EBAE /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		8E1C0FC92211511800EFC778 /* SelectSNCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectSNCodeViewController.h; sourceTree = "<group>"; };
+		8E1C0FCA2211511800EFC778 /* SelectSNCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectSNCodeViewController.m; sourceTree = "<group>"; };
+		8E1C0FCB2211511800EFC778 /* SelectSNCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSNCodeViewController.xib; sourceTree = "<group>"; };
+		8E1C0FCF221152F800EFC778 /* SNCodeSelectTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNCodeSelectTableViewCell.h; sourceTree = "<group>"; };
+		8E1C0FD0221152F800EFC778 /* SNCodeSelectTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNCodeSelectTableViewCell.m; sourceTree = "<group>"; };
+		8E1C0FD1221152F800EFC778 /* SNCodeSelectTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNCodeSelectTableViewCell.xib; sourceTree = "<group>"; };
 		8E412B7B1F23572100A40CE6 /* CodeLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeLoginViewController.h; sourceTree = "<group>"; };
 		8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeLoginViewController.m; sourceTree = "<group>"; };
 		8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CodeLoginViewController.xib; sourceTree = "<group>"; };
@@ -2077,6 +2087,9 @@
 				8EF3AF9521F5FFDB0003FB35 /* RoleViewController.h */,
 				8EF3AF9621F5FFDB0003FB35 /* RoleViewController.m */,
 				8EF3AF9721F5FFDB0003FB35 /* RoleViewController.xib */,
+				8E1C0FC92211511800EFC778 /* SelectSNCodeViewController.h */,
+				8E1C0FCA2211511800EFC778 /* SelectSNCodeViewController.m */,
+				8E1C0FCB2211511800EFC778 /* SelectSNCodeViewController.xib */,
 			);
 			name = MyStore;
 			sourceTree = "<group>";
@@ -2420,6 +2433,9 @@
 				8E874AC42203FC7900D15435 /* ApplyApproveTableViewCell.h */,
 				8E874AC52203FC7900D15435 /* ApplyApproveTableViewCell.m */,
 				8E874AC62203FC7900D15435 /* ApplyApproveTableViewCell.xib */,
+				8E1C0FCF221152F800EFC778 /* SNCodeSelectTableViewCell.h */,
+				8E1C0FD0221152F800EFC778 /* SNCodeSelectTableViewCell.m */,
+				8E1C0FD1221152F800EFC778 /* SNCodeSelectTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -4125,6 +4141,7 @@
 				8E6D1EAD21EB273F002C6717 /* SettingViewController.xib in Resources */,
 				8EB4E54B21201FAE00BC563B /* chatListCellHead@2x.png in Resources */,
 				CDC88E4E1D8691E000CE03CE /* LaunchScreen.storyboard in Resources */,
+				8E1C0FD3221152F800EFC778 /* SNCodeSelectTableViewCell.xib in Resources */,
 				8EB4E52E21201FAE00BC563B /* chatBar_colorMore_location@2x.png in Resources */,
 				8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */,
 				8EB4E54821201FAE00BC563B /* messageSendFail@2x.png in Resources */,
@@ -4193,6 +4210,7 @@
 				8EB4E4F421201FAE00BC563B /* VoiceSearchFeedback017@2x.png in Resources */,
 				2F106AEA21F4A8F0001D29D6 /* IntegralRulesViewController.xib in Resources */,
 				8EB4E4F921201FAE00BC563B /* VoiceSearchFeedback019@2x.png in Resources */,
+				8E1C0FCD2211511800EFC778 /* SelectSNCodeViewController.xib in Resources */,
 				2FA24E7021EC921800565459 /* ApplyShowDetailViewController.xib in Resources */,
 				8EB4E51421201FAE00BC563B /* VoiceSearchFeedback018@2x.png in Resources */,
 				8E7108B521E86F0100CB11B9 /* ApplyDetailViewController.xib in Resources */,
@@ -4407,6 +4425,7 @@
 				CD3D81A51EA9FF3600F6AC20 /* SBJsonBase.m in Sources */,
 				8EBF663E21E1B14A001C4A0D /* QRShowViewController.m in Sources */,
 				2FD7367221EEF5FD00B59D8F /* ShowWithdrawaldetailsViewController.m in Sources */,
+				8E1C0FD2221152F800EFC778 /* SNCodeSelectTableViewCell.m in Sources */,
 				2FFBAE9221EC4BAA00C9EBAE /* IQPreviousNextView.m in Sources */,
 				8EEF4C04211D8CB500DE1E36 /* EaseFaceView.m in Sources */,
 				8EEF4BA6211D8CB500DE1E36 /* UIViewController+HUD.m in Sources */,
@@ -4651,6 +4670,7 @@
 				2FB8362721EEDCA40028A376 /* WithdrawalViewController.m in Sources */,
 				8E6D1EA221EB273F002C6717 /* PWInputViewController.m in Sources */,
 				8EB4E42721201CC500BC563B /* ChatViewController.m in Sources */,
+				8E1C0FCC2211511800EFC778 /* SelectSNCodeViewController.m in Sources */,
 				8E6D1EAB21EB273F002C6717 /* ToolManager.m in Sources */,
 				8E6D1E1A21EB261C002C6717 /* HMScannerController.m in Sources */,
 				8E874AB72203F96F00D15435 /* ApplyCheckViewController.m in Sources */,

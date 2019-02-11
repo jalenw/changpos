@@ -17,6 +17,11 @@
     [super viewDidLoad];
 }
 
+-(void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

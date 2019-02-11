@@ -8,6 +8,7 @@
 
 #import "AllocateViewController.h"
 #import "LZHAreaPickerView.h"
+#import "FriendsViewController.h"
 @interface AllocateViewController ()
 {
     NSString *goods_id;
@@ -95,14 +96,21 @@
         if (status) {
             NSArray *array = [data safeArrayForKey:@"result"];
             if (array.count>0) {
-                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
-                pickerView.array = array;
-                pickerView.name = @"member_name";
-                [pickerView setBlock:^(NSDictionary *dict) {
+                FriendsViewController *vc = [[FriendsViewController alloc]init];
+                [vc setBlock:^(NSDictionary *dict) {
                     self.partnerTf.text = [dict safeStringForKey:@"member_name"];
                     member_info = dict;
                 }];
-                [pickerView showPicker];
+                vc.data = [array mutableCopy];
+                [self.navigationController pushViewController:vc animated:YES];
+//                LZHAreaPickerView *pickerView = [[LZHAreaPickerView alloc]init];
+//                pickerView.array = array;
+//                pickerView.name = @"member_name";
+//                [pickerView setBlock:^(NSDictionary *dict) {
+//                    self.partnerTf.text = [dict safeStringForKey:@"member_name"];
+//                    member_info = dict;
+//                }];
+//                [pickerView showPicker];
             }
             else
             {

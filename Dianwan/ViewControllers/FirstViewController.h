@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *rankActivity;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIView *profitView;
+@property (weak, nonatomic) IBOutlet UIView *rankView;
 - (IBAction)moreAct:(UIButton *)sender;
 - (IBAction)menuAct:(UIButton *)sender;
 @end

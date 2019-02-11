@@ -27,8 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.navigationItem.title = @"简单创业 轻松畅POS";
-    
-    [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 587)];
+    self.profitView.height = 350;
+    self.rankView.top = self.profitView.bottom;
+    [self.scrollView setContentSize:CGSizeMake(ScreenWidth, self.rankView.bottom)];
     [self.scrollView addLegendHeaderWithRefreshingBlock:^{
         [self getData];
     }];
@@ -42,7 +43,7 @@
     }];
     
     UICollectionViewFlowLayout *_layout = [[UICollectionViewFlowLayout alloc]init];
-    _layout.itemSize = CGSizeMake(ScreenWidth,200);
+    _layout.itemSize = CGSizeMake(ScreenWidth,350-38);
     _layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     _layout.minimumLineSpacing = 0;
     _layout.minimumInteritemSpacing = 0;

@@ -39,6 +39,11 @@
             if(dataArray.count>0){
                 [dataList addObjectsFromArray:dataArray];
             }
+            if (dataList.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [self.tableView reloadData];
         }
     }];

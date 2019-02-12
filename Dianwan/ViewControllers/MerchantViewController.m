@@ -71,6 +71,11 @@
             {
                 [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
+            if (dataList.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfMerchants" object:@(dataList.count)];
             [self.tableView reloadData];
         }
@@ -97,7 +102,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    return 216;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

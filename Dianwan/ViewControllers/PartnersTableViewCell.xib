@@ -193,9 +193,6 @@
                             <constraint firstItem="L4m-Gi-pV7" firstAttribute="leading" secondItem="mnY-OR-dCi" secondAttribute="trailing" id="z6v-yV-2yQ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.96078431372549022" green="0.74509803921568629" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                 <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
@@ -215,6 +212,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="acoverImageview" destination="rO1-pm-KJR" id="7Am-px-PJr"/>
+                <outlet property="bgView" destination="kNG-dm-5jG" id="tpt-Qi-1uV"/>
                 <outlet property="countNumLabel" destination="Af4-rA-c15" id="8hr-yH-2bC"/>
                 <outlet property="h9Label" destination="Vem-KR-MNh" id="bgo-6l-zET"/>
                 <outlet property="mp70Label" destination="aAe-ew-8qu" id="SJl-3i-42T"/>

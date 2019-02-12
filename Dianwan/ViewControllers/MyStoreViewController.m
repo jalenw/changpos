@@ -45,6 +45,11 @@
         [SVProgressHUD dismiss];
         if (status) {
             array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"list"];
+            if (array.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [self.tableView reloadData];
         }else{
             [AlertHelper showAlertWithTitle:error];

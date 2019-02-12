@@ -62,6 +62,11 @@
             {
                 [self.tableView.footer setState:MJRefreshFooterStateNoMoreData];
             }
+            if (dataList.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [self.tableView reloadData];
         }else
             [AlertHelper showAlertWithTitle:error];

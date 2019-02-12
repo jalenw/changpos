@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,8 +16,6 @@
                 <outlet property="changePWCell" destination="spl-Nx-zbN" id="frT-jD-LoQ"/>
                 <outlet property="clearCell" destination="E3K-4X-5jz" id="wb0-IX-aNo"/>
                 <outlet property="feedBackCell" destination="MD1-gX-5wB" id="Iun-27-xAG"/>
-                <outlet property="loginOutCell" destination="NMy-IH-EJu" id="y7H-ud-JIk"/>
-                <outlet property="loginoutBtn" destination="xna-nH-5vM" id="sC1-6W-dsi"/>
                 <outlet property="paySetCell" destination="kaC-H1-ZBn" id="8Db-7S-juW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,33 +27,6 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="NMy-IH-EJu">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="45"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NMy-IH-EJu" id="vPB-dQ-l4a">
-                <rect key="frame" x="0.0" y="0.0" width="330" height="44.5"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xna-nH-5vM">
-                        <rect key="frame" x="40" y="0.0" width="250" height="44.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="7bu-hv-pe0"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <state key="normal" backgroundImage="tcdl_1">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="xna-nH-5vM" firstAttribute="centerX" secondItem="vPB-dQ-l4a" secondAttribute="centerX" id="2gi-D7-Zer"/>
-                    <constraint firstAttribute="bottom" secondItem="xna-nH-5vM" secondAttribute="bottom" id="Bbb-vf-nX9"/>
-                    <constraint firstItem="xna-nH-5vM" firstAttribute="top" secondItem="vPB-dQ-l4a" secondAttribute="top" id="Hvl-hY-0gd"/>
-                    <constraint firstItem="xna-nH-5vM" firstAttribute="centerY" secondItem="vPB-dQ-l4a" secondAttribute="centerY" id="hM4-8I-9yu"/>
-                </constraints>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="115" y="572"/>
-        </tableViewCell>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="spl-Nx-zbN">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask"/>
@@ -159,7 +130,4 @@
             <point key="canvasLocation" x="22" y="1224"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="tcdl_1" width="432" height="82"/>
-    </resources>
 </document>

@@ -36,7 +36,7 @@
 }
 
 -(UIColor *)selectTabTextColor{
-    return RGB(241, 228, 142);
+    return [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];//RGB(241, 228, 142);
 }
 
 

@@ -24,7 +24,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.bgView.borderColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"rectangle_bg"]];
+    self.name.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
+    self.countNumLabel.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

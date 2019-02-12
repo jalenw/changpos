@@ -26,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
+    
     [self addChildVc:[[FirstViewController alloc] init] title:@"" image:@"sytub" selectedImage:@"sytub_1"];
     [self addChildVc:[[StatisticViewController alloc] init] title:@"" image:@"tjtub" selectedImage:@"tjtub_1"];
 //    EaseConversationListViewController *chatVc = [[EaseConversationListViewController alloc] init];

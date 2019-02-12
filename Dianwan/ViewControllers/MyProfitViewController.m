@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的收益";
+    self.bgView.borderColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"rectangle_bg"]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -84,7 +85,7 @@
 }
 
 -(UIColor *)selectTabTextColor{
-    return RGB(241, 228, 142);
+    return [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];//RGB(241, 228, 142);
 }
 
 

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UILabel *totalLb;
 @property (weak, nonatomic) IBOutlet UILabel *freezeLb;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 - (IBAction)getMoneyAct:(UIButton *)sender;
 
 @end

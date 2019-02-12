@@ -33,6 +33,7 @@
     [self setupPieChartView:self.nowChartView];
     [self setupPieChartView:self.oldChartView];
     [self getData];
+    [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 460)];
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView

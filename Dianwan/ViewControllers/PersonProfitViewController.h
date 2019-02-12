@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet PieChartView *oldChartView;
 @property (weak, nonatomic) IBOutlet UILabel *todayLb;
 @property (weak, nonatomic) IBOutlet UILabel *yesterdayLb;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 - (IBAction)changeAct:(UIButton *)sender;
 - (IBAction)dateAct:(UIButton *)sender;
 @end

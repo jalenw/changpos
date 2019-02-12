@@ -29,6 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     self.operationQueue = [NSOperationQueue new];
     [[UITabBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)]];
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];

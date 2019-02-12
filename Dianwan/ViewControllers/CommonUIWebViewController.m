@@ -122,6 +122,11 @@
     if (self.topic) {
         self.title = self.topic;
     }
+
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = RGB(48, 46, 58);
+    }
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 

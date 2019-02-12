@@ -17,9 +17,11 @@
                 <outlet property="oldChartView" destination="xXZ-JC-Z24" id="kGk-A5-g1Z"/>
                 <outlet property="scrollView" destination="lXP-xx-Vwi" id="wsc-Ra-nlb"/>
                 <outlet property="todayLb" destination="k5c-8U-MFM" id="TGm-j7-Loq"/>
+                <outlet property="todayTotalLb" destination="ei0-KL-ZYg" id="5RH-4R-YNP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weekBt" destination="D2f-g7-74P" id="MsK-di-gUg"/>
                 <outlet property="yesterdayLb" destination="LsK-nJ-9yZ" id="uv6-XQ-hzO"/>
+                <outlet property="yesterdayTotalLb" destination="3s0-l8-bCt" id="4ly-hy-JCP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -113,6 +115,15 @@
                         <view contentMode="scaleToFill" id="1wG-QV-LDd" customClass="PieChartView" customModule="Charts">
                             <rect key="frame" x="0.0" y="30" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ei0-KL-ZYg">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LsK-nJ-9yZ">
@@ -126,13 +137,22 @@
                         <view contentMode="scaleToFill" id="xXZ-JC-Z24" customClass="PieChartView" customModule="Charts">
                             <rect key="frame" x="0.0" y="260" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3s0-l8-bCt">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="132" y="123.68815592203899"/>
+            <point key="canvasLocation" x="131.8840579710145" y="123.09782608695653"/>
         </view>
     </objects>
 </document>

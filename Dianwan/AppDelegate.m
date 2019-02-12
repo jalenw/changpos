@@ -29,9 +29,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
     self.operationQueue = [NSOperationQueue new];
-    [[UITabBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)]];
+    
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
@@ -66,7 +65,8 @@ didFinishLaunchingWithOptions:launchOptions
     [[UINavigationBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:RGB(253, 210, 88)}];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:RGB(253, 210, 88)}];
+    [[UITabBar appearance] setBackgroundImage:[Tooles createImageWithColor:RGB(48, 46, 58)]];
     
     //    [[LocationService sharedInstance]startUpdateLocation];//启动定位
     

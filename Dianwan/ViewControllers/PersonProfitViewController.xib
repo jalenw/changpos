@@ -17,9 +17,11 @@
                 <outlet property="oldChartView" destination="97r-JH-hVC" id="Qgj-7E-aI9"/>
                 <outlet property="scrollView" destination="Dzm-LP-Upp" id="qKc-tR-qqd"/>
                 <outlet property="todayLb" destination="WTo-yC-rJf" id="rkm-lG-hdg"/>
+                <outlet property="todayTotalLb" destination="8AR-gE-xRD" id="aMZ-fo-tKq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weekBt" destination="caH-OD-2qe" id="Ggg-gm-P15"/>
                 <outlet property="yesterdayLb" destination="qkR-Us-mQK" id="9dJ-0W-EWd"/>
+                <outlet property="yesterdayTotalLb" destination="kis-hW-PdD" id="Cxg-82-iuX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -113,6 +115,15 @@
                         <view contentMode="scaleToFill" id="fWh-So-MTq" customClass="PieChartView" customModule="Charts">
                             <rect key="frame" x="0.0" y="30" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8AR-gE-xRD">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qkR-Us-mQK">
@@ -126,6 +137,15 @@
                         <view contentMode="scaleToFill" id="97r-JH-hVC" customClass="PieChartView" customModule="Charts">
                             <rect key="frame" x="0.0" y="260" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kis-hW-PdD">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>

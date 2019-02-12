@@ -42,7 +42,7 @@
         if (status) {
             dict = [data safeDictionaryForKey:@"result"];
             self.totalLb.text = [NSString stringWithFormat:@"￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"available"]];
-            self.freezeLb.text = [NSString stringWithFormat:@"￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"freeze"]];
+            self.freezeLb.text = [NSString stringWithFormat:@"已冻结:￥%@",[[dict safeDictionaryForKey:@"price"] safeStringForKey:@"freeze"]];
         }
         else
         {

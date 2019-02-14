@@ -76,6 +76,7 @@
                 [vc setBlock:^(NSString * str) {
                     self.snTf.text = str;
                     sn_code = str;
+                    self.totalTf.text = [NSString stringWithFormat:@"%lu",sn_code.length==0?0:(unsigned long)[sn_code componentsSeparatedByString:@","].count];
                 }];
                 vc.array = array;
                 vc.data = sns;
@@ -141,10 +142,10 @@
         [AlertHelper showAlertWithTitle:@"请选择SN号产品"];
         return;
     }
-    if ([self.totalTf.text integerValue]==0) {
-        [AlertHelper showAlertWithTitle:@"请选择调拨数量"];
-        return;
-    }
+//    if ([self.totalTf.text integerValue]==0) {
+//        [AlertHelper showAlertWithTitle:@"请选择调拨数量"];
+//        return;
+//    }
     if (member_info==nil) {
         [AlertHelper showAlertWithTitle:@"请选择代理商"];
         return;

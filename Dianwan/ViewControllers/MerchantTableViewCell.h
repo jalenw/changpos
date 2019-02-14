@@ -13,7 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MerchantTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (strong,nonatomic) NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @end

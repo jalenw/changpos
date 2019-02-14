@@ -64,6 +64,11 @@
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
+            if (dataList.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [self.tableView reloadData];
         }
     }];
@@ -96,6 +101,11 @@
             for ( NSDictionary *dataitem in dataArray) {
                 [dataList addObject:dataitem];
             }
+            if (dataList.count==0) {
+                [self.tableView setEmptyView];
+            }
+            else
+                [self.tableView removeEmptyView];
             [self.tableView reloadData];
         }
     }];

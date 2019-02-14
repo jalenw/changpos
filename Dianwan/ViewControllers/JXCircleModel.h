@@ -17,5 +17,6 @@
 @property (nonatomic, strong)UIColor *color;
 /** name*/
 @property (nonatomic, strong)NSString *name;
-
+/**文字 颜色*/
+@property (nonatomic, strong)UIColor *textcolor;
 @end

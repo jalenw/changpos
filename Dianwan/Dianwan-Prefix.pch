@@ -30,7 +30,7 @@
 #import "UIView+XibLayout.h"
 #import "CommonUIWebViewController.h"
 #import "User.h"
-
+#import "UITableView+Empty.h"
 #import "EaseUI.h"
 #import "EaseMob.h"
 #import "AppDelegate+EaseMob.h"

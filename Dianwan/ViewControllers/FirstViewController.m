@@ -26,7 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationItem.title = @"简单创业 轻松畅POS";
+
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
+    
     self.profitView.height = 350;
     self.rankView.top = self.profitView.bottom;
     [self.scrollView setContentSize:CGSizeMake(ScreenWidth, self.rankView.bottom)];

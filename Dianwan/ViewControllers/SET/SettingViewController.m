@@ -18,8 +18,6 @@
 @property(nonatomic,strong)UITableView *maintableview;
 @property(nonatomic,strong)NSArray *titleArr;
 @property (strong, nonatomic)  UILabel *clearLabel;
-@property (weak, nonatomic) IBOutlet UIButton *loginoutBtn;
-@property (strong, nonatomic) IBOutlet UITableViewCell *loginOutCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *clearCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *changePWCell;
 @property (strong, nonatomic) IBOutlet UITableViewCell *paySetCell;
@@ -45,13 +43,13 @@
     self.maintableview.backgroundColor  =RGB(48, 46, 58);
     self.view.backgroundColor  =RGB(48, 46, 58);
     UIButton *btn = [[UIButton alloc]init];
+    btn.layer.cornerRadius = 5;
+    btn.layer.masksToBounds = YES;
     [self.view addSubview:btn];
     btn.el_topToBottom(self.maintableview,0).el_axisXToAxisX(self.maintableview,0).el_toWidth(250).el_toHeight(50);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn setTitle:@"退 出 登 录" forState:UIControlStateNormal ];
     [btn setBackgroundColor:[UIColor colorWithRed:245/255.0 green:183/255.0 blue:56/255.0 alpha:1]];
-//    [btn setBackgroundImage:[UIImage imageNamed:@"tcdl_1"] forState:UIControlStateNormal];
-    
    [ btn addTarget:self action:@selector(loginOutAction) forControlEvents:UIControlEventTouchUpInside ];
     
     [LLFileTool getFileSize:cachePath completion:^(NSInteger totalSize) {
@@ -142,11 +140,4 @@
     [LLFileTool removeDirectoryPath:cachePath];
     self.clearLabel.text =@"0.0M";
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-//    [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
-    
-}
-
 @end

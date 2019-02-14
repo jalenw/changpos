@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,19 +15,22 @@
                 <outlet property="monthBt" destination="IGp-x8-kgs" id="7xa-ux-hF7"/>
                 <outlet property="nowChartView" destination="1wG-QV-LDd" id="Hyv-fN-7SI"/>
                 <outlet property="oldChartView" destination="xXZ-JC-Z24" id="kGk-A5-g1Z"/>
+                <outlet property="scrollView" destination="lXP-xx-Vwi" id="wsc-Ra-nlb"/>
                 <outlet property="todayLb" destination="k5c-8U-MFM" id="TGm-j7-Loq"/>
+                <outlet property="todayTotalLb" destination="ei0-KL-ZYg" id="5RH-4R-YNP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weekBt" destination="D2f-g7-74P" id="MsK-di-gUg"/>
                 <outlet property="yesterdayLb" destination="LsK-nJ-9yZ" id="uv6-XQ-hzO"/>
+                <outlet property="yesterdayTotalLb" destination="3s0-l8-bCt" id="4ly-hy-JCP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="Uz0-DQ-OnR">
-                    <rect key="frame" x="0.0" y="44" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bsg-dm-69z">
@@ -79,7 +82,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WhT-9W-1Qk">
-                            <rect key="frame" x="270" y="10" width="97" height="30"/>
+                            <rect key="frame" x="309" y="10" width="97" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.61960784310000006" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="选择时间">
@@ -98,15 +101,23 @@
                     <color key="backgroundColor" red="0.18823529410000001" green="0.18039215689999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lXP-xx-Vwi">
-                    <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                    <rect key="frame" x="0.0" y="94" width="414" height="642"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k5c-8U-MFM">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.18039215689999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" id="1wG-QV-LDd" customClass="PieChartView" customModule="Charts">
-                            <rect key="frame" x="0.0" y="8" width="375" height="167"/>
+                            <rect key="frame" x="0.0" y="30" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k5c-8U-MFM">
-                                    <rect key="frame" x="8" y="8" width="204" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ei0-KL-ZYg">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
@@ -115,12 +126,20 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LsK-nJ-9yZ">
+                            <rect key="frame" x="0.0" y="230" width="414" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.18823529410000001" green="0.18039215689999999" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <view contentMode="scaleToFill" id="xXZ-JC-Z24" customClass="PieChartView" customModule="Charts">
-                            <rect key="frame" x="0.0" y="175" width="375" height="162"/>
+                            <rect key="frame" x="0.0" y="260" width="414" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昨日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LsK-nJ-9yZ">
-                                    <rect key="frame" x="8" y="8" width="204" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3s0-l8-bCt">
+                                    <rect key="frame" x="8" y="16" width="158" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
@@ -133,7 +152,7 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="132" y="123.68815592203899"/>
+            <point key="canvasLocation" x="131.8840579710145" y="123.09782608695653"/>
         </view>
     </objects>
 </document>

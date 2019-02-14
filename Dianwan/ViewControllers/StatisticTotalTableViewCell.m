@@ -89,7 +89,9 @@
         [param setValue:search_date_end forKey:@"search_date_end"];
     }
     [param setValue:@(self.path.row+1) forKey:@"type"];
+    [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/Statistics/my_stats" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
         if (status) {
             NSDictionary *nowDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"present"];
             if (nowDict) {

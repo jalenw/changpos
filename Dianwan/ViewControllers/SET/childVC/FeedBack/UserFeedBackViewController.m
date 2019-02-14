@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.title = @"反馈意见";
+    self.title = @"反馈意见";
     
     self.view.backgroundColor =RGB(48, 46, 58);
     self.submit.layer.cornerRadius = 21;

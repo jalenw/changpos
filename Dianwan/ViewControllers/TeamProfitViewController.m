@@ -102,17 +102,19 @@
             
             [self setupBarLineChartView:self.chartView array:array];
             
+            double nowTotal = 0.00;
             NSMutableArray *yVals = [[NSMutableArray alloc] init];
             for (int i = 0; i < array.count; i++)
             {
                 NSDictionary *tempDict = [array objectAtIndex:i];
                 [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[tempDict safeDoubleForKey:@"earnings"]]];
+                if ([tempDict safeDoubleForKey:@"earnings"]>0) {
+                    nowTotal += [tempDict safeDoubleForKey:@"earnings"];
+                }
             }
-            
+            self.totalLb.text = [NSString stringWithFormat:@"总收益:￥%.2f",nowTotal];
             BarChartDataSet *set1 = nil;
-
-                set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"收益"];
-
+            set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"收益"];
             [set1 setColor:RGB(253, 210,88)];
                 set1.drawIconsEnabled = NO;
                 

@@ -27,7 +27,7 @@
 
 -(void)setDict:(NSDictionary *)dict{
     _dict = dict ;
-    self.statuesLabel.text  = [_dict safeStringForKey:@"stagetext"];
+    self.statuesLabel.text  = [_dict safeStringForKey:@"pl_desc"];
     self.countLabel.text =[NSString stringWithFormat:@"+%@", [_dict safeNumberForKey:@"pl_points"]];
     self.timeLabel.text = [_dict safeStringForKey:@"addtimetext"];
 }

@@ -32,7 +32,7 @@
     
     self.arriveTimeLabel.text = [_dict safeStringForKey:@"pdc_expect_time"];
     
-    self.noteLabel.text = [_dict safeStringForKey:@"pdc_amount"];
+    self.noteLabel.text = @"您的提现已到账至银行卡";
     
     self.bankNameLabel.text = [_dict safeStringForKey:@"pdc_bank_name"];
 }

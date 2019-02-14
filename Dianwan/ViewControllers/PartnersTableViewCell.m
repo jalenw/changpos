@@ -46,6 +46,9 @@
     [attribut1 addAttribute:NSForegroundColorAttributeName
                       value:[UIColor greenColor]
                       range:pointRange1];
+    [attribut1 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor whiteColor]
+                      range:NSMakeRange(pointRange1.location+pointRange1.length,1)];
     self.h9Label.attributedText =attribut1;
     
     NSMutableAttributedString *attribut2 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"%d/%d",[dataarr[1] safeIntForKey:@"activation"],[dataarr[1] safeIntForKey:@"total_stock"]]]];
@@ -53,9 +56,20 @@
     [attribut2 addAttribute:NSForegroundColorAttributeName
                       value:[UIColor greenColor]
                       range:pointRange2];
+    [attribut2 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor whiteColor]
+                      range:NSMakeRange(pointRange2.location+pointRange2.length,1)];
     self.mp70Label.attributedText =attribut2;
-//    self.mp70Label.text =[NSString stringWithFormat:@"%d/%d",[dataarr[1] safeIntForKey:@"activation"],[dataarr[1] safeIntForKey:@"total_stock"]] ;
-    self.zibeijiLabel.text =[NSString stringWithFormat:@"%d/%d",[dataarr[2] safeIntForKey:@"activation"],[dataarr[2] safeIntForKey:@"total_stock"]] ;
+    
+      NSMutableAttributedString *attribut3 = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%d/%d",[dataarr[2] safeIntForKey:@"activation"],[dataarr[2] safeIntForKey:@"total_stock"]]];
+     NSRange pointRange3 = NSMakeRange(0, [NSString stringWithFormat:@"%d",[dataarr[2] safeIntForKey:@"activation"]].length);
+    [attribut3 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor greenColor]
+                      range:pointRange3];
+    [attribut3 addAttribute:NSForegroundColorAttributeName
+                      value:[UIColor whiteColor]
+                      range:NSMakeRange(pointRange3.location+pointRange3.length,1)];
+    self.zibeijiLabel.attributedText =attribut3;
     
     
     [self.acoverImageview sd_setImageWithURL:[NSURL URLWithString:[_dict safeStringForKey:@"member_avatar"]]];
@@ -69,8 +83,8 @@
     [attribut addAttribute:NSForegroundColorAttributeName
                          value:[UIColor whiteColor]
                          range:pointRange];
-    
-    self.countNumLabel.attributedText =attribut;//[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"total_price"]];
+   
+    self.countNumLabel.attributedText =attribut;
     self.timeLabel.text = [_dict safeStringForKey:@"created_date"];
     
 }

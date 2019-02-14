@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xq-VJ-DcM">
                         <rect key="frame" x="16" y="0.0" width="314" height="150.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="银行卡icon" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="我的银行卡" translatesAutoresizingMaskIntoConstraints="NO" id="bdz-v1-rtv">
                                 <rect key="frame" x="24" y="16" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="5az-wu-zRj"/>
@@ -85,6 +85,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="银行卡icon" width="105" height="75"/>
+        <image name="我的银行卡" width="60" height="60"/>
     </resources>
 </document>

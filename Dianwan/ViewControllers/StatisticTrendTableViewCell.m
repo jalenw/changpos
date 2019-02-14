@@ -106,7 +106,9 @@
         [param setValue:search_date_end forKey:@"search_date_end"];
     }
     [param setValue:@(self.path.row+1) forKey:@"type"];
+    [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/Statistics/my_trend" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
         if (status) {
             NSDictionary *personalDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"personal"];
             NSDictionary *groupDict = [[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"group"];

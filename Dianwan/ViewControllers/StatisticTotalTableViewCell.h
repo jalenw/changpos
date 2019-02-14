@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Charts/Charts.h"
 #import "Dianwan-Swift.h"
+#import "JXCircleRatioView.h"
+#import "JXCircleModel.h"
 @protocol StatisticTotalTableViewCellDelegate <NSObject>
 -(void)showMoreInfoForCell:(NSIndexPath*_Nullable)path;
 @end
@@ -26,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *total;
 @property (weak, nonatomic) IBOutlet UILabel *total2;
 @property (nonatomic, assign) id<StatisticTotalTableViewCellDelegate> delegate;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView2;
 - (IBAction)showMoreAct:(UIButton *)sender;
 @end
 

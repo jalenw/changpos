@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *weekBt;
 @property (weak, nonatomic) IBOutlet UIButton *monthBt;
 @property (weak, nonatomic) IBOutlet BarChartView *chartView;
+@property (weak, nonatomic) IBOutlet LineChartView *lineChartView;
 @property (weak, nonatomic) IBOutlet UILabel *todayLb;
 @property (weak, nonatomic) IBOutlet UILabel *totalLb;
 - (IBAction)changeAct:(UIButton *)sender;

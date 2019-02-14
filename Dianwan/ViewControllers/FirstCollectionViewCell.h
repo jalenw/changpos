@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Charts/Charts.h"
 #import "Dianwan-Swift.h"
+#import "JXCircleRatioView.h"
+#import "JXCircleModel.h"
 @interface FirstCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet PieChartView *pieChartView;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (strong, nonatomic) NSDictionary *dict;
 @property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView;
 @end

@@ -41,7 +41,7 @@
     xAxis.granularity = 1.0;
     xAxis.labelCount = array.count;
     xAxis.valueFormatter = [[CustomValueFormatter alloc]initForArray:array endDate:endDate];
-    
+
     NSNumberFormatter *leftAxisFormatter = [[NSNumberFormatter alloc] init];
     leftAxisFormatter.minimumFractionDigits = 0;
     leftAxisFormatter.maximumFractionDigits = 2;
@@ -112,52 +112,103 @@
         if (status) {
             NSDictionary *personalDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"personal"];
             NSDictionary *groupDict = [[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"group"];
+            
+            NSMutableArray *xVals = [[NSMutableArray alloc] init];
+            NSMutableArray *yVals1 = [[NSMutableArray alloc] init];
+            
             if (personalDict) {
                 NSArray *array = [personalDict allKeys];
-                [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
+//                [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
                 
-                NSMutableArray *yVals = [[NSMutableArray alloc] init];
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
-                    [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+//                    [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+                    
+                    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
+                    [myDateFormatter setDateFormat:@"yyyy-MM-dd"];
+                    NSDate *e ;
+                    if (search_date_end) {
+                        e = [myDateFormatter dateFromString:search_date_end];
+                    }
+                    else
+                        e = [NSDate date];
+                    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+                    dateFormatter.dateFormat=@"MM-dd";
+                    NSDateComponents *components = [[NSDateComponents alloc]init];
+                    components.day = -6+i;
+                    NSDate *theDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:e options:0];
+                    NSString *date=[dateFormatter stringFromDate:theDate];
+                    
+                    [xVals addObject:date];
+                    [yVals1 addObject:@([personalDict safeDoubleForKey:key])];
                 }
+            }
+
                 
-                BarChartDataSet *set1 = nil;
-                
-                set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"个人"];
-                
-                [set1 setColor:RGB(253, 210,88)];
-                set1.drawIconsEnabled = NO;
-                
-                NSMutableArray *dataSets = [[NSMutableArray alloc] init];
-                [dataSets addObject:set1];
-                
-               BarChartDataSet *set2 = nil;
+//                BarChartDataSet *set1 = nil;
+//
+//                set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"个人"];
+//
+//                [set1 setColor:RGB(253, 210,88)];
+//                set1.drawIconsEnabled = NO;
+
+//                NSMutableArray *dataSets = [[NSMutableArray alloc] init];
+//                [dataSets addObject:set1];
+//
+//               BarChartDataSet *set2 = nil;
+            NSMutableArray *yVals2 = [[NSMutableArray alloc] init];
                 if (groupDict) {
                     NSArray *array = [groupDict allKeys];
-                    [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
-                    
-                    NSMutableArray *yVals = [[NSMutableArray alloc] init];
+//                    [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
+//                    NSMutableArray *yVals = [[NSMutableArray alloc] init];
+//                    for (int i = 0; i < array.count; i++)
+//                    {
+//                        NSString *key = [array objectAtIndex:i];
+//                        [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+//                    }
                     for (int i = 0; i < array.count; i++)
                     {
                         NSString *key = [array objectAtIndex:i];
-                        [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+                        //                    [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+                        
+                        NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
+                        [myDateFormatter setDateFormat:@"yyyy-MM-dd"];
+                        NSDate *e ;
+                        if (search_date_end) {
+                            e = [myDateFormatter dateFromString:search_date_end];
+                        }
+                        else
+                            e = [NSDate date];
+                        NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+                        dateFormatter.dateFormat=@"MM-dd";
+                        NSDateComponents *components = [[NSDateComponents alloc]init];
+                        components.day = -6+i;
+                        NSDate *theDate = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:e options:0];
+                        NSString *date=[dateFormatter stringFromDate:theDate];
+                        
+//                        [xVals addObject:date];
+                        [yVals2 addObject:@([groupDict safeDoubleForKey:key])];
                     }
-                    
-                    set2 = [[BarChartDataSet alloc] initWithValues:yVals label:@"团队"];
-                    
-                    [set2 setColor:RGB(253, 110,88)];
-                    set2.drawIconsEnabled = NO;
-                    [dataSets addObject:set2];
                 }
-        
-                BarChartData *data = [[BarChartData alloc] initWithDataSets:dataSets];
-                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.f]];
-                
-                data.barWidth = 0.9f;
-                _chartView.data = data;
-            }
+            [_bezierView removeFromSuperview];
+            _bezierView = nil;
+            _bezierView = [BezierCurveView initWithFrame:CGRectMake(0, 0, ScreenWidth-20, self.chartView.height)];
+            [self.chartView addSubview:_bezierView];
+            // 多根折线图
+            [_bezierView drawMoreLineChartViewWithX_Value_Names:xVals TargetValues:(NSMutableArray *)@[yVals1,yVals2] LineType:LineType_Straight];
+//                    set2 = [[BarChartDataSet alloc] initWithValues:yVals label:@"团队"];
+//
+//                    [set2 setColor:RGB(253, 110,88)];
+//                    set2.drawIconsEnabled = NO;
+//                    [dataSets addObject:set2];
+//                }
+//
+//                BarChartData *data = [[BarChartData alloc] initWithDataSets:dataSets];
+//                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.f]];
+//
+//                data.barWidth = 0.9f;
+//                _chartView.data = data;
         }
     }];
 }
@@ -197,46 +248,46 @@
             if (personalDict) {
                 NSArray *array = [personalDict allKeys];
                 [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
-                
+
                 NSMutableArray *yVals = [[NSMutableArray alloc] init];
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
                     [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
                 }
-                
+
                 BarChartDataSet *set1 = nil;
-                
+
                 set1 = [[BarChartDataSet alloc] initWithValues:yVals label:@"个人"];
-                
+
                 [set1 setColor:RGB(253, 210,88)];
                 set1.drawIconsEnabled = NO;
-                
+
                 NSMutableArray *dataSets = [[NSMutableArray alloc] init];
                 [dataSets addObject:set1];
-                
+
                 BarChartDataSet *set2 = nil;
                 if (groupDict) {
                     NSArray *array = [groupDict allKeys];
                     [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
-                    
+
                     NSMutableArray *yVals = [[NSMutableArray alloc] init];
                     for (int i = 0; i < array.count; i++)
                     {
                         NSString *key = [array objectAtIndex:i];
                         [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
                     }
-                    
+
                     set2 = [[BarChartDataSet alloc] initWithValues:yVals label:@"团队"];
-                    
+
                     [set2 setColor:RGB(253, 110,88)];
                     set2.drawIconsEnabled = NO;
                     [dataSets addObject:set2];
                 }
-                
+
                 BarChartData *data = [[BarChartData alloc] initWithDataSets:dataSets];
                 [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.f]];
-                
+
                 data.barWidth = 0.9f;
                 _chartView.data = data;
             }

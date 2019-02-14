@@ -9,6 +9,8 @@
 #import "BaseViewController.h"
 #import "Charts/Charts.h"
 #import "Dianwan-Swift.h"
+#import "JXCircleRatioView.h"
+#import "JXCircleModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TotalProfitViewController : BaseViewController
@@ -17,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *monthBt;
 @property (weak, nonatomic) IBOutlet PieChartView *nowChartView;
 @property (weak, nonatomic) IBOutlet PieChartView *oldChartView;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView2;
 @property (weak, nonatomic) IBOutlet UILabel *todayLb;
 @property (weak, nonatomic) IBOutlet UILabel *todayTotalLb;
 @property (weak, nonatomic) IBOutlet UILabel *yesterdayLb;

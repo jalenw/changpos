@@ -434,6 +434,7 @@
 		8ED176F41F0B45AE00105584 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD06664F1E8CD72A00CCD49A /* libicucore.tbd */; };
 		8ED176F51F0B45BF00105584 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA31EE7DC4E00AD1E77 /* libc++.tbd */; };
 		8ED176F61F0B45CD00105584 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA51EE7DC5600AD1E77 /* libz.tbd */; };
+		8ED1D71E2215A181009AA86C /* BezierCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D71D2215A181009AA86C /* BezierCurveView.m */; };
 		8ED4A878211197F70038E719 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4A876211197F70038E719 /* FirstViewController.m */; };
 		8ED4A879211197F70038E719 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4A877211197F70038E719 /* FirstViewController.xib */; };
 		8EDA41401F22F731000CBA40 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA413E1F22F731000CBA40 /* LoginViewController.m */; };
@@ -1263,6 +1264,8 @@
 		8EBF664221E1B157001C4A0D /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		8EC5C89620F884030041A34A /* UIView+XibLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XibLayout.h"; sourceTree = "<group>"; };
 		8EC5C89720F884030041A34A /* UIView+XibLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XibLayout.m"; sourceTree = "<group>"; };
+		8ED1D71C2215A181009AA86C /* BezierCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierCurveView.h; sourceTree = "<group>"; };
+		8ED1D71D2215A181009AA86C /* BezierCurveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierCurveView.m; sourceTree = "<group>"; };
 		8ED4A875211197F70038E719 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		8ED4A876211197F70038E719 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8ED4A877211197F70038E719 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -3994,6 +3997,8 @@
 				0413AA491F2879C5006F2743 /* ShareHelper.m */,
 				8E42034221FB0C37001994C5 /* CustomValueFormatter.h */,
 				8E42034321FB0C37001994C5 /* CustomValueFormatter.m */,
+				8ED1D71C2215A181009AA86C /* BezierCurveView.h */,
+				8ED1D71D2215A181009AA86C /* BezierCurveView.m */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -4635,6 +4640,7 @@
 				2F02FA0521F0A3D9001182E7 /* RunningWaterViewController.m in Sources */,
 				8EEF4C01211D8CB500DE1E36 /* EaseChatBarMoreView.m in Sources */,
 				8EEF4BA8211D8CB500DE1E36 /* NSString+Valid.m in Sources */,
+				8ED1D71E2215A181009AA86C /* BezierCurveView.m in Sources */,
 				8EEF4BF4211D8CB500DE1E36 /* MBProgressHUD.m in Sources */,
 				0432ECF81F271F0B008D7AA3 /* CommonUIWebViewController.m in Sources */,
 				8E71089621E72FB900CB11B9 /* MyPartnerViewController.m in Sources */,

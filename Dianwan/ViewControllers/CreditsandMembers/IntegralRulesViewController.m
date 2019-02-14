@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"积分规则";
 //    self.view.backgroundColor = RGB(48, 46, 58);
     // Do any additional setup after loading the view from its nib.
 }

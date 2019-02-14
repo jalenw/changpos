@@ -107,6 +107,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.tableView reloadData];
     NSDictionary *dict = dataList[indexPath.row];
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
     if ([dict safeStringForKey:@"member_id"]) {

@@ -12,8 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setupPieChartView:self.chartView];
-    [self setupPieChartView:self.chartView2];
+//    [self setupPieChartView:self.chartView];
+//    [self setupPieChartView:self.chartView2];
 }
 
 - (void)setupPieChartView:(PieChartView *)chartView
@@ -96,17 +96,17 @@
             NSDictionary *nowDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"present"];
             if (nowDict) {
                 NSArray *array = [nowDict allKeys];
-                NSMutableArray *entries = [[NSMutableArray alloc] init];
-                BOOL hasData = false;
+//                NSMutableArray *entries = [[NSMutableArray alloc] init];
+             
+                NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+                NSMutableArray *datas = [NSMutableArray new];
+                
                 double all = 0;
+                BOOL hasData = false;
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [nowDict safeDoubleForKey:key];
-                    NSString *label = [key isEqualToString:@"groups"]?@"团队":[key isEqualToString:@"personals"]?@"个人":@"";
-                    if (value>0) {
-                        [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
-                    }
                     if (value>0) {
                         hasData = true;
                         all += value;
@@ -121,38 +121,77 @@
                 if (path.row==2) {
                     self.total.text = [NSString stringWithFormat:@"￥%.2f",all];
                 }
-                PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
-                dataSet.sliceSpace = 2.0;
-                NSMutableArray *colors = [[NSMutableArray alloc] init];
-                [colors addObject:RGB(253, 210, 88)];
-                [colors addObject:RGB(33, 115, 243)];
-                [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
-                dataSet.colors = colors;
-                dataSet.valueLinePart1OffsetPercentage = 0.8;
-                dataSet.valueLinePart1Length = 0.2;
-                dataSet.valueLinePart2Length = 0.4;
-                dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
-                PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
-                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
-                [data setValueTextColor:UIColor.blackColor];
-                if (hasData) {
-                self.chartView.data = data;
-                }
-            }
-            NSDictionary *totalDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"total"];
-            if (totalDict) {
-                NSArray *array = [(totalDict) allKeys];
-                NSMutableArray *entries = [[NSMutableArray alloc] init];
-                BOOL hasData = false;
-                double all = 0;
+                
                 for (int i = 0; i < array.count; i++)
                 {
                     NSString *key = [array objectAtIndex:i];
-                    double value = [(totalDict) safeDoubleForKey:key];
-                    NSString *label = [key isEqualToString:@"group_total"]?@"团队":[key isEqualToString:@"personal_total"]?@"个人":@"";
-                    if (value>0) {
-                        [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+                    double value = [nowDict safeDoubleForKey:key];
+                    NSString *label = [key isEqualToString:@"groups"]?@"团队":[key isEqualToString:@"personals"]?@"个人":@"";
+//                    if (value>0) {
+//                        [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
+//                    }
+//                    if (value>0) {
+//                        hasData = true;
+//                    }
+                    if (!hasData) {
+                        JXCircleModel *model = [[JXCircleModel alloc]init];
+                        model.color = colors[i];
+                        model.textcolor = [UIColor blackColor];
+                        model.number = [NSString stringWithFormat:@"%@",@"250"];
+                        model.name = label;
+                        [datas  addObject:model];
                     }
+                    else
+                    {
+                        JXCircleModel *model = [[JXCircleModel alloc]init];
+                        model.color = colors[i];
+                        model.textcolor = [UIColor blackColor];
+                        model.number = [NSString stringWithFormat:@"%.2f",value];
+                        model.name = label;
+                        [datas  addObject:model];
+                    }
+                }
+    
+                [self.circleRatioView removeFromSuperview];
+                self.circleRatioView = nil;
+                    self.circleRatioView = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-160)/2,0,160,180)  andDataArray:datas CircleRadius:20];
+                    self.circleRatioView.bgColor = [UIColor whiteColor];
+                    self.circleRatioView.outRadius = 10;
+                    self.circleRatioView.backgroundColor = [UIColor whiteColor];
+                    [self.chartView addSubview:self.circleRatioView];
+
+//                PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
+//                dataSet.sliceSpace = 2.0;
+//                NSMutableArray *colors = [[NSMutableArray alloc] init];
+//                [colors addObject:RGB(253, 210, 88)];
+//                [colors addObject:RGB(33, 115, 243)];
+//                [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
+//                dataSet.colors = colors;
+//                dataSet.valueLinePart1OffsetPercentage = 0.8;
+//                dataSet.valueLinePart1Length = 0.2;
+//                dataSet.valueLinePart2Length = 0.4;
+//                dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+//                PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+//                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
+//                [data setValueTextColor:UIColor.blackColor];
+//                if (hasData) {
+//                self.chartView.data = data;
+//                }
+            }
+            NSDictionary *totalDict = [[data safeDictionaryForKey:@"result"] safeDictionaryForKey:@"total"];
+            if (totalDict) {
+                NSArray *array = [totalDict allKeys];
+//                NSMutableArray *entries = [[NSMutableArray alloc] init];
+                
+                NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+                NSMutableArray *datas = [NSMutableArray new];
+                
+                double all = 0;
+                BOOL hasData = false;
+                for (int i = 0; i < array.count; i++)
+                {
+                    NSString *key = [array objectAtIndex:i];
+                    double value = [totalDict safeDoubleForKey:key];
                     if (value>0) {
                         hasData = true;
                         all += value;
@@ -167,23 +206,56 @@
                 if (path.row==2) {
                     self.total2.text = [NSString stringWithFormat:@"￥%.2f",all];
                 }
-                PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
-                dataSet.sliceSpace = 2.0;
-                NSMutableArray *colors = [[NSMutableArray alloc] init];
-                [colors addObject:RGB(253, 210, 88)];
-                [colors addObject:RGB(33, 115, 243)];
-                [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
-                dataSet.colors = colors;
-                dataSet.valueLinePart1OffsetPercentage = 0.8;
-                dataSet.valueLinePart1Length = 0.2;
-                dataSet.valueLinePart2Length = 0.4;
-                dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
-                PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
-                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
-                [data setValueTextColor:UIColor.blackColor];
-                if (hasData) {
-                self.chartView2.data = data;
+                
+                for (int i = 0; i < array.count; i++)
+                {
+                    NSString *key = [array objectAtIndex:i];
+                    double value = [(totalDict) safeDoubleForKey:key];
+                    NSString *label = [key isEqualToString:@"group_total"]?@"团队":[key isEqualToString:@"personal_total"]?@"个人":@"";
+                    if (!hasData) {
+                        JXCircleModel *model = [[JXCircleModel alloc]init];
+                        model.color = colors[i];
+                        model.textcolor = [UIColor blackColor];
+                        model.number = [NSString stringWithFormat:@"%@",@"250"];
+                        model.name = label;
+                        [datas  addObject:model];
+                    }
+                    else
+                    {
+                        JXCircleModel *model = [[JXCircleModel alloc]init];
+                        model.color = colors[i];
+                        model.textcolor = [UIColor blackColor];
+                        model.number = [NSString stringWithFormat:@"%.2f",value];
+                        model.name = label;
+                        [datas  addObject:model];
+                    }
                 }
+                
+                [self.circleRatioView2 removeFromSuperview];
+                self.circleRatioView2 = nil;
+                    self.circleRatioView2 = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-160)/2,0,160,180)  andDataArray:datas CircleRadius:20];
+                    self.circleRatioView2.bgColor = [UIColor whiteColor];
+                    self.circleRatioView2.outRadius = 10;
+                    self.circleRatioView2.backgroundColor = [UIColor whiteColor];
+                    [self.chartView2 addSubview:self.circleRatioView2];
+
+//                PieChartDataSet *dataSet = [[PieChartDataSet alloc] initWithValues:entries label:@""];
+//                dataSet.sliceSpace = 2.0;
+//                NSMutableArray *colors = [[NSMutableArray alloc] init];
+//                [colors addObject:RGB(253, 210, 88)];
+//                [colors addObject:RGB(33, 115, 243)];
+//                [colors addObjectsFromArray:ChartColorTemplates.vordiplom];
+//                dataSet.colors = colors;
+//                dataSet.valueLinePart1OffsetPercentage = 0.8;
+//                dataSet.valueLinePart1Length = 0.2;
+//                dataSet.valueLinePart2Length = 0.4;
+//                dataSet.yValuePosition = PieChartValuePositionOutsideSlice;
+//                PieChartData *data = [[PieChartData alloc] initWithDataSet:dataSet];
+//                [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.f]];
+//                [data setValueTextColor:UIColor.blackColor];
+//                if (hasData) {
+//                self.chartView2.data = data;
+//                }
             }
         }
     }];

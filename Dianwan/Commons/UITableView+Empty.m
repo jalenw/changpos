@@ -29,7 +29,7 @@ static const char * code_key = "code_key";
         self.bgView.contentMode = UIViewContentModeScaleAspectFit;
         self.bgView.backgroundColor = [UIColor clearColor];
         self.bgView.center = self.center;
-        self.bgView.centerY = self.centerY-100;
+        self.bgView.centerY = self.centerY-150;
     }
     [self addSubview:self.bgView];
 }

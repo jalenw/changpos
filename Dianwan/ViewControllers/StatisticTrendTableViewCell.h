@@ -10,6 +10,7 @@
 #import "Charts/Charts.h"
 #import "Dianwan-Swift.h"
 #import "HooDatePicker.h"
+#import "BezierCurveView.h"
 @protocol StatisticTrendTableViewCellDelegate <NSObject>
 -(void)showMoreInfoForCell:(NSIndexPath*)path;
 @end
@@ -21,7 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (nonatomic, strong) NSIndexPath *path;
 @property (weak, nonatomic) IBOutlet BarChartView *chartView;
+@property (weak, nonatomic) IBOutlet LineChartView *lineChartView;
 @property (nonatomic, assign) id<StatisticTrendTableViewCellDelegate> delegate;
+@property (nonatomic, strong) BezierCurveView *bezierView;
 - (IBAction)showMoreAct:(UIButton *)sender;
 - (IBAction)dateAct:(UIButton *)sender;
 @end

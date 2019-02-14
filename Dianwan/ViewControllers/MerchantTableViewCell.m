@@ -53,18 +53,25 @@
     
     self.countNumLabel.attributedText =attribut;
     JXCircleModel *model1 = [[JXCircleModel alloc]init];
-    model1.number = [NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"trading_amount"] floatValue]];
+    model1.number = [NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"lineCard_amout"] floatValue]];
     model1.color = [UIColor greenColor];
-    
+    model1.name = @"";
     
     JXCircleModel *model2 = [[JXCircleModel alloc]init];
-    model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue] - [[_dict safeStringForKey:@"trading_amount"] floatValue]] ;
+    model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue] - [[_dict safeStringForKey:@"lineCard_amout"] floatValue]] ;
     model2.color = [UIColor redColor];
-    self.circleRatioView =[[JXCircleRatioView alloc]initWithFrame:CGRectMake(0,0,self.circleContentView.width,self.circleContentView.height)  andDataArray:[@[model1,model2] mutableCopy] CircleRadius:30];
-    CGAffineTransform transform =CGAffineTransformMakeRotation(-90 * M_PI/180.0);
-    [self.circleRatioView setTransform:transform];
-    [self.circleContentView addSubview:self.circleRatioView];
-    self.countLabel.text = [NSString stringWithFormat:@"%@",[[_dict safeStringForKey:@"trading_amount"] floatValue]>10000? [NSString stringWithFormat:@"%.0f万", [[_dict safeStringForKey:@"trading_amount"] floatValue]/10000]:[_dict safeStringForKey:@"trading_amount"]];
-    [self.circleContentView addSubview:self.countLabel];
+    model2.name = @"";
+
+    [self.circleRatioView removeFromSuperview];
+    self.circleRatioView = nil;
+    self.circleRatioView =[[JXCircleRatioView alloc]initWithFrame:CGRectMake(0,0,self.circleContentView.width,self.circleContentView.height)  andDataArray:[@[model1,model2] mutableCopy] CircleRadius:59];
+        CGAffineTransform transform =CGAffineTransformMakeRotation(-90 * M_PI/180.0);
+        [self.circleRatioView setTransform:transform];
+        self.circleRatioView.bgColor = RGB(47, 29, 47);
+        [self.circleContentView addSubview:self.circleRatioView];
+        [self.circleContentView addSubview:self.countLabel];
+
+    self.countLabel.text = [NSString stringWithFormat:@"%@",[[_dict safeStringForKey:@"lineCard_amout"] floatValue]>10000? [NSString stringWithFormat:@"%.0f万", [[_dict safeStringForKey:@"lineCard_amout"] floatValue]/10000]:[_dict safeStringForKey:@"lineCard_amout"]];
+
 }
 @end

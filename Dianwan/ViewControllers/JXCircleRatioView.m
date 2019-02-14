@@ -91,7 +91,7 @@ static CGFloat const foldLineWidth = 20.0;
 -(void)addCenterCircle{
     UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:whiteCircleRadius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
-    [RGB(47, 29, 47) set];
+    [self.bgColor set];
     [arcPath fill];
     [arcPath stroke];
     
@@ -123,7 +123,7 @@ static CGFloat const foldLineWidth = 20.0;
     CGContextSetFillColor(ctx, CGColorGetComponents(color.CGColor));
     
     // 3.画圆
-    CGContextAddArc(ctx, point.x, point.y, self.frame.size.width/2, angle_start, angle_end, 0);
+    CGContextAddArc(ctx, point.x, point.y, self.frame.size.width/2-self.outRadius, angle_start, angle_end, 0);
     
     // 4.填充
     CGContextFillPath(ctx);
@@ -143,7 +143,7 @@ static CGFloat const foldLineWidth = 20.0;
     // 6.小圆的中心点
     //    self.frame.size.height / 2
     CGFloat xx = self.frame.size.width / 2 + (_circleRadius +35) * cos(h);
-    CGFloat yy = (160 +20) + (_circleRadius-10 ) * sin(h);
+    CGFloat yy = self.frame.size.width / 2 + (_circleRadius-10 ) * sin(h);
     
     // 7.画折线
     [self addLineAndnumber:color andCGContextRef:ctx andX:xx andY:yy andInt:n angele:h];
@@ -304,6 +304,9 @@ static CGFloat const foldLineWidth = 20.0;
     // 10.画指引线上的数字
     if([model.number isEqualToString: @"250"]){
         model.number=@"0.00";
+    }
+    if (model.name.length==0) {
+        model.number = @"";
     }
     
     UILabel *numberLabel;

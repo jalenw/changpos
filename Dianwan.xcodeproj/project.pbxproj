@@ -4861,7 +4861,7 @@
 					"$(PROJECT_DIR)集成前/Dianwan/Externs/EaseMobSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.zuanqina.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = youqiang_pay_dev_123;
@@ -4922,7 +4922,7 @@
 					"$(PROJECT_DIR)集成前/Dianwan/Externs/EaseMobSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gdzuanqian.changjie;
+				PRODUCT_BUNDLE_IDENTIFIER = xx.zuanqina.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = youqiang_pay_dev_123;

@@ -13,6 +13,7 @@
 @property (strong,nonatomic) NSDictionary *snDict;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *desc;
+@property (weak, nonatomic) IBOutlet UILabel *model;
 @property (weak, nonatomic) IBOutlet UILabel *paytype1;
 @property (weak, nonatomic) IBOutlet UILabel *paytype2;
 @property (weak, nonatomic) IBOutlet UILabel *paytype3;

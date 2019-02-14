@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface JXCircleRatioView : UIView
-
-@property(nonatomic, strong) NSArray *dataArray; // 数据数组
-
-- (void)updateDataArray:(NSArray *)dataArray;
+@property(nonatomic, strong) NSMutableArray *dataArray; // 数据数组
+@property(nonatomic , assign) CGFloat circleRadius;// 半径
+- (instancetype)initWithFrame:(CGRect)frame andDataArray:(NSMutableArray *)dataArray CircleRadius:(CGFloat)circleRadius;
+- (void)setDataArray:(NSMutableArray *)dataArray;
 @end

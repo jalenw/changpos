@@ -15,9 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *countNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet JXCircleRatioView *circleRatioView;
-
-//@property(nonatomic,strong)JXCircleRatioView *circleRatioView;
+@property (weak, nonatomic) IBOutlet UIView *circleContentView;
+@property (strong, nonatomic) JXCircleRatioView *circleRatioView;
 @end
 
 @implementation MerchantTableViewCell
@@ -42,6 +41,8 @@
     self.nameLabel.text = [_dict safeStringForKey:@"goods_name"];
     self.snNumLabel.text =[NSString stringWithFormat:@"%@",[_dict safeStringForKey:@"sn_code"]];
     self.name.text = [_dict safeStringForKey:@"merchant_name"];
+    self.totalLabel.text = [NSString stringWithFormat:@"￥%@",[_dict safeStringForKey:@"trading_amount"]];
+    
     NSMutableAttributedString *attribut = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"累计 ¥%@",[_dict safeStringForKey:@"lg_av_amount"]]];
     //目的是想改变 ‘/’前面的字体的属性，所以找到目标的range
     NSRange range = [[NSString stringWithFormat:@"累计:%@",[_dict safeStringForKey:@"total_price"]] rangeOfString:@":"];
@@ -52,17 +53,18 @@
     
     self.countNumLabel.attributedText =attribut;
     JXCircleModel *model1 = [[JXCircleModel alloc]init];
-    model1.number = [_dict safeStringForKey:@"lg_av_amount"];
+    model1.number = [NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"trading_amount"] floatValue]];
     model1.color = [UIColor greenColor];
     
     
     JXCircleModel *model2 = [[JXCircleModel alloc]init];
-    model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue]] ;
+    model2.number =[NSString stringWithFormat:@"%f",[[_dict safeStringForKey:@"target_price"] floatValue] - [[_dict safeStringForKey:@"trading_amount"] floatValue]] ;
     model2.color = [UIColor redColor];
-    [self.circleRatioView updateDataArray:@[model1,model2]];
-     self.countLabel.text = [NSString stringWithFormat:@"%0.4f%%",[model1.number floatValue]/[model2.number floatValue]];
-    
-    
-    
+    self.circleRatioView =[[JXCircleRatioView alloc]initWithFrame:CGRectMake(0,0,self.circleContentView.width,self.circleContentView.height)  andDataArray:[@[model1,model2] mutableCopy] CircleRadius:30];
+    CGAffineTransform transform =CGAffineTransformMakeRotation(-90 * M_PI/180.0);
+    [self.circleRatioView setTransform:transform];
+    [self.circleContentView addSubview:self.circleRatioView];
+    self.countLabel.text = [NSString stringWithFormat:@"%@",[[_dict safeStringForKey:@"trading_amount"] floatValue]>10000? [NSString stringWithFormat:@"%.0f万", [[_dict safeStringForKey:@"trading_amount"] floatValue]/10000]:[_dict safeStringForKey:@"trading_amount"]];
+    [self.circleContentView addSubview:self.countLabel];
 }
 @end

@@ -17,11 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"分润细则";
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth, 536);
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth, 580);
     
     if (self.dict) {
         self.name.text = [self.dict safeStringForKey:@"gc_name"];
-        self.desc.text = [NSString stringWithFormat:@"%@ %@", [self.dict safeStringForKey:@"goods_name"],[self.dict safeStringForKey:@"goods_serial"]];
+        self.desc.text = [NSString stringWithFormat:@"%@", [self.dict safeStringForKey:@"goods_name"]];
+        self.model.text = [NSString stringWithFormat:@"%@",[self.dict safeStringForKey:@"goods_serial"]];
         self.paytype1.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"cloud_admin_share"]];
         self.paytype2.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"lineCard_admin_share"]];
         self.paytype3.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"bankCard_admin_share"]];

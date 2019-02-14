@@ -120,7 +120,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xle-X7-dBU">
-                            <rect key="frame" x="16" y="312" width="343" height="65"/>
+                            <rect key="frame" x="16" y="385" width="343" height="65"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="钱客通商户入网" backgroundImage="business_bg">
@@ -142,10 +142,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FWD-0o-64F">
-                            <rect key="frame" x="16" y="385" width="343" height="65"/>
+                            <rect key="frame" x="16" y="458" width="343" height="65"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="钱客通结算卡修改申请" backgroundImage="business_bg">
+                            <state key="normal" title="钱客通结算卡修改" backgroundImage="business_bg">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
@@ -164,7 +164,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X82-1H-WM8">
-                            <rect key="frame" x="16" y="458" width="343" height="65"/>
+                            <rect key="frame" x="16" y="312" width="343" height="65"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="调拨申请审核" backgroundImage="business_bg">

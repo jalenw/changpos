@@ -11,12 +11,17 @@
 #import "PartnersViewController.h"
 #import "MerchantViewController.h"
 #import "CommonViewController.h"
+#import "IntegralRulesViewController.h"
 @interface CreditsAndMembersViewController ()
 @property (weak, nonatomic) IBOutlet UIView *titleview;
 
 @end
 
 @implementation CreditsAndMembersViewController
+- (IBAction)pushIntegralRulesVC:(UIButton *)sender {
+    IntegralRulesViewController *VC = [[IntegralRulesViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

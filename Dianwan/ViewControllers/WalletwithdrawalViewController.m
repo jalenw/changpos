@@ -65,18 +65,17 @@
 //
 //        return;
 //    }
-//    if(singlaFormalities >0){
-//        self.yueLabel.text = [NSString stringWithFormat:@"手续费￥%f/笔，实际到账金额￥%f",[textField.text floatValue]*formalities+singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
-//    }else{
-//        self.yueLabel.text = [NSString stringWithFormat:@"实际到账金额￥%f",[textField.text floatValue]];
-//    }
-//    if (self.amountTextfiled.text.length>0) {
-//        self.alltixianBtn.hidden =YES;
-//    }else{
-//        self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
-//        self.alltixianBtn.hidden =NO;
-//    }
-//    
+    if(singlaFormalities >0){
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥%.4f税费，手续费%f/笔 实际到账金额￥%.4f",[textField.text floatValue]*formalities,singlaFormalities,[textField.text floatValue] *(1-formalities)-singlaFormalities];
+    }else{
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥%.4f税费,实际到账金额￥%.4f",[textField.text floatValue]*formalities,[textField.text floatValue]-[textField.text floatValue]*formalities];
+    }
+    if (self.amountTextfiled.text.length>0) {
+        self.alltixianBtn.hidden =YES;
+    }else{
+        self.yueLabel.text =[NSString stringWithFormat:@"余额%@", self.price];
+        self.alltixianBtn.hidden =NO;
+    }
 }
 
 
@@ -146,7 +145,6 @@
 }
 
 -(void)setUI{
-    [self.cardImageView sd_setImageWithURL:[NSURL URLWithString:self.model.bank_img]];
     self.cardBankNameLabel.text=@"";
     NSString *backName = [self.model.bank_card  substringWithRange:NSMakeRange(self.model.bank_card.length-4,4)] ;
     self.cardBankNameLabel.text =[NSString stringWithFormat:@"%@(%@)",self.model.bank_name,backName];
@@ -224,6 +222,12 @@
 }
 - (IBAction)allTiXianAction:(id)sender {
     self.amountTextfiled.text =[self.price substringFromIndex:1];
+    if(singlaFormalities >0){
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥%.4f税费，手续费%f/笔 实际到账金额￥%.4f",[self.amountTextfiled.text floatValue]*formalities,singlaFormalities,[self.amountTextfiled.text floatValue] *(1-formalities)-singlaFormalities];
+    }else{
+        self.yueLabel.text = [NSString stringWithFormat:@"扣除￥%.4f税费,实际到账金额￥%.4f",[self.amountTextfiled.text floatValue]*formalities,[self.amountTextfiled.text floatValue]-[self.amountTextfiled.text floatValue]*formalities];
+    }
+    
 }
 
 

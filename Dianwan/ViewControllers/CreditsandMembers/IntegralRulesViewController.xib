@@ -20,23 +20,75 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="X74-6c-zLc">
-                    <rect key="frame" x="0.0" y="20" width="375" height="150"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="hQM-Z1-CPr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员与积分说明" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-Vg-3xd">
+                    <rect key="frame" x="16" y="20" width="343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以上所有见识权归广东钻钱科技有限公司拥有" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFh-99-eLa">
+                    <rect key="frame" x="16" y="182" width="343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="，赶紧行动起来吧！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6E-h5-Zou">
+                    <rect key="frame" x="16" y="164" width="343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="钻石会员限定为6000积分以上，能得到笔白金会员更丰富的平台奖励" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lq-44-F8U">
+                    <rect key="frame" x="16" y="128" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="白银会员限定3000-6000积分，白银会员能从平台得到一定金额奖励" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mA-c6-RuK">
+                    <rect key="frame" x="16" y="92" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认新注册会员为青铜会员，青铜会员限定为0-2999积分，会员权益为普通会员权益" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-Rw-qP6">
+                    <rect key="frame" x="16" y="56" width="343" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员等级分为青铜，白银，钻石；" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-vQ-e5S">
+                    <rect key="frame" x="16" y="38" width="343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="X74-6c-zLc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="CUd-U9-hhI"/>
-                <constraint firstItem="X74-6c-zLc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="wFW-cr-CJS"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="X74-6c-zLc" secondAttribute="trailing" id="yDS-ub-QyM"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3d4-vQ-e5S" secondAttribute="trailing" constant="16" id="0CL-Wl-YpJ"/>
+                <constraint firstItem="MaM-Vg-3xd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="0iQ-3g-bdG"/>
+                <constraint firstItem="MaM-Vg-3xd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="0ml-Z6-5UP"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="MaM-Vg-3xd" secondAttribute="trailing" constant="16" id="0vl-KT-T7f"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="e6E-h5-Zou" secondAttribute="trailing" constant="16" id="6nu-9q-Lrm"/>
+                <constraint firstItem="3d4-vQ-e5S" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Ce9-4V-vZb"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="wFh-99-eLa" secondAttribute="trailing" constant="16" id="K5G-u5-yZq"/>
+                <constraint firstItem="jOc-Rw-qP6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="KTD-KO-EKf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0lq-44-F8U" secondAttribute="trailing" constant="16" id="Mn7-UD-2yQ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jOc-Rw-qP6" secondAttribute="trailing" constant="16" id="ObJ-Ai-25B"/>
+                <constraint firstItem="3d4-vQ-e5S" firstAttribute="top" secondItem="MaM-Vg-3xd" secondAttribute="bottom" id="PKf-lW-BnO"/>
+                <constraint firstItem="e6E-h5-Zou" firstAttribute="top" secondItem="0lq-44-F8U" secondAttribute="bottom" id="UyY-xD-dI5"/>
+                <constraint firstItem="e6E-h5-Zou" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Zid-Cz-QeR"/>
+                <constraint firstItem="jOc-Rw-qP6" firstAttribute="top" secondItem="3d4-vQ-e5S" secondAttribute="bottom" id="azq-6E-zSy"/>
+                <constraint firstItem="0lq-44-F8U" firstAttribute="top" secondItem="5mA-c6-RuK" secondAttribute="bottom" id="enO-3f-IlH"/>
+                <constraint firstItem="wFh-99-eLa" firstAttribute="top" secondItem="e6E-h5-Zou" secondAttribute="bottom" id="fOI-2I-cu2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5mA-c6-RuK" secondAttribute="trailing" constant="16" id="hbU-WT-6bw"/>
+                <constraint firstItem="wFh-99-eLa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="hxx-yc-09t"/>
+                <constraint firstItem="5mA-c6-RuK" firstAttribute="top" secondItem="jOc-Rw-qP6" secondAttribute="bottom" id="iiy-29-nz5"/>
+                <constraint firstItem="0lq-44-F8U" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="lqA-UX-EEl"/>
+                <constraint firstItem="5mA-c6-RuK" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="yOm-Yk-4nZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="318" y="154"/>
         </view>
     </objects>
 </document>

@@ -41,7 +41,7 @@
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, _pickerView.height+8, ScreenWidth, 44)];
     button.backgroundColor = [UIColor whiteColor];
     [button setTitle:@"确定" forState:UIControlStateNormal];
-    [button setTitleColor:RGB(153, 153, 153) forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(comfirmDidTap:) forControlEvents:UIControlEventTouchUpInside];
     
     self.pickerContainerView.top = ScreenHeight;

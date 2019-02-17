@@ -89,7 +89,7 @@ static CGFloat const foldLineWidth = 20.0;
 
 /// 添加中心白色圆
 -(void)addCenterCircle{
-    UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:whiteCircleRadius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    UIBezierPath *arcPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2) radius:_whiteRadius>0?_whiteRadius:whiteCircleRadius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
     
     [self.bgColor set];
     [arcPath fill];
@@ -145,8 +145,11 @@ static CGFloat const foldLineWidth = 20.0;
     CGFloat xx = self.frame.size.width / 2 + (_circleRadius +35) * cos(h);
     CGFloat yy = self.frame.size.width / 2 + (_circleRadius-10 ) * sin(h);
     
+    JXCircleModel *model = self.dataArray[n];
+    if (model.name.length>0) {
     // 7.画折线
     [self addLineAndnumber:color andCGContextRef:ctx andX:xx andY:yy andInt:n angele:h];
+    }
 }
 
 /**

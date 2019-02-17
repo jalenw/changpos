@@ -33,10 +33,13 @@
             }
             if ([dict safeIntForKey:@"state"]==1) {
                 [self.tips setTitle:@"已同意" forState:UIControlStateNormal];
+                self.tips.hidden = NO;
             }
-            if ([dict safeIntForKey:@"state"]==2) {
+            else if ([dict safeIntForKey:@"state"]==2) {
                 [self.tips setTitle:@"已拒绝" forState:UIControlStateNormal];
+                self.tips.hidden = NO;
             }
+            else self.tips.hidden = YES;
         }
     }];
 }

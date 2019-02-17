@@ -27,6 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *chartLb2;
 @property (weak, nonatomic) IBOutlet UILabel *total;
 @property (weak, nonatomic) IBOutlet UILabel *total2;
+@property (weak, nonatomic) IBOutlet UILabel *person1;
+@property (weak, nonatomic) IBOutlet UILabel *team1;
+@property (weak, nonatomic) IBOutlet UILabel *person2;
+@property (weak, nonatomic) IBOutlet UILabel *team2;
 @property (nonatomic, assign) id<StatisticTotalTableViewCellDelegate> delegate;
 @property (strong, nonatomic) JXCircleRatioView *circleRatioView;
 @property (strong, nonatomic) JXCircleRatioView *circleRatioView2;

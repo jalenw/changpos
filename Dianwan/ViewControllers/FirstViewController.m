@@ -63,6 +63,11 @@
     UISwipeGestureRecognizer * swipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(handleSwipeGesture:)];
     swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.collectionView addGestureRecognizer:swipeLeft];
+    
+    [self.timer invalidate];
+    self.timer = nil;
+    self.timer =[NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(timerAct) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -125,6 +130,18 @@
             [self.collectionView reloadData];
         }
     }];
+}
+
+-(void)timerAct
+{
+    self.index++;
+    if (self.index == 3) {
+        self.index = 0;
+    }
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.collectionView setContentOffset:CGPointMake(ScreenWidth*self.index, 0) animated:YES];
+    }];
+    self.pageControl.currentPage = index;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -228,5 +245,6 @@
         }];
     }
     self.pageControl.currentPage = index;
+    self.index = (int)index;
 }
 @end

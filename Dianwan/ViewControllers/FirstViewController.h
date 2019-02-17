@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UIView *profitView;
 @property (weak, nonatomic) IBOutlet UIView *rankView;
+@property (nonatomic,strong) NSTimer *timer;
+@property (nonatomic) int index;
 - (IBAction)moreAct:(UIButton *)sender;
 - (IBAction)menuAct:(UIButton *)sender;
 @end

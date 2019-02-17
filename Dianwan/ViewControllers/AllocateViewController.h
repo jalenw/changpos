@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *snTf;
 @property (weak, nonatomic) IBOutlet UITextField *totalTf;
 @property (weak, nonatomic) IBOutlet UITextField *partnerTf;
+@property (weak, nonatomic) IBOutlet UITextField *phone;
 - (IBAction)productAct:(UIButton *)sender;
 - (IBAction)snAct:(UIButton *)sender;
 - (IBAction)partnerAct:(UIButton *)sender;

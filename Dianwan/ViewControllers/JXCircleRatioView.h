@@ -12,6 +12,7 @@
 @property(nonatomic, strong) NSMutableArray *dataArray; // 数据数组
 @property(nonatomic , assign) CGFloat circleRadius;// 半径
 @property(nonatomic , assign) CGFloat outRadius;// 半径差
+@property(nonatomic , assign) CGFloat whiteRadius;// 中心圆半径差
 @property(nonatomic , strong) UIColor *bgColor;
 - (instancetype)initWithFrame:(CGRect)frame andDataArray:(NSMutableArray *)dataArray CircleRadius:(CGFloat)circleRadius;
 - (void)setDataArray:(NSMutableArray *)dataArray;

@@ -70,7 +70,7 @@
 //    NSMutableArray *entries = [[NSMutableArray alloc] init];
     BOOL hasData = false;
     
-    NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+    NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ,[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1]];
     NSMutableArray *datas = [NSMutableArray new];
     
     for (int i = 0; i < array.count; i++)

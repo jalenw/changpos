@@ -40,11 +40,11 @@
     self.machinesCountLabel.text =[NSString stringWithFormat:@"%@",[self.dict safeNumberForKey:@"equipment_num"]];
     if ([self.dict safeIntForKey:@"is_type"] ==1) {
        
-        self.nextbtn.userInteractionEnabled =YES;
+        self.nextbtn.userInteractionEnabled =NO;
         [self.nextbtn setTitle:@"已 收 款" forState:UIControlStateNormal];
         [self.nextbtn setBackgroundColor: RGB(200 , 200, 200)];
     }else {
-        self.nextbtn.userInteractionEnabled =NO;
+        self.nextbtn.userInteractionEnabled =YES;
         [self.nextbtn setTitle:@"确 定 收 款" forState:UIControlStateNormal];
         [self.nextbtn setBackgroundColor: RGB(251 , 182, 8)];
 
@@ -58,7 +58,7 @@
         [SVProgressHUD dismiss];
         if (status) {
             [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"]];
-            self.nextbtn.userInteractionEnabled =YES;
+            self.nextbtn.userInteractionEnabled =NO;
             [self.nextbtn setTitle:@"已 收 款" forState:UIControlStateNormal];
             [self.nextbtn setBackgroundColor: RGB(200 , 200, 200)];
         }else{

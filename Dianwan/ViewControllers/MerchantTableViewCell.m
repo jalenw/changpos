@@ -64,7 +64,7 @@
 
     [self.circleRatioView removeFromSuperview];
     self.circleRatioView = nil;
-    self.circleRatioView =[[JXCircleRatioView alloc]initWithFrame:CGRectMake(0,0,self.circleContentView.width,self.circleContentView.height)  andDataArray:[@[model1,model2] mutableCopy] CircleRadius:59];
+    self.circleRatioView =[[JXCircleRatioView alloc]initWithFrame:CGRectMake(4,4,self.circleContentView.width-8,self.circleContentView.height-8)  andDataArray:[@[model1,model2] mutableCopy] CircleRadius:59];
         CGAffineTransform transform =CGAffineTransformMakeRotation(-90 * M_PI/180.0);
         [self.circleRatioView setTransform:transform];
         self.circleRatioView.bgColor = RGB(47, 29, 47);

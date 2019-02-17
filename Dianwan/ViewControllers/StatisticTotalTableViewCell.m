@@ -98,7 +98,7 @@
                 NSArray *array = [nowDict allKeys];
 //                NSMutableArray *entries = [[NSMutableArray alloc] init];
              
-                NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+                NSArray *colors = @[[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1]];
                 NSMutableArray *datas = [NSMutableArray new];
                 
                 double all = 0;
@@ -107,6 +107,28 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [nowDict safeDoubleForKey:key];
+                    if (i==1) {
+                        if (path.row==0) {
+                            self.person1.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                        }
+                        if (path.row==1) {
+                            self.person1.text = [NSString stringWithFormat:@"商户:%d台",(int)value];
+                        }
+                        if (path.row==2) {
+                            self.person1.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                        }
+                    }
+                    else if (i==0) {
+                        if (path.row==0) {
+                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                        }
+                        if (path.row==1) {
+                            self.team1.text = [NSString stringWithFormat:@"渠道:%d台",(int)value];
+                        }
+                        if (path.row==2) {
+                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                        }
+                    }
                     if (value>0) {
                         hasData = true;
                         all += value;
@@ -126,7 +148,7 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [nowDict safeDoubleForKey:key];
-                    NSString *label = [key isEqualToString:@"groups"]?@"团队":[key isEqualToString:@"personals"]?@"个人":@"";
+                    NSString *label = [key isEqualToString:@"groups"]?@"渠道":[key isEqualToString:@"personals"]?@"商户":@"";
 //                    if (value>0) {
 //                        [entries addObject:[[PieChartDataEntry alloc] initWithValue:value label:label]];
 //                    }
@@ -136,27 +158,28 @@
                     if (!hasData) {
                         JXCircleModel *model = [[JXCircleModel alloc]init];
                         model.color = colors[i];
-                        model.textcolor = [UIColor blackColor];
+//                        model.textcolor = [UIColor blackColor];
                         model.number = [NSString stringWithFormat:@"%@",@"250"];
-                        model.name = label;
+//                        model.name = label;
                         [datas  addObject:model];
                     }
                     else
                     {
                         JXCircleModel *model = [[JXCircleModel alloc]init];
                         model.color = colors[i];
-                        model.textcolor = [UIColor blackColor];
+//                        model.textcolor = [UIColor blackColor];
                         model.number = [NSString stringWithFormat:@"%.2f",value];
-                        model.name = label;
+//                        model.name = label;
                         [datas  addObject:model];
                     }
                 }
     
                 [self.circleRatioView removeFromSuperview];
                 self.circleRatioView = nil;
-                    self.circleRatioView = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-160)/2,0,160,180)  andDataArray:datas CircleRadius:20];
+                    self.circleRatioView = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-150)/2,0,150,145)  andDataArray:datas CircleRadius:10];
+                self.circleRatioView.whiteRadius = 25;
                     self.circleRatioView.bgColor = [UIColor whiteColor];
-                    self.circleRatioView.outRadius = 10;
+                    self.circleRatioView.outRadius = 20;
                     self.circleRatioView.backgroundColor = [UIColor whiteColor];
                     [self.chartView addSubview:self.circleRatioView];
 
@@ -183,7 +206,7 @@
                 NSArray *array = [totalDict allKeys];
 //                NSMutableArray *entries = [[NSMutableArray alloc] init];
                 
-                NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1],[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+                NSArray *colors = @[[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1],[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1]];
                 NSMutableArray *datas = [NSMutableArray new];
                 
                 double all = 0;
@@ -192,6 +215,28 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [totalDict safeDoubleForKey:key];
+                    if (i==0) {
+                        if (path.row==0) {
+                            self.person2.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                        }
+                        if (path.row==1) {
+                            self.person2.text = [NSString stringWithFormat:@"商户:%d台",(int)value];
+                        }
+                        if (path.row==2) {
+                            self.person2.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                        }
+                    }
+                    else if (i==1) {
+                        if (path.row==0) {
+                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                        }
+                        if (path.row==1) {
+                            self.team2.text = [NSString stringWithFormat:@"渠道:%d台",(int)value];
+                        }
+                        if (path.row==2) {
+                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                        }
+                    }
                     if (value>0) {
                         hasData = true;
                         all += value;
@@ -211,31 +256,32 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [(totalDict) safeDoubleForKey:key];
-                    NSString *label = [key isEqualToString:@"group_total"]?@"团队":[key isEqualToString:@"personal_total"]?@"个人":@"";
+                    NSString *label = [key isEqualToString:@"group_total"]?@"商户":[key isEqualToString:@"personal_total"]?@"渠道":@"";
                     if (!hasData) {
                         JXCircleModel *model = [[JXCircleModel alloc]init];
                         model.color = colors[i];
-                        model.textcolor = [UIColor blackColor];
+//                        model.textcolor = [UIColor blackColor];
                         model.number = [NSString stringWithFormat:@"%@",@"250"];
-                        model.name = label;
+//                        model.name = label;
                         [datas  addObject:model];
                     }
                     else
                     {
                         JXCircleModel *model = [[JXCircleModel alloc]init];
                         model.color = colors[i];
-                        model.textcolor = [UIColor blackColor];
+//                        model.textcolor = [UIColor blackColor];
                         model.number = [NSString stringWithFormat:@"%.2f",value];
-                        model.name = label;
+//                        model.name = label;
                         [datas  addObject:model];
                     }
                 }
                 
                 [self.circleRatioView2 removeFromSuperview];
                 self.circleRatioView2 = nil;
-                    self.circleRatioView2 = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-160)/2,0,160,180)  andDataArray:datas CircleRadius:20];
+                    self.circleRatioView2 = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth/2-150)/2,0,150,145)  andDataArray:datas CircleRadius:10];
+                self.circleRatioView2.whiteRadius = 25;
                     self.circleRatioView2.bgColor = [UIColor whiteColor];
-                    self.circleRatioView2.outRadius = 10;
+                    self.circleRatioView2.outRadius = 20;
                     self.circleRatioView2.backgroundColor = [UIColor whiteColor];
                     [self.chartView2 addSubview:self.circleRatioView2];
 

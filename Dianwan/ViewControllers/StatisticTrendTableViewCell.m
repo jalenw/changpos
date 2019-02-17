@@ -202,7 +202,7 @@
 //                }
 //                else
 //                {
-                    set1 = [[LineChartDataSet alloc] initWithValues:values label:@"个人"];
+                    set1 = [[LineChartDataSet alloc] initWithValues:values label:@"商户"];
                     set1.drawIconsEnabled = NO;
                     [set1 setColor:[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1]];
                     [set1 setCircleColor:[UIColor colorWithRed:72/255.0 green:218/255.0 blue:255/255.0 alpha:1]];
@@ -271,10 +271,10 @@
 //                    }
 //                    else
 //                    {
-                        set2 = [[LineChartDataSet alloc] initWithValues:values label:@"团队"];
+                        set2 = [[LineChartDataSet alloc] initWithValues:values label:@"渠道"];
                         set2.drawIconsEnabled = NO;
-                        [set2 setColor:[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1]];
-                        [set2 setCircleColor:[UIColor colorWithRed:72/255.0 green:149/255.0 blue:255/255.0 alpha:1]];
+                        [set2 setColor:[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1]];
+                        [set2 setCircleColor:[UIColor colorWithRed:255/255.0 green:207/255.0 blue:72/255.0 alpha:1]];
                         set2.lineWidth = 1.0;
                         set2.circleRadius = 3.0;
                         set2.drawCircleHoleEnabled = NO;

@@ -110,6 +110,7 @@
                 FriendsViewController *vc = [[FriendsViewController alloc]init];
                 [vc setBlock:^(NSDictionary *dict) {
                     self.partnerTf.text = [dict safeStringForKey:@"member_name"];
+                    self.phone.text = [NSString stringWithFormat:@"%@",[dict safeStringForKey:@"member_mobile"]];
                     member_info = dict;
                 }];
                 vc.data = [array mutableCopy];

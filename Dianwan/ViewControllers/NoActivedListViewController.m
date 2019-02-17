@@ -104,8 +104,14 @@
             }
             else
                 [self.tableView removeEmptyView];
+            if (dataList.count>0) {
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotificationNumberOfInactive" object:@(dataList.count)];
+            }
+           
             [self.tableView reloadData];
         }
+        
+        
     }];
 }
 

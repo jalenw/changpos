@@ -17,8 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *machinesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *transfersTimeLabel;
 
-
-@property (weak, nonatomic) IBOutlet UIImageView *nextImageview;
+@property (weak, nonatomic) IBOutlet UIButton *nextbtn;
 @end
 
 @implementation TransfersViewController
@@ -29,8 +28,6 @@
     
     [self setupUI];
     self.view.backgroundColor = RGB(48, 46, 58);
-    UITapGestureRecognizer *shoukuan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(btnClickAction)];
-    [self.nextImageview addGestureRecognizer:shoukuan];
 }
 
 -(void)setupUI{
@@ -42,21 +39,28 @@
     self.transfersTimeLabel.text = [self.dict safeStringForKey:@"equipment_time"];
     self.machinesCountLabel.text =[NSString stringWithFormat:@"%@",[self.dict safeNumberForKey:@"equipment_num"]];
     if ([self.dict safeIntForKey:@"is_type"] ==1) {
-        self.nextImageview.userInteractionEnabled =NO;
-         self.nextImageview.image = [UIImage imageNamed:@"yishouk_2"];
+       
+        self.nextbtn.userInteractionEnabled =YES;
+        [self.nextbtn setTitle:@"已 收 款" forState:UIControlStateNormal];
+        [self.nextbtn setBackgroundColor: RGB(200 , 200, 200)];
     }else {
-        self.nextImageview.userInteractionEnabled =YES;
-        self.nextImageview.image = [UIImage imageNamed:@"yishouk_1"];
+        self.nextbtn.userInteractionEnabled =NO;
+        [self.nextbtn setTitle:@"确 定 收 款" forState:UIControlStateNormal];
+        [self.nextbtn setBackgroundColor: RGB(251 , 182, 8)];
+
     }
 }
--(void)btnClickAction{
+
+
+- (IBAction)btnClickAction:(UIButton *)sender {
     [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/allocationConfirm" params:@{@"id":[self.dict safeNumberForKey:@"id"]} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"]];
-            self.nextImageview.userInteractionEnabled =NO;
-            [self.nextImageview setImage:[UIImage imageNamed:@"yishouk_2"]];
+            self.nextbtn.userInteractionEnabled =YES;
+            [self.nextbtn setTitle:@"已 收 款" forState:UIControlStateNormal];
+            [self.nextbtn setBackgroundColor: RGB(200 , 200, 200)];
         }else{
              [AlertHelper showAlertWithTitle:error];
         }

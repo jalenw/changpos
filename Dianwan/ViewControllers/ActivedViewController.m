@@ -69,6 +69,7 @@
             }
             else
                 [self.tableView removeEmptyView];
+           
             [self.tableView reloadData];
         }
     }];
@@ -106,6 +107,9 @@
             }
             else
                 [self.tableView removeEmptyView];
+            if (dataList.count>0) {
+                  [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfHhasBeenactivated" object:@(dataList.count)];
+            }
             [self.tableView reloadData];
         }
     }];

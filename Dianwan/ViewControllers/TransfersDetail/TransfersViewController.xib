@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="machinesCountLabel" destination="PeH-db-fIK" id="9cD-Wy-yu7"/>
                 <outlet property="machinesName" destination="Jlb-wo-rXc" id="dWw-GA-k5e"/>
-                <outlet property="nextImageview" destination="svc-HG-3sG" id="vpC-G7-bKn"/>
+                <outlet property="nextbtn" destination="efJ-Y5-mq9" id="OXi-vZ-J02"/>
                 <outlet property="reactiverLabel" destination="Znl-go-By6" id="g2R-da-zgF"/>
                 <outlet property="reactiverPhoneLabel" destination="AVm-gj-KdU" id="cHx-Dt-Wqq"/>
                 <outlet property="snLabel" destination="W97-by-gVz" id="YZa-Jq-VJf"/>
@@ -423,31 +423,36 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="iGS-B7-HHG"/>
                 </view>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nextStepAction" translatesAutoresizingMaskIntoConstraints="NO" id="svc-HG-3sG">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efJ-Y5-mq9">
                     <rect key="frame" x="80" y="359" width="215" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="6Sb-VA-Sx1"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="wqR-qI-YFj"/>
+                        <constraint firstAttribute="height" constant="40" id="DeY-ia-S7k"/>
                     </constraints>
-                </imageView>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnClickAction:" destination="-1" eventType="touchUpInside" id="XEX-Lg-GtP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="svc-HG-3sG" secondAttribute="trailing" constant="80" id="4xC-cw-K6b"/>
-                <constraint firstItem="svc-HG-3sG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="80" id="5X5-Ur-gDg"/>
-                <constraint firstItem="svc-HG-3sG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="80" id="OHz-O1-KCF"/>
                 <constraint firstItem="LaB-00-ppc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="P8F-ok-HOU"/>
-                <constraint firstItem="svc-HG-3sG" firstAttribute="top" secondItem="LaB-00-ppc" secondAttribute="bottom" constant="24" id="RFp-rr-Jwx"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="svc-HG-3sG" secondAttribute="trailing" constant="80" id="RXA-uz-ohe"/>
+                <constraint firstItem="efJ-Y5-mq9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="80" id="Ro5-gE-XdN"/>
                 <constraint firstItem="LaB-00-ppc" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="USW-4x-t3S"/>
-                <constraint firstItem="svc-HG-3sG" firstAttribute="top" secondItem="LaB-00-ppc" secondAttribute="bottom" constant="24" id="XeP-Ef-rNP"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="efJ-Y5-mq9" secondAttribute="trailing" constant="80" id="nZl-eI-EGW"/>
                 <constraint firstItem="LaB-00-ppc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="-30" id="qjE-pk-HpB"/>
+                <constraint firstItem="efJ-Y5-mq9" firstAttribute="top" secondItem="LaB-00-ppc" secondAttribute="bottom" constant="24" id="zTQ-M2-85h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="-23.199999999999999" y="15.742128935532236"/>
         </view>
     </objects>
-    <resources>
-        <image name="nextStepAction" width="16" height="16"/>
-    </resources>
 </document>

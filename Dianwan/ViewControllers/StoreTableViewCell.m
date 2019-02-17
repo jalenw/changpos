@@ -27,7 +27,7 @@
     self.storeNameLb.text = [dict safeStringForKey:@"gc_name"];
     self.productNameLb.text = [dict safeStringForKey:@"goods_name"];
     self.seriesName.text = [dict safeStringForKey:@"goods_serial"];
-    self.priceLb.text = [NSString stringWithFormat:@"%@元",[dict safeStringForKey:@"goods_price"]];
+    self.priceLb.text = [NSString stringWithFormat:@"¥%@元",[dict safeStringForKey:@"goods_price"]];
     self.totalLb.text = [NSString stringWithFormat:@"x%@",[dict safeStringForKey:@"goods_count_num"]];
     [self.img sd_setImageWithURL:[NSURL URLWithString: [dict safeStringForKey:@"goods_image"]]];
 }

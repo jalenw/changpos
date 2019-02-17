@@ -21,22 +21,44 @@
 @property (weak, nonatomic) IBOutlet UIButton *disagressBtn;
 @property (weak, nonatomic) IBOutlet UIView *feilvChanggeView;
 @property (weak, nonatomic) IBOutlet UILabel *rateChangeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
+@property (strong, nonatomic) IBOutlet UIView *diaoBoSelectView;
+@property(nonatomic,assign)int isJujue;
 
 @end
 
 @implementation ApplyShowDetailViewController
 
 - (IBAction)dealApplyAction:(UIButton *)sender {
-    
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/parentExamine" params:@{@"id":@(self.idNum),@"type":@(sender.tag)} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
-        if (status) {
-            [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"] duration:3];
-            [self.navigationController popViewControllerAnimated:YES];
-        }else{
-            [AlertHelper showAlertWithTitle:error];
-        }
-    }];
+    if(sender.tag==1){
+         self.isJujue=1;
+         self.tipLabel.text =@"确定同意调拨";
+    }else{
+         self.isJujue=2;
+         self.tipLabel.text =@"确定拒绝调拨";
+    }
+     self.diaoBoSelectView.hidden =NO;
+
 }
+
+- (IBAction)diaoBoAct:(UIButton *)sender {
+    if(sender.tag==2){//取消
+        self.diaoBoSelectView.hidden=YES;
+        return;
+    }
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/parentExamine" params:@{@"id":@(self.idNum),@"type":@(self.isJujue)} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+            self.diaoBoSelectView.hidden=YES;
+            if (status) {
+                self.agressBtn.hidden =YES;
+                self.disagressBtn.hidden =YES;
+                [AlertHelper showAlertWithTitle:[data safeStringForKey:@"result"] duration:3];
+                [self.navigationController popViewControllerAnimated:YES];
+            }else{
+                [AlertHelper showAlertWithTitle:error];
+            }
+            
+        }];
+    }
 
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -53,6 +75,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"申请详情";
+    self.diaoBoSelectView.frame = [UIScreen mainScreen].bounds;
+    self.diaoBoSelectView.hidden =YES;
+    [self.view addSubview:self.diaoBoSelectView];
 //    [self setupNav];
     self.view.backgroundColor = RGB(246, 246, 246);
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/examineAllocationDetail" params:@{@"id":@(self.idNum)} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {

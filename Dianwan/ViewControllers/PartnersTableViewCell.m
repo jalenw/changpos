@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *h9Label;
 @property (weak, nonatomic) IBOutlet UILabel *mp70Label;
 @property (weak, nonatomic) IBOutlet UILabel *zibeijiLabel;
+@property (weak, nonatomic) IBOutlet UILabel *allcountLabel;
 
 @end
 
@@ -27,6 +28,7 @@
     self.nameLabel.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
     self.phonrNumLabel.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
     self.countNumLabel.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
+    self.allcountLabel.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -84,6 +86,8 @@
    
     self.countNumLabel.attributedText =attribut;
     self.timeLabel.text = [_dict safeStringForKey:@"created_date"];
+    self.allcountLabel.text = [NSString stringWithFormat:@"总交易量:¥%@",[_dict safeStringForKey:@"total_price"]];
+    
     
 }
 

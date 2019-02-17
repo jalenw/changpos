@@ -10,6 +10,10 @@
 #import "NoActivedListViewController.h"
 #import "ActivedViewController.h"
 @interface ActivedStoreViewController ()<UITextFieldDelegate>
+{
+    NSString *inactive;
+    NSString *hasBeenactivated;
+}
 
 @end
 
@@ -18,10 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeHasBeenactivatedcount:) name:@"kNotificationNumberOfHhasBeenactivated" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeNoInactivecount:) name:@"kNotificationNumberOfInactive" object:nil];
+}
+-(void)changeHasBeenactivatedcount:(NSNotification *)notification{
+    hasBeenactivated =[NSString stringWithFormat:@"已激活(%@)",notification.object];
+    [(UIButton *)self.topButtonArray[1] setTitle:hasBeenactivated forState:UIControlStateNormal];
+}
+-(void)changeNoInactivecount:(NSNotification *)notification{
+    inactive =[NSString stringWithFormat:@"未激活(%@)",notification.object];
+    [(UIButton *)self.topButtonArray[0] setTitle:inactive forState:UIControlStateNormal];
 }
 
 - (NSArray<NSString *> *)buttonTitleArray{
-    return @[@"未激活",@"已激活"];
+    inactive =@"未激活";
+    hasBeenactivated =@"已激活";
+    return @[inactive,hasBeenactivated];
 }
 
 -(UIColor *)BtnbackgroundColor{

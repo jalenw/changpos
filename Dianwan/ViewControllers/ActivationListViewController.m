@@ -76,7 +76,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dataList.count;
+    if(dataList.count>0){
+        return dataList.count+1;
+    }else{
+        return dataList.count ;
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

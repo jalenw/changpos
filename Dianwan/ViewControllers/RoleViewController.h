@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *actReward;
 @property (weak, nonatomic) IBOutlet UILabel *recommendReward;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *snLb;
+@property (weak, nonatomic) IBOutlet UILabel *modelLb;
 @property (weak, nonatomic) IBOutlet UIView *actView;
 @property (weak, nonatomic) IBOutlet UIView *recView;
 @end

@@ -16,6 +16,7 @@
                 <outlet property="card" destination="4jl-Ep-PQF" id="CM4-fR-C7O"/>
                 <outlet property="desc" destination="7ke-iF-3bI" id="Ap2-bR-l20"/>
                 <outlet property="model" destination="UUw-sc-fYo" id="nSK-Hp-gdZ"/>
+                <outlet property="modelLb" destination="9Wa-30-te9" id="htv-jo-gba"/>
                 <outlet property="name" destination="VCK-Bd-h7R" id="ml0-gX-Yqv"/>
                 <outlet property="paytype1" destination="8C3-oA-K7q" id="zSl-Ic-huA"/>
                 <outlet property="paytype2" destination="gOd-nk-WYG" id="dTy-p9-c4A"/>
@@ -25,6 +26,7 @@
                 <outlet property="recView" destination="2fM-8w-LOf" id="6gM-b6-eOq"/>
                 <outlet property="recommendReward" destination="TuV-wQ-ajp" id="vze-ib-Hnb"/>
                 <outlet property="scrollView" destination="Cjf-33-aqJ" id="JRr-y8-0L5"/>
+                <outlet property="snLb" destination="cbM-lV-AzH" id="xOS-SF-lBu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

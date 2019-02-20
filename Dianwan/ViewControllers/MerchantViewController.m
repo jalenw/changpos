@@ -110,8 +110,8 @@
     [self.tableView reloadData];
     NSDictionary *dict = dataList[indexPath.row];
     NSMutableDictionary *param = [HTTPClientInstance newDefaultParameters];
-    if ([dict safeStringForKey:@"member_id"]) {
-        [param setValue:[dict safeStringForKey:@"member_id"] forKey:@"others_member_id"];
+    if ([dict safeStringForKey:@"sn_code"]) {
+        [param setValue:[dict safeStringForKey:@"sn_code"] forKey:@"sn_code"];
     }
     [param setValue:[dict safeStringForKey:@"goods_id"] forKey:@"goods_id"];
     [SVProgressHUD show];

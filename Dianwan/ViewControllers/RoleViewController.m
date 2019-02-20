@@ -49,8 +49,20 @@
     if(self.type==1)
     {
         self.title = @"商户详情";
+        self.snLb.text = @"SN号";
         self.recView.hidden = YES;
         self.actView.hidden = YES;
+        
+        self.desc.text = [NSString stringWithFormat:@"%@", [self.dict safeStringForKey:@"sn_code"]];
+        self.name.text = [self.dict safeStringForKey:@"gc_name"];
+        self.modelLb.text = [NSString stringWithFormat:@"%@", [self.dict safeStringForKey:@"goods_name"]];
+        self.model.text = [NSString stringWithFormat:@"%@",[self.dict safeStringForKey:@"goods_serial"]];
+        self.paytype1.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"cloud_merchant_rate"]];
+        self.paytype2.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"lineCard_merchant_rate"]];
+        self.paytype3.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"bankCard_merchant_rate"]];
+        self.paytype4.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"quickPay_merchant_rate"]];
+        self.paytype5.text = [NSString stringWithFormat:@"%@%%", [self.dict safeStringForKey:@"scaveCode_merchant_rate"]];
+        self.card.text = [NSString stringWithFormat:@"%@", [self.dict safeStringForKey:@"bankCard_merchant_rate_top"]];
     }
 }
 @end

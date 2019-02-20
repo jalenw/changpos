@@ -74,7 +74,7 @@ didFinishLaunchingWithOptions:launchOptions
     [self initSharePlatform];
     
     //同步获取服务器地址
-    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain"];
+    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain?version=2.0"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse *response = NULL;
     NSError *connectionError = NULL;

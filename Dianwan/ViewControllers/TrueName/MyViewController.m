@@ -80,14 +80,14 @@
     self.phoneLabel.text =AppDelegateInstance.defaultUser.member_mobile;
     self.IdLabel.text =[NSString stringWithFormat:@"ID:%lld",AppDelegateInstance.defaultUser.member_id];
     self.integralLabel.text =[NSString stringWithFormat:@"%lld",AppDelegateInstance.defaultUser.member_points];
-    if (AppDelegateInstance.defaultUser.member_level  ==1) {
-        [_levelImageView setImage:[UIImage imageNamed:@"byhy_1"]];
+//    if (AppDelegateInstance.defaultUser.member_level  ==1) {
+        [_levelImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"我的会员%d",AppDelegateInstance.defaultUser.member_level]]];
     
-    }else  if(AppDelegateInstance.defaultUser.member_level  ==2) {
-        [_levelImageView setImage:[UIImage imageNamed: @"byhy_2"]];
-    }else{
-        [_levelImageView setImage:[UIImage imageNamed: @"byhy_3"]];
-    }
+//    }else  if(AppDelegateInstance.defaultUser.member_level  ==2) {
+//        [_levelImageView setImage:[UIImage imageNamed: @"byhy_2"]];
+//    }else{
+//        [_levelImageView setImage:[UIImage imageNamed: @"byhy_3"]];
+//    }
 }
 
 -(void)rightbarButtonDidTap:(UIButton *)button{

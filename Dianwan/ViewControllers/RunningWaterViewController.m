@@ -14,6 +14,7 @@
     NSMutableArray *dataList;
     int page;
 }
+@property(nonatomic,strong)NSDictionary *myRanlist;
 @end
 
 @implementation RunningWaterViewController
@@ -56,7 +57,11 @@
         }
         if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
+            
+            self.myRanlist = [data safeDictionaryForKey:@"my_ranking"];
             NSArray *dataArray = [result safeArrayForKey:@"list"];
+            
+            
             if (dataArray.count>0) {
                 [dataList addObjectsFromArray:dataArray];
             }
@@ -81,10 +86,8 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
         FirstTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"FirstTableViewCell" owner:self options:nil][0];
-        if (dataList.count>0) {
-            NSDictionary *dict = dataList[indexPath.row];
-            cell.dict = dict;
-        }
+       
+            cell.dict = self.myRanlist;
         return cell;
     }else{
     NSString *cellIdentifier = @"RunningWaterTableViewCell";
@@ -94,10 +97,8 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    if (dataList.count>0) {
-        NSDictionary *dict = dataList[indexPath.row];
+        NSDictionary *dict = dataList[indexPath.row -1];
         cell.dict = dict;
-    }
     return cell;
     }
 }

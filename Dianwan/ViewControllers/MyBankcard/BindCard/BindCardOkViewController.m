@@ -9,6 +9,7 @@
 #import "BindCardOkViewController.h"
 #import "ToolManager.h"
 #import "CountdownManager.h"
+#import "CardBindViewController.h"
 @interface BindCardOkViewController ()<CountdownManagerDelegate,UITextFieldDelegate>
 
 @property (strong, nonatomic) CountdownManager * countDownManager;
@@ -54,6 +55,14 @@
     
     UITapGestureRecognizer *bindViewCancletap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bindSelectedCancledAction)];
     [self.bindViewSureImageview addGestureRecognizer:bindViewCancletap];
+}
+
+-(void)back
+{
+    for (UIViewController *temp in self.navigationController.viewControllers)
+    {
+        if ([temp isKindOfClass:[CardBindViewController class]]) {[self.navigationController popToViewController:temp animated:YES];}
+    }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string

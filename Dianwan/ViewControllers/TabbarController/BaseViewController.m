@@ -52,6 +52,17 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (UIButton*)setLeftBarButtonWithTitle:(NSString*)title{
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
+    [button setTitle:title forState:UIControlStateNormal];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//    [button addTarget:self action:@selector(leftbarButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    button.titleLabel.font = DefaultFontOfSize(18);
+    [button setTitleColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]] forState:UIControlStateNormal];
+    self.navigationItem.titleView = button;
+    return button;
+}
+
 - (UIButton*)setRightBarButtonWithTitle:(NSString*)title{
     UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 44)];
     [button setTitle:title forState:UIControlStateNormal];

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ApplyApproveTableViewCell : UITableViewCell
+@interface ApplyApproveTableViewCell : BaseTableViewCell
 @property (strong,nonatomic) NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *phone;

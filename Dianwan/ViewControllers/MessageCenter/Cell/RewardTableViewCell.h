@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RewardTableViewCell : UITableViewCell
+@interface RewardTableViewCell : BaseTableViewCell
 @property(nonatomic,strong)NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;

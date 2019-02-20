@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommonTableViewCell : UITableViewCell
+@interface CommonTableViewCell : BaseTableViewCell
 @property(nonatomic,strong)NSDictionary *dict;
 
 @end

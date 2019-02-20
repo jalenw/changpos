@@ -118,6 +118,11 @@
             UserFeedBackViewController *feed = [[UserFeedBackViewController alloc]init];
             [self.navigationController pushViewController:feed animated:YES];
         }
+        else if (indexPath.row==4) {
+            CommonUIWebViewController *controller = [[CommonUIWebViewController alloc] init];
+            controller.address = [NSString stringWithFormat:@"%@%@?isBack=true",web_url,@"AboutUs"];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
 }
 
 

@@ -314,17 +314,17 @@ static CGFloat const foldLineWidth = 20.0;
     
     UILabel *numberLabel;
     if(n==2){
-        numberLabel =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX+numberSize.width/2-7, numberStartY, numberSize.width+5, numberSize.height)];
+        numberLabel =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX+numberSize.width/2-20, numberStartY, numberSize.width+5, numberSize.height)];
     }else if(n==1){
-        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX+numberSize.width/2, numberStartY, numberSize.width+5, numberSize.height)];
+        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX+numberSize.width/2-20, numberStartY, numberSize.width+5, numberSize.height)];
     }else if(n==0){
-        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX-numberSize.width/2, numberStartY, numberSize.width+5, numberSize.height)];
+        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX-numberSize.width/2+20, numberStartY, numberSize.width+5, numberSize.height)];
     }else if(n==3){
-        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX-numberSize.width/2, numberStartY, numberSize.width+5, numberSize.height)];
+        numberLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(numberStartX-numberSize.width/2+20, numberStartY, numberSize.width+5, numberSize.height)];
     }
     [numberLabel setText:model.number];
     numberLabel.textColor = [UIColor colorWithRed:85.0/255.0 green:85.0/255.0 blue:85.0/255.0 alpha:1];
-    numberLabel.textAlignment=NSTextAlignmentCenter;
+    numberLabel.textAlignment=NSTextAlignmentRight;
     numberLabel.font = [UIFont systemFontOfSize:16.0];
     [self addSubview:numberLabel];
     //     [model.number drawAtPoint:CGPointMake(numberStartX, numberStartY) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:10.0],NSForegroundColorAttributeName:color}];
@@ -341,13 +341,13 @@ static CGFloat const foldLineWidth = 20.0;
     
     UILabel *wenziLabel;
     if(n==2){
-        wenziLabel = [[UILabel alloc]initWithFrame:CGRectMake(textStartX, textStartY, textSize.width, textSize.height)];
+        wenziLabel = [[UILabel alloc]initWithFrame:CGRectMake(textStartX-20, textStartY, textSize.width, textSize.height)];
     }else if(n==1){
-        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX, textStartY, textSize.width, textSize.height)];
+        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX-20, textStartY, textSize.width, textSize.height)];
     }else if(n==0){
-        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX, textStartY, textSize.width, textSize.height)];
+        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX+20, textStartY, textSize.width, textSize.height)];
     }else if(n==3){
-        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX, textStartY, textSize.width, textSize.height)];
+        wenziLabel  =  [[UILabel alloc]initWithFrame:CGRectMake(textStartX+20, textStartY, textSize.width, textSize.height)];
     }
     
     wenziLabel.center =CGPointMake((lineLosePointX+lineEndPointX)/2, textStartY+(textSize.height+12)/2);

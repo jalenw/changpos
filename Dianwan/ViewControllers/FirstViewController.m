@@ -29,6 +29,9 @@
 
     [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
     
+    self.menuTitle1.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
+    self.menuTitle2.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
+                                 
     self.profitView.height = 350;
     self.rankView.top = self.profitView.bottom;
     [self.scrollView setContentSize:CGSizeMake(ScreenWidth, self.rankView.bottom)];
@@ -68,6 +71,17 @@
     self.timer = nil;
     self.timer =[NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(timerAct) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hadEnterForeGround) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)hadEnterForeGround{
+    [self.collectionView reloadData];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -94,11 +108,13 @@
         titleTip = @"下午好";
     }else titleTip = @"晚上好";
     if (AppDelegateInstance.defaultUser.is_approve == 1) {
-        self.navigationItem.title = [NSString stringWithFormat:@"%@,%@",titleTip,AppDelegateInstance.defaultUser.member_name];
+//        self.navigationItem.title = [NSString stringWithFormat:@"%@,%@",titleTip,AppDelegateInstance.defaultUser.member_name];
+        [self setLeftBarButtonWithTitle:[NSString stringWithFormat:@"%@,%@",titleTip,AppDelegateInstance.defaultUser.member_name]];
     }
     else
     {
-        self.navigationItem.title = @"你还没认证，请前往认证";
+        [self setLeftBarButtonWithTitle:@"你还没认证，请前往认证"];
+//        self.navigationItem.title = @"你还没认证，请前往认证";
     }
     
     [self getData];
@@ -141,7 +157,16 @@
     [UIView animateWithDuration:0.3 animations:^{
         [self.collectionView setContentOffset:CGPointMake(ScreenWidth*self.index, 0) animated:YES];
     }];
-    self.pageControl.currentPage = index;
+    self.pageControl.currentPage = self.index;
+    if (self.index==0) {
+        self.menuTitle1.text = @"今日收益";
+    }
+    if (self.index==1) {
+        self.menuTitle1.text = @"今日激活量";
+    }
+    if (self.index==2) {
+        self.menuTitle1.text = @"今日交易量";
+    }
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -246,5 +271,14 @@
     }
     self.pageControl.currentPage = index;
     self.index = (int)index;
+    if (self.index==0) {
+        self.menuTitle1.text = @"今日收益";
+    }
+    if (self.index==1) {
+        self.menuTitle1.text = @"今日激活量";
+    }
+    if (self.index==2) {
+        self.menuTitle1.text = @"今日交易量";
+    }
 }
 @end

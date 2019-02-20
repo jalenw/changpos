@@ -25,11 +25,17 @@
     if (self.others_member_id) {
         self.title = @"伙伴的库存";
         self.bt.hidden = YES;
-        self.tableView.frame = ScreenBounds;
     }
     else
         self.title = @"我的机具";
     // Do any additional setup after loading the view from its nib.
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.others_member_id) {
+        self.tableView.height = ScreenHeight - 44;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -64,9 +70,6 @@
 }
 - (IBAction)confirmAct:(UIButton *)sender {
     AllocateViewController *vc = [[AllocateViewController alloc]init];
-//    if (self.others_member_id) {
-//        vc.others_member_id = self.others_member_id;
-//    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 

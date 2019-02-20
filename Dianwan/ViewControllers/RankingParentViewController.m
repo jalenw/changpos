@@ -17,7 +17,6 @@
 @implementation RankingParentViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setRightBarButtonWithTitle:@"排行榜说明"];
 }
 
 - (NSArray<NSString *> *)buttonTitleArray{

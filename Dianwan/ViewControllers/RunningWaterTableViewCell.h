@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RunningWaterTableViewCell : UITableViewCell
+@interface RunningWaterTableViewCell : BaseTableViewCell
 @property(nonatomic,strong)NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;

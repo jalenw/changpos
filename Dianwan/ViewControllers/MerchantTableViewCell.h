@@ -12,7 +12,7 @@
 #import "Dianwan-Swift.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MerchantTableViewCell : UITableViewCell
+@interface MerchantTableViewCell : BaseTableViewCell
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (strong,nonatomic) NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;

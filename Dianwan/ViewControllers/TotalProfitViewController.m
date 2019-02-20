@@ -133,7 +133,7 @@
             }
             [self.circleRatioView removeFromSuperview];
             self.circleRatioView = nil;
-                self.circleRatioView = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth-200)/2,10,200,200)  andDataArray:datas CircleRadius:59];
+                self.circleRatioView = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth-180)/2,20,180,180)  andDataArray:datas CircleRadius:59];
                 self.circleRatioView.bgColor = [UIColor whiteColor];
                 self.circleRatioView.outRadius = 20;
                 self.circleRatioView.backgroundColor = [UIColor whiteColor];
@@ -209,7 +209,7 @@
             }
             [self.circleRatioView2 removeFromSuperview];
             self.circleRatioView2 = nil;
-                self.circleRatioView2 = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth-200)/2,10,200,200)  andDataArray:datas2 CircleRadius:59];
+                self.circleRatioView2 = [[JXCircleRatioView alloc]initWithFrame:CGRectMake((ScreenWidth-180)/2,20,180,180)  andDataArray:datas2 CircleRadius:59];
                 self.circleRatioView2.bgColor = [UIColor whiteColor];
                 self.circleRatioView2.outRadius = 20;
                 self.circleRatioView2.backgroundColor = [UIColor whiteColor];

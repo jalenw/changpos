@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoleViewController">
             <connections>
                 <outlet property="actReward" destination="kci-Zv-LLT" id="ZvJ-hx-suQ"/>
+                <outlet property="actView" destination="I9s-zO-7H1" id="up5-Wm-Mmw"/>
                 <outlet property="card" destination="4jl-Ep-PQF" id="CM4-fR-C7O"/>
                 <outlet property="desc" destination="7ke-iF-3bI" id="Ap2-bR-l20"/>
                 <outlet property="model" destination="UUw-sc-fYo" id="nSK-Hp-gdZ"/>
@@ -21,6 +22,7 @@
                 <outlet property="paytype3" destination="aln-Ve-Jd5" id="RCH-QE-bVD"/>
                 <outlet property="paytype4" destination="da3-LN-QXA" id="p8a-kE-ur1"/>
                 <outlet property="paytype5" destination="b6c-Yw-6Ww" id="GSc-fA-YSZ"/>
+                <outlet property="recView" destination="2fM-8w-LOf" id="6gM-b6-eOq"/>
                 <outlet property="recommendReward" destination="TuV-wQ-ajp" id="vze-ib-Hnb"/>
                 <outlet property="scrollView" destination="Cjf-33-aqJ" id="JRr-y8-0L5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

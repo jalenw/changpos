@@ -20,6 +20,7 @@
 #import <AlipaySDK/AlipaySDK.h>
 #import "AliPayManager.h"
 #import "WXApiManager.h"
+#import "HelpViewController.h"
 @interface AppDelegate ()<UIAlertViewDelegate,WXApiDelegate>
 @property (strong,nonatomic) UINavigationController* mainNavController;
 @end
@@ -88,15 +89,22 @@ didFinishLaunchingWithOptions:launchOptions
         NSLog(@"服务器内部错误");
     }
     
-    if ([HTTPClientInstance isLogin]) {
-        AppDelegateInstance.defaultUser = [User getObjectById:[HTTPClientInstance.uid longLongValue] context:AppDelegateInstance.managedObjectContext];
-        [self showMainPage];
-    }
-    else
-    {
-        [self showLoginView];
-    }
     
+//    if ([Tooles isFirstOpen:@"resetLogin"])
+//    {
+//        HelpViewController *guideView=[[HelpViewController alloc] init];
+//        self.window.rootViewController=guideView;
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainPage) name:@"kNOtificationShowLoginGuide" object:nil];
+//    }else{
+        if ([HTTPClientInstance isLogin]) {
+            AppDelegateInstance.defaultUser = [User getObjectById:[HTTPClientInstance.uid longLongValue] context:AppDelegateInstance.managedObjectContext];
+            [self showMainPage];
+        }
+        else
+        {
+            [self showLoginView];
+        }
+//    }
     //极光长连接消息
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];

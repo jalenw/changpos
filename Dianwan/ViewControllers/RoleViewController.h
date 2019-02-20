@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 
 @interface RoleViewController : BaseViewController
+@property (assign,nonatomic) int type;//1 商户详情
 @property (strong,nonatomic) NSDictionary *dict;
 @property (strong,nonatomic) NSDictionary *snDict;
 @property (weak, nonatomic) IBOutlet UILabel *name;
@@ -23,4 +24,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *actReward;
 @property (weak, nonatomic) IBOutlet UILabel *recommendReward;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *actView;
+@property (weak, nonatomic) IBOutlet UIView *recView;
 @end

@@ -79,9 +79,7 @@
         //判断是不是删除键
         return YES;
     }
-    else if(textField.text.length >= 5 && self.tag ==1111) {
-            _inputAllBlodk(self.textField.text);
-    
+    else if(textField.text.length >= 666 && self.tag ==1111) {
         //输入的字符个数大于6，则无法继续输入，返回NO表示禁止输入  zyf增
         NSLog(@"输入的字符个数大于6，忽略输入");
         return NO;
@@ -113,7 +111,7 @@
         ((UIView *)[self.dotArray objectAtIndex:i]).hidden = NO;
     }
     if (textField.text.length == kDotCount) {
-      
+        _inputAllBlodk(self.textField.text);
         NSLog(@"输入完毕");
     }
 }

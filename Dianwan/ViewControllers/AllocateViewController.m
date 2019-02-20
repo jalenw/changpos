@@ -111,6 +111,10 @@
                 [vc setBlock:^(NSDictionary *dict) {
                     self.partnerTf.text = [dict safeStringForKey:@"member_name"];
                     self.phone.text = [NSString stringWithFormat:@"%@",[dict safeStringForKey:@"member_mobile"]];
+                    if([self.phone.text isEqualToString:@"1"])
+                    {
+                        self.phone.text = @"";
+                    }
                     member_info = dict;
                 }];
                 vc.data = [array mutableCopy];

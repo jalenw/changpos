@@ -119,6 +119,7 @@
         [SVProgressHUD dismiss];
         if (status) {
             RoleViewController *vc = [[RoleViewController alloc]init];
+            vc.type = 1;
             vc.dict = [data safeDictionaryForKey:@"result"];
             [self.navigationController pushViewController:vc animated:YES];
         }else{

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToolTableViewCell : UITableViewCell
+@interface ToolTableViewCell : BaseTableViewCell
 @property (strong,nonatomic) NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UILabel *name;

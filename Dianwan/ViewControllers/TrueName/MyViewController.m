@@ -66,7 +66,7 @@
     self.mainTableView.delegate =self;
     self.mainTableView.dataSource =self;
     
-    _tableViewArr = @[@"我的钱包",@"库存管理",@"渠道管理",@"业务申请",@"我的银行卡",@"消息中心",@"积分与会员",@"实名认证",@"在线客服"];
+    _tableViewArr = @[@"我的钱包",@"库存管理",@"渠道管理",@"业务申请",@"我的银行卡",@"消息中心",@"积分与会员",@"实名认证"];
 }
 
 

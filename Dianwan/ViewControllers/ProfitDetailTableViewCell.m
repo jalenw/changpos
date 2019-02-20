@@ -34,14 +34,14 @@
     }
     self.price.text = [dict safeStringForKey:@"lg_av_amount"];
     self.desc.text = [dict safeStringForKey:@"lg_desc"];
-    [self.desc sizeToFit];
+    self.desc.height = [Tooles calculateTextHeight:ScreenWidth-134-12 Content:self.desc.text fontSize:12];
     self.time.text = [dict safeStringForKey:@"lg_addtime"];
 }
 
 +(CGFloat)heightForProfitDetailTableViewCell:(NSDictionary *)dict
 {
     NSString *text = [dict safeStringForKey:@"lg_desc"];
-    CGFloat height = 64-12;
+    CGFloat height = 64;
     height += [Tooles calculateTextHeight:ScreenWidth-134-12 Content:text fontSize:12];
     return height;
 }

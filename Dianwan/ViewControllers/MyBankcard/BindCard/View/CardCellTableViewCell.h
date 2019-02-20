@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class CardInfoModel;
 
-@interface CardCellTableViewCell : UITableViewCell
+@interface CardCellTableViewCell : BaseTableViewCell
 @property(nonatomic,strong)CardInfoModel *model;
 
 @end

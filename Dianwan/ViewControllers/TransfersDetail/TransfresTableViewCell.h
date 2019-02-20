@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TransfresTableViewCell : UITableViewCell
+@interface TransfresTableViewCell : BaseTableViewCell
 @property (nonatomic,strong)NSDictionary *dict;
 //调拨者
 @property (weak, nonatomic) IBOutlet UILabel *transferserLabel;

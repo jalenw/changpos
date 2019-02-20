@@ -14,8 +14,8 @@
 #import "PWInputViewController.h"
 #import "UIView+EasyLayout.h"
 #import "BindCardOkViewController.h"
-
-@interface CardBindViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "BindCardCodeViewController.h"
+@interface CardBindViewController ()<UITableViewDelegate,UITableViewDataSource,BindCardCodeViewControllerDelegate>
 @property(nonatomic,strong)UITableView *mainTbleview;
 @property(nonatomic,strong)NSMutableArray *modelArr;
 @property (weak, nonatomic) IBOutlet UIImageView *noCardImageView;
@@ -74,8 +74,15 @@
 
 
 -(void)addCardAction{
-    BindCardOkViewController *bindOkVC= [[BindCardOkViewController alloc]init];
-    [self.navigationController pushViewController:bindOkVC  animated:YES];
+    BindCardCodeViewController *vc = [[BindCardCodeViewController alloc]init];
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)codeValDone
+{
+    BindCardOkViewController *vc = [[BindCardOkViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

@@ -31,17 +31,21 @@
     ChartYAxis *leftAxis = _lineChartView.leftAxis;
     [leftAxis removeAllLimitLines];
     NSNumberFormatter *leftAxisFormatter = [[NSNumberFormatter alloc] init];
-    leftAxisFormatter.minimumFractionDigits = 0;
-    leftAxisFormatter.maximumFractionDigits = 2;
     if (self.path.row==0) {
+        leftAxisFormatter.minimumFractionDigits = 2;
+        leftAxisFormatter.maximumFractionDigits = 2;
         leftAxisFormatter.negativeSuffix = @" ￥";
         leftAxisFormatter.positiveSuffix = @" ￥";
     }
     if (self.path.row==1) {
+        leftAxisFormatter.minimumFractionDigits = 0;
+        leftAxisFormatter.maximumFractionDigits = 0;
         leftAxisFormatter.negativeSuffix = @" 台";
         leftAxisFormatter.positiveSuffix = @" 台";
     }
     if (self.path.row==2) {
+        leftAxisFormatter.minimumFractionDigits = 2;
+        leftAxisFormatter.maximumFractionDigits = 2;
         leftAxisFormatter.negativeSuffix = @" ￥";
         leftAxisFormatter.positiveSuffix = @" ￥";
     }
@@ -161,8 +165,34 @@
             NSMutableArray *dataSets = [[NSMutableArray alloc] init];
             LineChartDataSet *set1 = nil;
             LineChartDataSet *set2 = nil;
+            LineChartDataSet *set3 = nil;
+            NSMutableArray *totalValues = [[NSMutableArray alloc] init];
             if (personalDict) {
-                NSArray *array = [personalDict allKeys];
+                NSArray *keys = [personalDict allKeys];
+                NSMutableArray *array = [[NSMutableArray alloc]initWithArray:keys];
+                for (NSString *key in keys) {
+                    if ([key isEqualToString:@"personal_one"]) {
+                        [array replaceObjectAtIndex:0 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_two"]) {
+                        [array replaceObjectAtIndex:1 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_three"]) {
+                        [array replaceObjectAtIndex:2 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_four"]) {
+                        [array replaceObjectAtIndex:3 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_five"]) {
+                        [array replaceObjectAtIndex:4 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_six"]) {
+                        [array replaceObjectAtIndex:5 withObject:key];
+                    }
+                    if ([key isEqualToString:@"personal_seven"]) {
+                        [array replaceObjectAtIndex:6 withObject:key];
+                    }
+                }
 //                [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
                 [self setupLineChartView:array endDate:search_date_end];
                 
@@ -190,6 +220,8 @@
 //                    [yVals1 addObject:@([personalDict safeDoubleForKey:key])];
                     
                     [values addObject:[[ChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+                    
+                    [totalValues addObject:[[ChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
                 }
                 
               
@@ -230,14 +262,31 @@
 //               BarChartDataSet *set2 = nil;
 //            NSMutableArray *yVals2 = [[NSMutableArray alloc] init];
                 if (groupDict) {
-                    NSArray *array = [groupDict allKeys];
-//                    [self setupBarLineChartView:self.chartView array:array endDate:search_date_end];
-//                    NSMutableArray *yVals = [[NSMutableArray alloc] init];
-//                    for (int i = 0; i < array.count; i++)
-//                    {
-//                        NSString *key = [array objectAtIndex:i];
-//                        [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
-//                    }
+                    NSArray *keys = [groupDict allKeys];
+                    NSMutableArray *array = [[NSMutableArray alloc]initWithArray:keys];
+                    for (NSString *key in keys) {
+                        if ([key isEqualToString:@"group_one"]) {
+                            [array replaceObjectAtIndex:0 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_two"]) {
+                            [array replaceObjectAtIndex:1 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_three"]) {
+                            [array replaceObjectAtIndex:2 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_four"]) {
+                            [array replaceObjectAtIndex:3 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_five"]) {
+                            [array replaceObjectAtIndex:4 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_six"]) {
+                            [array replaceObjectAtIndex:5 withObject:key];
+                        }
+                        if ([key isEqualToString:@"group_seven"]) {
+                            [array replaceObjectAtIndex:6 withObject:key];
+                        }
+                    }
                     NSMutableArray *values = [[NSMutableArray alloc] init];
                     for (int i = 0; i < array.count; i++)
                     {
@@ -260,6 +309,14 @@
 //                        NSString *date=[dateFormatter stringFromDate:theDate];
 //                        [yVals2 addObject:@([groupDict safeDoubleForKey:key])];
                           [values addObject:[[ChartDataEntry alloc] initWithX:i y:[groupDict safeDoubleForKey:key]]];
+                        if (!personalDict) {
+                            [totalValues addObject:[[ChartDataEntry alloc] initWithX:i y:[personalDict safeDoubleForKey:key]]];
+                        }
+                        else
+                        {
+                            ChartDataEntry *entry = [totalValues objectAtIndex:i];
+                            entry.y += [groupDict safeDoubleForKey:key];
+                        }
                     }
                     
 //                    if (_lineChartView.data.dataSetCount > 0)
@@ -284,6 +341,18 @@
                         [dataSets addObject:set2];
 //                    }
                 }
+            
+            set3 = [[LineChartDataSet alloc] initWithValues:totalValues label:@"总量"];
+            set3.drawIconsEnabled = NO;
+            [set3 setColor:[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+            [set3 setCircleColor:[UIColor colorWithRed:95/255.0 green:220/255.0 blue:92/255.0 alpha:1] ];
+            set3.lineWidth = 1.0;
+            set3.circleRadius = 3.0;
+            set3.drawCircleHoleEnabled = NO;
+            set3.valueFont = [UIFont systemFontOfSize:9.f];
+            set3.formLineWidth = 1.0;
+            set3.formSize = 15.0;
+            [dataSets addObject:set3];
 
         LineChartData *data = [[LineChartData alloc] initWithDataSets:dataSets];
         _lineChartView.data = data;

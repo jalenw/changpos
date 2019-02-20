@@ -435,6 +435,14 @@
 		8ED176F51F0B45BF00105584 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA31EE7DC4E00AD1E77 /* libc++.tbd */; };
 		8ED176F61F0B45CD00105584 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3DFAA51EE7DC5600AD1E77 /* libz.tbd */; };
 		8ED1D71E2215A181009AA86C /* BezierCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D71D2215A181009AA86C /* BezierCurveView.m */; };
+		8ED1D729221AB0B3009AA86C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D727221AB0B2009AA86C /* HelpViewController.m */; };
+		8ED1D72A221AB0B3009AA86C /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1D728221AB0B2009AA86C /* HelpViewController.xib */; };
+		8ED1D72E221ADAEB009AA86C /* BindCardCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D72C221ADAEB009AA86C /* BindCardCodeViewController.m */; };
+		8ED1D72F221ADAEB009AA86C /* BindCardCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1D72D221ADAEB009AA86C /* BindCardCodeViewController.xib */; };
+		8ED1D733221ADCB1009AA86C /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D731221ADCB1009AA86C /* BaseTableViewCell.m */; };
+		8ED1D734221ADCB1009AA86C /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1D732221ADCB1009AA86C /* BaseTableViewCell.xib */; };
+		8ED1D738221AE131009AA86C /* SystemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1D736221AE131009AA86C /* SystemDetailViewController.m */; };
+		8ED1D739221AE131009AA86C /* SystemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED1D737221AE131009AA86C /* SystemDetailViewController.xib */; };
 		8ED4A878211197F70038E719 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4A876211197F70038E719 /* FirstViewController.m */; };
 		8ED4A879211197F70038E719 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4A877211197F70038E719 /* FirstViewController.xib */; };
 		8EDA41401F22F731000CBA40 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA413E1F22F731000CBA40 /* LoginViewController.m */; };
@@ -1266,6 +1274,18 @@
 		8EC5C89720F884030041A34A /* UIView+XibLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XibLayout.m"; sourceTree = "<group>"; };
 		8ED1D71C2215A181009AA86C /* BezierCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierCurveView.h; sourceTree = "<group>"; };
 		8ED1D71D2215A181009AA86C /* BezierCurveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierCurveView.m; sourceTree = "<group>"; };
+		8ED1D725221AB0B1009AA86C /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		8ED1D727221AB0B2009AA86C /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		8ED1D728221AB0B2009AA86C /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		8ED1D72B221ADAEB009AA86C /* BindCardCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindCardCodeViewController.h; sourceTree = "<group>"; };
+		8ED1D72C221ADAEB009AA86C /* BindCardCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindCardCodeViewController.m; sourceTree = "<group>"; };
+		8ED1D72D221ADAEB009AA86C /* BindCardCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BindCardCodeViewController.xib; sourceTree = "<group>"; };
+		8ED1D730221ADCB1009AA86C /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		8ED1D731221ADCB1009AA86C /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		8ED1D732221ADCB1009AA86C /* BaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
+		8ED1D735221AE131009AA86C /* SystemDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SystemDetailViewController.h; path = Dianwan/ViewControllers/messageCenter/SystemDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		8ED1D736221AE131009AA86C /* SystemDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SystemDetailViewController.m; path = Dianwan/ViewControllers/messageCenter/SystemDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		8ED1D737221AE131009AA86C /* SystemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SystemDetailViewController.xib; path = Dianwan/ViewControllers/messageCenter/SystemDetailViewController.xib; sourceTree = SOURCE_ROOT; };
 		8ED4A875211197F70038E719 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		8ED4A876211197F70038E719 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8ED4A877211197F70038E719 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -1914,6 +1934,9 @@
 				2FF228FC21F8875C009A079A /* SystemTableViewCell.h */,
 				2FF228FD21F8875C009A079A /* SystemTableViewCell.m */,
 				2FF228FE21F8875C009A079A /* SystemTableViewCell.xib */,
+				8ED1D735221AE131009AA86C /* SystemDetailViewController.h */,
+				8ED1D736221AE131009AA86C /* SystemDetailViewController.m */,
+				8ED1D737221AE131009AA86C /* SystemDetailViewController.xib */,
 			);
 			path = MessageCenter;
 			sourceTree = "<group>";
@@ -2130,6 +2153,9 @@
 			isa = PBXGroup;
 			children = (
 				8E6D1EDC21EB2ACB002C6717 /* BindCard */,
+				8ED1D72B221ADAEB009AA86C /* BindCardCodeViewController.h */,
+				8ED1D72C221ADAEB009AA86C /* BindCardCodeViewController.m */,
+				8ED1D72D221ADAEB009AA86C /* BindCardCodeViewController.xib */,
 			);
 			path = MyBankcard;
 			sourceTree = "<group>";
@@ -2450,6 +2476,9 @@
 				8E1C0FCF221152F800EFC778 /* SNCodeSelectTableViewCell.h */,
 				8E1C0FD0221152F800EFC778 /* SNCodeSelectTableViewCell.m */,
 				8E1C0FD1221152F800EFC778 /* SNCodeSelectTableViewCell.xib */,
+				8ED1D730221ADCB1009AA86C /* BaseTableViewCell.h */,
+				8ED1D731221ADCB1009AA86C /* BaseTableViewCell.m */,
+				8ED1D732221ADCB1009AA86C /* BaseTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -3647,6 +3676,9 @@
 		CD0666311E8CB9A600CCD49A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8ED1D725221AB0B1009AA86C /* HelpViewController.h */,
+				8ED1D727221AB0B2009AA86C /* HelpViewController.m */,
+				8ED1D728221AB0B2009AA86C /* HelpViewController.xib */,
 				8E6D1DFD21EB2487002C6717 /* RegisterViewController.h */,
 				8E6D1E0121EB2488002C6717 /* RegisterViewController.m */,
 				8E6D1DFB21EB2487002C6717 /* RegisterViewController.xib */,
@@ -4146,6 +4178,7 @@
 				8E6D1EF521EB2ACB002C6717 /* RemoveBindCardViewController.xib in Resources */,
 				8E6D1EC121EB2A5C002C6717 /* SetPayPwViewController.xib in Resources */,
 				8EB4E51E21201FAE00BC563B /* chatBar_more_location@2x.png in Resources */,
+				8ED1D739221AE131009AA86C /* SystemDetailViewController.xib in Resources */,
 				8EEF4A91211D8C9600DE1E36 /* EaseMob.bundle in Resources */,
 				8EB4E4E121201FAE00BC563B /* chatBar_more_face.png in Resources */,
 				2F02FA1121F0AF34001182E7 /* FirstTableViewCell.xib in Resources */,
@@ -4162,6 +4195,7 @@
 				8E1C0FD3221152F800EFC778 /* SNCodeSelectTableViewCell.xib in Resources */,
 				8EB4E52E21201FAE00BC563B /* chatBar_colorMore_location@2x.png in Resources */,
 				8E6D1E0521EB2488002C6717 /* SelectRegistViewController.xib in Resources */,
+				8ED1D734221ADCB1009AA86C /* BaseTableViewCell.xib in Resources */,
 				8EB4E54821201FAE00BC563B /* messageSendFail@2x.png in Resources */,
 				8EB4E4FE21201FAE00BC563B /* VoiceSearchFeedback007.png in Resources */,
 				8EB4E4E021201FAE00BC563B /* chatBar_more_cardSelected.png in Resources */,
@@ -4185,6 +4219,7 @@
 				8E6D1E9E21EB273F002C6717 /* PaySetPWViewController.xib in Resources */,
 				8EDA41531F22F85C000CBA40 /* FriendsViewController.xib in Resources */,
 				8EB4E4CA21201FAE00BC563B /* chat_location_preview@2x.png in Resources */,
+				8ED1D72A221AB0B3009AA86C /* HelpViewController.xib in Resources */,
 				8EB4E54321201FAE00BC563B /* chatBar_faceSelected@2x.png in Resources */,
 				8E591B3D21F4B93700279630 /* NoActivedListViewController.xib in Resources */,
 				8EB4E4E921201FAE00BC563B /* chat_sender_audio_playing_003@2x.png in Resources */,
@@ -4210,6 +4245,7 @@
 				8E591B3721F4B8C200279630 /* ActivedStoreViewController.xib in Resources */,
 				8EB4E4D421201FAE00BC563B /* chat_receiver_bg.png in Resources */,
 				8EEF4BF3211D8CB500DE1E36 /* MWPhotoBrowser.bundle in Resources */,
+				8ED1D72F221ADAEB009AA86C /* BindCardCodeViewController.xib in Resources */,
 				8EB4E4D121201FAE00BC563B /* chat_location_detail_disclosureHL@2x.png in Resources */,
 				8EB4E50721201FAE00BC563B /* VoiceSearchFeedback011.png in Resources */,
 				8E874ACE22041D4D00D15435 /* CheckDetailViewController.xib in Resources */,
@@ -4423,6 +4459,7 @@
 				8E6D1EAA21EB273F002C6717 /* UIView+EasyLayout.m in Sources */,
 				8EEF4BB2211D8CB500DE1E36 /* EaseMessageMulticastBase.m in Sources */,
 				2FFBAE8C21EC4BAA00C9EBAE /* IQUIView+Hierarchy.m in Sources */,
+				8ED1D72E221ADAEB009AA86C /* BindCardCodeViewController.m in Sources */,
 				8EB4E3ED212009AD00BC563B /* UIButton+EMWebCache.m in Sources */,
 				8EB4E3EE212009AD00BC563B /* EMSDWebImagePrefetcher.m in Sources */,
 				04395ED81F233EC10074865E /* NSBundle+TZImagePicker.m in Sources */,
@@ -4448,6 +4485,7 @@
 				8E1C0FD2221152F800EFC778 /* SNCodeSelectTableViewCell.m in Sources */,
 				2FFBAE9221EC4BAA00C9EBAE /* IQPreviousNextView.m in Sources */,
 				8EEF4C04211D8CB500DE1E36 /* EaseFaceView.m in Sources */,
+				8ED1D729221AB0B3009AA86C /* HelpViewController.m in Sources */,
 				8EEF4BA6211D8CB500DE1E36 /* UIViewController+HUD.m in Sources */,
 				8E4664EE2169BFD70022DF94 /* MKAnnotation.m in Sources */,
 				8EEF4BD6211D8CB500DE1E36 /* PSTCollectionViewController.m in Sources */,
@@ -4523,6 +4561,7 @@
 				8E6D1EB221EB273F002C6717 /* CountdownManager.m in Sources */,
 				8EEF4BAB211D8CB500DE1E36 /* EaseMessageReadManager.m in Sources */,
 				8EEF4BD8211D8CB500DE1E36 /* PSTCollectionViewCell.m in Sources */,
+				8ED1D733221ADCB1009AA86C /* BaseTableViewCell.m in Sources */,
 				8E8AB45622008A810093BE90 /* FirstHeaderView.m in Sources */,
 				8EEF4BE0211D8CB500DE1E36 /* PSTGridLayoutRow.m in Sources */,
 				2FB8362221EEDBE00028A376 /* MessageCenterViewController.m in Sources */,
@@ -4652,6 +4691,7 @@
 				8E980B632110373100C7B6DA /* SystemMsgTableViewCell.m in Sources */,
 				8E6D1E9121EB273F002C6717 /* City2ViewController.m in Sources */,
 				8E6D1EF221EB2ACB002C6717 /* BindCardOkViewController.m in Sources */,
+				8ED1D738221AE131009AA86C /* SystemDetailViewController.m in Sources */,
 				CD06662C1E8CB53700CCD49A /* ZTNavigationController.m in Sources */,
 				8EEF4BCD211D8CB500DE1E36 /* MWPhotoBrowser.m in Sources */,
 				8EEF4BC4211D8CB500DE1E36 /* amrFileCodec.mm in Sources */,

@@ -8,6 +8,7 @@
 
 #import "SystemViewController.h"
 #import "SystemTableViewCell.h"
+#import "SystemDetailViewController.h"
 @interface SystemViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray *dataList;
@@ -75,8 +76,6 @@
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.section];
@@ -113,6 +112,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (dataList.count>0) {
+        NSDictionary *dict = dataList[indexPath.section];
+        SystemDetailViewController *vc = [[SystemDetailViewController alloc]init];
+        vc.dict = dict;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

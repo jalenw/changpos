@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIView *rankView;
 @property (nonatomic,strong) NSTimer *timer;
 @property (nonatomic) int index;
+@property (weak, nonatomic) IBOutlet UILabel *menuTitle1;
+@property (weak, nonatomic) IBOutlet UILabel *menuTitle2;
 - (IBAction)moreAct:(UIButton *)sender;
 - (IBAction)menuAct:(UIButton *)sender;
 @end

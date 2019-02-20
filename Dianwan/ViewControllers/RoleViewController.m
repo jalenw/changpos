@@ -45,5 +45,12 @@
         self.actReward.text = [NSString stringWithFormat:@"0"];
         self.recommendReward.text = [NSString stringWithFormat:@"0"];
     }
+    
+    if(self.type==1)
+    {
+        self.title = @"商户详情";
+        self.recView.hidden = YES;
+        self.actView.hidden = YES;
+    }
 }
 @end

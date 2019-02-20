@@ -81,7 +81,7 @@
                                 <constraint firstAttribute="height" constant="18" id="Y3R-7P-DxO"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIC-YU-kTx">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIC-YU-kTx">
                             <rect key="frame" x="297.5" y="8" width="61.5" height="18"/>
                             <connections>
                                 <action selector="pushIntegralRulesVC:" destination="-1" eventType="touchUpInside" id="Xa3-Fl-lNe"/>
@@ -136,8 +136,8 @@
     </objects>
     <resources>
         <image name="WechatIMG3" width="750" height="222"/>
-        <image name="line" width="747" height="1"/>
-        <image name="积分明细" width="147" height="40"/>
-        <image name="积分规则" width="147" height="40"/>
+        <image name="line" width="1" height="1"/>
+        <image name="积分明细" width="73" height="20"/>
+        <image name="积分规则" width="73" height="20"/>
     </resources>
 </document>

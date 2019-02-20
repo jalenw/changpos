@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"费率调整";
+    self.title = @"业务申请";
     [self.scrollView setContentSize:CGSizeMake(ScreenWidth, 531)];
     
     [self.bts enumerateObjectsUsingBlock:^(UIButton *obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -32,7 +32,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self setRightBarButtonWithTitle:@"费改通知"];
+    [self setRightBarButtonWithTitle:@"申请明细"];
 }
 
 - (void)rightbarButtonDidTap:(UIButton*)button

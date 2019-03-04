@@ -162,10 +162,6 @@
         return;
     }
 //    //账号，账号规则由后台判断
-    if (![Tooles valiMobile:account]) {
-        fal(@"请输入正确的手机号");
-        return;
-    }
     if ([captcha isEqualToString:@""]) {
         fal(@"验证码不能为空");
         return;
@@ -246,11 +242,7 @@
         fal(@"手机号不能为空");
         return;
     }
-    if (![Tooles valiMobile:account]) {
-        fal(@"请输入正确的手机号");
-        return;
-    }
- 
+
     [SVProgressHUD show];
     NSDictionary * params =  @{
                                @"phone":account,

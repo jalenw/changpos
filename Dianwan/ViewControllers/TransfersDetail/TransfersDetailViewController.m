@@ -25,8 +25,6 @@
     [super viewDidLoad];
     self.title =@"申请列表";
     dataList = [[NSMutableArray alloc]init];
-    page = 1;
-    [self refreshData];
     self.mainTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.mainTableview.backgroundColor = RGB(48, 46, 58);
     [self.mainTableview addLegendHeaderWithRefreshingBlock:^{
@@ -42,6 +40,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     page = 1;
+    [dataList removeAllObjects];
     [self refreshData];
 }
 
@@ -63,9 +62,18 @@
         }
         if (status) {
             NSArray *dataArray = [data safeArrayForKey:@"result"];
-            for ( NSDictionary *dataitem in dataArray) {
-                [dataList addObject:dataitem];
+            if (dataArray.count>0) {
+                [dataList addObjectsFromArray:dataArray];
             }
+            else
+            {
+                [self.mainTableview.footer setState:MJRefreshFooterStateNoMoreData];
+            }
+            if (dataList.count==0) {
+                [self.mainTableview setEmptyView];
+            }
+            else
+                [self.mainTableview removeEmptyView];
             [self.mainTableview reloadData];
         }else
             [AlertHelper showAlertWithTitle:error];

@@ -54,7 +54,7 @@
 
 - (IBAction)partnerAct:(UIButton *)sender {
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:@{@"rate_action":@"2"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/get_transfer_mb_list" params:@{@"rate_action":@"1"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSArray *array = [data safeArrayForKey:@"result"];

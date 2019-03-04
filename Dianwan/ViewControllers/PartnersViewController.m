@@ -54,7 +54,9 @@
     }
     [param setValue:@(2.0) forKey:@"version"];
     [param setValue:@(page) forKey:@"page"];
+    [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/member/my_partners_list" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
         if (page==1) {
             [self.tableView headerEndRefreshing];
         }
@@ -77,7 +79,7 @@
             }
             else
                 [self.tableView removeEmptyView];
-             [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfPartners" object:@(dataList.count)];
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfPartners" object:@([result safeIntForKey:@"total_count"])];
             
             [self.tableView reloadData];
         }

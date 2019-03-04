@@ -34,10 +34,10 @@
         [self.tableView.footer setState:MJRefreshFooterStateIdle];
         [self refreshData];
     }];
-    [self.tableView addLegendFooterWithRefreshingBlock:^{
-        page ++;
-        [self refreshData];
-    }];
+//    [self.tableView addLegendFooterWithRefreshingBlock:^{
+//        page ++;
+//        [self refreshData];
+//    }];
 }
 
 -(void)refreshData
@@ -55,7 +55,7 @@
         }
         if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
-            self.myRanklist = [data safeDictionaryForKey:@"my_ranking"];
+            self.myRanklist = [result safeDictionaryForKey:@"my_ranking"];
             NSArray *dataArray = [result safeArrayForKey:@"list"];
             if (dataArray.count>0) {
                 [dataList addObjectsFromArray:dataArray];

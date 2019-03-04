@@ -443,9 +443,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4h-7R-FWv">
                     <rect key="frame" x="16" y="200" width="343" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-5n-j6w">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tankuang_1" translatesAutoresizingMaskIntoConstraints="NO" id="UXg-5n-j6w">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜您，绑定成功" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8c-h4-5QF">
                             <rect key="frame" x="32" y="16" width="279" height="80"/>
@@ -464,14 +463,19 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="UXg-5n-j6w" firstAttribute="top" secondItem="X4h-7R-FWv" secondAttribute="top" id="8Gc-IQ-94d"/>
+                        <constraint firstAttribute="bottom" secondItem="UXg-5n-j6w" secondAttribute="bottom" id="DHf-EF-AF2"/>
+                        <constraint firstItem="UXg-5n-j6w" firstAttribute="leading" secondItem="X4h-7R-FWv" secondAttribute="leading" id="GMW-Py-1MF"/>
                         <constraint firstAttribute="height" constant="200" id="KB5-xB-OC0"/>
                         <constraint firstItem="h8c-h4-5QF" firstAttribute="top" secondItem="X4h-7R-FWv" secondAttribute="top" constant="16" id="KzS-kQ-lAE"/>
                         <constraint firstItem="h8c-h4-5QF" firstAttribute="leading" secondItem="X4h-7R-FWv" secondAttribute="leading" constant="32" id="Tri-Ft-29W"/>
+                        <constraint firstAttribute="trailing" secondItem="UXg-5n-j6w" secondAttribute="trailing" id="XAl-MK-ziT"/>
                         <constraint firstAttribute="trailing" secondItem="h8c-h4-5QF" secondAttribute="trailing" constant="32" id="hYR-5B-ffh"/>
                         <constraint firstItem="3gg-JO-D7m" firstAttribute="leading" secondItem="X4h-7R-FWv" secondAttribute="leading" constant="46" id="i6a-yK-2bj"/>
                         <constraint firstItem="3gg-JO-D7m" firstAttribute="top" secondItem="h8c-h4-5QF" secondAttribute="bottom" constant="48" id="kOe-sI-bBh"/>
+                        <constraint firstAttribute="trailing" secondItem="3gg-JO-D7m" secondAttribute="trailing" constant="47" id="tOh-1V-bxj"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -491,9 +495,9 @@
         </view>
     </objects>
     <resources>
-        <image name="chux_12" width="58.080001831054688" height="19.680000305175781"/>
-        <image name="qued_3" width="58.080001831054688" height="19.680000305175781"/>
-        <image name="tankuang_1" width="159.36000061035156" height="93.599998474121094"/>
-        <image name="xybanniu" width="103.68000030517578" height="19.680000305175781"/>
+        <image name="chux_12" width="121" height="41"/>
+        <image name="qued_3" width="121" height="41"/>
+        <image name="tankuang_1" width="332" height="195"/>
+        <image name="xybanniu" width="216" height="41"/>
     </resources>
 </document>

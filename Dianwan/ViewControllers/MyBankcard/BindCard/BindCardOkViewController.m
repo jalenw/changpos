@@ -41,20 +41,21 @@
     self.phoneLabel.delegate =self;
     self.phoneLabel.tag =2;
     self.codeLabel.delegate =self;
-    self.codeLabel.tag=1;UITapGestureRecognizer *nexttap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backAction)];
+    self.codeLabel.tag=1;
+    UITapGestureRecognizer *nexttap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backAction)];
     [self.nextstepImageview addGestureRecognizer:nexttap];
    
     UITapGestureRecognizer *cancleViewCancletap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancleBindAction)];
-    [self.cancleViewCancleImageview addGestureRecognizer:cancleViewCancletap];
+//    [self.cancleViewCancleImageview addGestureRecognizer:cancleViewCancletap];
     
     UITapGestureRecognizer *cancleViewSuretap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cancleViewSelectioncancleAction)];
-    [self.cancleViewSureImageview addGestureRecognizer:cancleViewSuretap];
+//    [self.cancleViewSureImageview addGestureRecognizer:cancleViewSuretap];
     
     UITapGestureRecognizer *bindViewSuretap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bindCardAction)];
-    [self.bindViewCancleImageview addGestureRecognizer:bindViewSuretap];
+//    [self.bindViewCancleImageview addGestureRecognizer:bindViewSuretap];
     
     UITapGestureRecognizer *bindViewCancletap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(bindSelectedCancledAction)];
-    [self.bindViewSureImageview addGestureRecognizer:bindViewCancletap];
+//    [self.bindViewSureImageview addGestureRecognizer:bindViewCancletap];
 }
 
 -(void)back
@@ -128,11 +129,6 @@
 - (IBAction)getCodeAction:(UIButton *)sender {
     if ([Tooles isEmpty:self.phoneLabel.text] ) {
         [AlertHelper showAlertWithTitle:@"手机号不能为空"];
-        return;
-    }
-    if (![Tooles valiMobile:self.phoneLabel.text]) {
-        
-        [AlertHelper showAlertWithTitle:@"请输入正确的手机号"];
         return;
     }
     
@@ -222,17 +218,14 @@
         [AlertHelper showAlertWithTitle:@"请输入手机号"];
         return ;
     }
-    if(![Tooles valiMobile:self.phoneLabel.text]){
-        [AlertHelper showAlertWithTitle:@"请输入正确的手机号"];
-        return ;
-    }
     
     if([Tooles isEmpty:self.codeLabel.text]){
         [AlertHelper showAlertWithTitle:@"请输入验证码"];
         return ;
     }
     
-    self.BindSelectview.hidden =NO;
+//    self.BindSelectview.hidden =NO;
+    [self bindCardAction];
 }
 
 //绑卡选择q-------确定按钮
@@ -251,11 +244,11 @@
         if (status) {
             if ([data safeIntForKey:@"code"]==200) {
                 //绑定成功
-                self.BindSelectview.hidden =YES;
+//                self.BindSelectview.hidden =YES;
                 self.bindSuccview.hidden =NO;
             }else{
                 self.BindSelectview.hidden =YES;
-//               [AlertHelper showAlertWithTitle:error];
+               [AlertHelper showAlertWithTitle:error];
                 NSLog(@"绑定失败---%@",requestFailed);
             }
         }else{

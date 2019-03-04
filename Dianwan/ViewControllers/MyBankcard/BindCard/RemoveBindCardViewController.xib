@@ -63,6 +63,7 @@
                         <constraint firstAttribute="trailing" secondItem="JgQ-rW-diY" secondAttribute="trailing" constant="80" id="DD1-KH-1xI"/>
                         <constraint firstItem="JgQ-rW-diY" firstAttribute="top" secondItem="Cpl-Gk-Wa3" secondAttribute="bottom" constant="8" id="DEk-On-6xM"/>
                         <constraint firstItem="iXq-Vf-EzL" firstAttribute="leading" secondItem="hun-9H-vHP" secondAttribute="leading" constant="80" id="PZn-B3-xyu"/>
+                        <constraint firstAttribute="trailing" secondItem="iXq-Vf-EzL" secondAttribute="trailing" constant="80" id="VHp-dp-stp"/>
                         <constraint firstAttribute="bottom" secondItem="iXq-Vf-EzL" secondAttribute="bottom" constant="175" id="a2i-lt-pBP"/>
                         <constraint firstAttribute="trailing" secondItem="Cpl-Gk-Wa3" secondAttribute="trailing" constant="80" id="boT-oz-VT2"/>
                         <constraint firstItem="MI3-3y-XXf" firstAttribute="top" secondItem="hun-9H-vHP" secondAttribute="top" constant="168" id="fi6-XO-V4t"/>
@@ -88,7 +89,7 @@
         </view>
     </objects>
     <resources>
-        <image name="jiec_1" width="103.68000030517578" height="19.680000305175781"/>
-        <image name="yingkatub_1" width="25.440000534057617" height="18.479999542236328"/>
+        <image name="jiec_1" width="216" height="41"/>
+        <image name="yingkatub_1" width="53" height="38"/>
     </resources>
 </document>

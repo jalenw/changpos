@@ -22,8 +22,6 @@
     [super viewDidLoad];
     self.title = @"费改通知";
     dataList = [[NSMutableArray alloc]init];
-    page = 1;
-    [self refreshData];
     [self.tableView addLegendHeaderWithRefreshingBlock:^{
         page = 1;
         [dataList removeAllObjects];
@@ -39,6 +37,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    page = 1;
+    [dataList removeAllObjects];
     [self refreshData];
 }
 

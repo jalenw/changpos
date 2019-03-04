@@ -85,7 +85,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 95;
+    if (dataList.count>0) {
+        NSDictionary *dict = dataList[indexPath.section];
+        return [SystemTableViewCell heightForSystemTableViewCell:dict];
+    }
+    else
+        return 95;
 }
 
 //设置边距

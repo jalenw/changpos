@@ -24,8 +24,8 @@
 -(void)setDict:(NSDictionary *)dict{
     _dict =dict;
     self.phoneLabel.text = [_dict safeStringForKey:@"lg_member_name"];
-    self.countLabel.text =[NSString stringWithFormat:@"%d",[_dict safeIntForKey:@"amount"]];
-    self.numLabel.text =[NSString stringWithFormat:@"%d",[_dict safeIntForKey:@"rownum"]];
+    self.countLabel.text =[NSString stringWithFormat:@"%@",[_dict safeStringForKey:@"amount"]];
+    self.numLabel.text =[NSString stringWithFormat:@"%@",[_dict safeIntForKey:@"rownum"]>99?@"99+":[_dict safeStringForKey:@"rownum"]];
     
     [self.levelImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"会员%d",[_dict safeIntForKey:@"level"]]]];
     

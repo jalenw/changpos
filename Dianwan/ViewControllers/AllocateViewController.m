@@ -66,7 +66,7 @@
         return;
     }
     [SVProgressHUD show];
-    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/showProductSNCode" params:@{@"goods_id":goods_id} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+    [[ServiceForUser manager]postMethodName:@"mobile/Mystock/showProductSNCode" params:@{@"goods_id":goods_id,@"pagesize":@"100000"} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         [SVProgressHUD dismiss];
         if (status) {
             NSArray *array = [[data safeDictionaryForKey:@"result"] safeArrayForKey:@"data"];

@@ -72,7 +72,7 @@
     self.zibeijiLabel.attributedText =attribut3;
     
     
-    [self.acoverImageview sd_setImageWithURL:[NSURL URLWithString:[_dict safeStringForKey:@"member_avatar"]]];
+    [self.acoverImageview sd_setImageWithURL:[NSURL URLWithString:[_dict safeStringForKey:@"member_avatar"]] placeholderImage:[UIImage imageNamed:@"default_user"]];
     self.nameLabel.text = [_dict safeStringForKey:@"truename"];
    
     self.phonrNumLabel.text = [_dict safeStringForKey:@"member_mobile"];

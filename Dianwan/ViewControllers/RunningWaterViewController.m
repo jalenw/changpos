@@ -35,10 +35,10 @@
         [self.tableView.footer setState:MJRefreshFooterStateIdle];
         [self refreshData];
     }];
-    [self.tableView addLegendFooterWithRefreshingBlock:^{
-        page ++;
-        [self refreshData];
-    }];
+//    [self.tableView addLegendFooterWithRefreshingBlock:^{
+//        page ++;
+//        [self refreshData];
+//    }];
     
 }
 
@@ -58,7 +58,7 @@
         if (status) {
             NSDictionary *result = [data safeDictionaryForKey:@"result"];
             
-            self.myRanlist = [data safeDictionaryForKey:@"my_ranking"];
+            self.myRanlist = [result safeDictionaryForKey:@"my_ranking"];
             NSArray *dataArray = [result safeArrayForKey:@"list"];
             
             
@@ -91,7 +91,7 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==0) {
         FirstTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"FirstTableViewCell" owner:self options:nil][0];
-       
+        cell.unitLabel.text = @"元";
             cell.dict = self.myRanlist;
         return cell;
     }else{

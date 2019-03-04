@@ -25,7 +25,13 @@
     self.titleLabel.text = [_dict safeStringForKey:@"push_title"];
     self.contentLabel.text = [_dict safeStringForKey:@"push_message"];
     self.timeLabel.text = [_dict safeStringForKey:@"push_time"];
-    
+    self.contentLabel.height = [Tooles calculateTextHeight:ScreenWidth-64 Content:[dict safeStringForKey:@"push_message"] fontSize:17]>145?145:[Tooles calculateTextHeight:ScreenWidth-64 Content:[dict safeStringForKey:@"push_message"] fontSize:17];
 }
 
++(CGFloat)heightForSystemTableViewCell:(NSDictionary *)dict
+{
+    CGFloat height = 45+23;
+    height += [Tooles calculateTextHeight:ScreenWidth-64 Content:[dict safeStringForKey:@"push_message"] fontSize:17]>145?145:[Tooles calculateTextHeight:ScreenWidth-64 Content:[dict safeStringForKey:@"push_message"] fontSize:17];
+    return height;
+}
 @end

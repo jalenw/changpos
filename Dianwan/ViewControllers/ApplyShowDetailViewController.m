@@ -32,10 +32,10 @@
 - (IBAction)dealApplyAction:(UIButton *)sender {
     if(sender.tag==1){
          self.isJujue=1;
-         self.tipLabel.text =@"确定同意调拨";
+         self.tipLabel.text =@"确认同意";
     }else{
          self.isJujue=2;
-         self.tipLabel.text =@"确定拒绝调拨";
+         self.tipLabel.text =@"确认拒绝";
     }
      self.diaoBoSelectView.hidden =NO;
 
@@ -96,7 +96,7 @@
 
 -(void)setupUI:(NSDictionary *)dict{
     //判断是否出现审核按钮
-    if ([dict safeIntForKey:@"is_type"]==1&&[[dict safeStringForKey:@"examine_type"] integerValue]==0 ) {
+    if ([dict safeIntForKey:@"is_type"]==1) {
         self.agressBtn.hidden =NO;
         self.disagressBtn.hidden =NO;
     }
@@ -123,6 +123,16 @@
             
             self.stateLabel.text = @"审核失败 ";
               self.stateLabel.textColor = RGB(190, 0, 0);
+            break;
+        case 4:
+            
+            self.stateLabel.text = @"待下级审核 ";
+            self.stateLabel.textColor = RGB(230, 185, 55);
+            break;
+        case 5:
+            
+            self.stateLabel.text = @"请审核 ";
+            self.stateLabel.textColor = RGB(230, 185, 55);
             break;
             
     }

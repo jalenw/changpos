@@ -115,10 +115,6 @@
 #pragma mark - 按钮点击
 
 - (IBAction)clickGetCodeBtn:(UIButton *)sender {
-    if(![Tooles valiMobile:self.phoneTF.text]){
-        [SVProgressHUD showImage:[UIImage imageNamed:@""] status:@"请输入正确手机号"];
-        return;
-    }
     WEAKSELF
     [self.registerViewModel requestCAPTCHAByAccount:_phoneTF.text Success:^(NSInteger time) {
         [SVProgressHUD showSuccessWithStatus:@"验证码已发送"];

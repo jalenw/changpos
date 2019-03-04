@@ -103,6 +103,8 @@
 		8E1C0FCD2211511800EFC778 /* SelectSNCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C0FCB2211511800EFC778 /* SelectSNCodeViewController.xib */; };
 		8E1C0FD2221152F800EFC778 /* SNCodeSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1C0FD0221152F800EFC778 /* SNCodeSelectTableViewCell.m */; };
 		8E1C0FD3221152F800EFC778 /* SNCodeSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1C0FD1221152F800EFC778 /* SNCodeSelectTableViewCell.xib */; };
+		8E361AC5221DB61B0057F6AB /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E361AC2221DB5F80057F6AB /* Charts.framework */; };
+		8E361AC6221DB61B0057F6AB /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E361AC2221DB5F80057F6AB /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8E412B841F23572100A40CE6 /* CodeLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7C1F23572100A40CE6 /* CodeLoginViewController.m */; };
 		8E412B851F23572100A40CE6 /* CodeLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E412B7D1F23572100A40CE6 /* CodeLoginViewController.xib */; };
 		8E412B861F23572100A40CE6 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E412B7F1F23572100A40CE6 /* ForgetViewController.m */; };
@@ -254,8 +256,6 @@
 		8EA1DC3521E48D3300A8A501 /* FirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1DC3321E48D3300A8A501 /* FirstCollectionViewCell.m */; };
 		8EA1DC3621E48D3300A8A501 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1DC3421E48D3300A8A501 /* FirstCollectionViewCell.xib */; };
 		8EA1E1C921E5E04C00A8A501 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1E1C821E5E04B00A8A501 /* File.swift */; };
-		8EA1E1D321E5E12D00A8A501 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; };
-		8EA1E1D421E5E12D00A8A501 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA1E1D021E5E08400A8A501 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EA385662202A86C005C0260 /* ConnectQrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA385642202A86C005C0260 /* ConnectQrCodeViewController.m */; };
 		8EA385672202A86C005C0260 /* ConnectQrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA385652202A86C005C0260 /* ConnectQrCodeViewController.xib */; };
 		8EA3856C2202AB41005C0260 /* CardModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA3856A2202AB41005C0260 /* CardModifyViewController.m */; };
@@ -620,19 +620,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8EA1E1CF21E5E08400A8A501 /* PBXContainerItemProxy */ = {
+		8E361AC1221DB5F80057F6AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteGlobalIDString = 8E361ABE221DB5930057F6AB;
 			remoteInfo = Charts;
 		};
-		8EA1E1D121E5E08400A8A501 /* PBXContainerItemProxy */ = {
+		8E361AC3221DB5F80057F6AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteGlobalIDString = 8E361ABF221DB5930057F6AB;
 			remoteInfo = ChartsTests;
+		};
+		8E361AC7221DB61B0057F6AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EA1E1CA21E5E08400A8A501 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
 		};
 		8EA1E1D521E5E12D00A8A501 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -644,13 +651,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CD0666551E8CEA4E00CCD49A /* Embed Frameworks */ = {
+		8E361AC9221DB61B0057F6AB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8EA1E1D421E5E12D00A8A501 /* Charts.framework in Embed Frameworks */,
+				8E361AC6221DB61B0057F6AB /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1746,8 +1753,8 @@
 				CD6323BF1EE54C1100D033F4 /* WechatConnector.framework in Frameworks */,
 				CD6323C21EE54C1100D033F4 /* libWeiboSDK.a in Frameworks */,
 				CD6323BB1EE54C1100D033F4 /* MailConnector.framework in Frameworks */,
+				8E361AC5221DB61B0057F6AB /* Charts.framework in Frameworks */,
 				CD6323C41EE54C1100D033F4 /* libWeChatSDK.a in Frameworks */,
-				8EA1E1D321E5E12D00A8A501 /* Charts.framework in Frameworks */,
 				CD3C730D1ED56E6E0039B80B /* jcore-ios-1.1.3.a in Frameworks */,
 				8EEF4BC1211D8CB500DE1E36 /* libopencore-amrwb.a in Frameworks */,
 				8EB4E43521201DF300BC563B /* Bolts.framework in Frameworks */,
@@ -2496,8 +2503,8 @@
 		8EA1E1CB21E5E08400A8A501 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8EA1E1D021E5E08400A8A501 /* Charts.framework */,
-				8EA1E1D221E5E08400A8A501 /* ChartsTests.xctest */,
+				8E361AC2221DB5F80057F6AB /* Charts.framework */,
+				8E361AC4221DB5F80057F6AB /* ChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4075,12 +4082,13 @@
 				CDC88E341D8691DF00CE03CE /* Sources */,
 				CDC88E351D8691DF00CE03CE /* Frameworks */,
 				CDC88E361D8691DF00CE03CE /* Resources */,
-				CD0666551E8CEA4E00CCD49A /* Embed Frameworks */,
+				8E361AC9221DB61B0057F6AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				8EA1E1D621E5E12D00A8A501 /* PBXTargetDependency */,
+				8E361AC8221DB61B0057F6AB /* PBXTargetDependency */,
 			);
 			name = Dianwan;
 			productName = happy;
@@ -4137,18 +4145,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8EA1E1D021E5E08400A8A501 /* Charts.framework */ = {
+		8E361AC2221DB5F80057F6AB /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 8EA1E1CF21E5E08400A8A501 /* PBXContainerItemProxy */;
+			remoteRef = 8E361AC1221DB5F80057F6AB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8EA1E1D221E5E08400A8A501 /* ChartsTests.xctest */ = {
+		8E361AC4221DB5F80057F6AB /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 8EA1E1D121E5E08400A8A501 /* PBXContainerItemProxy */;
+			remoteRef = 8E361AC3221DB5F80057F6AB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -4748,6 +4756,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8E361AC8221DB61B0057F6AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 8E361AC7221DB61B0057F6AB /* PBXContainerItemProxy */;
+		};
 		8EA1E1D621E5E12D00A8A501 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Charts;
@@ -4889,7 +4902,7 @@
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4950,7 +4963,7 @@
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

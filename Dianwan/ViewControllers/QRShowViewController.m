@@ -7,11 +7,12 @@
 //
 
 #import "QRShowViewController.h"
-
+#import <ShareSDK/ShareSDK.h>
 @interface QRShowViewController ()
 {
     NSArray *bgList;
     int i;
+    NSDictionary *info;
 }
 @end
 
@@ -22,6 +23,7 @@
     self.navigationItem.title = @"我的二维码";
     [[ServiceForUser manager]postMethodName:@"mobile/memberinviter/index" params:@{} block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
         if (status) {
+            info = [[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"];
             self.name.text = [[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"member_name"];
             self.code.text = [[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"inviter_code"];
             [self.headImg sd_setImageWithURL:[NSURL URLWithString:[[[data safeDictionaryForKey:@"result"]safeDictionaryForKey:@"info"]safeStringForKey:@"member_avatar"]]];
@@ -66,10 +68,44 @@
         }
     }
     if (sender.tag==1) {
-        
+        NSMutableDictionary *shareParam = [NSMutableDictionary dictionary];
+        [shareParam SSDKSetupShareParamsByText:@"邀请分享" images:[info safeStringForKey:@"member_avatar"] url:[NSURL URLWithString:[info safeStringForKey:@"html_url"]] title:@"畅pos" type:SSDKContentTypeAuto];
+        [ShareSDK share:SSDKPlatformSubTypeWechatSession parameters:shareParam onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
+            switch (state) {
+                case SSDKResponseStateSuccess:
+                {
+                    [AlertHelper showAlertWithTitle:@"分享成功"];
+                    break;
+                }
+                case SSDKResponseStateFail:
+                {
+                    [AlertHelper showAlertWithTitle:@"分享失败"];
+                    break;
+                }
+                default:
+                    break;
+            }
+        }];
     }
     if (sender.tag==2) {
-        
+        NSMutableDictionary *shareParam = [NSMutableDictionary dictionary];
+        [shareParam SSDKSetupShareParamsByText:@"邀请分享" images:[info safeStringForKey:@"member_avatar"] url:[NSURL URLWithString:[info safeStringForKey:@"html_url"]] title:@"畅pos" type:SSDKContentTypeAuto];
+        [ShareSDK share:SSDKPlatformSubTypeWechatTimeline parameters:shareParam onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error) {
+            switch (state) {
+                case SSDKResponseStateSuccess:
+                {
+                    [AlertHelper showAlertWithTitle:@"分享成功"];
+                    break;
+                }
+                case SSDKResponseStateFail:
+                {
+                    [AlertHelper showAlertWithTitle:@"分享失败"];
+                    break;
+                }
+                default:
+                    break;
+            }
+        }];
     }
     if (sender.tag==3) {
         UIImage *image =  [self nomalSnapshotImage];

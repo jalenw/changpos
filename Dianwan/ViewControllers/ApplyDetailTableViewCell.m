@@ -32,27 +32,29 @@
     _dict =dict;
     self.titleLabel.text = [_dict safeStringForKey:@"title"];
     self.creatTimeLabel.text = [[_dict safeStringForKey:@"create_time"] substringToIndex:[_dict safeStringForKey:@"create_time"].length-3 ];
-    //这里找不到文档的sn号字段sn_code
-    self.snNumLabel.text =[NSString stringWithFormat:@"SN号:%@",[_dict safeStringForKey:@"goods_id"]];
-
+    self.snNumLabel.text =[NSString stringWithFormat:@"%@ %@",[_dict safeStringForKey:@"member_name"],[_dict safeStringForKey:@"member_id"]];
+    
+    self.desc.text =[NSString stringWithFormat:@"%@ %@",[_dict safeStringForKey:@"goods_name"],[_dict safeStringForKey:@"goods_serial"]];
     
     switch ([[_dict safeStringForKey:@"examine_type"] integerValue]) {
         case 0:
             self.typeLabel.text = @"待上级审核 ";
             break;
         case 1:
-            
             self.typeLabel.text = @"待平台审核 ";
             break;
         case 2:
-            
             self.typeLabel.text = @"审核通过 ";
             break;
         case 3:
-            
             self.typeLabel.text = @"审核失败 ";
             break;
-      
+        case 4:
+            self.typeLabel.text = @"待下级审核 ";
+            break;
+        case 5:
+            self.typeLabel.text = @"请审核 ";
+            break;
     }
     
 }

@@ -41,7 +41,7 @@
 
         CommonUIWebViewController *inputPWVC = [[CommonUIWebViewController alloc] init];
         inputPWVC.address =stringValue;
-        inputPWVC.showNav = YES;
+        inputPWVC.showNav = NO;
 //        WebViewController *inputPWVC = [[WebViewController alloc]init];
 //        inputPWVC.url = stringValue;
         WEAKSELF

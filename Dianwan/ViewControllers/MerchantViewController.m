@@ -53,7 +53,9 @@
     }
     [param setValue:@(page) forKey:@"page"];
      [param setValue:@(2.0) forKey:@"version"];
+    [SVProgressHUD show];
     [[ServiceForUser manager]postMethodName:@"mobile/Mystock/listOfMyBusiness" params:param block:^(NSDictionary *data, NSString *error, BOOL status, NSError *requestFailed) {
+        [SVProgressHUD dismiss];
         if (page==1) {
             [self.tableView headerEndRefreshing];
         }
@@ -76,7 +78,7 @@
             }
             else
                 [self.tableView removeEmptyView];
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfMerchants" object:@(dataList.count)];
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfMerchants" object:@([result safeIntForKey:@"total_count"])];
             [self.tableView reloadData];
         }
     }];

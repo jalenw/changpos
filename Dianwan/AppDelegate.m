@@ -74,7 +74,7 @@ didFinishLaunchingWithOptions:launchOptions
     [self initSharePlatform];
     
     //同步获取服务器地址
-    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain?version=2.0"];
+    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain?version=2.1"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse *response = NULL;
     NSError *connectionError = NULL;
@@ -90,12 +90,12 @@ didFinishLaunchingWithOptions:launchOptions
     }
     
     
-//    if ([Tooles isFirstOpen:@"resetLogin"])
-//    {
-//        HelpViewController *guideView=[[HelpViewController alloc] init];
-//        self.window.rootViewController=guideView;
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainPage) name:@"kNOtificationShowLoginGuide" object:nil];
-//    }else{
+    if ([Tooles isFirstOpen:@"resetLogin"])
+    {
+        HelpViewController *guideView=[[HelpViewController alloc] init];
+        self.window.rootViewController=guideView;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainPage) name:@"kNOtificationShowLoginGuide" object:nil];
+    }else{
         if ([HTTPClientInstance isLogin]) {
             AppDelegateInstance.defaultUser = [User getObjectById:[HTTPClientInstance.uid longLongValue] context:AppDelegateInstance.managedObjectContext];
             [self showMainPage];
@@ -104,7 +104,7 @@ didFinishLaunchingWithOptions:launchOptions
         {
             [self showLoginView];
         }
-//    }
+    }
     //极光长连接消息
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];

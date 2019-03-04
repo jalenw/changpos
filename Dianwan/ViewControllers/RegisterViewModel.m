@@ -23,10 +23,6 @@
         registerFailure(@"手机号不能为空");
         return;
     }
-    if (![Tooles valiMobile:account]) {
-        registerFailure(@"请输入正确的手机号");
-        return;
-    }
     if ([Tooles isEmpty:captcha]) {
         registerFailure(@"验证码不能为空");
         return;
@@ -98,10 +94,6 @@
              
              if ([account isEqualToString:@""] ) {
                  fal(@"手机号不能为空");
-                 return;
-             }
-             if (![Tooles valiMobile:account]) {
-                 fal(@"请输入正确的手机号");
                  return;
              }
             [SVProgressHUD show];

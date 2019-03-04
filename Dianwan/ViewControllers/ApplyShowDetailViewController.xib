@@ -496,7 +496,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45g-F7-vy1">
-                            <rect key="frame" x="16" y="67.5" width="42" height="21"/>
+                            <rect key="frame" x="16" y="95.5" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -534,7 +534,7 @@
                         <constraint firstAttribute="height" constant="200" id="fcF-mv-J7g"/>
                         <constraint firstAttribute="bottom" secondItem="Wjo-c8-Ypv" secondAttribute="bottom" constant="20" id="gzX-uK-fCg"/>
                         <constraint firstAttribute="trailing" secondItem="u4I-ca-FJv" secondAttribute="trailing" constant="4" id="jHf-EK-nVG"/>
-                        <constraint firstItem="45g-F7-vy1" firstAttribute="top" secondItem="eV6-X5-7QR" secondAttribute="bottom" constant="8" id="pnH-ca-g7L"/>
+                        <constraint firstItem="45g-F7-vy1" firstAttribute="top" secondItem="eV6-X5-7QR" secondAttribute="bottom" constant="36" id="pnH-ca-g7L"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

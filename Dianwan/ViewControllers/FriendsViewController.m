@@ -50,7 +50,7 @@
     }
     NSDictionary *dict = [self.data objectAtIndex:indexPath.row];
     cell.name.text = [dict safeStringForKey:@"member_name"];
-    [cell.image sd_setImageWithURL:[NSURL URLWithString:[dict safeStringForKey:@"member_avatar"]]];
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:[dict safeStringForKey:@"member_avatar"]] placeholderImage:[UIImage imageNamed:@"default_user"]];
     return cell;
 }
 

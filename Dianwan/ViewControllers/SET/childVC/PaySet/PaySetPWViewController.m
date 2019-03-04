@@ -76,10 +76,6 @@
         [AlertHelper showAlertWithTitle:@"手机号不能为空"];
         return;
     }
-    if (![Tooles valiMobile:_phoneTF.text]) {
-         [AlertHelper showAlertWithTitle:@"请输入正确的手机号"];
-        return;
-    }
     
     [SVProgressHUD show];
     NSDictionary * params =  @{

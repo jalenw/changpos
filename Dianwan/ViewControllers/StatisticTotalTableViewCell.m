@@ -107,26 +107,27 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [nowDict safeDoubleForKey:key];
+                    NSString *valueStr = [nowDict safeStringForKey:key];
                     if (i==1) {
                         if (path.row==0) {
-                            self.person1.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                            self.person1.text = [NSString stringWithFormat:@"商户:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"商户:￥%.2f",value];
                         }
                         if (path.row==1) {
                             self.person1.text = [NSString stringWithFormat:@"商户:%d台",(int)value];
                         }
                         if (path.row==2) {
-                            self.person1.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                            self.person1.text = [NSString stringWithFormat:@"商户:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"商户:￥%.2f",value];
                         }
                     }
                     else if (i==0) {
                         if (path.row==0) {
-                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"渠道:￥%.2f",value];
                         }
                         if (path.row==1) {
                             self.team1.text = [NSString stringWithFormat:@"渠道:%d台",(int)value];
                         }
                         if (path.row==2) {
-                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                            self.team1.text = [NSString stringWithFormat:@"渠道:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"渠道:￥%.2f",value];
                         }
                     }
                     if (value>0) {
@@ -135,13 +136,13 @@
                     }
                 }
                 if (path.row==0) {
-                    self.total.text = [NSString stringWithFormat:@"￥%.2f",all];
+                    self.total.text = [NSString stringWithFormat:@"￥%@",[Tooles getDealNumwithstring:[NSString stringWithFormat:@"%f",all]]];
                 }
                 if (path.row==1) {
                     self.total.text = [NSString stringWithFormat:@"%d台",(int)all];
                 }
                 if (path.row==2) {
-                    self.total.text = [NSString stringWithFormat:@"￥%.2f",all];
+                    self.total.text = [NSString stringWithFormat:@"￥%@",[Tooles getDealNumwithstring:[NSString stringWithFormat:@"%f",all]]];
                 }
                 
                 for (int i = 0; i < array.count; i++)
@@ -215,26 +216,27 @@
                 {
                     NSString *key = [array objectAtIndex:i];
                     double value = [totalDict safeDoubleForKey:key];
+                    NSString *valueStr = [totalDict safeStringForKey:key];
                     if (i==0) {
                         if (path.row==0) {
-                            self.person2.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                            self.person2.text = [NSString stringWithFormat:@"商户:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"商户:￥%.2f",value];
                         }
                         if (path.row==1) {
                             self.person2.text = [NSString stringWithFormat:@"商户:%d台",(int)value];
                         }
                         if (path.row==2) {
-                            self.person2.text = [NSString stringWithFormat:@"商户:￥%.2f",value];
+                            self.person2.text = [NSString stringWithFormat:@"商户:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"商户:￥%.2f",value];
                         }
                     }
                     else if (i==1) {
                         if (path.row==0) {
-                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"渠道:￥%.2f",value];
                         }
                         if (path.row==1) {
                             self.team2.text = [NSString stringWithFormat:@"渠道:%d台",(int)value];
                         }
                         if (path.row==2) {
-                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%.2f",value];
+                            self.team2.text = [NSString stringWithFormat:@"渠道:￥%@",[Tooles getDealNumwithstring:valueStr]];//[NSString stringWithFormat:@"渠道:￥%.2f",value];
                         }
                     }
                     if (value>0) {
@@ -243,13 +245,13 @@
                     }
                 }
                 if (path.row==0) {
-                    self.total2.text = [NSString stringWithFormat:@"￥%.2f",all];
+                    self.total2.text = [NSString stringWithFormat:@"￥%@",[Tooles getDealNumwithstring:[NSString stringWithFormat:@"%f",all]]];
                 }
                 if (path.row==1) {
                     self.total2.text = [NSString stringWithFormat:@"%d台",(int)all];
                 }
                 if (path.row==2) {
-                    self.total2.text = [NSString stringWithFormat:@"￥%.2f",all];
+                    self.total2.text = [NSString stringWithFormat:@"￥%@",[Tooles getDealNumwithstring:[NSString stringWithFormat:@"%f",all]]];
                 }
                 
                 for (int i = 0; i < array.count; i++)

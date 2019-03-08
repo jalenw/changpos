@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
+//    [[UINavigationBar appearance] setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
     
     self.menuTitle1.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
     self.menuTitle2.textColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]];
@@ -141,8 +141,8 @@
         [self.scrollView headerEndRefreshing];
         if (status) {
             dict = [data safeDictionaryForKey:@"result"];
-            self.rankTurnover.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"trading"]];
-            self.rankActivity.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"activation"]];
+            self.rankTurnover.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeIntForKey:@"trading"]>999?@"999+":[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"trading"]];
+            self.rankActivity.text = [NSString stringWithFormat:@"%@",[[dict safeDictionaryForKey:@"top_info"] safeIntForKey:@"activation"]>999?@"999+":[[dict safeDictionaryForKey:@"top_info"] safeStringForKey:@"activation"]];
             [self.collectionView reloadData];
         }
     }];

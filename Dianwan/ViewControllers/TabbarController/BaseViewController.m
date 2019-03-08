@@ -15,6 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSFontAttributeName:[UIFont systemFontOfSize:19],NSForegroundColorAttributeName:[UIColor colorWithPatternImage:[UIImage imageNamed:@"btt_1"]]}];
 }
 
 - (void)viewWillAppear:(BOOL)animated

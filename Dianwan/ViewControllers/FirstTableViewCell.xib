@@ -32,9 +32,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWx-Wm-h0c">
-                        <rect key="frame" x="16" y="56" width="40" height="25"/>
+                        <rect key="frame" x="16" y="56" width="45" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="YKC-ac-uHe"/>
+                            <constraint firstAttribute="width" constant="45" id="YKC-ac-uHe"/>
                             <constraint firstAttribute="height" constant="25" id="oc3-Ga-Q7e"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArV-4m-4P5">
-                        <rect key="frame" x="64" y="56" width="0.0" height="25"/>
+                        <rect key="frame" x="69" y="56" width="0.0" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="hRg-fQ-dhZ"/>
                         </constraints>
@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbu-7M-Qhy">
-                        <rect key="frame" x="72" y="56" width="80" height="25"/>
+                        <rect key="frame" x="77" y="56" width="80" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="FR2-nG-k8D"/>
                             <constraint firstAttribute="width" constant="80" id="IlZ-rs-IqN"/>

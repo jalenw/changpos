@@ -105,7 +105,7 @@
             else
                 [self.tableView removeEmptyView];
             if (dataList.count>0) {
-                 [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotificationNumberOfInactive" object:@(dataList.count)];
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"kNotificationNumberOfInactive" object:@([result safeIntForKey:@"total_goods_count_num"])];
             }
            
             [self.tableView reloadData];
@@ -125,6 +125,7 @@
     if(cell == nil){
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        cell.timeLb.hidden = YES;
     }
     if (dataList.count>0) {
         NSDictionary *dict = dataList[indexPath.row];

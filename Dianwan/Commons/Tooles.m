@@ -316,4 +316,35 @@ double LantitudeLongitudeDist(double lon1,double lat1,
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     return ![regextestmobile evaluateWithObject:text];
 }
+
++ (NSString *)getDealNumwithstring:(NSString *)string{
+    
+    
+    NSDecimalNumber *numberA = [NSDecimalNumber decimalNumberWithString:string];
+    NSDecimalNumber *numberB ;
+    NSString *unit = @"";
+    int integer = 0;
+    if ([string doubleValue]/10000>1) {
+        integer=4;
+        unit = @"万";
+    }
+    if ([string doubleValue]/100000000>1) {
+        integer=8;
+        unit = @"亿";
+    }
+    if (integer == 4) {
+        numberB =  [NSDecimalNumber decimalNumberWithString:@"10000"];
+    } else if (integer == 8){
+        numberB =  [NSDecimalNumber decimalNumberWithString:@"100000000"];
+    }else{
+        numberB =  [NSDecimalNumber decimalNumberWithString:@"1"];
+    }
+    //NSDecimalNumberBehaviors对象的创建  参数 1.RoundingMode 一个取舍枚举值 2.scale 处理范围 3.raiseOnExactness  精确出现异常是否抛出原因 4.raiseOnOverflow  上溢出是否抛出原因  4.raiseOnUnderflow  下溢出是否抛出原因  5.raiseOnDivideByZero  除以0是否抛出原因。
+    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundDown scale:2 raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    
+    /// 这里不仅包含Multiply还有加 减 乘。
+    NSDecimalNumber *numResult = [numberA decimalNumberByDividingBy:numberB withBehavior:roundingBehavior];
+    NSString *strResult = [numResult stringValue];
+    return [NSString stringWithFormat:@"%@%@",strResult,unit];
+}
 @end

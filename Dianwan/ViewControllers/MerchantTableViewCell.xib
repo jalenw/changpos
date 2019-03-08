@@ -141,6 +141,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dabiao" id="Woe-N7-v8i">
+                                <rect key="frame" x="207" y="16" width="92" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -148,6 +153,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backMoneyImg" destination="Woe-N7-v8i" id="HOh-eC-hjK"/>
                 <outlet property="bgView" destination="i8c-8K-CHS" id="Xon-Yu-7LS"/>
                 <outlet property="circleContentView" destination="jvC-Na-0O9" id="0VW-vc-mzY"/>
                 <outlet property="countLabel" destination="Niv-DX-1WF" id="dnH-Em-0ax"/>
@@ -163,6 +169,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dabiao" width="67" height="68"/>
         <image name="tx_1" width="36" height="36"/>
     </resources>
 </document>

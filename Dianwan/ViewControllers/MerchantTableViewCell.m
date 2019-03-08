@@ -72,6 +72,22 @@
         [self.circleContentView addSubview:self.countLabel];
 
     self.countLabel.text = [NSString stringWithFormat:@"%@",[[_dict safeStringForKey:@"lineCard_amout"] floatValue]>10000? [NSString stringWithFormat:@"%.0f万", [[_dict safeStringForKey:@"lineCard_amout"] floatValue]/10000]:[_dict safeStringForKey:@"lineCard_amout"]];
-
+    
+    if ([[_dict safeStringForKey:@"lineCard_amout"] floatValue]>=[[_dict safeStringForKey:@"target_price"] floatValue]) {
+        self.backMoneyImg.hidden = NO;
+        self.circleContentView.hidden = YES;
+        if ([_dict safeIntForKey:@"lineFull_refund"]==1) {
+            [self.backMoneyImg setImage:[UIImage imageNamed:@"yifan"]];
+        }
+        else
+        {
+            [self.backMoneyImg setImage:[UIImage imageNamed:@"dabiao"]];
+        }
+    }
+    else
+    {
+        self.backMoneyImg.hidden = YES;
+        self.circleContentView.hidden = NO;
+    }
 }
 @end

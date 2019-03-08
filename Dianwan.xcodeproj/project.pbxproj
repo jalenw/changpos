@@ -598,7 +598,6 @@
 		CDC88E3D1D8691E000CE03CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E3C1D8691E000CE03CE /* main.m */; };
 		CDC88E401D8691E000CE03CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E3F1D8691E000CE03CE /* AppDelegate.m */; };
 		CDC88E4E1D8691E000CE03CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC88E4C1D8691E000CE03CE /* LaunchScreen.storyboard */; };
-		CDC88FF91D8698BF00CE03CE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E681D8698BF00CE03CE /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CDC88FFA1D8698BF00CE03CE /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E6B1D8698BF00CE03CE /* HTTPClient.m */; };
 		CDC88FFC1D8698BF00CE03CE /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E711D8698BF00CE03CE /* AFHTTPSessionManager.m */; };
 		CDC88FFD1D8698BF00CE03CE /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC88E741D8698BF00CE03CE /* AFNetworkReachabilityManager.m */; };
@@ -1688,8 +1687,6 @@
 		CDC88E3F1D8691E000CE03CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CDC88E4D1D8691E000CE03CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDC88E4F1D8691E000CE03CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDC88E671D8698BF00CE03CE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		CDC88E681D8698BF00CE03CE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CDC88E6A1D8698BF00CE03CE /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		CDC88E6B1D8698BF00CE03CE /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		CDC88E701D8698BF00CE03CE /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -3927,8 +3924,6 @@
 			children = (
 				8E4664E62169BF040022DF94 /* MapService */,
 				8E42A8B71F26DADB0026ED07 /* LocationService */,
-				CDC88E671D8698BF00CE03CE /* Reachability.h */,
-				CDC88E681D8698BF00CE03CE /* Reachability.m */,
 				CDC88E691D8698BF00CE03CE /* RequestServices */,
 			);
 			path = Services;
@@ -4478,7 +4473,6 @@
 				8E9FE2CE212E72B900D26955 /* MJRefreshFooter.m in Sources */,
 				8E6D1EBC21EB2A48002C6717 /* PayViewController.m in Sources */,
 				8EEF4BAD211D8CB500DE1E36 /* EaseChineseToPinyin.m in Sources */,
-				CDC88FF91D8698BF00CE03CE /* Reachability.m in Sources */,
 				04395EDB1F233EC10074865E /* TZGifPhotoPreviewController.m in Sources */,
 				8E6D1E9521EB273F002C6717 /* CertificationSuccessViewController.m in Sources */,
 				8EEF4BB3211D8CB500DE1E36 /* EaseMessageModel.m in Sources */,
@@ -4899,6 +4893,7 @@
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/Parse",
 					"$(PROJECT_DIR)/Dianwan/Externs/Charts",
+					"$(PROJECT_DIR)/Dianwan/Externs",
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";
@@ -4960,6 +4955,7 @@
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI",
 					"$(PROJECT_DIR)/Dianwan/ViewControllers/EaseUI/Parse",
 					"$(PROJECT_DIR)/Dianwan/Externs/Charts",
+					"$(PROJECT_DIR)/Dianwan/Externs",
 				);
 				GCC_PREFIX_HEADER = "Dianwan/Dianwan-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Dianwan/Info.plist";

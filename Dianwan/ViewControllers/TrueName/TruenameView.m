@@ -30,14 +30,14 @@
 //         [AlertHelper showAlertWithTitle:@"请输入正确的身份证号"];
 //         return;
 //    }
-    if ([Tooles isEmpty:self.foreImageUrl]) {
-           [AlertHelper showAlertWithTitle:@"请选择一张身份证的正面照"];
-          return;
-    }
-    if ([Tooles isEmpty:self.backImageUrl]) {
-        [AlertHelper showAlertWithTitle:@"请选择一张身份证的背面照"];
-        return;
-    }
+//    if ([Tooles isEmpty:self.foreImageUrl]) {
+//           [AlertHelper showAlertWithTitle:@"请选择一张身份证的正面照"];
+//          return;
+//    }
+//    if ([Tooles isEmpty:self.backImageUrl]) {
+//        [AlertHelper showAlertWithTitle:@"请选择一张身份证的背面照"];
+//        return;
+//    }
     
     
     PerfectInformationViewController *PerfectInformation =[[PerfectInformationViewController alloc]init];

@@ -59,4 +59,5 @@ double LantitudeLongitudeDist(double lon1,double lat1,
 
 + (BOOL)isEmpty:(NSString *) str;
 + (BOOL)checkTextMin:(NSInteger)min Max:(NSInteger)max Text:(NSString *)text;
++ (NSString *)getDealNumwithstring:(NSString *)string;
 @end

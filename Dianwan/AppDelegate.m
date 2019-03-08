@@ -21,6 +21,7 @@
 #import "AliPayManager.h"
 #import "WXApiManager.h"
 #import "HelpViewController.h"
+
 @interface AppDelegate ()<UIAlertViewDelegate,WXApiDelegate>
 @property (strong,nonatomic) UINavigationController* mainNavController;
 @end
@@ -74,7 +75,7 @@ didFinishLaunchingWithOptions:launchOptions
     [self initSharePlatform];
     
     //同步获取服务器地址
-    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain?version=2.1"];
+    NSURL *url = [NSURL URLWithString:@"http://zqcj.gdzuanqian.com/index.php/mobile/index/get_site_domain?version=2.2"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse *response = NULL;
     NSError *connectionError = NULL;

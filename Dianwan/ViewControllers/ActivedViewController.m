@@ -108,7 +108,7 @@
             else
                 [self.tableView removeEmptyView];
             if (dataList.count>0) {
-                  [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfHhasBeenactivated" object:@(dataList.count)];
+                  [[NSNotificationCenter defaultCenter]postNotificationName:@"kNotificationNumberOfHhasBeenactivated" object:@([result safeIntForKey:@"total_goods_count_num"])];
             }
             [self.tableView reloadData];
         }
